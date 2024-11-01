@@ -18,7 +18,15 @@
   </div>
 </section>
 
+<h1>Welcome to My Svelte Website</h1>
+
 <style>
+  h1 {
+    color: #333;
+    text-align: center;
+    padding: 2rem;
+  }
+
   .hero {
     text-align: center;
     padding: 4rem 0;
