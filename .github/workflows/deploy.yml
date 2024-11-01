@@ -24,12 +24,12 @@ jobs:
         run: npm run build
       - name: Create .nojekyll file
         run: |
-          touch .svelte-kit/output/client/.nojekyll
-          cp .svelte-kit/output/client/index.html .svelte-kit/output/client/404.html
+          touch build/.nojekyll
+          cp build/index.html build/404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .svelte-kit/output/client
+          path: build
 
   deploy:
     needs: build
