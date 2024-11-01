@@ -1,7 +1,7 @@
 <nav>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/projects">Projects</a>
+  <a href="/my-svelte-website/">Home</a>
+  <a href="/my-svelte-website/about">About</a>
+  <a href="/my-svelte-website/projects">Projects</a>
 </nav>
 
 <main>
