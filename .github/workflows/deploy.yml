@@ -23,7 +23,9 @@ jobs:
       - name: Build website
         run: npm run build
       - name: Create .nojekyll file
-        run: touch .svelte-kit/output/client/.nojekyll
+        run: |
+          touch .svelte-kit/output/client/.nojekyll
+          cp .svelte-kit/output/client/index.html .svelte-kit/output/client/404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
