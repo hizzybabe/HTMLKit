@@ -104,7 +104,7 @@
     &lt;/body&gt;
     
     &lt;/html&gt;</code></pre>
-    
+
     
   <h3>Step 4: Save the File</h3>
   <ol>
@@ -154,8 +154,8 @@
 
 
 <ChapterNavigation 
-    prevHref="html" 
-    nextHref="html/chapter2" 
+    prevHref="/html" 
+    nextHref="/html/chapter2" 
 />
 
 </div>
