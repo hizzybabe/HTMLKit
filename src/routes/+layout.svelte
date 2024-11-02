@@ -3,14 +3,14 @@
 </script>
 
 <nav>
-  <a href="/my-svelte-website/">Home</a>
-  <a href="/my-svelte-website/about">About</a>
-  <a href="/my-svelte-website/html">HTML</a>
-  <a href="/my-svelte-website/css">CSS</a>
-  <a href="/my-svelte-website/javascript">Javascript</a>
-  <a href="/my-svelte-website/svelte">Svelte</a>
-  <a href="/my-svelte-website/astro">Astro</a>
-  <a href="/my-svelte-website/practice">Practice</a>
+  <a href="/htmlkit/">Home</a>
+  <a href="/htmlkit/about">About</a>
+  <a href="/htmlkit/html">HTML</a>
+  <a href="/htmlkit/css">CSS</a>
+  <a href="/htmlkit/javascript">Javascript</a>
+  <a href="/htmlkit/svelte">Svelte</a>
+  <a href="/htmlkit/astro">Astro</a>
+  <a href="/htmlkit/practice">Practice</a>
 </nav>
 
 <slot />

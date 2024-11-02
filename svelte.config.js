@@ -6,7 +6,7 @@ export default {
       fallback: 'index.html'
     }),
     paths: {
-      base: '/my-svelte-website'
+      base: '/htmlkit'
     }
   }
 };
