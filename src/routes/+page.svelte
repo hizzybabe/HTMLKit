@@ -1,5 +1,5 @@
 <div class="container mx-auto px-4 py-8">
-  
+
 <div class="hero">
   <h1>Welcome to HTMLKIT</h1>
   <p>Built with SvelteKit</p>
@@ -12,7 +12,7 @@
   </div>
   <div class="feature">
     <h2>Learn Svelte</h2>
-    <p>A very lean Javascript framework</p>
+    <p>A modern, lean Javascript framework</p>
   </div>
   <div class="feature">
     <h2>Learn Astro</h2>

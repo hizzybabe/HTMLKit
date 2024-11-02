@@ -4,43 +4,43 @@
         title: "Introduction to HTML & Setup",
         topics: ["What is HTML?", "Brief History", "Environment Setup"],
         workshop: "Hello World Workshop",
-        path: "HTMLKit/html/chapter1"
+        path: "html/chapter1"
       },
       {
         title: "Basic HTML Structure & Elements",
         topics: ["Document Structure", "Common Elements", "HTML Attributes"],
         workshop: "Personal Profile Workshop",
-        path: "HTMLKit/html/chapter2"
+        path: "html/chapter2"
       },
       {
         title: "Text and Links",
         topics: ["Text Formatting", "Hyperlinks", "Email Links"],
         workshop: "Enhanced Profile Workshop",
-        path: "HTMLKit/html/chapter3"
+        path: "html/chapter3"
       },
       {
         title: "Images, Lists, and Tables",
         topics: ["Working with Images", "List Types", "Table Creation"],
         workshop: "Product Showcase Workshop",
-        path: "HTMLKit/html/chapter4"
+        path: "html/chapter4"
       },
       {
         title: "Forms and Input Elements",
         topics: ["HTML Forms", "Input Types", "Form Components"],
         workshop: "Contact Form Workshop",
-        path: "HTMLKit/html/chapter5"
+        path: "html/chapter5"
       },
       {
         title: "Semantic HTML & Accessibility",
         topics: ["Semantic Elements", "Web Accessibility", "ARIA"],
         workshop: "Accessibility Workshop",
-        path: "HTMLKit/html/chapter6"
+        path: "html/chapter6"
       },
       {
         title: "Advanced Topics & Best Practices",
         topics: ["SEO Meta Tags", "HTML Entities", "Coding Standards"],
         workshop: "Personal Website Project",
-        path: "HTMLKit/html/chapter7"
+        path: "html/chapter7"
       }
     ];
   </script>
