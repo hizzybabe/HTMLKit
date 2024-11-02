@@ -51,6 +51,10 @@
     * {
       font-family: 'Roboto', sans-serif;
     }
+
+    .roboto-text {
+      font-family: 'Roboto', sans-serif;
+    }
   </style>
 
   <div class="roboto-text">
