@@ -87,20 +87,29 @@
   </ol>
   <h4>Step 3: Write the Basic HTML Structure</h4>
   <div>In the new file, enter the following code to create a simple HTML document:</div>
-  <div>
-    ```html
+  <code>
     <!DOCTYPE html>
+
     <html lang="en">
+    
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hello, World!</title>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Hello, World!</title>
+    
     </head>
+    
     <body>
-        <h1>Hello, World!</h1>
+    
+    <h1>Hello, World!</h1>
+    
     </body>
+    
     </html>
-  </div>
+  </code>
   <h3>Step 4: Save the File</h3>
   <ol>
   <li>
