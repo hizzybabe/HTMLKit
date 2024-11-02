@@ -36,5 +36,6 @@
     text-align: center;
     padding: 1rem;
     background: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
   }
 </style>
