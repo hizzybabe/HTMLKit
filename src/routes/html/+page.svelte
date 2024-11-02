@@ -50,7 +50,7 @@
     
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {#each chapters as chapter}
-        <<div class="border rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow bg-white hover:scale-105 transform duration-200">
+        <div class="border rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow bg-white hover:scale-105 transform duration-200">
           >
           <h2 class="text-2xl font-semibold mb-4">{chapter.title}</h2>
           
