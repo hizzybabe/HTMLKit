@@ -18,6 +18,7 @@
     padding: 1rem;
     display: flex;
     gap: 1rem;
+    font-family: 'Roboto', sans-serif;
   }
 
   nav a {
