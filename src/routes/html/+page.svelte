@@ -85,6 +85,8 @@
     
     .container {
       max-width: 1200px;
+      padding: 20px;
+      margin: 20px;
     }
   </style>
   
