@@ -48,7 +48,7 @@
     text-align: center;
   }
   
-    .roboto-text {
+    * {
       font-family: 'Roboto', sans-serif;
     }
   </style>
