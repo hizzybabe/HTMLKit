@@ -1,3 +1,6 @@
+<div class="page">
+
+
 <h1>Chapter 1: Introduction to HTML &amp; Setting Up the Environment</h1>
 <h2>Theory</h2>
 <h3>What is HTML?</h3>
@@ -168,3 +171,5 @@
 <div>Congratulations on creating your first HTML page! This fundamental skill sets the stage for more advanced web development topics.</div>
 <div></div>
 <div></div>
+
+</div>
