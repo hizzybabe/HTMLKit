@@ -6,15 +6,15 @@
 <section class="features">
   <div class="feature">
     <h2>Learn HTML, CSS, and JavaScript</h2>
-    <p>Lightning-quick performance</p>
+    <p>The Foundation of Web Development</p>
   </div>
   <div class="feature">
     <h2>Learn Svelte</h2>
-    <p>Easy to understand</p>
+    <p>A very lean Javascript framework</p>
   </div>
   <div class="feature">
-    <h2>Practice Projects</h2>
-    <p>Built for modern web</p>
+    <h2>Learn Astro</h2>
+    <p>Static-site generator with support for many frontend frameworks</p>
   </div>
 </section>
 
