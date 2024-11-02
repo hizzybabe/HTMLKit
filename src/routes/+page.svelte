@@ -25,40 +25,7 @@
 </div>
 
 <style>
-  h1 {
-    color: #333;
-    text-align: center;
-    padding: 2rem;
-  }
 
-  .hero {
-    text-align: center;
-    padding: 4rem 0;
-    background: #f0f0f0;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-  }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .feature {
-    padding: 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-    * {
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .roboto-text {
-      font-family: 'Roboto', sans-serif;
-    }
   </style>
 
   
