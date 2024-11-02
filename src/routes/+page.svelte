@@ -47,9 +47,6 @@
     border-radius: 8px;
     text-align: center;
   }
-</style>
-  <style>
-    /* Your existing styles here */
   
     .roboto-text {
       font-family: 'Roboto', sans-serif;
