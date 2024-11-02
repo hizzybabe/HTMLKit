@@ -1,3 +1,7 @@
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+</script>
+
 <div class="container mx-auto px-4 py-8">
 
 
@@ -141,11 +145,7 @@
   </ul>
   <div>Congratulations on creating your first HTML page! This fundamental skill sets the stage for more advanced web development topics.</div>
   
-  <script>
-    import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
-</script>
 
-<!-- Your existing chapter content -->
 
 <ChapterNavigation 
     prevHref="/html" 
