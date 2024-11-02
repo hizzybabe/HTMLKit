@@ -20,6 +20,10 @@
 
 <h1>Welcome to HTMLKIT</h1>
 
+<div>
+  Embark on your journey to becoming a proficient web developer with HTMLKIT. Our platform offers a comprehensive curriculum that covers HTML, CSS, and JavaScript, equipping you with the fundamental skills to create stunning websites. Additionally, dive into the world of Svelte, a modern JavaScript framework that simplifies the process of building interactive and dynamic user interfaces.
+</div>
+
 <style>
   h1 {
     color: #333;
@@ -57,6 +61,4 @@
     }
   </style>
 
-  <div class="roboto-text">
-    Embark on your journey to becoming a proficient web developer with HTMLKIT. Our platform offers a comprehensive curriculum that covers HTML, CSS, and JavaScript, equipping you with the fundamental skills to create stunning websites. Additionally, dive into the world of Svelte, a modern JavaScript framework that simplifies the process of building interactive and dynamic user interfaces.
-  </div>
+  
