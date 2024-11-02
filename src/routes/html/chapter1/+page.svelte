@@ -141,5 +141,15 @@
   </ul>
   <div>Congratulations on creating your first HTML page! This fundamental skill sets the stage for more advanced web development topics.</div>
   
+  <script>
+    import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+</script>
+
+<!-- Your existing chapter content -->
+
+<ChapterNavigation 
+    prevHref="/html" 
+    nextHref="/html/chapter2" 
+/>
 
 </div>
