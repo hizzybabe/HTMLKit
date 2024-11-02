@@ -87,7 +87,7 @@
   </ol>
   <h4>Step 3: Write the Basic HTML Structure</h4>
   <div>In the new file, enter the following code to create a simple HTML document:</div>
-  <code>
+</code></pre>
     <!DOCTYPE html>
 
     <html lang="en">
