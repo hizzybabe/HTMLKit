@@ -79,14 +79,69 @@
   </main>
   
   <style>
-    :global(body) {
-      background-color: #f8f9fa;
-    }
-    
     .container {
-      max-width: 800px;
-      padding: 20px;
-      margin: 20px;
-    }
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #f7df1e;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+
+  .chapters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .chapter-card {
+    background: #2a2a2a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+    border: 1px solid #f7df1e;
+  }
+
+  .chapter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(247,223,30,0.2);
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    color: #f7df1e;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #f7df1e;
+  }
   </style>
   
