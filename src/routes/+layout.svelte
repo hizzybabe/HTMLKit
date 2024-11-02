@@ -1,3 +1,7 @@
+<script>
+  import '../app.css';
+</script>
+
 <nav>
   <a href="/my-svelte-website/">Home</a>
   <a href="/my-svelte-website/about">About</a>
@@ -9,9 +13,7 @@
   <a href="/my-svelte-website/practice">Practice</a>
 </nav>
 
-<main>
-  <slot />
-</main>
+<slot />
 
 <footer>
   <p>© 2024 HTMLKIT</p>
@@ -29,12 +31,6 @@
   nav a {
     color: white;
     text-decoration: none;
-  }
-
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
   }
 
   footer {
