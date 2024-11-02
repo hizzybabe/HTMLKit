@@ -48,3 +48,13 @@
     text-align: center;
   }
 </style>
+
+<style>
+  .roboto-text {
+    font-family: 'Roboto', sans-serif;
+  }
+</style>
+
+<div class="roboto-text">
+  This text will be in Roboto font
+</div>
