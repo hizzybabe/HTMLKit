@@ -158,8 +158,8 @@
 
 
 <ChapterNavigation 
-    prevHref="/" 
-    nextHref="/chapter2" 
+    prevHref="html" 
+    nextHref="html/chapter2" 
 />
 
 </div>
