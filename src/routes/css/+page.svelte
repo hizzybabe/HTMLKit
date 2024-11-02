@@ -81,6 +81,7 @@
             <li>{topic}</li>
           {/each}
         </ul>
+        <button>Start Chapter</button>
       </div>
     {/each}
   </div>
