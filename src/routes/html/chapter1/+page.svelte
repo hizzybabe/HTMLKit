@@ -88,17 +88,18 @@
   <h4>Step 3: Write the Basic HTML Structure</h4>
   <div>In the new file, enter the following code to create a simple HTML document:</div>
   <div>
-  <div>&lt;!DOCTYPE html&gt;</div>
-  <div>&lt;html lang="en"&gt;</div>
-  <div>&lt;head&gt;</div>
-  <div>&lt;meta charset="UTF-8"&gt;</div>
-  <div>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</div>
-  <div>&lt;title&gt;Hello, World!&lt;/title&gt;</div>
-  <div>&lt;/head&gt;</div>
-  <div>&lt;body&gt;</div>
-  <div>&lt;h1&gt;Hello, World!&lt;/h1&gt;</div>
-  <div>&lt;/body&gt;</div>
-  <div>&lt;/html&gt;</div>
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello, World!</title>
+    </head>
+    <body>
+        <h1>Hello, World!</h1>
+    </body>
+    </html>
   </div>
   <h3>Step 4: Save the File</h3>
   <ol>
@@ -148,8 +149,8 @@
 
 
 <ChapterNavigation 
-    prevHref="/html" 
-    nextHref="/html/chapter2" 
+    prevHref="HTMLKit/html" 
+    nextHref="HTMLKit/html/chapter2" 
 />
 
 </div>

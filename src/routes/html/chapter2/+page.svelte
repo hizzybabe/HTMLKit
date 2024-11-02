@@ -162,4 +162,11 @@
 <div>Congratulations on creating your personal profile web page! This exercise reinforces the fundamental elements of HTML and paves the way for more complex web development projects.</div>
 
   
+<ChapterNavigation 
+    prevHref="HTMLKit/html" 
+    nextHref="HTMLKit/html/chapter2" 
+/>
+
+
+
   </div>
