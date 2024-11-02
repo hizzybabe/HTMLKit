@@ -1,6 +1,6 @@
 <h1>Practice Projects</h1>
 
-<div class="projects-container">
+<div class="container mx-auto px-4">
   <section>
     <h2>HTML Projects</h2>
     <ul>
