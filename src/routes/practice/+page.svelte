@@ -39,54 +39,5 @@
 </div>
 
 <style>
-  * {
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-
-  section {
-    background: #f8f8f8;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-
-  h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  h2 {
-    color: #444;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 0.5rem;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
-    margin: 0.8rem 0;
-  }
-
-  a {
-    color: #0066cc;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  a:hover {
-    color: #004499;
-    text-decoration: underline;
-  }
+  
 </style>

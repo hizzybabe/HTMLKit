@@ -79,66 +79,7 @@
   </main>
   
   <style>
-    .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
 
-  h1 {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .intro {
-    text-align: center;
-    color: #666;
-    margin-bottom: 3rem;
-  }
-
-  .chapters {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .chapter-card {
-    background: #f5f5f5;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-  }
-
-  .chapter-card:hover {
-    transform: translateY(-5px);
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    color: #2a2a2a;
-    margin-bottom: 1rem;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    color: #555;
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-    position: relative;
-  }
-
-  li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #666;
-  }
+  
   </style>
   
