@@ -3,20 +3,20 @@
 </script>
 
 <nav>
-  <a href="/htmlkit/">Home</a>
-  <a href="/htmlkit/about">About</a>
-  <a href="/htmlkit/html">HTML</a>
-  <a href="/htmlkit/css">CSS</a>
-  <a href="/htmlkit/javascript">Javascript</a>
-  <a href="/htmlkit/svelte">Svelte</a>
-  <a href="/htmlkit/astro">Astro</a>
-  <a href="/htmlkit/practice">Practice</a>
+  <a href="/HTMLKit/">Home</a>
+  <a href="/HTMLKit/about">About</a>
+  <a href="/HTMLKit/html">HTML</a>
+  <a href="/HTMLKit/css">CSS</a>
+  <a href="/HTMLKit/javascript">Javascript</a>
+  <a href="/HTMLKit/svelte">Svelte</a>
+  <a href="/HTMLKit/astro">Astro</a>
+  <a href="/HTMLKit/practice">Practice</a>
 </nav>
 
 <slot />
 
 <footer>
-  <p>© 2024 HTMLKIT</p>
+  <p>© 2024 HTMLKit</p>
 </footer>
 
 <style>
