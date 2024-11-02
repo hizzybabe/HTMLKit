@@ -1,4 +1,4 @@
-<div class="page">
+<div class="container mx-auto px-4 py-8">
 
 
 <h1>Chapter 1: Introduction to HTML &amp; Setting Up the Environment</h1>
