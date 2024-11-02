@@ -5,7 +5,7 @@
 
 <section class="features">
   <div class="feature">
-    <h2>Learn HTML, CSS, and JavaScript</h2>:
+    <h2>Learn HTML, CSS, and JavaScript</h2>
     <p>Lightning-quick performance</p>
   </div>
   <div class="feature">
