@@ -9,7 +9,7 @@
 </main>
 
 <footer>
-  <p>© 2024 My Svelte Website</p>
+  <p>© 2024 HTMLKIT</p>
 </footer>
 
 <style>
