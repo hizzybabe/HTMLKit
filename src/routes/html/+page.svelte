@@ -80,17 +80,16 @@
   
   <style>
     .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
   }
 
   h1 {
     font-size: 2.5rem;
-    color: #f7df1e;
+    color: #333;
     text-align: center;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   }
 
   .intro {
@@ -106,22 +105,20 @@
   }
 
   .chapter-card {
-    background: #2a2a2a;
+    background: #f5f5f5;
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.2s ease;
-    border: 1px solid #f7df1e;
   }
 
   .chapter-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(247,223,30,0.2);
   }
 
   h2 {
     font-size: 1.2rem;
-    color: #f7df1e;
+    color: #2a2a2a;
     margin-bottom: 1rem;
   }
 
@@ -131,17 +128,17 @@
   }
 
   li {
-    color: #fff;
+    color: #555;
     margin-bottom: 0.5rem;
     padding-left: 1rem;
     position: relative;
   }
 
   li::before {
-    content: "→";
+    content: "•";
     position: absolute;
     left: 0;
-    color: #f7df1e;
+    color: #666;
   }
   </style>
   
