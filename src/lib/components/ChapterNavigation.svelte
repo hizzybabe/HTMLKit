@@ -5,7 +5,7 @@
 
 <div class="navigation-container">
     <a 
-        href="HTMLKit/html"
+        href="html"
         class="chapter-btn back-btn"
     >
         Back to Chapters
