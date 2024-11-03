@@ -19,6 +19,11 @@
     <p>Static-site generator with support for many frontend frameworks</p>
   </div>
 </section>
+<div class="feature">
+  <h2>Make a Multi-Page Website</h2>
+  <p>Crash course</p>
+</div>
+</section>
 
 <h1>Welcome to HTMLKIT</h1>
 
