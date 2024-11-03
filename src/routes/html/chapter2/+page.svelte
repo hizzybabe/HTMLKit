@@ -40,14 +40,19 @@
   <div><strong>Headings</strong> (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>): Used to define headings and subheadings. <code>&lt;h1&gt;</code> is the largest and most important heading, while <code>&lt;h6&gt;</code> is the smallest.</div>
   </li>
   </ul>
+
   <div>
 
-  <div>&lt;h1&gt;Main Heading&lt;/h1&gt;</div>
-  <h1>Main Heading</h1>
-  <div>&lt;h2&gt;Subheading&lt;/h2&gt;</div>
-  <h2>Subheading</h2>
+    <code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code>
+
+      <h1>Main Heading</h1>
+
+    <code>&lt;h2&gt;Subheading&lt;/h2&gt;</code>
+
+      <h2>Subheading</h2>
 
   </div>
+
   <ul>
   <li>
   <div><strong>Paragraph</strong> (<code>&lt;p&gt;</code>): Defines a paragraph of text. This tag is essential for presenting text content clearly.</div>
