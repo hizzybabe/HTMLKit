@@ -21,7 +21,7 @@
 
 <style>
   nav {
-    background: #333;
+    background: darkblue;
     padding: 1rem;
     display: flex;
     gap: 1rem;
