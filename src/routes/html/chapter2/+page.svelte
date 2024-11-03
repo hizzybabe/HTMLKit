@@ -108,20 +108,24 @@
   </ol>
   <h4>Step 3: Write the Basic HTML Structure</h4>
   <div>Enter the following code in your new file:</div>
-  <pre><code>
-&lt;!DOCTYPE html&gt;
+
+  <pre><code>&lt;!DOCTYPE html&gt;
+
 &lt;html lang="en"&gt;
+
 &lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;title&gt;My Profile&lt;/title&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Profile&lt;/title&gt;
 &lt;/head&gt;
+
 &lt;body&gt;
-&lt;h1&gt;Your Name&lt;/h1&gt;
-&lt;p&gt;Hello! My name is &lt;strong&gt;Your Name&lt;/strong&gt;. I am a [your profession/education]. I enjoy various activities, one of my favorite hobbies is &lt;span style="font-weight: bold; color: blue;"&gt;[your hobby]&lt;/span&gt;. In my free time, I love to explore more about it!&lt;/p&gt;
+  &lt;h1&gt;Your Name&lt;/h1&gt;
+  &lt;p&gt;Hello! My name is &lt;strong&gt;Your Name&lt;/strong&gt;. I am a [your profession/education]. I enjoy various activities, one of my favorite hobbies is &lt;span style="font-weight: bold; color: blue;"&gt;[your hobby]&lt;/span&gt;. In my free time, I love to explore more about it!&lt;/p&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+
+&lt;/html&gt;</code></pre>
+
   <div>Replace <code><strong>Your Name</strong></code> and <code><strong>[your profession/education]</strong></code> with your actual name and profession, and <code><strong>[your hobby]</strong></code> with a hobby you enjoy.</div>
   <h4>Step 4: Save the File</h4>
   <ol>
