@@ -2,6 +2,7 @@
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
 
   let showCode = true;
+  let showCode1 = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -67,12 +68,12 @@
       <div>
         <button 
           class="mb-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          on:click={() => showCode = !showCode}
+          on:click={() => showCode1 = !showCode1}
         >
-          {showCode ? 'Show Preview' : 'Show Code'}
+          {showCode1 ? 'Show Preview' : 'Show Code'}
         </button>
       
-        {#if showCode}
+        {#if showCode1}
 
         <div><code>&lt;h2&gt;Subheading&lt;/h2&gt;</code></div>
         {:else}
