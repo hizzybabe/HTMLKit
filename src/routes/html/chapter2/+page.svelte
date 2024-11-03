@@ -50,14 +50,14 @@
 
       <div>
         <button 
-          class="mb-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          class="mb-2 px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
           on:click={() => showCode = !showCode}
         >
           {showCode ? 'Show Preview' : 'Show Code'}
         </button>
       
         {#if showCode}
-        <div><code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code></div>
+        <div class="mb-2"><code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code></div>
 
         {:else}
         <div><h1>Main Heading</h1></div>
@@ -67,7 +67,7 @@
 
       <div>
         <button 
-          class="mb-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          class="mb-2 px-2 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           on:click={() => showCode1 = !showCode1}
         >
           {showCode1 ? 'Show Preview' : 'Show Code'}
