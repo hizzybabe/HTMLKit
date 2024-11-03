@@ -20,7 +20,7 @@
   </div>
 <div class="feature">
   <h2>Make a Multi-Page Website</h2>
-  <p>HTML, CSS, and JavaScript crash course</p>
+  <p>HTML, CSS, and JavaScript special crash course. Helps you build a multi-page website from scratch.</p>
 </div>
 </section>
 
