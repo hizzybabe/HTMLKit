@@ -108,7 +108,7 @@
   </ol>
   <h4>Step 3: Write the Basic HTML Structure</h4>
   <div>Enter the following code in your new file:</div>
-  <div>
+  <pre><code>
   <div>&lt;!DOCTYPE html&gt;</div>
   <div>&lt;html lang="en"&gt;</div>
   <div>&lt;head&gt;</div>
@@ -121,7 +121,7 @@
   <div>&lt;p&gt;Hello! My name is &lt;strong&gt;Your Name&lt;/strong&gt;. I am a [your profession/education]. I enjoy various activities, one of my favorite hobbies is &lt;span style="font-weight: bold; color: blue;"&gt;[your hobby]&lt;/span&gt;. In my free time, I love to explore more about it!&lt;/p&gt;</div>
   <div>&lt;/body&gt;</div>
   <div>&lt;/html&gt;</div>
-  </div>
+</code></pre>
   <div>Replace <code><strong>Your Name</strong></code> and <code><strong>[your profession/education]</strong></code> with your actual name and profession, and <code><strong>[your hobby]</strong></code> with a hobby you enjoy.</div>
   <h4>Step 4: Save the File</h4>
   <ol>
