@@ -48,7 +48,7 @@
 
 
 
-      <div class= bg-gray-100 p-2 rounded-lg">
+      <div class="bg-gray-100 p-2 rounded-lg">
         <button 
           class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600"
           on:click={() => showCode = !showCode}
