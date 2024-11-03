@@ -22,7 +22,7 @@
 
 <style>
   nav {
-    background: darkblue;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
     padding: 1rem;
     display: flex;
     gap: 1rem;
