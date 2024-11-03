@@ -100,8 +100,8 @@
   <div><strong>Span</strong> (<code>&lt;span&gt;</code>): A simple inline container used to group text for styling or scripting purposes without introducing line breaks.</div>
   </li>
   </ul>
+
   <div>
-  <div><span style="color: blue;">This text is blue.</span></div>
 
   <div>
     <button 
@@ -116,12 +116,13 @@
     <div><code>&lt;span style="color: blue;"&gt;This text is blue.&lt;/span&gt;</code></div>
     {:else}
 
-    <div><h2>Subheading</h2></div>
+    <div><span style="color: blue;">This text is blue.</span></div>
     {/if}
   </div>
 
 
   </div>
+  
   <ul>
   <li>
   <div><strong>Div</strong> (<code>&lt;div&gt;</code>): A block-level container used to group larger chunks of content. It is commonly used for styling.</div>
