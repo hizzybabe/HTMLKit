@@ -2,7 +2,7 @@
 
 <div class="hero">
   <h1>Welcome to HTMLKIT</h1>
-  <p>Built with SvelteKit</p>
+  <p></p>
 </div>
 
 <section class="features">

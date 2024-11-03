@@ -16,7 +16,7 @@
 <slot />
 
 <footer>
-  <p>© 2024 HTMLKit</p>
+  <p>© 2024 HTMLKit. Built with SvelteKit</p>
 </footer>
 
 <style>
