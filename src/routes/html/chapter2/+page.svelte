@@ -3,6 +3,7 @@
 
   let showCode = true;
   let showCode1 = true;
+  let showCode2 = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -44,7 +45,7 @@
   </li>
   </ul>
 
-  <div class="bg-gray-300 p-2 rounded-lg">
+  <div class="bg-gray-200 p-2 rounded-lg">
 
 
 
@@ -100,7 +101,26 @@
   </li>
   </ul>
   <div>
-  <div>&lt;span style="color: blue;"&gt;This text is blue.&lt;/span&gt;</div>
+  <div><span style="color: blue;">This text is blue.</span></div>
+
+  <div>
+    <button 
+      class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600"
+      on:click={() => showCode2 = !showCode2}
+    >
+      {showCode2 ? 'Show Preview' : 'Show Code'}
+    </button>
+  
+    {#if showCode2}
+
+    <div><code>&lt;span style="color: blue;"&gt;This text is blue.&lt;/span&gt;</code></div>
+    {:else}
+
+    <div><h2>Subheading</h2></div>
+    {/if}
+  </div>
+
+
   </div>
   <ul>
   <li>
