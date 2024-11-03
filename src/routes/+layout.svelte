@@ -11,6 +11,7 @@
   <a href="/HTMLKit/svelte">Svelte</a>
   <a href="/HTMLKit/astro">Astro</a>
   <a href="/HTMLKit/practice">Practice</a>
+  <a href="/HTMLKit/practice">FREE Templates</a>
 </nav>
 
 <slot />
