@@ -44,7 +44,7 @@
   </li>
   </ul>
 
-  <div class="bg-gray-200 p-2 rounded-lg">
+  <div class="bg-gray-300 p-2 rounded-lg">
 
 
 
