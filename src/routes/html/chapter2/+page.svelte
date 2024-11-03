@@ -4,6 +4,7 @@
   let showCode = true;
   let showCode1 = true;
   let showCode2 = true;
+  let showCode3 = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -122,7 +123,7 @@
 
 
   </div>
-  
+
   <ul>
   <li>
   <div><strong>Div</strong> (<code>&lt;div&gt;</code>): A block-level container used to group larger chunks of content. It is commonly used for styling.</div>
@@ -157,6 +158,26 @@
   <div>
   <div>&lt;h1 style="color: red;"&gt;Red Heading&lt;/h1&gt;</div>
   </div>
+
+  <div>
+    <button 
+      class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600"
+      on:click={() => showCode2 = !showCode2}
+    >
+      {showCode2 ? 'Show Preview' : 'Show Code'}
+    </button>
+  
+    {#if showCode2}
+
+    <div><code>&lt;h1 style="color: red;"&gt;Red Heading&lt;/h1&gt;</code></div>
+    {:else}
+
+    <div><h1 style="color: red;">Red Heading</span></div>
+    {/if}
+  </div>
+
+
+
   <hr/>
   <h2>Practice Workshop: Building a Simple Web Page</h2>
   <h3>Task: Create an HTML page for a personal profile</h3>
