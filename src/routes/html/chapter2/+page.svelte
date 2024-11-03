@@ -45,9 +45,7 @@
 
   <div>
 
-    <code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code>
 
-      <h1>Main Heading</h1>
 
       <div>
         <button 
@@ -58,17 +56,15 @@
         </button>
       
         {#if showCode}
-          <code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code>
-          <code>&lt;h2&gt;Subheading&lt;/h2&gt;</code>
+        <div><code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code></div>
+        <div><code>&lt;h2&gt;Subheading&lt;/h2&gt;</code></div>
         {:else}
-          <h1>Main Heading</h1>
-          <h2>Subheading</h2>
+        <div><h1>Main Heading</h1></div>
+        <div><h2>Subheading</h2></div>
         {/if}
       </div>
 
-    <code>&lt;h2&gt;Subheading&lt;/h2&gt;</code>
 
-      <h2>Subheading</h2>
 
   </div>
 
