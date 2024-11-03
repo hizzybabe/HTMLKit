@@ -52,7 +52,7 @@
 
       <div>
         <button 
-          class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600"
+          class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 !important"
           on:click={() => showCode = !showCode}
         >
           {showCode ? 'Show Preview' : 'Show Code'}
@@ -69,7 +69,7 @@
 
       <div>
         <button 
-          class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600"
+          class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 !important"
           on:click={() => showCode1 = !showCode1}
         >
           {showCode1 ? 'Show Preview' : 'Show Code'}
@@ -106,7 +106,7 @@
 
   <div>
     <button 
-      class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600"
+      class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 !important"
       on:click={() => showCode2 = !showCode2}
     >
       {showCode2 ? 'Show Preview' : 'Show Code'}
@@ -161,7 +161,7 @@
 
   <div>
     <button 
-      class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600"
+      class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 !important"
       on:click={() => showCode2 = !showCode2}
     >
       {showCode2 ? 'Show Preview' : 'Show Code'}
@@ -172,7 +172,7 @@
     <div><code>&lt;h1 style="color: red;"&gt;Red Heading&lt;/h1&gt;</code></div>
     {:else}
 
-    <div><h1 style="color: red;">Red Heading</h1></div>
+    <div><h1 style="color: red !important;">Red Heading</h1></div>
     {/if}
   </div>
 
