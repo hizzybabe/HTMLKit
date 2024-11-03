@@ -43,9 +43,9 @@
   <div>
 
   <div>&lt;h1&gt;Main Heading&lt;/h1&gt;</div>
-  <h1>Main Heading</div>
+  <h1>Main Heading</h1>
   <div>&lt;h2&gt;Subheading&lt;/h2&gt;</div>
-  <h2>Subheading</div>
+  <h2>Subheading</h2>
 
   </div>
   <ul>
