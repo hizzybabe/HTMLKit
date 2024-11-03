@@ -57,9 +57,26 @@
       
         {#if showCode}
         <div><code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code></div>
-        <div><code>&lt;h2&gt;Subheading&lt;/h2&gt;</code></div>
+
         {:else}
         <div><h1>Main Heading</h1></div>
+
+        {/if}
+      </div>
+
+      <div>
+        <button 
+          class="mb-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          on:click={() => showCode = !showCode}
+        >
+          {showCode ? 'Show Preview' : 'Show Code'}
+        </button>
+      
+        {#if showCode}
+
+        <div><code>&lt;h2&gt;Subheading&lt;/h2&gt;</code></div>
+        {:else}
+
         <div><h2>Subheading</h2></div>
         {/if}
       </div>
