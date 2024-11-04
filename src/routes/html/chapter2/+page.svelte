@@ -162,12 +162,12 @@
   <div>
     <button 
       class="mb-1 px-1 py-1 text-xs bg-blue-500 text-white rounded hover:bg-blue-600 !important"
-      on:click={() => showCode2 = !showCode2}
+      on:click={() => showCode3 = !showCode3}
     >
-      {showCode2 ? 'Show Preview' : 'Show Code'}
+      {showCode3 ? 'Show Preview' : 'Show Code'}
     </button>
   
-    {#if showCode2}
+    {#if showCode3}
 
     <div><code>&lt;h1 style="color: red;"&gt;Red Heading&lt;/h1&gt;</code></div>
     {:else}
