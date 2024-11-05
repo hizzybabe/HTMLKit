@@ -100,20 +100,24 @@
 </ol>
 <div>Here&rsquo;s an example of how your updated HTML code might look:</div>
 <div>
-<div>&lt;!DOCTYPE html&gt;</div>
-<div>&lt;html lang="en"&gt;</div>
-<div>&lt;head&gt;</div>
-<div>&lt;meta charset="UTF-8"&gt;</div>
-<div>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</div>
-<div>&lt;title&gt;My Profile&lt;/title&gt;</div>
-<div>&lt;/head&gt;</div>
-<div>&lt;body&gt;</div>
-<div>&lt;h1&gt;Your Name&lt;/h1&gt;</div>
-<div>&lt;p&gt;Hello! My name is &lt;strong&gt;Your Name&lt;/strong&gt;. I am a &lt;em&gt;[your profession/education]&lt;/em&gt;. I enjoy various activities, and one of my favorite hobbies is &lt;span style="font-weight: bold; color: blue;"&gt;[your hobby]&lt;/span&gt;. In my free time, I love to explore more about it!&lt;/p&gt;</div>
-<div>&lt;p&gt;For more information, visit my favorite website: &lt;a href="https://www.yourfavoritewebsite.com" target="_blank"&gt;Your Favorite Website&lt;/a&gt;.&lt;/p&gt;</div>
-<div>&lt;p&gt;Feel free to &lt;a href="mailto:yourname@example.com"&gt;contact me&lt;/a&gt; anytime!&lt;/p&gt;</div>
-<div>&lt;/body&gt;</div>
-<div>&lt;/html&gt;</div>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;My Profile&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Your Name&lt;/h1&gt;
+&lt;p&gt;Hello! My name is &lt;strong&gt;Your Name&lt;/strong&gt;. I am a &lt;em&gt;[your profession/education]&lt;/em&gt;. I enjoy various activities, and one of my favorite hobbies is &lt;span style="font-weight: bold; color: blue;"&gt;[your hobby]&lt;/span&gt;. In my free time, I love to explore more about it!&lt;/p&gt;
+&lt;p&gt;For more information, visit my favorite website: &lt;a href="https://www.yourfavoritewebsite.com" target="_blank"&gt;Your Favorite Website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;a href="mailto:yourname@example.com"&gt;contact me&lt;/a&gt; anytime!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
 </div>
 <h4>Step 3: Save the Changes</h4>
 <ol>
