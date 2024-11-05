@@ -78,7 +78,7 @@
 
 <!-- Workshop Section -->
 
-<div class="bg-gray-100 p-6 rounded-lg">
+<div class="bg-blue-100 p-6 rounded-lg">
 
   <h2 class="text-2xl font-semibold mb-4">Practice Workshop: &ldquo;Hello, World!&rdquo; in HTML</h2>
   <h3>Task: Create a simple HTML page that displays &ldquo;Hello, World!&rdquo;.</h3>
