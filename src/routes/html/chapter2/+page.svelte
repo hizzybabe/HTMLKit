@@ -52,7 +52,7 @@
 
       <div>
         <button 
-          class="toggle-btn !mb-0.5 !px-0.5 !py-0.5 !text-[10px] !bg-blue-500 !text-white !rounded hover:!bg-blue-600"
+          class="toggle-btn bg-blue-500 mb-0.5 px-0.5 py-0.5 text-[10px] text-white rounded hover:bg-blue-600"
           on:click={() => showCode = !showCode}
         >
           {showCode ? 'Show Preview' : 'Show Code'}
@@ -69,7 +69,7 @@
 
       <div>
         <button 
-          class="toggle-btn !mb-0.5 !px-0.5 !py-0.5 !text-[10px] !bg-blue-500 !text-white !rounded hover:!bg-blue-600"
+          class="toggle-btn bg-blue-500 mb-0.5 px-0.5 py-0.5 text-[10px] text-white rounded hover:bg-blue-600"
           on:click={() => showCode1 = !showCode1}
         >
           {showCode1 ? 'Show Preview' : 'Show Code'}
@@ -106,7 +106,7 @@
 
   <div>
     <button 
-      class="toggle-btn !mb-0.5 !px-0.5 !py-0.5 !text-[10px] !bg-blue-500 !text-white !rounded hover:!bg-blue-600"
+      class="toggle-btn bg-blue-500 mb-0.5 px-0.5 py-0.5 text-[10px] text-white rounded hover:bg-blue-600"
       on:click={() => showCode2 = !showCode2}
     >
       {showCode2 ? 'Show Preview' : 'Show Code'}
@@ -161,7 +161,7 @@
 
   <div>
     <button 
-      class="toggle-btn !mb-0.5 !px-0.5 !py-0.5 !text-[10px] !bg-blue-500 !text-white !rounded hover:!bg-blue-600"
+      class="toggle-btn bg-blue-500 mb-0.5 px-0.5 py-0.5 text-[10px] text-white rounded hover:bg-blue-600"
       on:click={() => showCode3 = !showCode3}
     >
       {showCode3 ? 'Show Preview' : 'Show Code'}
