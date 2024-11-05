@@ -172,7 +172,7 @@
     <div><code>&lt;h1 style="color: red;"&gt;Red Heading&lt;/h1&gt;</code></div>
     {:else}
 
-    <div><h1 style="color: red !important">Red Heading</h1></div>
+    <div><h1 style="color: red !important; -webkit-text-fill-color: red !important;">Red Heading</h1></div>
     {/if}
   </div>
 
