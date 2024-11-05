@@ -71,7 +71,16 @@
   </ol>
   <div>Once your environment is set up, you&rsquo;re ready to start coding in HTML!</div>
   <hr/>
-  <h2>Practice Workshop: &ldquo;Hello, World!&rdquo; in HTML</h2>
+
+
+
+
+
+<!-- Workshop Section -->
+
+<div class="bg-gray-100 p-6 rounded-lg">
+
+  <h2 class="text-2xl font-semibold mb-4">Practice Workshop: &ldquo;Hello, World!&rdquo; in HTML</h2>
   <h3>Task: Create a simple HTML page that displays &ldquo;Hello, World!&rdquo;.</h3>
   <h4>Step 1: Open Your Code Editor</h4>
   <ol>
@@ -150,6 +159,8 @@
   </li>
   </ul>
   <div>Congratulations on creating your first HTML page! This fundamental skill sets the stage for more advanced web development topics.</div>
+
+</div><!-- Workshop Section CSS div -->
   
 
 

@@ -197,3 +197,94 @@ pre code {
   transform: none;
   box-shadow: none;
 }
+
+/* Workshop section styling */
+.container h2:has(+ h3[class*="Task"]),
+.container h2:contains("Workshop") {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  color: white;
+  padding: 1rem;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+}
+
+.container h2:has(+ h3[class*="Task"]) + *,
+.container h2:contains("Workshop") ~ * {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 1rem;
+}
+
+.container hr + h2 {
+  margin-top: 3rem;
+}
+
+/* Workshop code blocks */
+.container h2:contains("Workshop") ~ pre {
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  margin: 1rem 0;
+}
+
+/* Workshop steps */
+.container h2:contains("Workshop") ~ h4 {
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+/* Workshop deliverables and submission sections */
+.container h2:contains("Workshop") ~ h3:not(:first-of-type) {
+  background-color: #e9ecef;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+
+/* Workshop section styling - Add after line 200 */
+.workshop-title {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.workshop-container {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 2rem;
+}
+
+.workshop-container h3.task {
+  color: var(--primary);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.workshop-container h4 {
+  color: var(--primary-dark);
+  font-weight: 600;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.workshop-container pre {
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  margin: 1rem 0;
+  padding: 1.5rem;
+}
+
+.workshop-container h3:not(.task) {
+  background-color: #e9ecef;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+  font-weight: 600;
+}
