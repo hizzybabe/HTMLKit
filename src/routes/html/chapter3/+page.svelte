@@ -74,10 +74,14 @@
 </li>
 </ul>
 <div>
-<div>&lt;!-- Link to a section --&gt;</div>
-<div>&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;</div>
-<div>&lt;!-- Target section --&gt;</div>
-<div>&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;</div>
+
+<code>
+&lt;!-- Link to a section --&gt;
+&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;
+&lt;!-- Target section --&gt;
+&lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;
+</code>
+
 </div>
 <hr/>
 <h2>Practice Workshop: Enhancing Your Profile Page</h2>
