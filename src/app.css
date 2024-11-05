@@ -186,11 +186,11 @@ pre code {
 /* Add any other global styles you need */
 
 .toggle-btn {
-  background: none !important;
   padding: 0;
   font-size: 10px;
   font-weight: normal;
   box-shadow: none;
+  background: none;
 }
 
 .toggle-btn:hover {
