@@ -29,12 +29,12 @@
   <button 
     class="toggle-btn mb-0.5 px-0.5 py-0.5 text-[10px] text-white rounded"
     style="background-color: rgb(59 130 246) !important"
-    on:click={() => showCode2 = !showCode2}
+    on:click={() => showCode = !showCode}
   >
-    {showCode2 ? 'Show Preview' : 'Show Code'}
+    {showCode ? 'Show Preview' : 'Show Code'}
   </button>
 
-  {#if showCode2}
+  {#if showCode}
 
   <div><code>&lt;strong&gt;This text is important.&lt;/strong&gt;</code></div>
   {:else}
