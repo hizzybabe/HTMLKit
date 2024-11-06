@@ -77,91 +77,65 @@
 
 
 <!-- Workshop Section -->
-
-<div class="bg-blue-100 p-6 rounded-lg">
-
-  <h2 class="text-2xl font-semibold mb-4">Practice Workshop: &ldquo;Hello, World!&rdquo; in HTML</h2>
-  <h3>Task: Create a simple HTML page that displays &ldquo;Hello, World!&rdquo;.</h3>
+<hr />
+<h2 class="workshop-title">Practice Workshop: "Hello, World!" in HTML</h2>
+<div class="workshop-container">
+  <h3 class="task">Task: Create a simple HTML page that displays "Hello, World!".</h3>
+  
   <h4>Step 1: Open Your Code Editor</h4>
   <ol>
-  <li>
-  <div>Launch your installed code editor.</div>
-  </li>
+    <li>Launch your installed code editor.</li>
   </ol>
+
   <h4>Step 2: Create a New File</h4>
   <ol>
-  <li>
-  <div>Click on &ldquo;File,&rdquo; then &ldquo;New File&rdquo; (or use the shortcut, usually <code>Ctrl + N</code> or <code>Cmd + N</code>).</div>
-  </li>
+    <li>Click on "File," then "New File" (or use the shortcut, usually <code>Ctrl + N</code> or <code>Cmd + N</code>).</li>
   </ol>
+
   <h4>Step 3: Write the Basic HTML Structure</h4>
   <div>In the new file, enter the following code to create a simple HTML document:</div>
 
-
   <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Hello, World!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
-    &lt;html lang="en"&gt;
-    
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Hello, World!&lt;/title&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
-        &lt;h1&gt;Hello, World!&lt;/h1&gt;
-    &lt;/body&gt;
-    
-    &lt;/html&gt;</code></pre>
+  <h4>Step 4: Save the File</h4>
+  <ol>
+    <li>Click on "File" then "Save As" (or use the shortcut, usually <code>Ctrl + S</code> or <code>Cmd + S</code>).</li>
+    <li>Name the file <code>hello.html</code> and ensure you save it with the <code>.html</code> extension.</li>
+  </ol>
 
-    
-  <h3>Step 4: Save the File</h3>
+  <h4>Step 5: Open the HTML File in a Web Browser</h4>
   <ol>
-  <li>
-  <div>Click on &ldquo;File&rdquo; then &ldquo;Save As&rdquo; (or use the shortcut, usually <code>Ctrl + S</code> or <code>Cmd + S</code>).</div>
-  </li>
-  <li>
-  <div>Name the file <code>hello.html</code> and ensure you save it with the <code>.html</code> extension.</div>
-  </li>
+    <li>Locate the <code>hello.html</code> file where you saved it.</li>
+    <li>Right-click on the file and select "Open With" followed by your preferred web browser (e.g., Chrome, Firefox).</li>
+    <li>You should see a webpage displaying "Hello, World!" in a large font.</li>
   </ol>
-  <h3>Step 5: Open the HTML File in a Web Browser</h3>
-  <ol>
-  <li>
-  <div>Locate the <code>hello.html</code> file where you saved it.</div>
-  </li>
-  <li>
-  <div>Right-click on the file and select &ldquo;Open With&rdquo; followed by your preferred web browser (e.g., Chrome, Firefox).</div>
-  </li>
-  <li>
-  <div>You should see a webpage displaying &ldquo;Hello, World!&rdquo; in a large font.</div>
-  </li>
-  </ol>
+
   <h3>Deliverables</h3>
   <ol>
-  <li>
-  <div><strong>hello.html File</strong>: Ensure your final HTML file includes the basic structure as shown above.</div>
-  </li>
-  <li>
-  <div><strong>Screenshot</strong>: Capture a screenshot of the browser displaying the &ldquo;Hello, World!&rdquo; message.</div>
-  </li>
+    <li><strong>hello.html File</strong>: Ensure your final HTML file includes the basic structure as shown above.</li>
+    <li><strong>Screenshot</strong>: Capture a screenshot of the browser displaying the "Hello, World!" message.</li>
   </ol>
+
   <h3>Submission</h3>
   <div>Once you have completed your task:</div>
   <ul>
-  <li>
-  <div>Make sure your <code>hello.html</code> file is correctly formatted and saved.</div>
-  </li>
-  <li>
-  <div>Take a screenshot of the output displayed in the web browser.</div>
-  </li>
-  <li>
-  <div>Submit both the HTML file and the screenshot as per your course requirements.</div>
-  </li>
+    <li>Make sure your <code>hello.html</code> file is correctly formatted and saved.</li>
+    <li>Take a screenshot of the output displayed in the web browser.</li>
+    <li>Submit both the HTML file and the screenshot as per your course requirements.</li>
   </ul>
-  <div>Congratulations on creating your first HTML page! This fundamental skill sets the stage for more advanced web development topics.</div>
 
-</div><!-- Workshop Section CSS div -->
-  
+  <div>Congratulations on creating your first HTML page! This fundamental skill sets the stage for more advanced web development topics.</div>
+</div>
 
 
 <ChapterNavigation 
