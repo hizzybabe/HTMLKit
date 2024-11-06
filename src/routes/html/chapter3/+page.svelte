@@ -50,7 +50,7 @@
 <div>The <code>&lt;a&gt;</code> tag, known as the anchor tag, is used to create hyperlinks. You can link to other web pages, files, images, or even sections of the same page.</div>
 <div>The basic syntax of the anchor tag is:</div>
 <div>
-<div>&lt;a href="URL"&gt;Link Text&lt;/a&gt;</div>
+<code>&lt;a href="URL"&gt;Link Text&lt;/a&gt;</code>
 </div>
 <ul>
 <li>
