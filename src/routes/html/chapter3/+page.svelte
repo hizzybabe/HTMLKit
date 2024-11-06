@@ -19,11 +19,6 @@
 <div><code><strong>&lt;strong&gt;</strong></code>: This tag is used to indicate that text is of strong importance. By default, it renders text in bold.</div>
 </li>
 </ul>
-<div>
-<div>&lt;strong&gt;This text is important.&lt;/strong&gt;</div>
-</div>
-
-
 
 <div>
   <button 
@@ -53,6 +48,32 @@
 <div>
 <div>&lt;em&gt;This text is emphasized.&lt;/em&gt;</div>
 </div>
+
+
+<div>
+  <button 
+    class="toggle-btn mb-0.5 px-0.5 py-0.5 text-[10px] text-white rounded"
+    style="background-color: rgb(59 130 246) !important"
+    on:click={() => showCode1 = !showCode1}
+  >
+    {showCode1 ? 'Show Preview' : 'Show Code'}
+  </button>
+
+  {#if showCode1}
+
+  <div><code>&lt;em&gt;This text is emphasized.&lt;/em&gt;</code></div>
+  {:else}
+
+  <div><em>This text is emphasized.</em></div>
+  {/if}
+</div>
+
+
+
+
+
+
+
 <ul>
 <li>
 <div><code><strong>&lt;u&gt;</strong></code>: This tag underlines the text, although underlining is often reserved for hyperlinked text.</div>
