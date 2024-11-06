@@ -22,6 +22,29 @@
 <div>
 <div>&lt;strong&gt;This text is important.&lt;/strong&gt;</div>
 </div>
+
+
+
+<div>
+  <button 
+    class="toggle-btn mb-0.5 px-0.5 py-0.5 text-[10px] text-white rounded"
+    style="background-color: rgb(59 130 246) !important"
+    on:click={() => showCode2 = !showCode2}
+  >
+    {showCode2 ? 'Show Preview' : 'Show Code'}
+  </button>
+
+  {#if showCode2}
+
+  <div><code>&lt;strong&gt;This text is important.&lt;/strong&gt;</code></div>
+  {:else}
+
+  <div><strong>This text is important.</strong></div>
+  {/if}
+</div>
+
+
+
 <ul>
 <li>
 <div><code><strong>&lt;em&gt;</strong></code>: This tag is used to emphasize text, usually rendered in italics. This is often used for stress or importance in phrases.</div>
