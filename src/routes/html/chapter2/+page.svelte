@@ -183,81 +183,68 @@
 
 
   <hr/>
-  <h2>Practice Workshop: Building a Simple Web Page</h2>
-  <h3>Task: Create an HTML page for a personal profile</h3>
-  <div>In this workshop, you will create a simple HTML page that includes your name, a brief description of yourself, and highlight a specific hobby using the <code>&lt;span&gt;</code> element.</div>
-  <h4>Step 1: Open Your Code Editor</h4>
-  <div>Launch your preferred code editor.</div>
-  <h4>Step 2: Create a New File</h4>
-  <ol>
-  <li>
-  <div>Click on &ldquo;File,&rdquo; then &ldquo;New File&rdquo; (or use the shortcut).</div>
-  </li>
-  </ol>
-  <h4>Step 3: Write the Basic HTML Structure</h4>
-  <div>Enter the following code in your new file:</div>
+  <h2 class="workshop-title">Practice Workshop: Building a Simple Web Page</h2>
+  <div class="workshop-container">
+    <h3 class="task">Task: Create an HTML page for a personal profile</h3>
+    
+    <div>In this workshop, you will create a simple HTML page that includes your name, a brief description of yourself, and highlight a specific hobby using the <code>&lt;span&gt;</code> element.</div>
+    
+    <h4>Step 1: Open Your Code Editor</h4>
+    <div>Launch your preferred code editor.</div>
+    
+    <h4>Step 2: Create a New File</h4>
+    <ol>
+      <li>Click on "File," then "New File" (or use the shortcut).</li>
+    </ol>
+    
+    <h4>Step 3: Write the Basic HTML Structure</h4>
+    <div>Enter the following code in your new file:</div>
 
-  <pre><code>&lt;!DOCTYPE html&gt;
-
+    <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
-
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
   &lt;title&gt;My Profile&lt;/title&gt;
 &lt;/head&gt;
-
 &lt;body&gt;
   &lt;h1&gt;Your Name&lt;/h1&gt;
   &lt;p&gt;Hello! My name is &lt;strong&gt;Your Name&lt;/strong&gt;. I am a [your profession/education]. I enjoy various activities, one of my favorite hobbies is &lt;span style="font-weight: bold; color: blue;"&gt;[your hobby]&lt;/span&gt;. In my free time, I love to explore more about it!&lt;/p&gt;
 &lt;/body&gt;
-
 &lt;/html&gt;</code></pre>
 
-  <div>Replace <code><strong>Your Name</strong></code> and <code><strong>[your profession/education]</strong></code> with your actual name and profession, and <code><strong>[your hobby]</strong></code> with a hobby you enjoy.</div>
-  <h4>Step 4: Save the File</h4>
-  <ol>
-  <li>
-  <div>Save this file as <code>profile.html</code>.</div>
-  </li>
-  </ol>
-  <h4>Step 5: Open the HTML File in a Web Browser</h4>
-  <ol>
-  <li>
-  <div>Locate the <code>profile.html</code> file where you saved it.</div>
-  </li>
-  <li>
-  <div>Right-click the file and select &ldquo;Open With,&rdquo; followed by your preferred web browser.</div>
-  </li>
-  <li>
-  <div>You should see your personal profile displayed on the page.</div>
-  </li>
-  </ol>
-  <h3>Deliverables</h3>
-  <ol>
-  <li>
-  <div><strong>profile.html File</strong>: Ensure your HTML file includes your name, a brief description, and the hobby highlighted using <code>&lt;span&gt;</code>.</div>
-  </li>
-  <li>
-  <div><strong>Screenshot</strong>: Capture a screenshot of the rendered page showing your personal profile in the browser.</div>
-  </li>
-  </ol>
-  <h3>Submission</h3>
-  <div>Once you have completed your task:</div>
-  <ul>
-  <li>
-  <div>Ensure that your <code>profile.html</code> file is formatted correctly and saved.</div>
-  </li>
-  <li>
-  <div>Take a screenshot of the output displayed in the web browser.</div>
-  </li>
-  <li>
-  <div>Submit both the HTML file and the screenshot as required by the course guidelines.</div>
-  </li>
-  </ul>
-  <div>Congratulations on creating your personal profile web page! This exercise reinforces the fundamental elements of HTML and paves the way for more complex web development projects.</div>
-  
-  
+    <div>Replace <code><strong>Your Name</strong></code> and <code><strong>[your profession/education]</strong></code> with your actual name and profession, and <code><strong>[your hobby]</strong></code> with a hobby you enjoy.</div>
+    
+    <h4>Step 4: Save the File</h4>
+    <ol>
+      <li>Save this file as <code>profile.html</code>.</li>
+    </ol>
+    
+    <h4>Step 5: Open the HTML File in a Web Browser</h4>
+    <ol>
+      <li>Locate the <code>profile.html</code> file where you saved it.</li>
+      <li>Right-click the file and select "Open With," followed by your preferred web browser.</li>
+      <li>You should see your personal profile displayed on the page.</li>
+    </ol>
+
+    <h3>Deliverables</h3>
+    <ol>
+      <li><strong>profile.html File</strong>: Ensure your HTML file includes your name, a brief description, and the hobby highlighted using <code>&lt;span&gt;</code>.</li>
+      <li><strong>Screenshot</strong>: Capture a screenshot of the rendered page showing your personal profile in the browser.</li>
+    </ol>
+
+    <h3>Submission</h3>
+    <div>Once you have completed your task:</div>
+    <ul>
+      <li>Ensure that your <code>profile.html</code> file is formatted correctly and saved.</li>
+      <li>Take a screenshot of the output displayed in the web browser.</li>
+      <li>Submit both the HTML file and the screenshot as required by the course guidelines.</li>
+    </ul>
+
+    <div>Congratulations on creating your personal profile web page! This exercise reinforces the fundamental elements of HTML and paves the way for more complex web development projects.</div>
+  </div>
+
+
 
 
 <ChapterNavigation 
