@@ -158,9 +158,6 @@
   <div><code><strong>style</strong></code>: Allows you to add inline CSS styling directly to an element.</div>
   </li>
   </ul>
-  <div>
-  <div>&lt;h1 style="color: red;"&gt;Red Heading&lt;/h1&gt;</div>
-  </div>
 
   <div>
     <button 
