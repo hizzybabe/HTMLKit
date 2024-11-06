@@ -75,12 +75,12 @@
 </ul>
 <div>
 
-<code>
+  <pre><code>
 &lt;!-- Link to a section --&gt;
 &lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;
 &lt;!-- Target section --&gt;
 &lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;
-</code>
+</code></pre>
 
 </div>
 <hr/>
