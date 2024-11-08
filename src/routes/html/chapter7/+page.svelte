@@ -115,7 +115,7 @@ contact.html (Contact Page)</code></pre>
     prevHref="/HTMLKit/html/chapter6" 
     nextHref="/HTMLKit/html/chapter8" 
   />
-</div>
+
 
 <style>
   .code-preview {
