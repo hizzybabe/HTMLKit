@@ -56,26 +56,25 @@
     <h4>Step 3: Write Your CSS Code</h4>
     <div>In the new file, enter the following code to style your HTML document:</div>
     
-    <pre><code>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-      }
-      
-      h1 {
-        color: #4CAF50;
-      }
-      
-      p {
-        line-height: 1.6;
-      }
-    </code></pre>
+    <pre><code>{`
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+p {
+    line-height: 1.6;
+}`}</code></pre>
     
     <h4>Step 4: Link Your CSS File to Your HTML</h4>
     <div>In your HTML file, add the following line within the <code>&lt;head&gt;</code> section:</div>
     
-    <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+    <pre><code>{`<link rel="stylesheet" href="styles.css">`}</code></pre>
     
     <h3>Deliverables</h3>
     <ol>
