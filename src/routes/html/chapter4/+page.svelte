@@ -1,7 +1,6 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
 
-  let showCode = true;
   let showCode1 = true;
   let showCode2 = true;
   let showCode3 = true;

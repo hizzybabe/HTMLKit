@@ -1,210 +1,244 @@
 <script>
-  const chapterContent = {
-    title: "Introduction to HTML & Setup",
-    sections: [
-      {
-        heading: "What is HTML?",
-        content: "HTML (HyperText Markup Language) is the standard markup language for creating web pages..."
-      },
-      {
-        heading: "Brief History",
-        content: "HTML was created by Tim Berners-Lee in 1991..."
-      },
-      {
-        heading: "Environment Setup",
-        content: "To start writing HTML, you'll need a text editor..."
-      }
-    ],
-    workshop: {
-      title: "Hello World Workshop",
-      instructions: "Create your first HTML page:",
-      codeExample: `<!DOCTYPE html>
-<html>
-  <head>
-    <title>My First Page</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-</html>`
-    }
-  };
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+
+  let showCode = true;
+  let showCode1 = true;
+  let showCode2 = true;
+  let showCode3 = true;
 </script>
 
-<main class="container mx-auto px-4 py-8">
-  <h1 class="text-4xl font-bold mb-8">{chapterContent.title}</h1>
-
-  <!-- Chapter Content -->
+<div class="container mx-auto px-4 py-8">
   <h1>Chapter 5: Forms and Input Elements</h1>
+  
   <h2>Theory</h2>
+  
   <h3>Introduction to HTML Forms</h3>
-  <div>HTML forms are essential tools for collecting user input. The <code>&lt;form&gt;</code> element wraps all the elements that make up the form and provides options to handle user submissions. Forms can be used for various purposes such as contact forms, surveys, and login forms.</div>
-  <div><strong>Basic Structure of a Form</strong>:</div>
-  <div>
-  <div>&lt;form action="URL" method="POST"&gt;</div>
-  <div>&lt;!-- Form Elements Go Here --&gt;</div>
-  <div>&lt;/form&gt;</div>
+  <div>HTML forms are essential tools for collecting user input. The <code>&lt;form&gt;</code> element wraps all form elements and provides options to handle user submissions.</div>
+
+  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+    <button 
+      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+      style="background-color: rgb(59 130 246) !important"
+      on:click={() => showCode = !showCode}
+    >
+      {showCode ? 'Show Preview' : 'Show Code'}
+    </button>
+    
+    {#if showCode}
+    <pre><code>&lt;form action="URL" method="POST"&gt;
+  &lt;!-- Form Elements Go Here --&gt;
+&lt;/form&gt;</code></pre>
+    {:else}
+    <div class="preview-content">
+      <form class="border p-4 rounded">
+        <em>Form container example</em>
+      </form>
+    </div>
+    {/if}
   </div>
-  <ul>
-  <li>
-  <div><code><strong>action</strong></code>: The URL where the form data will be sent when submitted.</div>
-  </li>
-  <li>
-  <div><code><strong>method</strong></code>: The HTTP method used when sending form data, typically either <code>GET</code> or <code>POST</code>.</div>
-  </li>
-  </ul>
+
+  <div class="my-4">
+    <strong>Key Form Attributes:</strong>
+    <ul>
+      <li><code>action</code>: The URL where form data will be sent</li>
+      <li><code>method</code>: The HTTP method (GET or POST) used for submission</li>
+    </ul>
+  </div>
+
   <h3>Input Types</h3>
-  <div>The <code>&lt;input&gt;</code> element is one of the most crucial elements of a form. It can take various types, each serving different purposes. Here are some common input types:</div>
-  <ul>
-  <li>
-  <div><strong>Text</strong> (<code>&lt;input type="text"&gt;</code>): For single-line text input.</div>
-  </li>
-  </ul>
-  <div>
-  <div>&lt;input type="text" name="username" placeholder="Enter your name"&gt;</div>
+  <div>The <code>&lt;input&gt;</code> element is versatile and can take various types for different purposes:</div>
+
+  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+    <button 
+      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+      style="background-color: rgb(59 130 246) !important"
+      on:click={() => showCode1 = !showCode1}
+    >
+      {showCode1 ? 'Show Preview' : 'Show Code'}
+    </button>
+    
+    {#if showCode1}
+    <pre><code>&lt;!-- Text Input --&gt;
+&lt;input type="text" name="username" placeholder="Enter your name"&gt;
+
+&lt;!-- Password Input --&gt;
+&lt;input type="password" name="password" placeholder="Enter your password"&gt;
+
+&lt;!-- Email Input --&gt;
+&lt;input type="email" name="email" placeholder="Enter your email"&gt;
+
+&lt;!-- Number Input --&gt;
+&lt;input type="number" name="age" min="1" max="120"&gt;</code></pre>
+    {:else}
+    <div class="preview-content space-y-4">
+      <div>
+        <input type="text" name="username" placeholder="Enter your name" class="border p-2 rounded w-full">
+      </div>
+      <div>
+        <input type="password" name="password" placeholder="Enter your password" class="border p-2 rounded w-full">
+      </div>
+      <div>
+        <input type="email" name="email" placeholder="Enter your email" class="border p-2 rounded w-full">
+      </div>
+      <div>
+        <input type="number" name="age" min="1" max="120" class="border p-2 rounded w-full">
+      </div>
+    </div>
+    {/if}
   </div>
-  <ul>
-  <li>
-  <div><strong>Password</strong> (<code>&lt;input type="password"&gt;</code>): Hides the user&rsquo;s input for sensitive data.</div>
-  </li>
-  </ul>
-  <div>
-  <div>&lt;input type="password" name="password" placeholder="Enter your password"&gt;</div>
-  </div>
-  <ul>
-  <li>
-  <div><strong>Email</strong> (<code>&lt;input type="email"&gt;</code>): Validates that the input is in the form of an email address.</div>
-  </li>
-  </ul>
-  <div>
-  <div>&lt;input type="email" name="email" placeholder="Enter your email"&gt;</div>
-  </div>
-  <ul>
-  <li>
-  <div><strong>Number</strong> (<code>&lt;input type="number"&gt;</code>): Accepts numerical input only.</div>
-  </li>
-  </ul>
-  <div>
-  <div>&lt;input type="number" name="age" min="1" max="120"&gt;</div>
-  </div>
+
   <h3>Other Form Elements</h3>
-  <div>In addition to the <code>&lt;input&gt;</code> element, several other elements can be utilized to collect user input:</div>
-  <ul>
-  <li>
-  <div><code><strong>&lt;textarea&gt;</strong></code>: Used for multi-line text input.</div>
-  </li>
-  </ul>
-  <div>
-  <div>&lt;textarea name="message" placeholder="Enter your message" rows="4" cols="50"&gt;&lt;/textarea&gt;</div>
-  </div>
-  <ul>
-  <li>
-  <div><code><strong>&lt;select&gt;</strong></code>: A dropdown list that allows users to select one option from a list.</div>
-  </li>
-  </ul>
-  <div>
-  <div>&lt;select name="inquiryType"&gt;</div>
-  <div>&lt;option value="general"&gt;General Inquiry&lt;/option&gt;</div>
-  <div>&lt;option value="support"&gt;Support&lt;/option&gt;</div>
-  <div>&lt;option value="feedback"&gt;Feedback&lt;/option&gt;</div>
-  <div>&lt;/select&gt;</div>
-  </div>
-  <ul>
-  <li>
-  <div><code><strong>&lt;button&gt;</strong></code>: A button that can be customized to submit the form or trigger JavaScript actions.</div>
-  </li>
-  </ul>
-  <div>
-  <div>&lt;button type="submit"&gt;Submit&lt;/button&gt;</div>
-  </div>
-  <hr/>
-  <h2>Practice Workshop: Creating a Simple Contact Form</h2>
-  <h3>Task: Add a contact form to your personal profile page</h3>
-  <div>In this workshop, you will enhance your personal profile page by adding a contact form with fields for the user&rsquo;s name, email, message, a dropdown for the inquiry type, and a submit button.</div>
-  <h4>Step 1: Open Your Existing Profile HTML File</h4>
-  <div>Launch your code editor and open the <code>profile.html</code> file you created in previous chapters.</div>
-  <h4>Step 2: Update Your HTML Code</h4>
-  <div>Add the following contact form within the <code>&lt;body&gt;</code> section of your HTML, ideally after your existing content:</div>
-  <div>
-  <div>&lt;h2&gt;Contact Me&lt;/h2&gt;</div>
-  <div>&lt;form action="submit_form.php" method="POST"&gt;</div>
-  <div>&lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;</div>
-  <div>&lt;input type="text" id="name" name="name" placeholder="Enter your name" required&gt;&lt;br&gt;&lt;br&gt;</div>
-  <div>&lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;</div>
-  <div>&lt;input type="email" id="email" name="email" placeholder="Enter your email" required&gt;&lt;br&gt;&lt;br&gt;</div>
-  <div>&lt;label for="inquiryType"&gt;Inquiry Type:&lt;/label&gt;&lt;br&gt;</div>
-  <div>&lt;select id="inquiryType" name="inquiryType"&gt;</div>
-  <div>&lt;option value="general"&gt;General Inquiry&lt;/option&gt;</div>
-  <div>&lt;option value="support"&gt;Support&lt;/option&gt;</div>
-  <div>&lt;option value="feedback"&gt;Feedback&lt;/option&gt;</div>
-  <div>&lt;/select&gt;&lt;br&gt;&lt;br&gt;</div>
-  <div>&lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;</div>
-  <div>&lt;textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;</div>
-  <div>&lt;button type="submit"&gt;Submit&lt;/button&gt;</div>
-  <div>&lt;/form&gt;</div>
-  </div>
-  <h3>Notes on the Form Code:</h3>
-  <ul>
-  <li>
-  <div>Each <code>input</code> and <code>textarea</code> has an associated <code>label</code> that helps identify the input field. The <code>for</code> attribute in the label corresponds to the <code>id</code> of the input.</div>
-  </li>
-  <li>
-  <div>The <code>required</code> attribute ensures that users fill out the fields before submitting the form.</div>
-  </li>
-  <li>
-  <div>Adjust the <code>action</code> attribute as necessary depending on your setup or if you&rsquo;re testing locally (for local tests, this could be an empty string or a relevant URL).</div>
-  </li>
-  </ul>
-  <h4>Step 3: Save the Changes</h4>
-  <ol>
-  <li>
-  <div>Save your modifications to the <code>profile.html</code> file.</div>
-  </li>
-  </ol>
-  <h4>Step 4: Open the Updated HTML File in a Web Browser</h4>
-  <ol>
-  <li>
-  <div>Locate your updated <code>profile.html</code> file.</div>
-  </li>
-  <li>
-  <div>Right-click the file and select &ldquo;Open With,&rdquo; followed by your preferred web browser.</div>
-  </li>
-  <li>
-  <div>Verify that the contact form renders correctly, and all fields are displayed as intended.</div>
-  </li>
-  </ol>
-  <h3>Deliverables</h3>
-  <ol>
-  <li>
-  <div><strong>Updated profile.html File</strong>: Ensure that your HTML file includes the new contact form with fields for name, email, message, a dropdown for inquiry type, and the submit button.</div>
-  </li>
-  <li>
-  <div><strong>Screenshot</strong>: Capture a screenshot of the rendered form in the browser, showing all fields.</div>
-  </li>
-  </ol>
-  <h3>Submission</h3>
-  <div>Once you have completed the task:</div>
-  <ul>
-  <li>
-  <div>Ensure that your updated <code>profile.html</code> file is formatted correctly and saved.</div>
-  </li>
-  <li>
-  <div>Take a screenshot of the output displayed in the web browser.</div>
-  </li>
-  <li>
-  <div>Submit both the updated HTML file and the screenshot as required by your course guidelines.</div>
-  </li>
-  </ul>
-  <div>Congratulations on adding a contact form to your profile page! Forms are crucial for interacting with users and collecting data effectively, a key skill in web development.</div>
+  <div>Forms can include various other elements for different types of input:</div>
 
-  <!-- Workshop Section -->
+  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+    <button 
+      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+      style="background-color: rgb(59 130 246) !important"
+      on:click={() => showCode2 = !showCode2}
+    >
+      {showCode2 ? 'Show Preview' : 'Show Code'}
+    </button>
+    
+    {#if showCode2}
+    <pre><code>&lt;!-- Textarea --&gt;
+&lt;textarea name="message" placeholder="Enter your message" rows="4" cols="50"&gt;&lt;/textarea&gt;
 
+&lt;!-- Select Dropdown --&gt;
+&lt;select name="inquiryType"&gt;
+  &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
+  &lt;option value="support"&gt;Support&lt;/option&gt;
+  &lt;option value="feedback"&gt;Feedback&lt;/option&gt;
+&lt;/select&gt;
 
-  <!-- Navigation -->
+&lt;!-- Submit Button --&gt;
+&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></pre>
+    {:else}
+    <div class="preview-content space-y-4">
+      <div>
+        <textarea name="message" placeholder="Enter your message" rows="4" cols="50" class="border p-2 rounded w-full"></textarea>
+      </div>
+      <div>
+        <select name="inquiryType" class="border p-2 rounded w-full">
+          <option value="general">General Inquiry</option>
+          <option value="support">Support</option>
+          <option value="feedback">Feedback</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+      </div>
+    </div>
+    {/if}
+  </div>
+
+  <hr class="my-8"/>
+
+  <h2 class="workshop-title">Practice Workshop: Creating a Contact Form</h2>
+  
+  <div class="workshop-container">
+    <h3 class="task">Task: Create a contact form for your personal profile page</h3>
+    
+    <div class="steps">
+      <h4>Step 1: Open Your Profile HTML File</h4>
+      <div>Add the following contact form to your existing profile.html file:</div>
+
+      <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+        <button 
+          class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+          style="background-color: rgb(59 130 246) !important"
+          on:click={() => showCode3 = !showCode3}
+        >
+          {showCode3 ? 'Show Preview' : 'Show Code'}
+        </button>
+        
+        {#if showCode3}
+        <pre><code>&lt;h2&gt;Contact Me&lt;/h2&gt;
+&lt;form action="submit_form.php" method="POST"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="name" name="name" placeholder="Enter your name" required&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="email" id="email" name="email" placeholder="Enter your email" required&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;label for="inquiryType"&gt;Inquiry Type:&lt;/label&gt;&lt;br&gt;
+  &lt;select id="inquiryType" name="inquiryType"&gt;
+    &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
+    &lt;option value="support"&gt;Support&lt;/option&gt;
+    &lt;option value="feedback"&gt;Feedback&lt;/option&gt;
+  &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;
+  &lt;textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+  
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        {:else}
+        <div class="preview-content">
+          <h2>Contact Me</h2>
+          <form class="space-y-4">
+            <div>
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required class="border p-2 rounded w-full">
+            </div>
+            
+            <div>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required class="border p-2 rounded w-full">
+            </div>
+            
+            <div>
+              <label for="inquiryType">Inquiry Type:</label><br>
+              <select id="inquiryType" name="inquiryType" class="border p-2 rounded w-full">
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message">Message:</label><br>
+              <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message" required class="border p-2 rounded w-full"></textarea>
+            </div>
+            
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+          </form>
+        </div>
+        {/if}
+      </div>
+
+      <h3>Notes on the Form Code:</h3>
+      <ul>
+        <li>Each input has an associated label for accessibility</li>
+        <li>The required attribute ensures fields are filled before submission</li>
+        <li>The action attribute should be updated based on your server setup</li>
+      </ul>
+
+      <h3>Deliverables</h3>
+      <ol>
+        <li>Updated profile.html file with the contact form</li>
+        <li>Screenshot of the rendered form in browser</li>
+      </ol>
+    </div>
+  </div>
+
   <ChapterNavigation 
-  prevHref="/HTMLKit/html/chapter4" 
-  nextHref="/HTMLKit/html/chapter6" 
-/>
+    prevHref="/HTMLKit/html/chapter4" 
+    nextHref="/HTMLKit/html/chapter6" 
+  />
+</div>
 
+<style>
+  .code-preview {
+    margin: 1rem 0;
+  }
+  
+  .preview-content {
+    padding: 1rem;
+    background: white;
+    border-radius: 4px;
+  }
 
-</main>
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+</style>
