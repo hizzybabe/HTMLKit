@@ -24,6 +24,7 @@
 
   <div class="concept-block">
     <h4>Variables in Sass</h4>
+    <p>Store reusable values (e.g., colors, font sizes).</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>// Variables
 $primary-color: #3498db;
@@ -34,6 +35,7 @@ body &#123;
     </div>
 
     <h4>Nesting</h4>
+    <p>Write CSS in a hierarchical structure.</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>// Nesting
 .container &#123;
@@ -44,6 +46,7 @@ body &#123;
     </div>
 
     <h4>Mixins</h4>
+    <p>Define reusable code blocks.</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>// Mixins
 @mixin border-radius($radius) &#123;
@@ -53,6 +56,14 @@ body &#123;
 .box &#123;
     @include border-radius(10px);
 &#125;</code></pre>
+    </div>
+
+    <h4>Partials and Imports</h4>
+    <p>Organize code by splitting it into multiple files and importing them.</p>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>// Importing partials
+@import 'variables';
+@import 'mixins';</code></pre>
     </div>
   </div>
 
