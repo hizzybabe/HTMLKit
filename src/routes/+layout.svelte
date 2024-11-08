@@ -49,7 +49,7 @@
   }
 
   footer nav a {
-    color: #333;
+    color: white;
     text-decoration: none;
     margin: 0 0.5rem;
   }
