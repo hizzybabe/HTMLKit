@@ -22,6 +22,7 @@
     <pre><code class="language-css">selector &#123;
     property: value;
 &#125;</code></pre>
+{/if}
 
   <h2 on:click={() => showSelectors = !showSelectors}>2. Selectors</h2>
   {#if showSelectors}
@@ -60,6 +61,7 @@ margin: 10px;
 <pre><code class="language-css">div p &#123;
 margin: 10px;
 &#125;</code></pre>
+{/if}
 
 <h2 on:click={() => showTextStyling = !showTextStyling}>3. Text Styling</h2>
 {#if showTextStyling}
@@ -92,6 +94,7 @@ text-align: center;
 <pre><code class="language-css">p &#123;
 text-decoration: underline;
 &#125;</code></pre>
+{/if}
 
 <h2 on:click={() => showBackground = !showBackground}>4. Background</h2>
 {#if showBackground}
@@ -118,6 +121,7 @@ background-position: center;
 <pre><code class="language-css">p &#123;
 background-size: cover;
 &#125;</code></pre>
+{/if}
 
 <h2 on:click={() => showBoxModel = !showBoxModel}>5. Box Model</h2>
 {#if showBoxModel}
@@ -149,6 +153,7 @@ height: 100px;
   border: 1px solid black;
   border-radius: 5px;
 &#125;</code></pre>
+{/if}
 
   <h2 on:click={() => showDisplayPositioning = !showDisplayPositioning}>4. Display & Positioning</h2>
   {#if showDisplayPositioning}
@@ -186,6 +191,7 @@ height: 100px;
   <pre><code class="language-css">.element &#123;
   z-index: 1;
 &#125;</code></pre>
+{/if}
 
 <h2 on:click={() => showFlexbox = !showFlexbox}>7. Flexbox</h2>
   {#if showFlexbox}
@@ -233,6 +239,7 @@ height: 100px;
 <pre><code class="language-css">.item &#123;
   flex-grow: 1;
 &#125;</code></pre>
+{/if}
 
 <h2 on:click={() => showGrid = !showGrid}>8. Grid</h2>
 {#if showGrid}
@@ -254,6 +261,7 @@ height: 100px;
 <pre><code class="language-css">.container &#123;
   gap: 10px;
 &#125;</code></pre>
+{/if}
 
 <h2 on:click={() => showTransformTransition = !showTransformTransition}>9. Transform & Transition</h2>
 {#if showTransformTransition}
@@ -268,6 +276,7 @@ height: 100px;
 <pre><code class="language-css">.element &#123;
   transition: property duration timing-function delay;
 &#125;</code></pre>
+{/if}
 
 <h2 on:click={() => showMediaQueries = !showMediaQueries}>10. Media Queries</h2>
 {#if showMediaQueries}
