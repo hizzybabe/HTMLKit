@@ -45,7 +45,7 @@
 <pre><code class="language-css">#unique-id &#123;
 background-color: yellow;
 &#125;</code></pre>
-<pre><code class="language-css">#unique-id &#123;
+
 <h3>Descendant Selector</h3>
 <p>Selects elements that are descendants of another element.</p>
 <pre><code class="language-css">div p &#123;
