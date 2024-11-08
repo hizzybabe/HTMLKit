@@ -40,22 +40,9 @@
   <div>HTML entities are special characters or reserved symbols that can’t be directly typed into HTML because they are reserved for markup syntax. You can use these entities to represent characters that might otherwise confuse the parser.</div>
 
   <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-    <button 
-      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-      style="background-color: rgb(59 130 246) !important"
-      on:click={() => showCode1 = !showCode1}
-    >
-      {showCode1 ? 'Show Preview' : 'Show Code'}
-    </button>
-    
-    {#if showCode1}
     <pre><code>&lt;p&gt;Use &amp;lt;code&amp;gt; for code snippets.&lt;/p&gt;</code></pre>
-    {:else}
-    <div class="preview-content">
-      <p>Use &lt;code&gt; for code snippets.</p>
-    </div>
-    {/if}
   </div>
+</div>
 
   <h3>Best Practices for HTML Coding</h3>
   <div>To ensure your HTML is clean, efficient, and accessible, follow these best practices:</div>
