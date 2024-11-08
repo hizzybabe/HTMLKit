@@ -248,10 +248,10 @@ height: 100px;
 
 <h2>10. Media Queries</h2>
 <p>Controls the display of elements based on the screen size.</p>
-<pre><code class="language-css">@media (max-width: 768px) {
+<pre><code class="language-css">@media (max-width: 768px) &#123;
   .element &#123;
     display: none;
   &#125;
-}</code></pre>
+&#125;</code></pre>
 
 </div>
