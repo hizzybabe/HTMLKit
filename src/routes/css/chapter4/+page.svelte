@@ -1,259 +1,180 @@
-## Chapter 4: Colors, Backgrounds, & Gradients
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+  let showCode = true;
+</script>
 
-In this chapter, we’ll explore how to add visual appeal to your webpages using color, background images, and gradients. These styling elements help create dynamic and engaging designs. By the end of this chapter, you’ll know how to apply colors in various formats, add background images, and use gradients to create smooth transitions.
+<div class="container mx-auto px-4 py-8">
+  <h1>Chapter 4: Colors, Backgrounds, & Gradients</h1>
+  
+  <div class="chapter-intro">
+    <p>In this chapter, we'll explore how to add visual appeal to your webpages using color, background images, and gradients. These styling elements help create dynamic and engaging designs.</p>
+    
+    <div class="chapter-details">
+      <p><strong>Duration:</strong> Approximately 2 hours</p>
+      <p><strong>Goal:</strong> Learn to apply colors, background images, and gradients to style a hero section.</p>
+    </div>
+  </div>
 
-### **Chapter 4 Overview:**
-- Duration: Approximately 2 hours
-- Goal: Learn to apply colors, background images, and gradients to style a hero section.
+  <hr/>
 
----
+  <h2>Theory</h2>
 
-### **Theory**
+  <h3>4.1 Color Theory for the Web</h3>
+  <p>Colors on the web are represented in different formats. Understanding these formats will help you choose and apply colors effectively.</p>
 
-#### **4.1 Color Theory for the Web**
+  <div class="concept-block">
+    <h4>RGB Format</h4>
+    <p>Colors are defined by Red, Green, and Blue values ranging from 0 to 255.</p>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>body &lbrace;
+    color: rgb(255, 0, 0);  /* Pure red */
+    background-color: rgb(240, 248, 255);  /* Light blue */
+&rbrace;</code></pre>
+    </div>
+  </div>
 
-Colors on the web are represented in different formats. Understanding these formats will help you choose and apply colors effectively.
+  <div class="concept-block">
+    <h4>HEX Format</h4>
+    <p>Hexadecimal format uses a six-character code to represent RGB values.</p>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.header &lbrace;
+    color: #FF0000;  /* Pure red */
+    background-color: #333333;  /* Dark gray */
+&rbrace;</code></pre>
+    </div>
+  </div>
 
-- **RGB**: Colors are defined by Red, Green, and Blue values ranging from 0 to 255.
-  - Example: `rgb(255, 0, 0)` for red.
+  <div class="concept-block">
+    <h4>HSL Format</h4>
+    <p>HSL (Hue, Saturation, Lightness) offers an intuitive way to pick colors.</p>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.button &lbrace;
+    background-color: hsl(0, 100%, 50%);  /* Pure red */
+    color: hsl(0, 0%, 100%);  /* White */
+&rbrace;</code></pre>
+    </div>
+  </div>
 
-- **HEX**: Hexadecimal format uses a six-character code to represent RGB values.
-  - Example: `#FF0000` for red.
+  <h3>4.2 Background Images and Repeat Properties</h3>
+  <p>Background images can add depth to your designs. You can control how images are displayed and repeated with CSS.</p>
 
-- **HSL**: Stands for Hue, Saturation, and Lightness, offering an intuitive way to pick colors.
-  - Example: `hsl(0, 100%, 50%)` for red.
-
-**Example Usage**:
-```css
-body {
-    background-color: rgb(240, 248, 255);
-    color: #333333;
-}
-```
-
----
-
-#### **4.2 Background Images and Repeat Properties**
-
-Background images can add depth to your designs. You can control how images are displayed and repeated with CSS.
-
-- **Background Image**: Use `background-image` to add an image as a background.
-- **Background Size**: Set the size of the image (`cover` for full coverage, `contain` for fitting within the container).
-- **Background Repeat**: Define if and how the image should repeat (`repeat`, `repeat-x`, `repeat-y`, `no-repeat`).
-- **Background Position**: Adjust the position of the image (`center`, `top left`, etc.).
-
-**Example Usage**:
-```css
-.hero {
+  <div class="concept-block">
+    <h4>Basic Background Properties</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.hero &lbrace;
     background-image: url('hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
-```
+&rbrace;</code></pre>
+    </div>
+  </div>
 
----
+  <h3>4.3 Creating Gradients</h3>
+  <p>Gradients are smooth transitions between colors, useful for adding depth and texture without images.</p>
 
-#### **4.3 Creating Gradients (Linear and Radial)**
+  <div class="concept-block">
+    <h4>Linear Gradients</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.gradient-bg &lbrace;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+&rbrace;</code></pre>
+    </div>
+  </div>
 
-Gradients are smooth transitions between colors, useful for adding depth and texture without images.
+  <div class="concept-block">
+    <h4>Radial Gradients</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.radial-bg &lbrace;
+    background: radial-gradient(circle, #ff7e5f, #feb47b);
+&rbrace;</code></pre>
+    </div>
+  </div>
 
-- **Linear Gradient**: A transition between colors along a straight line.
-  - Example: `background: linear-gradient(to right, #ff7e5f, #feb47b);`
+  <hr/>
 
-- **Radial Gradient**: Colors transition from a central point outward.
-  - Example: `background: radial-gradient(circle, #ff7e5f, #feb47b);`
+  <h2 class="workshop-title">Practice Workshop: Designing a Hero Section</h2>
+  <div class="workshop-container">
+    <h3 class="task">Task: Create an engaging hero section with background images and gradients</h3>
 
-**Example Usage**:
-```css
-.hero {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('hero.jpg');
-}
-```
+    <h4>Step 1: Set Up Your Files</h4>
+    <ul>
+      <li>Create a new HTML file named <code>hero.html</code></li>
+      <li>Create a CSS file named <code>hero.css</code></li>
+      <li>Link the CSS file in your HTML:
+        <pre><code>&lt;link rel="stylesheet" href="hero.css"&gt;</code></pre>
+      </li>
+    </ul>
 
----
+    <h4>Step 2: HTML Structure</h4>
+    <pre><code>&lt;div class="hero"&gt;
+    &lt;h1&gt;Welcome to Our Website&lt;/h1&gt;
+    &lt;p&gt;Discover amazing content and join our community.&lt;/p&gt;
+    &lt;button class="cta"&gt;Get Started&lt;/button&gt;
+&lt;/div&gt;</code></pre>
 
-### **Practice Workshop: Designing a Hero Section**
+    <h4>Step 3: Basic Hero Styling</h4>
+    <pre><code>.hero &lbrace;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7)
+    ),
+    url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+&rbrace;</code></pre>
 
-In this workshop, you’ll design a hero section, a prominent area typically found at the top of a webpage, often with an eye-catching background and a call-to-action button.
-
-#### **Workshop Tasks**
-
-1. **Set Up Your Files**:
-   - Create a new HTML file named `hero.html`.
-   - Create a CSS file named `hero.css`.
-   - Link `hero.css` to `hero.html` in the `<head>` section:
-     ```html
-     <link rel="stylesheet" href="hero.css">
-     ```
-
-2. **HTML Structure for the Hero Section**:
-   - In `hero.html`, create a container with a title, description, and call-to-action button.
-   ```html
-   <div class="hero">
-       <h1>Welcome to Our Website</h1>
-       <p>Discover amazing content and join our community.</p>
-       <button class="cta">Get Started</button>
-   </div>
-   ```
-
-3. **Apply a Gradient Background**:
-   - In `hero.css`, add a gradient background to the hero section.
-   ```css
-   .hero {
-       height: 100vh;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       color: white;
-       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('hero.jpg');
-       background-size: cover;
-       background-position: center;
-       text-align: center;
-   }
-   ```
-
-4. **Overlaying Background Image with Opacity**:
-   - Combine a gradient with a background image for a subtle overlay effect.
-
-5. **Styling the Call-to-Action Button**:
-   - Style the button with colors, padding, and transitions.
-   ```css
-   .cta {
-       padding: 10px 20px;
-       background-color: #ff7e5f;
-       border: none;
-       color: white;
-       font-size: 16px;
-       cursor: pointer;
-       transition: background-color 0.3s;
-   }
-
-   .cta:hover {
-       background-color: #feb47b;
-   }
-   ```
-
-#### **Deliverables**
-
-1. **hero.html**: The HTML file for the hero section.
-2. **hero.css**: The CSS file containing styles for the hero section.
-3. **Screenshot**: Take a screenshot of the hero section with the gradient, background image, and button.
-
----
-
-### **Chapter 5: Responsive Web Design (RWD) & Media Queries**
-
-Responsive web design ensures that your website looks great on all devices, from desktops to smartphones. In this chapter, you’ll learn the principles of RWD, how to use media queries, and implement flexible units.
-
----
-
-### **Theory**
-
-#### **5.1 Principles of Responsive Web Design**
-
-Responsive web design is a technique that allows a website to adapt to various screen sizes and resolutions. The three main principles are:
-
-1. **Fluid Grids**: Use relative units like percentages to create flexible layouts.
-2. **Flexible Images**: Adjust image sizes to fit within their containers.
-3. **Media Queries**: Apply CSS rules based on device characteristics, such as screen width.
-
----
-
-#### **5.2 Using Media Queries for Different Screen Sizes**
-
-Media queries are CSS rules that apply styles based on the device’s screen size, orientation, or resolution.
-
-**Syntax**:
-```css
-@media (max-width: 600px) {
-    /* Styles for devices with a max-width of 600px */
-}
-```
-
-**Example Usage**:
-```css
-@media (max-width: 768px) {
-    .gallery-item {
-        width: 100%;
-    }
-}
-```
-
----
-
-#### **5.3 Introduction to Flexible Units (%, em, rem, vw, vh)**
-
-Flexible units allow you to create scalable and responsive designs.
-
-- **%**: Relative to the parent element’s size.
-- **em**: Relative to the font size of the parent element.
-- **rem**: Relative to the font size of the root element (usually `<html>`).
-- **vw**: 1% of the viewport width.
-- **vh**: 1% of the viewport height.
-
-**Example Usage**:
-```css
-body {
+    <h4>Step 4: Call-to-Action Button</h4>
+    <pre><code>.cta &lbrace;
+    padding: 10px 20px;
+    background-color: #ff7e5f;
+    border: none;
+    color: white;
     font-size: 16px;
-}
+    cursor: pointer;
+    transition: background-color 0.3s;
+&rbrace;
 
-h1 {
-    font-size: 2rem; /* Scales with root font size */
-}
+.cta:hover &lbrace;
+    background-color: #feb47b;
+&rbrace;</code></pre>
 
-.container {
-    width: 80vw; /* 80% of viewport width */
-}
-```
+    <h3>Deliverables</h3>
+    <ul>
+      <li><strong>HTML File</strong>: Complete hero.html with proper structure</li>
+      <li><strong>CSS File</strong>: Styled hero.css implementing colors, backgrounds, and gradients</li>
+      <li><strong>Screenshot</strong>: Final hero section with gradient overlay and styled button</li>
+    </ul>
+  </div>
 
----
+  <ChapterNavigation 
+    prevHref="/HTMLKit/css/chapter3" 
+    nextHref="/HTMLKit/css/chapter5"
+  />
+</div>
 
-### **Practice Workshop: Making the Gallery Responsive**
+<style>
+  .concept-block {
+    margin-bottom: 2rem;
+  }
+  
+  .chapter-intro {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
 
-In this workshop, you’ll update the photo gallery created in Chapter 3 to make it responsive using media queries and flexible units.
-
-#### **Workshop Tasks**
-
-1. **Set Up Your Files**:
-   - Open your `gallery.html` and `gallery.css` files from Chapter 3.
-
-2. **Use Media Queries to Adjust Layout**:
-   - In `gallery.css`, use media queries to adjust the layout for smaller screens.
-   ```css
-   @media (max-width: 768px) {
-       .gallery-item {
-           width: 48%;
-       }
-   }
-
-   @media (max-width: 480px) {
-       .gallery-item {
-           width: 100%;
-       }
-   }
-   ```
-
-3. **Implement Flexible Units for Font Sizes and Spacing**:
-   - Use `em`, `rem`, and `%` units for font sizes and padding/margin to create flexibility.
-   ```css
-   .gallery-item {
-       padding: 1rem;
-       margin: 0.5rem;
-   }
-   ```
-
-#### **Deliverables**
-
-1. **Updated gallery.html and gallery.css**: Include media queries and flexible units.
-2. **Screenshots of the Gallery on Different Screen Sizes**: Take screenshots to show how the gallery layout adjusts on various devices.
-
----
-
-### **Summary and Key Takeaways**
-
-- **Colors & Gradients**: Use colors, background images, and gradients to create visually appealing designs.
-- **Responsive Design**: Media queries, flexible units, and responsive principles help your site adapt to any device.
-- **Flexible Units**: `%`, `em`, `rem`, `vw`, and `vh` offer scalability for responsive designs.
-
-By implementing these techniques, your website will be visually engaging and accessible across all devices, setting a strong foundation for modern web development.
+  .chapter-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #dee2e6;
+  }
+</style>
