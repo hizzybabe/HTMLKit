@@ -1,227 +1,94 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
-
-  let showCode1 = true;
-  let showCode2 = true;
-  let showCode3 = true;
+  let showCode = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
-  <h1>Chapter 5: Forms and Input Elements</h1>
+  <h1>Chapter 5: Responsive Web Design (RWD) & Media Queries</h1>
   
+  <div class="chapter-intro">
+    <p>In this chapter, you'll learn the principles of responsive web design (RWD) and how to use media queries to create layouts that adapt to different screen sizes. You'll also be introduced to flexible units like %, em, rem, vw, and vh, which allow your designs to adjust seamlessly across various devices.</p>
+    
+    <div class="chapter-details">
+      <p><strong>Duration:</strong> Approximately 2 hours</p>
+      <p><strong>Goal:</strong> Learn to create responsive layouts using media queries and flexible units.</p>
+    </div>
+  </div>
+
+  <hr/>
+
   <h2>Theory</h2>
-  
-  <h3>Introduction to HTML Forms</h3>
-  <div>HTML forms are essential tools for collecting user input. The <code>&lt;form&gt;</code> element wraps all form elements and provides options to handle user submissions.</div>
 
-
-    <pre><code>&lt;form action="URL" method="POST"&gt;
-  &lt;!-- Form Elements Go Here --&gt;
-&lt;/form&gt;</code></pre>
-
-
-  <div class="my-4">
-    <strong>Key Form Attributes:</strong>
+  <h3>5.1 Principles of Responsive Web Design</h3>
+  <div class="concept-block">
+    <p>Responsive Web Design (RWD) ensures that web content looks good and functions well across a range of devices and screen sizes. The core principles of RWD include:</p>
+    
     <ul>
-      <li><code>action</code>: The URL where form data will be sent</li>
-      <li><code>method</code>: The HTTP method (GET or POST) used for submission</li>
+      <li><strong>Fluid Layouts</strong>: Use flexible units like percentages instead of fixed pixel values to make layouts adapt to screen width.</li>
+      <li><strong>Flexible Images</strong>: Use CSS to resize images and avoid overflowing their containers.</li>
+      <li><strong>Media Queries</strong>: CSS rules that apply different styles based on the screen size, device type, or orientation.</li>
     </ul>
   </div>
 
-  <h3>Input Types</h3>
-  <div>The <code>&lt;input&gt;</code> element is versatile and can take various types for different purposes:</div>
-
-  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-    <button 
-      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-      style="background-color: rgb(59 130 246) !important"
-      on:click={() => showCode1 = !showCode1}
-    >
-      {showCode1 ? 'Show Preview' : 'Show Code'}
-    </button>
+  <h3>5.2 Using Media Queries for Different Screen Sizes</h3>
+  <div class="concept-block">
+    <p>Media queries allow you to apply CSS rules based on certain conditions, such as screen width or height. Common breakpoints used in RWD include:</p>
     
-    {#if showCode1}
-    <pre><code>&lt;!-- Text Input --&gt;
-&lt;input type="text" name="username" placeholder="Enter your name"&gt;
+    <ul>
+      <li><strong>Large screens</strong>: Desktops and larger screens (e.g., <code>min-width: 1200px</code>).</li>
+      <li><strong>Medium screens</strong>: Tablets and smaller laptops (e.g., <code>min-width: 768px</code>).</li>
+      <li><strong>Small screens</strong>: Mobile devices (e.g., <code>max-width: 767px</code>).</li>
+    </ul>
 
-&lt;!-- Password Input --&gt;
-&lt;input type="password" name="password" placeholder="Enter your password"&gt;
-
-&lt;!-- Email Input --&gt;
-&lt;input type="email" name="email" placeholder="Enter your email"&gt;
-
-&lt;!-- Number Input --&gt;
-&lt;input type="number" name="age" min="1" max="120"&gt;</code></pre>
-    {:else}
-    <div class="preview-content space-y-4">
-      <div>
-        <input type="text" name="username" placeholder="Enter your name" class="border p-2 rounded w-full">
-      </div>
-      <div>
-        <input type="password" name="password" placeholder="Enter your password" class="border p-2 rounded w-full">
-      </div>
-      <div>
-        <input type="email" name="email" placeholder="Enter your email" class="border p-2 rounded w-full">
-      </div>
-      <div>
-        <input type="number" name="age" min="1" max="120" class="border p-2 rounded w-full">
-      </div>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>@media (max-width: 767px) &lbrace;
+    /* CSS rules for small screens */
+&rbrace;</code></pre>
     </div>
-    {/if}
+
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>/* Default layout */
+.gallery-item &lbrace;
+    width: 30%;
+&rbrace;
+
+/* Small screens */
+@media (max-width: 767px) &lbrace;
+    .gallery-item &lbrace;
+        width: 100%;
+    &rbrace;
+&rbrace;</code></pre>
+    </div>
   </div>
 
-  <h3>Other Form Elements</h3>
-  <div>Forms can include various other elements for different types of input:</div>
+  <!-- Continue with other sections following same pattern -->
 
-  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-    <button 
-      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-      style="background-color: rgb(59 130 246) !important"
-      on:click={() => showCode2 = !showCode2}
-    >
-      {showCode2 ? 'Show Preview' : 'Show Code'}
-    </button>
-    
-    {#if showCode2}
-    <pre><code>&lt;!-- Textarea --&gt;
-&lt;textarea name="message" placeholder="Enter your message" rows="4" cols="50"&gt;&lt;/textarea&gt;
-
-&lt;!-- Select Dropdown --&gt;
-&lt;select name="inquiryType"&gt;
-  &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
-  &lt;option value="support"&gt;Support&lt;/option&gt;
-  &lt;option value="feedback"&gt;Feedback&lt;/option&gt;
-&lt;/select&gt;
-
-&lt;!-- Submit Button --&gt;
-&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></pre>
-    {:else}
-    <div class="preview-content space-y-4">
-      <div>
-        <textarea name="message" placeholder="Enter your message" rows="4" cols="50" class="border p-2 rounded w-full"></textarea>
-      </div>
-      <div>
-        <select name="inquiryType" class="border p-2 rounded w-full">
-          <option value="general">General Inquiry</option>
-          <option value="support">Support</option>
-          <option value="feedback">Feedback</option>
-        </select>
-      </div>
-      <div>
-        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
-      </div>
-    </div>
-    {/if}
-  </div>
-
-  <hr class="my-8"/>
-
-  <h2 class="workshop-title">Practice Workshop: Creating a Contact Form</h2>
-  
+  <h2 class="workshop-title">Practice Workshop: Making the Gallery Responsive</h2>
   <div class="workshop-container">
-    <h3 class="task">Task: Create a contact form for your personal profile page</h3>
-    
-    <div class="steps">
-      <h4>Step 1: Open Your Profile HTML File</h4>
-      <div>Add the following contact form to your existing profile.html file:</div>
-
-      <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-        <button 
-          class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-          style="background-color: rgb(59 130 246) !important"
-          on:click={() => showCode3 = !showCode3}
-        >
-          {showCode3 ? 'Show Preview' : 'Show Code'}
-        </button>
-        
-        {#if showCode3}
-        <pre><code>&lt;h2&gt;Contact Me&lt;/h2&gt;
-&lt;form action="submit_form.php" method="POST"&gt;
-  &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;
-  &lt;input type="text" id="name" name="name" placeholder="Enter your name" required&gt;&lt;br&gt;&lt;br&gt;
-  
-  &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
-  &lt;input type="email" id="email" name="email" placeholder="Enter your email" required&gt;&lt;br&gt;&lt;br&gt;
-  
-  &lt;label for="inquiryType"&gt;Inquiry Type:&lt;/label&gt;&lt;br&gt;
-  &lt;select id="inquiryType" name="inquiryType"&gt;
-    &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
-    &lt;option value="support"&gt;Support&lt;/option&gt;
-    &lt;option value="feedback"&gt;Feedback&lt;/option&gt;
-  &lt;/select&gt;&lt;br&gt;&lt;br&gt;
-  
-  &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;
-  &lt;textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
-  
-  &lt;button type="submit"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-        {:else}
-        <div class="preview-content">
-          <h2>Contact Me</h2>
-          <form class="space-y-4">
-            <div>
-              <label for="name">Name:</label><br>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required class="border p-2 rounded w-full">
-            </div>
-            
-            <div>
-              <label for="email">Email:</label><br>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required class="border p-2 rounded w-full">
-            </div>
-            
-            <div>
-              <label for="inquiryType">Inquiry Type:</label><br>
-              <select id="inquiryType" name="inquiryType" class="border p-2 rounded w-full">
-                <option value="general">General Inquiry</option>
-                <option value="support">Support</option>
-                <option value="feedback">Feedback</option>
-              </select>
-            </div>
-            
-            <div>
-              <label for="message">Message:</label><br>
-              <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message" required class="border p-2 rounded w-full"></textarea>
-            </div>
-            
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
-          </form>
-        </div>
-        {/if}
-      </div>
-
-      <h3>Notes on the Form Code:</h3>
-      <ul>
-        <li>Each input has an associated label for accessibility</li>
-        <li>The required attribute ensures fields are filled before submission</li>
-        <li>The action attribute should be updated based on your server setup</li>
-      </ul>
-
-      <h3>Deliverables</h3>
-      <ol>
-        <li>Updated profile.html file with the contact form</li>
-        <li>Screenshot of the rendered form in browser</li>
-      </ol>
-    </div>
+    <!-- Workshop content -->
   </div>
 
   <ChapterNavigation 
     prevHref="/HTMLKit/html/chapter4" 
-    nextHref="/HTMLKit/html/chapter6" 
+    nextHref="/HTMLKit/html/chapter6"
   />
 </div>
 
 <style>
-  .code-preview {
-    margin: 1rem 0;
+  .concept-block {
+    margin-bottom: 2rem;
   }
   
-  .preview-content {
-    padding: 1rem;
-    background: white;
-    border-radius: 4px;
+  .chapter-intro {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
   }
 
-  .space-y-4 > * + * {
+  .chapter-details {
     margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #dee2e6;
   }
 </style>
