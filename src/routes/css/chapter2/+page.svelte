@@ -30,10 +30,10 @@
 
   <h4>Selector Example:</h4>
   <pre><code>
-h1 { color: navy; }           /* Element selector */
-#header { font-size: 24px; }  /* ID selector */
-.container { padding: 10px; } /* Class selector */
-* { box-sizing: border-box; } /* Universal selector */
+h1 &lbrace; color: navy; &rbrace;           /* Element selector */
+#header &lbrace; font-size: 24px; &rbrace;  /* ID selector */
+.container &lbrace; padding: 10px; &rbrace; /* Class selector */
+* &lbrace; box-sizing: border-box; &rbrace; /* Universal selector */
   </code></pre>
 
   <h3>Common CSS Properties</h3>
@@ -61,12 +61,12 @@ h1 { color: navy; }           /* Element selector */
 
   <h4>Property Example:</h4>
   <pre><code>
-body {
+body &lbrace;
     color: #333;
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     font-size: 16px;
-}
+&rbrace;
   </code></pre>
 
   <h3>Introduction to the Box Model</h3>
@@ -84,11 +84,11 @@ body {
 
   <h4>Box Model Example:</h4>
   <pre><code>
-.profile {
+.profile &lbrace;
     padding: 10px;     /* Space inside the element */
     border: 2px solid #ccc; /* Border around the element */
     margin: 20px;      /* Space outside the element */
-}
+&rbrace;
   </code></pre>
 
   <h3>Practice Workshop: Styling a Personal Profile</h3>
@@ -111,36 +111,36 @@ body {
       <ul>
         <li><strong>Element Selector</strong>: Use element selectors to style text elements globally:
           <pre><code>
-body {
+body &lbrace;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-}
+&rbrace;
 
-h1 {
+h1 &lbrace;
     color: #2c3e50;
     font-size: 28px;
     text-align: center;
-}
+&rbrace;
           </code></pre>
         </li>
         <li><strong>ID Selector</strong>: Apply unique styles to specific sections of the profile:
           <pre><code>
-#profile-header {
+#profile-header &lbrace;
     background-color: #3498db;
     color: white;
     padding: 10px;
     text-align: center;
-}
+&rbrace;
           </code></pre>
         </li>
         <li><strong>Class Selector</strong>: Use class selectors to style multiple elements in a similar way:
           <pre><code>
-.section {
+.section &lbrace;
     margin: 20px;
     padding: 15px;
     background-color: #ecf0f1;
     border-radius: 5px;
-}
+&rbrace;
           </code></pre>
         </li>
       </ul>
@@ -157,11 +157,11 @@ h1 {
         <li>Apply padding and margins to create spacing around elements.</li>
         <li>Add a border to highlight specific sections.
           <pre><code>
-.profile-section {
+.profile-section &lbrace;
     padding: 20px;
     margin: 15px 0;
     border: 1px solid #ddd;
-}
+&rbrace;
           </code></pre>
         </li>
       </ul>
