@@ -1,7 +1,6 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
 
-  let showCode = true;
   let showCode1 = true;
   let showCode2 = true;
   let showCode3 = true;
@@ -15,27 +14,11 @@
   <h3>Introduction to HTML Forms</h3>
   <div>HTML forms are essential tools for collecting user input. The <code>&lt;form&gt;</code> element wraps all form elements and provides options to handle user submissions.</div>
 
-  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-    <button 
-      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-      style="background-color: rgb(59 130 246) !important"
-      on:click={() => showCode = !showCode}
-    >
-      {showCode ? 'Show Preview' : 'Show Code'}
-    </button>
-    
-    {#if showCode}
+
     <pre><code>&lt;form action="URL" method="POST"&gt;
   &lt;!-- Form Elements Go Here --&gt;
 &lt;/form&gt;</code></pre>
-    {:else}
-    <div class="preview-content">
-      <form class="border p-4 rounded">
-        <em>Form container example</em>
-      </form>
-    </div>
-    {/if}
-  </div>
+
 
   <div class="my-4">
     <strong>Key Form Attributes:</strong>
