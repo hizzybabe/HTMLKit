@@ -26,6 +26,10 @@
   <h2>Make a One-Page Website, Landing Page</h2>
   <p>HTML, CSS, and JavaScript special crash course. Helps you build a one-page website from scratch.</p>
 </div>
+<div class="feature">
+  <h2>Learn Tailwind CSS</h2>
+  <p>Learn Tailwind CSS, a utility-first CSS framework.</p>
+</div>
 </section>
 
 <h1>Welcome to HTMLKIT</h1>
