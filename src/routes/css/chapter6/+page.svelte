@@ -32,6 +32,15 @@
 &#125;</code></pre>
     </div>
 
+    <h4>Nth-Child Selector</h4>
+  <p>Targets elements based on their position within a parent element.</p>
+  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+    <pre><code>/* Example: Style every other list item */
+li:nth-child(odd) &#123;
+    background-color: #f9f9f9;
+&#125;</code></pre>
+  </div>
+
     <h4>Descendant and Child Selectors</h4>
     <p>Target elements based on their relationship in the DOM.</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
@@ -97,13 +106,15 @@ h1::before &#123;
   <h2 class="workshop-title">Practice Workshop: Enhancing Interactivity</h2>
   <div class="workshop-container">
     <h3 class="task">Task: Enhance your personal profile page with advanced selectors and interactive elements</h3>
+
+    <p>In this workshop, you&rsquo;ll enhance the personal profile page using advanced selectors, pseudo-classes for interactivity, and pseudo-elements for decorative purposes. These techniques will help you create a more engaging, visually appealing profile page.</p>
     
     <div class="concept-block">
       <h4>1. Set Up Your Files</h4>
       <p>Open your existing <code>profile.html</code> and <code>profile.css</code> files.</p>
 
       <h4>2. Applying Advanced Selectors</h4>
-      <p>Use attribute selectors and nth-child selectors to style specific elements:</p>
+      <p>2. **Applying Advanced Selectors**:<br/> - Use attribute selectors to style specific inputs in forms (if your profile page includes a form).<br/> - Use `nth-child` selectors to add background colors or styles to alternating sections.<br/></p>
       <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
         <pre><code>/* Style only the text inputs */
 input[type="text"] &#123;
@@ -119,7 +130,7 @@ ul li:nth-child(odd) &#123;
       </div>
 
       <h4>3. Adding Interactivity with Pseudo-Classes</h4>
-      <p>Create hover effects and active states:</p>
+      <p>3. **Adding Interactivity with Pseudo-Classes**:<br/> - Add hover effects to links and buttons, changing color or background on hover.<br/> - Use `:active` to give buttons a &ldquo;pressed&rdquo; effect when clicked.<br/></p>
       <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
         <pre><code>.cta-button:hover &#123;
     background-color: #3498db;
@@ -132,7 +143,7 @@ ul li:nth-child(odd) &#123;
       </div>
 
       <h4>4. Styling with Pseudo-Elements</h4>
-      <p>Add decorative elements using ::before and ::after:</p>
+      <p>4. **Styling with Pseudo-Elements for Decorative Purposes**:<br/> - Add `::before` and `::after` elements to create decorative borders, icons, or lines around text.<br/> - Use pseudo-elements to create a unique style for the profile heading.<br/></p>
       <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
         <pre><code>/* Decorative border for headings */
 h2::before &#123;
