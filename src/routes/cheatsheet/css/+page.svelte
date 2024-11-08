@@ -220,14 +220,14 @@ height: 100px;
   display: grid;
 &#125;</code></pre>
 
-<h3></h3>Grid Template Columns/Rows</h3>
+<h3>Grid Template Columns/Rows</h3>
 <p>Sets the number of columns/rows in a grid.</p>
 <pre><code class="language-css">.container &#123;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
 &#125;</code></pre>
 
-<h3></h3>Gap</h3>
+<h3>Gap</h3>
 <p>Sets the gap between grid items.</p>
 <pre><code class="language-css">.container &#123;
   gap: 10px;
