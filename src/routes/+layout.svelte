@@ -11,6 +11,16 @@
   <a href="/HTMLKit/svelte">Svelte</a>
   <a href="/HTMLKit/astro">Astro</a>
   <a href="/HTMLKit/practice">Practice</a>
+  <div class="dropdown">
+    <a href="/HTMLKit/cheatsheet">Cheatsheet ▼</a>
+    <div class="dropdown-content">
+      <a href="/HTMLKit/cheatsheet/html">HTML Cheatsheet</a>
+      <a href="/HTMLKit/cheatsheet/css">CSS Cheatsheet</a>
+      <a href="/HTMLKit/cheatsheet/javascript">JavaScript Cheatsheet</a>
+      <a href="/HTMLKit/cheatsheet/svelte">Svelte Cheatsheet</a>
+      <a href="/HTMLKit/cheatsheet/astro">Astro Cheatsheet</a>
+    </div>
+  </div>
   <a href="/HTMLKit/practice">FREE Templates</a>
 </nav>
 
@@ -56,5 +66,33 @@
 
   footer nav a:hover {
     text-decoration: underline;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 </style>
