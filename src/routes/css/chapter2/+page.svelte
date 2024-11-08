@@ -91,14 +91,12 @@ body &lbrace;
 &rbrace;
   </code></pre>
 
-  <h3>Practice Workshop: Styling a Personal Profile</h3>
-  <div>
-    In this workshop, you’ll apply the CSS concepts learned in this chapter to style a personal profile page. You’ll use element, ID, and class selectors, as well as various properties to enhance the appearance of the profile.
-  </div>
-
-  <h4>Workshop Tasks</h4>
-  <ol>
-    <li><strong>Set Up Your Files</strong>:
+  <h2 class="workshop-title">Practice Workshop: Styling a Personal Profile</h2>
+  <div class="workshop-container">
+    <h3 class="task">Task: Style your personal profile page using CSS selectors and properties</h3>
+    
+    <div class="steps">
+      <h4>Step 1: Set Up Your Files</h4>
       <ul>
         <li>Open the <code>profile.html</code> file created in the Learn HTML course.</li>
         <li>Create a new CSS file named <code>profile.css</code>.</li>
@@ -106,12 +104,11 @@ body &lbrace;
           <pre><code>&lt;link rel="stylesheet" href="profile.css"&gt;</code></pre>
         </li>
       </ul>
-    </li>
-    <li><strong>Styling with Selectors</strong>:
+
+      <h4>Step 2: Styling with Selectors</h4>
       <ul>
         <li><strong>Element Selector</strong>: Use element selectors to style text elements globally:
-          <pre><code>
-body &lbrace;
+          <pre><code>body &lbrace;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 &rbrace;
@@ -120,60 +117,53 @@ h1 &lbrace;
     color: #2c3e50;
     font-size: 28px;
     text-align: center;
-&rbrace;
-          </code></pre>
+&rbrace;</code></pre>
         </li>
         <li><strong>ID Selector</strong>: Apply unique styles to specific sections of the profile:
-          <pre><code>
-#profile-header &lbrace;
+          <pre><code>#profile-header &lbrace;
     background-color: #3498db;
     color: white;
     padding: 10px;
     text-align: center;
-&rbrace;
-          </code></pre>
+&rbrace;</code></pre>
         </li>
         <li><strong>Class Selector</strong>: Use class selectors to style multiple elements in a similar way:
-          <pre><code>
-.section &lbrace;
+          <pre><code>.section &lbrace;
     margin: 20px;
     padding: 15px;
     background-color: #ecf0f1;
     border-radius: 5px;
-&rbrace;
-          </code></pre>
+&rbrace;</code></pre>
         </li>
       </ul>
-    </li>
-    <li><strong>Applying Common Properties</strong>:
+
+      <h4>Step 3: Applying Common Properties</h4>
       <ul>
         <li><strong>Text Color</strong>: Use <code>color</code> to change the color of headings and paragraphs.</li>
         <li><strong>Background Color</strong>: Set background colors for different sections.</li>
         <li><strong>Font Style</strong>: Experiment with different font sizes and font families.</li>
       </ul>
-    </li>
-    <li><strong>Using the Box Model</strong>:
+
+      <h4>Step 4: Using the Box Model</h4>
       <ul>
         <li>Apply padding and margins to create spacing around elements.</li>
-        <li>Add a border to highlight specific sections.
-          <pre><code>
-.profile-section &lbrace;
+        <li>Add a border to highlight specific sections:
+          <pre><code>.profile-section &lbrace;
     padding: 20px;
     margin: 15px 0;
     border: 1px solid #ddd;
-&rbrace;
-          </code></pre>
+&rbrace;</code></pre>
         </li>
       </ul>
-    </li>
-  </ol>
+    </div>
 
-  <h3>Deliverables</h3>
-  <ol>
-    <li><strong>Updated profile.html</strong>: Ensure that your <code>profile.html</code> file links to <code>profile.css</code> and includes content for a personal profile.</li>
-    <li><strong>CSS File (profile.css)</strong>: Include styles for text, background colors, and the Box Model properties as outlined in the task.</li>
-    <li><strong>Before/After Screenshots</strong>: Take a screenshot of the page before adding styles, then another screenshot with the styles applied. Compare the two to observe the visual difference.</li>
-  </ol>
+    <h3>Deliverables</h3>
+    <ul>
+      <li><strong>Updated profile.html</strong>: Ensure that your <code>profile.html</code> file links to <code>profile.css</code> and includes content for a personal profile.</li>
+      <li><strong>CSS File (profile.css)</strong>: Include styles for text, background colors, and the Box Model properties as outlined in the task.</li>
+      <li><strong>Before/After Screenshots</strong>: Take a screenshot of the page before adding styles, then another screenshot with the styles applied. Compare the two to observe the visual difference.</li>
+    </ul>
+  </div>
 
   <h2>Summary and Key Takeaways</h2>
   <ul>
