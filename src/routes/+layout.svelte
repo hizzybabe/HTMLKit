@@ -5,14 +5,23 @@
 <nav>
   <a href="/HTMLKit/">Home</a>
   <a href="/HTMLKit/about">About</a>
-  <a href="/HTMLKit/html">HTML</a>
-  <a href="/HTMLKit/css">CSS</a>
-  <a href="/HTMLKit/javascript">Javascript</a>
-  <a href="/HTMLKit/svelte">Svelte</a>
-  <a href="/HTMLKit/astro">Astro</a>
+
+  <div class="dropdown">
+  <a href="#">Learn ▼</a>
+
+  <div class="dropdown-content">
+    <a href="/HTMLKit/html">HTML</a>
+    <a href="/HTMLKit/css">CSS</a>
+    <a href="/HTMLKit/javascript">JavaScript</a>
+    <a href="/HTMLKit/svelte">Svelte</a>
+    <a href="/HTMLKit/astro">Astro</a>
+  </div>
+  
   <a href="/HTMLKit/practice">Practice</a>
+
   <div class="dropdown">
     <a href="/HTMLKit/cheatsheet">Cheatsheet ▼</a>
+    
     <div class="dropdown-content">
       <a href="/HTMLKit/cheatsheet/html">HTML Cheatsheet</a>
       <a href="/HTMLKit/cheatsheet/css">CSS Cheatsheet</a>
