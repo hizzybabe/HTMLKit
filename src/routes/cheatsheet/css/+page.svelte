@@ -19,14 +19,18 @@
   
   <h1>CSS Cheatsheet</h1>
   
-  <h2 on:click={() => showBasicSyntax = !showBasicSyntax}>1. Basic Syntax</h2>
+  <h2 on:click={() => showBasicSyntax = !showBasicSyntax} class="cursor-pointer">
+    📝 1. Basic Syntax {showBasicSyntax ? '▼' : '▶'}
+  </h2>
   {#if showBasicSyntax}
     <pre><code class="language-css">selector &#123;
     property: value;
 &#125;</code></pre>
 {/if}
 
-  <h2 on:click={() => showSelectors = !showSelectors}>2. Selectors</h2>
+  <h2 on:click={() => showSelectors = !showSelectors} class="cursor-pointer">
+    🎯 2. Selectors {showSelectors ? '▼' : '▶'}
+  </h2>
   {#if showSelectors}
     <h3>Type Selector</h3>
     <p>Selects all elements of a given type.</p>
@@ -65,7 +69,9 @@ margin: 10px;
 &#125;</code></pre>
 {/if}
 
-<h2 on:click={() => showTextStyling = !showTextStyling}>3. Text Styling</h2>
+<h2 on:click={() => showTextStyling = !showTextStyling} class="cursor-pointer">
+  📝 3. Text Styling {showTextStyling ? '▼' : '▶'}
+</h2>
 {#if showTextStyling}
 <h3>Color</h3>
 <p>Sets the text color.</p>
@@ -98,7 +104,9 @@ text-decoration: underline;
 &#125;</code></pre>
 {/if}
 
-<h2 on:click={() => showBackground = !showBackground}>4. Background</h2>
+<h2 on:click={() => showBackground = !showBackground} class="cursor-pointer">
+  🎨 4. Background {showBackground ? '▼' : '▶'}
+</h2>
 {#if showBackground}
 <h3>Background Color</h3>
 <p>Sets the background color.</p>
@@ -125,7 +133,9 @@ background-size: cover;
 &#125;</code></pre>
 {/if}
 
-<h2 on:click={() => showBoxModel = !showBoxModel}>5. Box Model</h2>
+<h2 on:click={() => showBoxModel = !showBoxModel} class="cursor-pointer">
+  📦 5. Box Model {showBoxModel ? '▼' : '▶'}
+</h2>
 {#if showBoxModel}
 <h3>Width and Height</h3>
 <p>Sets the width and height of an element.</p>
@@ -157,7 +167,9 @@ height: 100px;
 &#125;</code></pre>
 {/if}
 
-  <h2 on:click={() => showDisplayPositioning = !showDisplayPositioning}>4. Display & Positioning</h2>
+  <h2 on:click={() => showDisplayPositioning = !showDisplayPositioning} class="cursor-pointer">
+    🔲 4. Display & Positioning {showDisplayPositioning ? '▼' : '▶'}
+  </h2>
   {#if showDisplayPositioning}
   <h3>Common Values</h3>
   <p>Display controls how elements are displayed.</p>
@@ -195,7 +207,9 @@ height: 100px;
 &#125;</code></pre>
 {/if}
 
-<h2 on:click={() => showFlexbox = !showFlexbox}>7. Flexbox</h2>
+<h2 on:click={() => showFlexbox = !showFlexbox} class="cursor-pointer">
+  🔲 7. Flexbox {showFlexbox ? '▼' : '▶'}
+</h2>
   {#if showFlexbox}
   <h3>Container Properties</h3>
   <pre><code class="language-css">.container &#123;
@@ -243,7 +257,9 @@ height: 100px;
 &#125;</code></pre>
 {/if}
 
-<h2 on:click={() => showGrid = !showGrid}>8. Grid</h2>
+<h2 on:click={() => showGrid = !showGrid} class="cursor-pointer">
+  🔲 8. Grid {showGrid ? '▼' : '▶'}
+</h2>
 {#if showGrid}
 <h3>Display Grid</h3>
 <p>Enables CSS Grid on a container.</p>
@@ -265,7 +281,9 @@ height: 100px;
 &#125;</code></pre>
 {/if}
 
-<h2 on:click={() => showTransformTransition = !showTransformTransition}>9. Transform & Transition</h2>
+<h2 on:click={() => showTransformTransition = !showTransformTransition} class="cursor-pointer">
+  🔲 9. Transform & Transition {showTransformTransition ? '▼' : '▶'}
+</h2>
 {#if showTransformTransition}
 <h3>Transform</h3>
 <p>Applies a 2D or 3D transformation to an element.</p>
@@ -280,7 +298,9 @@ height: 100px;
 &#125;</code></pre>
 {/if}
 
-<h2 on:click={() => showMediaQueries = !showMediaQueries}>10. Media Queries</h2>
+<h2 on:click={() => showMediaQueries = !showMediaQueries} class="cursor-pointer">
+  🔲 10. Media Queries {showMediaQueries ? '▼' : '▶'}
+</h2>
 {#if showMediaQueries}
 <p>Controls the display of elements based on the screen size.</p>
   <pre><code class="language-css">@media (max-width: 768px) &#123;
