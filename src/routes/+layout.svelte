@@ -4,7 +4,6 @@
 
 <nav>
   <a href="/HTMLKit/">Home</a>
-  <a href="/HTMLKit/about">About</a>
 
   <div class="dropdown">
     <a href="/HTMLKit/">Learn ▼</a>
@@ -38,6 +37,7 @@
 <footer>
   <p>© 2024 HTMLKit. Built with SvelteKit</p>
   <nav>
+    <a href="/HTMLKit/about">About</a>
     <a href="/HTMLKit/contact">Contact Us</a>
   </nav>
 </footer>
@@ -67,10 +67,13 @@
 
   footer nav {
     margin-top: 1rem;
+    background: none;
+    padding: 0;
+    justify-content: center;
   }
 
   footer nav a {
-    color: white;
+    color: var(--primary);
     text-decoration: none;
     margin: 0 0.5rem;
   }
