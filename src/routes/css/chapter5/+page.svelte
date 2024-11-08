@@ -60,6 +60,11 @@
     <h3 class="task">Task: Update your photo gallery to be responsive across all devices</h3>
     
     <h4>Step 1: Update Gallery Layout</h4>
+    <p>1. **Set Up Your Files**:<br /> - Open your existing `gallery.html` and `gallery.css` files from Chapter 3.</p>
+    <p>2. **Applying Flexible Units**:<br /> - Update the CSS to use flexible units for font sizes, padding, and margins.<br /> - Replace fixed values with relative units like `%`, `em`, `rem`, `vw`, and `vh` where appropriate.<br /></p>
+    <p>3. **Adding Media Queries for Different Screen Sizes**:<br /> - Use media queries to adjust the gallery layout for smaller screens.<br /> - For mobile devices, set the `.gallery-item` width to 100% so images stack vertically.<br /></p>
+    <p>4. **Adjusting Font Sizes and Spacing**:<br /> - Use flexible units for text and spacing to make the design adapt better on smaller screens.<br /> - Set base font sizes in `rem` and use `em` for spacing.<br /></p>
+    <p>5. **Testing the Responsive Design**:<br /> - Open `gallery.html` in a browser and resize the window to test how the layout responds to different screen sizes.<br /> - Ensure that images and text scale smoothly across breakpoints.</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>.gallery &#123;
     display: flex;
