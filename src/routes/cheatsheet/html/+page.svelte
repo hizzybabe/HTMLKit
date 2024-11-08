@@ -1,11 +1,11 @@
 <div class="container mx-auto px-4 py-8">
     
 <p>Here's a simple HTML cheatsheet to help you with essential HTML tags and attributes:</p>
-<p>---</p>
+<hr class="my-4">
 
-<p>### **HTML Cheatsheet**</p>
+<h1 class="text-2xl font-bold mb-4">HTML Cheatsheet</h1>
 
-<p>#### **1. Basic Document Structure**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">1. Basic Document Structure</h2>
 <pre><code class="language-html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -20,7 +20,7 @@
 &lt;/html&gt;
 </code></pre>
 
-<p>#### **2. Text Elements**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">2. Text Elements</h2>
 <ul>
   <li><strong>Headings</strong>: Defines headings from the largest (<code>&lt;h1&gt;</code>) to smallest (<code>&lt;h6&gt;</code>).</li>
   <pre><code class="language-html">
@@ -41,7 +41,7 @@
   </code></pre>
 </ul>
 
-<p>#### **3. Lists**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">3. Lists</h2>
 <ul>
   <li><strong>Unordered List</strong>:</li>
   <pre><code class="language-html">
@@ -60,7 +60,7 @@
   </code></pre>
 </ul>
 
-<p>#### **4. Links &amp; Images**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">4. Links &amp; Images</h2>
 <ul>
   <li><strong>Link (Anchor)</strong>: Defines a hyperlink.</li>
   <pre><code class="language-html">
@@ -73,7 +73,7 @@
   </code></pre>
 </ul>
 
-<p>#### **5. Tables**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">5. Tables</h2>
 <pre><code class="language-html">
 &lt;table&gt;
   &lt;tr&gt;
@@ -87,14 +87,14 @@
 &lt;/table&gt;
 </code></pre>
 
-<p>#### **6. Forms**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">6. Forms</h2>
 <pre><code class="language-html">
 &lt;form action="submit.php" method="post"&gt;
   &lt;label for="name"&gt;Name:&lt;/label&gt;
   &lt;input type="text" id="name" name="name"&gt;
 </code></pre>
 
-<p>#### **7. Media Embeds**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">7. Media Embeds</h2>
 <ul>
   <li><strong>Video</strong>:</li>
   <pre><code class="language-html">
@@ -113,7 +113,7 @@
   </code></pre>
 </ul>
 
-<p>#### **8. Common HTML Entities**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">8. Common HTML Entities</h2>
 <ul>
   <li><strong>Space</strong>: `&amp;nbsp;`</li>
   <li><strong>Less Than (&lt;)</strong>: `&amp;lt;`</li>
@@ -121,7 +121,7 @@
   <li><strong>Ampersand (&amp;)</strong>: `&amp;amp;`</li>
 </ul>
 
-<p>#### **9. Semantic Elements**</p>
+<h2 class="text-xl font-bold mt-6 mb-3">9. Semantic Elements</h2>
 <ul>
   <li><strong>Header</strong>: Defines a header for a document or section.</li>
   <pre><code class="language-html">
@@ -154,7 +154,7 @@
   </code></pre>
 </ul>
 
-<p>---</p>
+<hr class="my-4">
 <p>This cheatsheet covers essential HTML tags and structures, perfect for quick reference as you build web pages!</p>
 
 </div>
