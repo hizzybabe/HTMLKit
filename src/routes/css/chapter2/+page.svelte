@@ -15,7 +15,7 @@
   <h4>Types of Selectors:</h4>
   <ul>
     <li><strong>Element Selector</strong>: Targets all elements of a specific type.
-      <div>Example: <code>p {{ '{' }} color: blue; {{ '}' }}</code> styles all <code>&lt;p&gt;</code> elements.</div>
+      <div>Example: <code>p &lbrace; color: blue; &rbrace;</code> styles all <code>&lt;p&gt;</code> elements.</div>
     </li>
     <li><strong>ID Selector</strong>: Targets a specific element with a unique <code>id</code> attribute. The ID selector is represented with a <code>#</code>.
       <div>Example: <code>#profile { color: green; }</code> styles the element with <code>id="profile"</code>.</div>
