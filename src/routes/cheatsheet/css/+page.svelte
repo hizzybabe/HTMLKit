@@ -168,7 +168,7 @@ height: 100px;
 {/if}
 
   <h2 on:click={() => showDisplayPositioning = !showDisplayPositioning} class="cursor-pointer">
-    🔲 4. Display & Positioning {showDisplayPositioning ? '▼' : '▶'}
+    📍 6. Display & Positioning {showDisplayPositioning ? '▼' : '▶'}
   </h2>
   {#if showDisplayPositioning}
   <h3>Common Values</h3>
@@ -208,7 +208,7 @@ height: 100px;
 {/if}
 
 <h2 on:click={() => showFlexbox = !showFlexbox} class="cursor-pointer">
-  🔲 7. Flexbox {showFlexbox ? '▼' : '▶'}
+  💪 7. Flexbox {showFlexbox ? '▼' : '▶'}
 </h2>
   {#if showFlexbox}
   <h3>Container Properties</h3>
@@ -258,7 +258,7 @@ height: 100px;
 {/if}
 
 <h2 on:click={() => showGrid = !showGrid} class="cursor-pointer">
-  🔲 8. Grid {showGrid ? '▼' : '▶'}
+  📏 8. Grid {showGrid ? '▼' : '▶'}
 </h2>
 {#if showGrid}
 <h3>Display Grid</h3>
@@ -282,7 +282,7 @@ height: 100px;
 {/if}
 
 <h2 on:click={() => showTransformTransition = !showTransformTransition} class="cursor-pointer">
-  🔲 9. Transform & Transition {showTransformTransition ? '▼' : '▶'}
+  ✨ 9. Transform & Transition {showTransformTransition ? '▼' : '▶'}
 </h2>
 {#if showTransformTransition}
 <h3>Transform</h3>
@@ -299,7 +299,7 @@ height: 100px;
 {/if}
 
 <h2 on:click={() => showMediaQueries = !showMediaQueries} class="cursor-pointer">
-  🔲 10. Media Queries {showMediaQueries ? '▼' : '▶'}
+  📱 10. Media Queries {showMediaQueries ? '▼' : '▶'}
 </h2>
 {#if showMediaQueries}
 <p>Controls the display of elements based on the screen size.</p>
