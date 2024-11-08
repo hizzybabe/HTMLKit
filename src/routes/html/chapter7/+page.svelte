@@ -47,24 +47,7 @@
   <h3>Best Practices for HTML Coding</h3>
   <div>To ensure your HTML is clean, efficient, and accessible, follow these best practices:</div>
 
-  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-    <button 
-      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-      style="background-color: rgb(59 130 246) !important"
-      on:click={() => showCode2 = !showCode2}
-    >
-      {showCode2 ? 'Show Preview' : 'Show Code'}
-    </button>
-    
-    {#if showCode2}
-    <pre><code>1. Use Semantic HTML
-2. Validate Your HTML
-3. Keep Code Clean and Organized
-4. Test Across Browsers
-5. Optimize for Performance
-6. Ensure Accessibility</code></pre>
-    {:else}
-    <div class="preview-content">
+    <div class="my-4">
       <ol>
         <li>Use Semantic HTML</li>
         <li>Validate Your HTML</li>
@@ -74,8 +57,7 @@
         <li>Ensure Accessibility</li>
       </ol>
     </div>
-    {/if}
-  </div>
+
 
   <hr class="my-8"/>
 
