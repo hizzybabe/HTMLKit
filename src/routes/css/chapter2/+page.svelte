@@ -21,10 +21,10 @@
       <div>Example: <code>#profile &lbrace; color: green; &rbrace;</code> styles the element with <code>id="profile"</code>.</div>
     </li>
     <li><strong>Class Selector</strong>: Targets all elements with a specific <code>class</code> attribute. The class selector is represented with a <code>.</code>.
-      <div>Example: <code>.highlight { background-color: yellow; }</code> styles all elements with <code>class="highlight"</code>.</div>
+      <div>Example: <code>.highlight &lbrace; background-color: yellow; &rbrace;</code> styles all elements with <code>class="highlight"</code>.</div>
     </li>
     <li><strong>Universal Selector</strong>: Targets all elements on the page and is represented with <code>*</code>.
-      <div>Example: <code>* { margin: 0; padding: 0; }</code> removes default margins and padding from all elements.</div>
+      <div>Example: <code>* &lbrace; margin: 0; padding: 0; &rbrace;</code> removes default margins and padding from all elements.</div>
     </li>
   </ul>
 
