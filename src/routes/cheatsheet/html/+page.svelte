@@ -22,14 +22,14 @@
   <p>Here's a simple HTML cheatsheet to help you with essential HTML tags and attributes:</p>
   <hr class="my-4">
 
-  <h1 class="text-2xl font-bold mb-4">HTML Cheatsheet</h1>
+  <h1 class="text-2xl font-bold mb-4">📝 HTML Cheatsheet</h1>
 
   <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
     on:click={() => toggleSection('structure')}
   >
     <span class="mr-2">{visibleSections.structure ? '▼' : '▶'}</span>
-    1. Basic Document Structure
+    🏗️ 1. Basic Document Structure
   </h2>
   {#if visibleSections.structure}
     <pre><code class="language-html">
@@ -52,7 +52,7 @@
     on:click={() => toggleSection('text')}
   >
     <span class="mr-2">{visibleSections.text ? '▼' : '▶'}</span>
-    2. Text Elements
+    📝 2. Text Elements
   </h2>
   {#if visibleSections.text}
     <ul>
@@ -81,7 +81,7 @@
     on:click={() => toggleSection('lists')}
   >
     <span class="mr-2">{visibleSections.lists ? '▼' : '▶'}</span>
-    3. Lists
+    📋 3. Lists
   </h2>
   {#if visibleSections.lists}
     <ul>
@@ -108,7 +108,7 @@
     on:click={() => toggleSection('linksAndImages')}
   >
     <span class="mr-2">{visibleSections.linksAndImages ? '▼' : '▶'}</span>
-    4. Links &amp; Images
+    🔗 4. Links & Images
   </h2>
   {#if visibleSections.linksAndImages}
     <ul>
@@ -129,7 +129,7 @@
     on:click={() => toggleSection('tables')}
   >
     <span class="mr-2">{visibleSections.tables ? '▼' : '▶'}</span>
-    5. Tables
+    📊 5. Tables
   </h2>
   {#if visibleSections.tables}
     <pre><code class="language-html">
@@ -151,7 +151,7 @@
     on:click={() => toggleSection('forms')}
   >
     <span class="mr-2">{visibleSections.forms ? '▼' : '▶'}</span>
-    6. Forms
+    📝 6. Forms
   </h2>
   {#if visibleSections.forms}
     <pre><code class="language-html">
@@ -166,7 +166,7 @@
     on:click={() => toggleSection('media')}
   >
     <span class="mr-2">{visibleSections.media ? '▼' : '▶'}</span>
-    7. Media Embeds
+    🎥 7. Media Embeds
   </h2>
   {#if visibleSections.media}
     <ul>
@@ -193,7 +193,7 @@
     on:click={() => toggleSection('entities')}
   >
     <span class="mr-2">{visibleSections.entities ? '▼' : '▶'}</span>
-    8. Common HTML Entities
+    ⚡ 8. Common HTML Entities
   </h2>
   {#if visibleSections.entities}
     <ul>
@@ -209,7 +209,7 @@
     on:click={() => toggleSection('semantic')}
   >
     <span class="mr-2">{visibleSections.semantic ? '▼' : '▶'}</span>
-    9. Semantic Elements
+    🏷️ 9. Semantic Elements
   </h2>
   {#if visibleSections.semantic}
     <ul>
