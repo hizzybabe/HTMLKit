@@ -58,41 +58,22 @@
     {/if}
   </div>
 
-  <h3>Importance of Accessibility</h3>
-  <div>Web accessibility is about making websites usable for people of all abilities and disabilities. Here are important principles to consider when creating accessible web pages:</div>
+  <div class="my-4">
+    <h3>Importance of Accessibility</h3>
+    <div>Web accessibility is about making websites usable for people of all abilities and disabilities. Here are important principles to consider when creating accessible web pages:</div>
 
-  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-    <button 
-      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-      style="background-color: rgb(59 130 246) !important"
-      on:click={() => showCode1 = !showCode1}
-    >
-      {showCode1 ? 'Show Preview' : 'Show Code'}
-    </button>
-    
-    {#if showCode1}
-    <pre><code>1. Perceivable: Ensure that all information presented on the page is accessible to all users.
-2. Operable: Users should be able to navigate and interact with all content using a keyboard or other assistive technologies.
-3. Understandable: Content should be readable and understandable.
-4. Robust: Ensure that your website is compatible with current and future user agents.</code></pre>
-    {:else}
-    <div class="preview-content">
-      <ol>
-        <li>Perceivable: Ensure that all information presented on the page is accessible to all users.</li>
-        <li>Operable: Users should be able to navigate and interact with all content using a keyboard or other assistive technologies.</li>
-        <li>Understandable: Content should be readable and understandable.</li>
-        <li>Robust: Ensure that your website is compatible with current and future user agents.</li>
-      </ol>
-    </div>
-    {/if}
+    <ol>
+      <li>Perceivable: Ensure that all information presented on the page is accessible to all users.</li>
+      <li>Operable: Users should be able to navigate and interact with all content using a keyboard or other assistive technologies.</li>
+      <li>Understandable: Content should be readable and understandable.</li>
+      <li>Robust: Ensure that your website is compatible with current and future user agents.</li>
+    </ol>
   </div>
 
   <h3>Implementing ARIA Attributes</h3>
   <div>Consider implementing ARIA (Accessible Rich Internet Applications) attributes when necessary, which can provide additional information on the roles and properties of elements.</div>
 
-  <pre><code>&lt;button aria-label="Close" onclick="closeModal()"&gt;X&lt;/button&gt;</code></pre>
 
-<!--
   <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
     <button 
       class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
@@ -110,8 +91,8 @@
     </div>
     {/if}
   </div>
--->
-  
+
+
   <hr class="my-8"/>
 
   <h2 class="workshop-title">Practice Workshop: Enhancing Accessibility & Semantics</h2>
