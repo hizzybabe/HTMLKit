@@ -42,7 +42,7 @@
   <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
     <pre><code>&lt;p&gt;Use &amp;lt;code&amp;gt; for code snippets.&lt;/p&gt;</code></pre>
   </div>
-</div>
+
 
   <h3>Best Practices for HTML Coding</h3>
   <div>To ensure your HTML is clean, efficient, and accessible, follow these best practices:</div>
@@ -115,7 +115,7 @@ contact.html (Contact Page)</code></pre>
     prevHref="/HTMLKit/html/chapter6" 
     nextHref="/HTMLKit/html/chapter8" 
   />
-
+</div>
 
 <style>
   .code-preview {
