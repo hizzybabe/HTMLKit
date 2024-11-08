@@ -1,89 +1,238 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
-  let showCode = true;
+
+  let showCode1 = true;
+  let showCode2 = true;
+  let showCode3 = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
-  <h1>Chapter 4: Colors, Backgrounds, & Gradients</h1>
+  <h1>Chapter 4: Images, Lists, and Tables</h1>
   
-  <div class="chapter-intro">
-    <p>In this chapter, we'll explore how to use colors, backgrounds, and gradients to create visually engaging designs. You'll learn about color theory for the web, background images and their properties, and how to create gradients.</p>
-    
-    <div class="chapter-details">
-      <p><strong>Duration:</strong> Approximately 2 hours</p>
-      <p><strong>Goal:</strong> Understand color formats, background properties, and gradient techniques to enhance web design.</p>
-    </div>
-  </div>
-
-  <hr/>
-
   <h2>Theory</h2>
+  
+  <h3>Adding Images</h3>
+  <div>The <code>&lt;img&gt;</code> tag is used to embed images in an HTML document. This tag is self-closing, meaning it does not require a separate closing tag. The two essential attributes are:</div>
+  <ul>
+    <li><code>src</code>: Specifies the image file location</li>
+    <li><code>alt</code>: Provides alternative text for accessibility</li>
+  </ul>
 
-  <h3>4.1 Color Theory for the Web</h3>
-  <p>Colors on the web are defined using various color models. The most common formats are <strong>RGB</strong>, <strong>HEX</strong>, and <strong>HSL</strong>.</p>
+    <pre><code>&lt;img src="product-image.jpg" alt="A sleek modern laptop"&gt;</code></pre>
 
-  <div class="concept-block">
-    <h4>RGB (Red, Green, Blue)</h4>
-    <ul>
-      <li>Defines color by specifying values for red, green, and blue.</li>
-      <li>Example: <code>rgb(255, 0, 0)</code> for red.</li>
-    </ul>
+  <h3>Working with Lists</h3>
+  <div>HTML offers three types of lists to organize content effectively:</div>
 
-    <h4>HEX</h4>
-    <ul>
-      <li>Hexadecimal representation of RGB values.</li>
-      <li>Common format for web colors.</li>
-      <li>Example: <code>#FF0000</code> for red.</li>
-    </ul>
+  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+    <button 
+      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+      style="background-color: rgb(59 130 246) !important"
+      on:click={() => showCode1 = !showCode1}
+    >
+      {showCode1 ? 'Show Preview' : 'Show Code'}
+    </button>
+    
+    {#if showCode1}
+    <pre><code>&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;
 
-    <h4>HSL (Hue, Saturation, Lightness)</h4>
-    <ul>
-      <li>Represents color with hue (color shade), saturation (intensity), and lightness (brightness).</li>
-      <li>Example: <code>hsl(0, 100%, 50%)</code> for red.</li>
-    </ul>
+&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+&lt;/ol&gt;
 
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>body {
-    background-color: rgb(240, 240, 240);
-    color: #333333;
-}
+&lt;!-- Definition List --&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+    {:else}
+    <div class="preview-content">
+      <h4>Unordered List:</h4>
+      <ul>
+        <li>First item</li>
+        <li>Second item</li>
+      </ul>
 
-h1 {
-    color: hsl(210, 50%, 40%);
-}</code></pre>
+      <h4>Ordered List:</h4>
+      <ol>
+        <li>First step</li>
+        <li>Second step</li>
+      </ol>
+
+      <h4>Definition List:</h4>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+      </dl>
     </div>
+    {/if}
   </div>
 
-  <!-- Continue with other sections following same pattern -->
+  <h3>Creating Tables</h3>
+  <div>Tables help organize data into rows and columns. Key elements include:</div>
+  <ul>
+    <li><code>&lt;table&gt;</code>: Container for the table</li>
+    <li><code>&lt;tr&gt;</code>: Table row</li>
+    <li><code>&lt;th&gt;</code>: Table header</li>
+    <li><code>&lt;td&gt;</code>: Table data cell</li>
+  </ul>
 
-  <h2 class="workshop-title">Practice Workshop: Designing a Hero Section</h2>
-  <div class="workshop-container">
-    <h3 class="task">Task: Create a hero section with gradient background and overlay</h3>
+  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+    <button 
+      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+      style="background-color: rgb(59 130 246) !important"
+      on:click={() => showCode2 = !showCode2}
+    >
+      {showCode2 ? 'Show Preview' : 'Show Code'}
+    </button>
     
-    <!-- Workshop content -->
+    {#if showCode2}
+    <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 1&lt;/td&gt;
+    &lt;td&gt;Data 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    {:else}
+    <table border="1" class="w-full">
+      <tr>
+        <th class="p-2">Header 1</th>
+        <th class="p-2">Header 2</th>
+      </tr>
+      <tr>
+        <td class="p-2">Data 1</td>
+        <td class="p-2">Data 2</td>
+      </tr>
+    </table>
+    {/if}
+  </div>
+
+  <hr class="my-8"/>
+
+  <h2 class="workshop-title">Practice Workshop: Product Showcase Page</h2>
+  
+  <div class="workshop-container">
+    <h3 class="task">Task: Create a product showcase page using images, lists, and tables</h3>
+    
+    <div class="steps">
+      <h4>Step 1: Set Up Your File</h4>
+      <div>Create a new file named <code>product.html</code></div>
+
+      <h4>Step 2: Add Basic HTML Structure</h4>
+      <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+        <button 
+          class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+          style="background-color: rgb(59 130 246) !important"
+          on:click={() => showCode3 = !showCode3}
+        >
+          {showCode3 ? 'Show Preview' : 'Show Code'}
+        </button>
+        
+        {#if showCode3}
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Product Showcase&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Amazing Product&lt;/h1&gt;
+    
+    &lt;!-- Product Image --&gt;
+    &lt;img src="product.jpg" alt="Our Amazing Product"&gt;
+    
+    &lt;!-- Features List --&gt;
+    &lt;h2&gt;Key Features&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Feature 1&lt;/li&gt;
+        &lt;li&gt;Feature 2&lt;/li&gt;
+        &lt;li&gt;Feature 3&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;!-- Comparison Table --&gt;
+    &lt;h2&gt;Comparison&lt;/h2&gt;
+    &lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Feature&lt;/th&gt;
+            &lt;th&gt;Basic&lt;/th&gt;
+            &lt;th&gt;Premium&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Feature 1&lt;/td&gt;
+            &lt;td&gt;✓&lt;/td&gt;
+            &lt;td&gt;✓&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        {:else}
+        <div class="preview-content">
+          <h1>Amazing Product</h1>
+          <img src="https://via.placeholder.com/300x200" alt="Our Amazing Product">
+          <h2>Key Features</h2>
+          <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+          </ul>
+          <h2>Comparison</h2>
+          <table border="1" class="w-full">
+            <tr>
+              <th class="p-2">Feature</th>
+              <th class="p-2">Basic</th>
+              <th class="p-2">Premium</th>
+            </tr>
+            <tr>
+              <td class="p-2">Feature 1</td>
+              <td class="p-2">✓</td>
+              <td class="p-2">✓</td>
+            </tr>
+          </table>
+        </div>
+        {/if}
+      </div>
+
+      <h3>Deliverables</h3>
+      <ul>
+        <li>Complete HTML file with proper structure</li>
+        <li>At least one image</li>
+        <li>Both ordered and unordered lists</li>
+        <li>A comparison table</li>
+      </ul>
+    </div>
   </div>
 
   <ChapterNavigation 
     prevHref="/HTMLKit/html/chapter3" 
-    nextHref="/HTMLKit/html/chapter5"
+    nextHref="/HTMLKit/html/chapter5" 
   />
 </div>
 
 <style>
-  .concept-block {
-    margin-bottom: 2rem;
+  .code-preview {
+    margin: 1rem 0;
   }
   
-  .chapter-intro {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+  .preview-content {
+    padding: 1rem;
+    background: white;
+    border-radius: 4px;
   }
 
-  .chapter-details {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid #dee2e6;
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
   }
 </style>
