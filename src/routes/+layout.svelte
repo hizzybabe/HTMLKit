@@ -18,6 +18,9 @@
 
 <footer>
   <p>© 2024 HTMLKit. Built with SvelteKit</p>
+  <nav>
+    <a href="/contact">Contact Us</a>
+  </nav>
 </footer>
 
 <style>
@@ -39,5 +42,19 @@
     padding: 1rem;
     background: #f5f5f5;
     font-family: 'Roboto', sans-serif;
+  }
+
+  footer nav {
+    margin-top: 1rem;
+  }
+
+  footer nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+
+  footer nav a:hover {
+    text-decoration: underline;
   }
 </style>
