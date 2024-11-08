@@ -19,21 +19,7 @@
     <li><code>alt</code>: Provides alternative text for accessibility</li>
   </ul>
 
-  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-    <button 
-      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-      style="background-color: rgb(59 130 246) !important"
-      on:click={() => showCode = !showCode}
-    >
-      {showCode ? 'Show Preview' : 'Show Code'}
-    </button>
-    
-    {#if showCode}
     <pre><code>&lt;img src="product-image.jpg" alt="A sleek modern laptop"&gt;</code></pre>
-    {:else}
-    <img src="https://via.placeholder.com/300x200" alt="A sleek modern laptop">
-    {/if}
-  </div>
 
   <h3>Working with Lists</h3>
   <div>HTML offers three types of lists to organize content effectively:</div>
