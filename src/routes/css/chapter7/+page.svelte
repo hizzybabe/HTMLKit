@@ -4,14 +4,14 @@
 </script>
 
 <div class="container mx-auto px-4 py-8">
-  <h1>Chapter 7: Preprocessors & Best Practices</h1>
+  <h1>Chapter 7: Preprocessors, CSS Frameworks, & Best Practices</h1>
   
   <div class="chapter-intro">
-    <p>In this final chapter, we'll explore CSS preprocessors like Sass/SCSS and learn essential best practices for writing maintainable CSS. We'll also look at popular CSS frameworks and how they can enhance your development workflow.</p>
+    <p>In this chapter, we'll explore CSS preprocessors, popular CSS frameworks, and best practices for writing efficient, maintainable CSS. You'll get an introduction to Sass/SCSS, learn about frameworks like Bootstrap and Tailwind CSS, and discover how to write better CSS code.</p>
     
     <div class="chapter-details">
-      <p><strong>Duration:</strong> Approximately 2-3 hours</p>
-      <p><strong>Goal:</strong> Master CSS preprocessors and best practices for efficient, maintainable stylesheets.</p>
+      <p><strong>Duration:</strong> Approximately 3 hours</p>
+      <p><strong>Goal:</strong> Gain familiarity with CSS preprocessors and frameworks, and learn best practices for creating maintainable, efficient styles.</p>
     </div>
   </div>
 
@@ -19,57 +19,117 @@
 
   <h2>Theory</h2>
 
-  <h3>7.1 Introduction to CSS Preprocessors</h3>
+  <h3>7.1 Introduction to CSS Preprocessors (Sass/SCSS Basics)</h3>
+  <p>CSS preprocessors like Sass extend CSS with powerful features that make your code more maintainable and easier to write.</p>
+
   <div class="concept-block">
-    <p>CSS preprocessors extend CSS with additional features:</p>
-    
     <h4>Variables in Sass</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>$primary-color: #3498db;
-$spacing-unit: 1rem;
+      <pre><code>// Variables
+$primary-color: #3498db;
 
-.button &lbrace;
-    background: $primary-color;
-    padding: $spacing-unit;
-&rbrace;</code></pre>
+body {
+    color: $primary-color;
+}</code></pre>
     </div>
 
-    <h4>Nesting in Sass</h4>
+    <h4>Nesting</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.navbar &lbrace;
-    background: #fff;
-    
-    ul &lbrace;
-        margin: 0;
-        
-        li &lbrace;
-            display: inline-block;
-        &rbrace;
-    &rbrace;
-&rbrace;</code></pre>
+      <pre><code>// Nesting
+.container {
+    .header {
+        color: #333;
+    }
+}</code></pre>
+    </div>
+
+    <h4>Mixins</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>// Mixins
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+.box {
+    @include border-radius(10px);
+}</code></pre>
     </div>
   </div>
 
-  <h3>7.2 CSS Best Practices</h3>
+  <h3>7.2 Overview of Popular CSS Frameworks</h3>
+  <p>CSS frameworks provide pre-built components and utilities to speed up development.</p>
+
   <div class="concept-block">
-    <ul>
-      <li><strong>Organization</strong>: Group related styles together</li>
-      <li><strong>Naming Conventions</strong>: Use consistent, descriptive class names</li>
-      <li><strong>Modularity</strong>: Break styles into reusable components</li>
-      <li><strong>Performance</strong>: Minimize specificity and avoid deep nesting</li>
-    </ul>
+    <h4>Bootstrap Example</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-6"&gt;Half width&lt;/div&gt;
+        &lt;div class="col-md-6"&gt;Half width&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <h4>Tailwind CSS Example</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>&lt;div class="flex flex-col items-center justify-center min-h-screen bg-blue-500"&gt;
+    &lt;h1 class="text-4xl font-bold text-white"&gt;Hello, World!&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+    </div>
   </div>
 
-  <h2 class="workshop-title">Practice Workshop: Final Project</h2>
+  <h3>7.3 CSS Best Practices</h3>
+  <div class="concept-block">
+    <h4>BEM Naming Convention</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.block {}
+.block__element {}
+.block--modifier {}</code></pre>
+    </div>
+  </div>
+
+  <h2 class="workshop-title">Practice Workshop: Final Project - Personal Website Revamp</h2>
   <div class="workshop-container">
-    <h3 class="task">Task: Create a complete website using preprocessors and best practices</h3>
+    <h3 class="task">Task: Revamp your personal website using advanced CSS techniques</h3>
     
-    <!-- Workshop content here -->
+    <h4>Step 1: Project Setup</h4>
+    <ul>
+      <li>Create a new branch in your project repository</li>
+      <li>Set up Sass/SCSS if you're using a preprocessor</li>
+      <li>Choose and integrate a CSS framework if desired</li>
+    </ul>
+
+    <h4>Step 2: Implementation</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>// Example SCSS structure
+@import 'variables';
+@import 'mixins';
+@import 'layout';
+@import 'components';
+
+// Variables
+$primary: #3498db;
+$secondary: #2ecc71;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}</code></pre>
+    </div>
+
+    <h3>Deliverables</h3>
+    <ul>
+      <li>Complete website with responsive design</li>
+      <li>Organized CSS/SCSS files following best practices</li>
+      <li>Documentation of your implementation choices</li>
+    </ul>
   </div>
 
   <ChapterNavigation 
     prevHref="/HTMLKit/css/chapter6" 
-    nextHref="/HTMLKit/css/chapter8"
+    nextHref="/HTMLKit/javascript/chapter1"
   />
 </div>
 

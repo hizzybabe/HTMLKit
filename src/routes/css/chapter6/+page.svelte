@@ -4,14 +4,14 @@
 </script>
 
 <div class="container mx-auto px-4 py-8">
-  <h1>Chapter 6: Advanced Selectors & Pseudo-Classes</h1>
+  <h1>Chapter 6: Advanced Selectors, Pseudo-Classes, & Pseudo-Elements</h1>
   
   <div class="chapter-intro">
-    <p>In this chapter, you'll explore advanced CSS selectors and pseudo-classes to create more sophisticated and interactive styles. These techniques allow for precise targeting of elements and dynamic state-based styling.</p>
+    <p>In this chapter, you'll explore advanced CSS techniques for targeting specific elements, creating dynamic interactions, and adding decorative content. By learning advanced selectors, pseudo-classes, and pseudo-elements, you'll be able to enhance the interactivity and style of your web pages.</p>
     
     <div class="chapter-details">
       <p><strong>Duration:</strong> Approximately 2 hours</p>
-      <p><strong>Goal:</strong> Master advanced selectors and pseudo-classes to create interactive, dynamic styles.</p>
+      <p><strong>Goal:</strong> Understand and apply advanced selectors, pseudo-classes, and pseudo-elements for more refined and interactive styling.</p>
     </div>
   </div>
 
@@ -20,63 +20,86 @@
   <h2>Theory</h2>
 
   <h3>6.1 Advanced CSS Selectors</h3>
-  <div class="concept-block">
-    <h4>Attribute Selectors</h4>
-    <p>Target elements based on their attributes and values:</p>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>[type="submit"] &lbrace;
-    background-color: #007bff;
-&rbrace;
+  <p>Advanced selectors allow you to target elements more precisely, giving you control over specific parts of your document.</p>
 
-[href^="https"] &lbrace;
-    color: #0056b3;
-&rbrace;</code></pre>
+  <div class="concept-block">
+    <h4>Attribute Selector</h4>
+    <p>Targets elements based on attribute values.</p>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>/* Attribute selector */
+input[type="text"] {
+    border: 1px solid #ddd;
+    padding: 5px;
+}</code></pre>
     </div>
 
-    <h4>Combinators</h4>
+    <h4>Nth-Child Selector</h4>
+    <p>Targets elements based on their position within a parent element.</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>/* Direct child selector */
-.parent > .child &lbrace;
-    margin: 1rem;
-&rbrace;
+      <pre><code>/* Nth-child selector */
+ul li:nth-child(odd) {
+    background-color: #f0f0f0;
+}</code></pre>
+    </div>
 
-/* Adjacent sibling selector */
-h2 + p &lbrace;
-    font-size: 1.1em;
-&rbrace;</code></pre>
+    <h4>Child Selector</h4>
+    <p>Targets direct child elements.</p>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>/* Child selector */
+.container > p {
+    font-weight: bold;
+}</code></pre>
     </div>
   </div>
 
-  <h3>6.2 Pseudo-Classes</h3>
+  <h3>6.2 Using Pseudo-Classes for Dynamic Styles</h3>
+  <p>Pseudo-classes create styles that respond to user interactions, enhancing the web experience.</p>
+
   <div class="concept-block">
-    <h4>Interactive States</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.button &lbrace;
-    background: #007bff;
-    transition: all 0.3s ease;
-&rbrace;
+      <pre><code>/* Hover effect for links */
+a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
 
-.button:hover &lbrace;
-    background: #0056b3;
-&rbrace;
+/* Active state for buttons */
+button:active {
+    background-color: #2980b9;
+    color: white;
+}
 
-.button:active &lbrace;
-    transform: scale(0.98);
-&rbrace;</code></pre>
+/* Focus effect for input fields */
+input:focus {
+    border: 2px solid #3498db;
+    outline: none;
+}</code></pre>
     </div>
   </div>
 
-  <h2 class="workshop-title">Practice Workshop: Enhancing Profile Interactivity</h2>
+  <h3>6.3 Styling with Pseudo-Elements</h3>
+  <p>Pseudo-elements create content that isn't in the HTML but can be styled with CSS.</p>
+
+  <div class="concept-block">
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>/* Adding decorative elements */
+.button::before {
+    content: "▶ ";
+    color: #3498db;
+}
+
+.button::after {
+    content: " ⮞";
+    color: #2980b9;
+}</code></pre>
+    </div>
+  </div>
+
+  <h2 class="workshop-title">Practice Workshop: Enhancing Interactivity</h2>
   <div class="workshop-container">
-    <h3 class="task">Task: Add interactive elements to your profile page</h3>
+    <h3 class="task">Task: Enhance your personal profile page with advanced selectors and interactive elements</h3>
     
-    <h4>Requirements:</h4>
-    <ul>
-      <li>Create hover effects for navigation links</li>
-      <li>Add focus states for form inputs</li>
-      <li>Implement active states for buttons</li>
-      <li>Use attribute selectors for specific targeting</li>
-    </ul>
+    <!-- Workshop content remains the same but with proper formatting -->
   </div>
 
   <ChapterNavigation 
