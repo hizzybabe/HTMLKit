@@ -272,19 +272,17 @@ height: 100px;
 <h2 on:click={() => showMediaQueries = !showMediaQueries}>10. Media Queries</h2>
 {#if showMediaQueries}
 <p>Controls the display of elements based on the screen size.</p>
-<pre><code class="language-css">@media (max-width: 768px) &#123;
-  .element &#123;
-    display: none;
-  &#125;
-&#125;</code></pre>
+  <pre><code class="language-css">@media (max-width: 768px) &#123;
+    .element &#123;
+      display: none;
+    &#125;
+  &#125;</code></pre>
 
-    <p>Sets the text color.</p>
-    <pre><code class="language-css">p &#123;
-    color: #333;
-&#125;</code></pre>
+  <p>Sets the text color.</p>
+  <pre><code class="language-css">p &#123;
+  color: #333;
+  &#125;</code></pre>
+{/if}
 
-    <!-- Add other text styling properties here -->
-  {/if}
-
-  <!-- Repeat the pattern for other sections -->
+  <!-- Add other text styling properties here -->
 </div>

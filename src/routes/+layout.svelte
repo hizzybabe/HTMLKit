@@ -7,7 +7,7 @@
   <a href="/HTMLKit/about">About</a>
 
   <div class="dropdown">
-    <a href="#">Learn ▼</a>
+    <a href="/HTMLKit/">Learn ▼</a>
     <div class="dropdown-content">
       <a href="/HTMLKit/html">HTML</a>
       <a href="/HTMLKit/css">CSS</a>
