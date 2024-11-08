@@ -54,43 +54,51 @@
     };
 </script>
 
-<main class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-8 text-center">Learn HTML: Quick Course with Practical Examples</h1>
+<main class="container mx-auto px-4 py-8 max-w-4xl">
+    <h1 class="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text">
+        Learn HTML: Quick Course with Practical Examples
+    </h1>
     
-    <div class="grid gap-6">
+    <div class="space-y-4">
         {#each chapters as chapter, i}
-            <div class="border rounded-lg shadow-md bg-white">
+            <div class="rounded-xl overflow-hidden bg-white shadow-lg transition-all duration-200 hover:shadow-xl">
                 <!-- Toggle Header -->
                 <button 
-                    class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50"
+                    class="w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white transition-all duration-200"
                     on:click={() => toggleChapter(i)}
                 >
-                    <h2 class="text-2xl font-semibold">{chapter.title}</h2>
-                    <span class="transform transition-transform duration-200" class:rotate-180={visibleChapters[i]}>
+                    <h2 class="text-xl font-semibold">{chapter.title}</h2>
+                    <span 
+                        class="transform transition-transform duration-300 text-white"
+                        class:rotate-180={visibleChapters[i]}
+                    >
                         ▼
                     </span>
                 </button>
                 
                 <!-- Collapsible Content -->
                 {#if visibleChapters[i]}
-                    <div class="p-6 pt-0">
-                        <div class="mb-4">
-                            <h3 class="font-medium mb-2">Key Topics:</h3>
-                            <ul class="list-disc list-inside">
+                    <div class="p-6 bg-white">
+                        <div class="mb-6">
+                            <h3 class="font-semibold mb-3 text-lg text-gray-800">Key Topics:</h3>
+                            <ul class="space-y-2">
                                 {#each chapter.topics as topic}
-                                    <li>{topic}</li>
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="mr-2">•</span>
+                                        {topic}
+                                    </li>
                                 {/each}
                             </ul>
                         </div>
                         
-                        <div class="mb-4">
-                            <h3 class="font-medium mb-2">Practice:</h3>
-                            <p>{chapter.workshop}</p>
+                        <div class="mb-6">
+                            <h3 class="font-semibold mb-3 text-lg text-gray-800">Practice:</h3>
+                            <p class="text-gray-700">{chapter.workshop}</p>
                         </div>
                         
                         <a 
                             href={chapter.path}
-                            class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                            class="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2.5 rounded-lg hover:opacity-90 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
                         >
                             Start Chapter
                         </a>
@@ -100,9 +108,10 @@
         {/each}
     </div>
 </main>
-  
-  <style>
 
-  
-  </style>
+<style>
+    :global(body) {
+        background-color: #f8fafc;
+    }
+</style>
   
