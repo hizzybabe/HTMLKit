@@ -68,7 +68,10 @@ body &#123;
   </div>
 
   <h3>7.2 Overview of Popular CSS Frameworks</h3>
-  <p>CSS frameworks provide pre-built components and utilities to speed up development.</p>
+  <p>CSS frameworks offer pre-built styles and components to speed up development.
+    They provide a consistent, modern design and make it easier to create responsive layouts.</p>
+
+    <p>- **Bootstrap**:<br/> - Known for its grid system and extensive component library.<br/> - Provides ready-to-use components like navbars, buttons, modals, and forms.<br/> - Syntax example:<br/> ```html<br/> &lt;div class="container"&gt;<br/> &lt;div class="row"&gt;<br/> &lt;div class="col-md-6"&gt;Half width&lt;/div&gt;<br/> &lt;div class="col-md-6"&gt;Half width&lt;/div&gt;<br/> &lt;/div&gt;<br/> &lt;/div&gt;<br/> ```</p>
 
   <div class="concept-block">
     <h4>Bootstrap Example</h4>
@@ -81,6 +84,8 @@ body &#123;
 &lt;/div&gt;</code></pre>
     </div>
 
+    <p>- **Tailwind CSS**:<br/> - A utility-first framework that provides low-level classes for layout, color, spacing, and typography.<br/> - Allows for custom styles by combining multiple utility classes.<br/> - Syntax example:<br/> ```html<br/> &lt;div class="flex flex-col items-center justify-center min-h-screen bg-blue-500"&gt;<br/> &lt;h1 class="text-4xl font-bold text-white"&gt;Hello, World!&lt;/h1&gt;<br/> &lt;/div&gt;<br/> ```</p>
+
     <h4>Tailwind CSS Example</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>&lt;div class="flex flex-col items-center justify-center min-h-screen bg-blue-500"&gt;
@@ -89,15 +94,26 @@ body &#123;
     </div>
   </div>
 
+  <p>Both frameworks offer customization options and are widely used in modern web development to create responsive, visually appealing websites quickly.</p>
+
   <h3>7.3 CSS Best Practices</h3>
   <div class="concept-block">
     <h4>BEM Naming Convention</h4>
+
+    <p>- **Use Consistent Naming Conventions**: Naming conventions like BEM (Block, Element, Modifier) make it easier to understand relationships between elements.<br/> - Example: `.button--primary`, `.card__title`, `.navbar__link`</p>
+
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>.block &#123;&#125;
 .block__element &#123;&#125;
 .block--modifier &#123;&#125;</code></pre>
     </div>
   </div>
+
+  <p>- **Organize CSS Using Comments and Sections**: Separate sections of your CSS for layout, typography, colors, and components, and use comments to label each section.</p>
+<p>- **Avoid Deep Nesting**: Too much nesting makes CSS harder to read and maintain. Keep nesting to two or three levels.</p>
+<p>- **Optimize CSS for Performance**:<br/> - Minify CSS files for faster loading times.<br/> - Use classes over IDs for styling.<br/> - Limit the use of universal selectors (`*`) and deeply nested selectors.</p>
+<p>- **Leverage Variables and Mixins**: Reuse common values with variables, and create mixins for repetitive code.</p>
+<p>---</p>
 
   <h2 class="workshop-title">Practice Workshop: Final Project - Personal Website Revamp</h2>
   <div class="workshop-container">
