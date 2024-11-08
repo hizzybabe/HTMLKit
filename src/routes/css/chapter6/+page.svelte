@@ -27,28 +27,28 @@
     <p>Targets elements based on attribute values.</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>/* Attribute selector */
-input[type="text"] {
+input[type="text"] &#123;
     border: 1px solid #ddd;
     padding: 5px;
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h4>Nth-Child Selector</h4>
     <p>Targets elements based on their position within a parent element.</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>/* Nth-child selector */
-ul li:nth-child(odd) {
+ul li:nth-child(odd) &#123;
     background-color: #f0f0f0;
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h4>Child Selector</h4>
     <p>Targets direct child elements.</p>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>/* Child selector */
-.container > p {
+.container > p &#123;
     font-weight: bold;
-}</code></pre>
+&#125;</code></pre>
     </div>
   </div>
 
@@ -58,22 +58,22 @@ ul li:nth-child(odd) {
   <div class="concept-block">
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>/* Hover effect for links */
-a:hover {
+a:hover &#123;
     color: #3498db;
     text-decoration: underline;
-}
+&#125;
 
 /* Active state for buttons */
-button:active {
+button:active &#123;
     background-color: #2980b9;
     color: white;
-}
+&#125;
 
 /* Focus effect for input fields */
-input:focus {
+input:focus &#123;
     border: 2px solid #3498db;
     outline: none;
-}</code></pre>
+&#125;</code></pre>
     </div>
   </div>
 
@@ -83,15 +83,15 @@ input:focus {
   <div class="concept-block">
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>/* Adding decorative elements */
-.button::before {
+.button::before &#123;
     content: "▶ ";
     color: #3498db;
-}
+&#125;
 
-.button::after {
+.button::after &#123;
     content: " ⮞";
     color: #2980b9;
-}</code></pre>
+&#125;</code></pre>
     </div>
   </div>
 

@@ -28,31 +28,31 @@
       <pre><code>// Variables
 $primary-color: #3498db;
 
-body {
+body &#123;
     color: $primary-color;
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h4>Nesting</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>// Nesting
-.container {
-    .header {
+.container &#123;
+    .header &#123;
         color: #333;
-    }
-}</code></pre>
+    &#125;
+&#125;</code></pre>
     </div>
 
     <h4>Mixins</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>// Mixins
-@mixin border-radius($radius) {
+@mixin border-radius($radius) &#123;
     border-radius: $radius;
-}
+&#125;
 
-.box {
+.box &#123;
     @include border-radius(10px);
-}</code></pre>
+&#125;</code></pre>
     </div>
   </div>
 
@@ -82,9 +82,9 @@ body {
   <div class="concept-block">
     <h4>BEM Naming Convention</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.block {}
-.block__element {}
-.block--modifier {}</code></pre>
+      <pre><code>.block &#123;&#125;
+.block__element &#123;&#125;
+.block--modifier &#123;&#125;</code></pre>
     </div>
   </div>
 
@@ -112,11 +112,11 @@ $primary: #3498db;
 $secondary: #2ecc71;
 
 // Mixins
-@mixin flex-center {
+@mixin flex-center &#123;
     display: flex;
     align-items: center;
     justify-content: center;
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h3>Deliverables</h3>

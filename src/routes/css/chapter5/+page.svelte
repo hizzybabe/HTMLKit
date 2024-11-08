@@ -36,16 +36,16 @@
   <div class="concept-block">
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>/* Default layout */
-.gallery-item {
+.gallery-item &#123;
     width: 30%;
-}
+&#125;
 
 /* Small screens */
-@media (max-width: 767px) {
-    .gallery-item {
+@media (max-width: 767px) &#123;
+    .gallery-item &#123;
         width: 100%;
-    }
-}</code></pre>
+    &#125;
+&#125;</code></pre>
     </div>
   </div>
 
@@ -55,25 +55,25 @@
   <div class="concept-block">
     <h4>Percentage (%)</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.container {
+      <pre><code>.container &#123;
     width: 80%;  /* Relative to parent */
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h4>em and rem Units</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.text {
+      <pre><code>.text &#123;
     font-size: 1.2em;   /* Relative to parent font size */
     margin: 1.5rem;     /* Relative to root font size */
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h4>Viewport Units</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.hero {
+      <pre><code>.hero &#123;
     height: 50vh;    /* 50% of viewport height */
     width: 100vw;    /* 100% of viewport width */
-}</code></pre>
+&#125;</code></pre>
     </div>
   </div>
 
@@ -83,28 +83,28 @@
     
     <h4>Step 1: Update Gallery Layout</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.gallery {
+      <pre><code>.gallery &#123;
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
-}
+&#125;
 
-.gallery-item {
+.gallery-item &#123;
     width: 30%;
     margin-bottom: 2rem;
-}
+&#125;
 
-@media (max-width: 768px) {
-    .gallery-item {
+@media (max-width: 768px) &#123;
+    .gallery-item &#123;
         width: 48%;
-    }
-}
+    &#125;
+&#125;
 
-@media (max-width: 480px) {
-    .gallery-item {
+@media (max-width: 480px) &#123;
+    .gallery-item &#123;
         width: 100%;
-    }
-}</code></pre>
+    &#125;
+&#125;</code></pre>
     </div>
 
     <h3>Deliverables</h3>
@@ -113,4 +113,9 @@
       <li><strong>Screenshots</strong>: Gallery layout at different screen sizes (desktop, tablet, mobile)</li>
     </ul>
   </div>
+
+  <ChapterNavigation 
+    prevHref="/HTMLKit/css/chapter4" 
+    nextHref="/HTMLKit/css/chapter6" 
+  />
 </div>
