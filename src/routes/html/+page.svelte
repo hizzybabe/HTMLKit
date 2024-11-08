@@ -59,7 +59,7 @@
         Learn HTML: Quick Course with Practical Examples
     </h1>
     
-    <div class="space-y-4 mb-12">
+    <div class="space-y-8">
         {#each chapters as chapter, i}
             <div class="rounded-xl overflow-hidden bg-white shadow-lg transition-all duration-200 hover:shadow-xl">
                 <!-- Toggle Header -->
