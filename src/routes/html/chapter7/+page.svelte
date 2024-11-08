@@ -113,7 +113,7 @@ contact.html (Contact Page)</code></pre>
 
   <ChapterNavigation 
     prevHref="/HTMLKit/html/chapter6" 
-    nextHref="/HTMLKit/html/chapter8" 
+    nextHref="/HTMLKit/css/chapter1" 
   />
 </div>
 
