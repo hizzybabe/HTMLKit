@@ -73,7 +73,7 @@
   <p class="intro">Master the fundamentals of CSS with our comprehensive guide</p>
 
   <div class="chapters">
-    {#each chapters as chapter}
+    {#each chapters as chapter, index}
       <div class="chapter-card">
         <h2>{chapter.title}</h2>
         <ul>
@@ -81,7 +81,7 @@
             <li>{topic}</li>
           {/each}
         </ul>
-        <button>Start Chapter</button>
+        <button on:click={() => window.location.href=`/HTMLKit/css/chapter${index + 1}`}>Start Chapter</button>
       </div>
     {/each}
   </div>
