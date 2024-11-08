@@ -7,21 +7,20 @@
   <a href="/HTMLKit/about">About</a>
 
   <div class="dropdown">
-  <a href="#">Learn ▼</a>
-
-  <div class="dropdown-content">
-    <a href="/HTMLKit/html">HTML</a>
-    <a href="/HTMLKit/css">CSS</a>
-    <a href="/HTMLKit/javascript">JavaScript</a>
-    <a href="/HTMLKit/svelte">Svelte</a>
-    <a href="/HTMLKit/astro">Astro</a>
+    <a href="#">Learn ▼</a>
+    <div class="dropdown-content">
+      <a href="/HTMLKit/html">HTML</a>
+      <a href="/HTMLKit/css">CSS</a>
+      <a href="/HTMLKit/javascript">JavaScript</a>
+      <a href="/HTMLKit/svelte">Svelte</a>
+      <a href="/HTMLKit/astro">Astro</a>
+    </div>
   </div>
   
   <a href="/HTMLKit/practice">Practice</a>
 
   <div class="dropdown">
     <a href="/HTMLKit/cheatsheet">Cheatsheet ▼</a>
-    
     <div class="dropdown-content">
       <a href="/HTMLKit/cheatsheet/html">HTML Cheatsheet</a>
       <a href="/HTMLKit/cheatsheet/css">CSS Cheatsheet</a>
@@ -30,7 +29,8 @@
       <a href="/HTMLKit/cheatsheet/astro">Astro Cheatsheet</a>
     </div>
   </div>
-  <a href="/HTMLKit/practice">FREE Templates</a>
+  
+  <a href="/HTMLKit/templates">FREE Templates</a>
 </nav>
 
 <slot />
@@ -45,11 +45,11 @@
 <style>
   nav {
     background: linear-gradient(45deg, var(--primary), var(--secondary));
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     font-family: 'Roboto', sans-serif;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
   }
 
