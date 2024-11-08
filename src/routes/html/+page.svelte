@@ -1,4 +1,6 @@
 <script>
+    import { goto } from '$app/navigation';
+
     const chapters = [
       {
         title: "1. Introduction to HTML & Setup",
@@ -96,12 +98,12 @@
                             <p class="text-gray-700">{chapter.workshop}</p>
                         </div>
                         
-                        <a 
-                            href={chapter.path}
+                        <button 
+                            on:click={() => goto(chapter.path)}
                             class="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2.5 rounded-lg hover:opacity-90 transition-all duration-200 font-medium shadow-md hover:shadow-lg"
                         >
                             Start Chapter
-                        </a>
+                        </button>
                     </div>
                 {/if}
             </div>
