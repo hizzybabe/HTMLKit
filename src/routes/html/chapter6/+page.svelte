@@ -90,6 +90,9 @@
   <h3>Implementing ARIA Attributes</h3>
   <div>Consider implementing ARIA (Accessible Rich Internet Applications) attributes when necessary, which can provide additional information on the roles and properties of elements.</div>
 
+  <pre><code>&lt;button aria-label="Close" onclick="closeModal()"&gt;X&lt;/button&gt;</code></pre>
+
+<!--
   <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
     <button 
       class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
@@ -107,7 +110,8 @@
     </div>
     {/if}
   </div>
-
+-->
+  
   <hr class="my-8"/>
 
   <h2 class="workshop-title">Practice Workshop: Enhancing Accessibility & Semantics</h2>
