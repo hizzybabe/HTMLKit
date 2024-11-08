@@ -268,12 +268,8 @@
 
 
   <!-- Navigation -->
-  <div class="mt-8 flex justify-between">
-    <a href="/html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-      Back to Chapters
-    </a>
-    <a href="/html/chapter2" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-      Next Chapter
-    </a>
-  </div>
+  <ChapterNavigation 
+  prevHref="/HTMLKit/html/chapter5" 
+  nextHref="/HTMLKit/html/chapter7" 
+/>
 </main>
