@@ -43,41 +43,63 @@
         path: "html/chapter7"
       }
     ];
-  </script>
-  
-  <main class="container mx-auto px-4 py-8">
+
+    // Add state management for toggle
+    let visibleChapters = chapters.map(() => false);
+
+    // Toggle function
+    const toggleChapter = (index) => {
+        visibleChapters[index] = !visibleChapters[index];
+        visibleChapters = [...visibleChapters]; // trigger reactivity
+    };
+</script>
+
+<main class="container mx-auto px-4 py-8">
     <h1 class="text-4xl font-bold mb-8 text-center">Learn HTML: Quick Course with Practical Examples</h1>
     
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {#each chapters as chapter}
-        <div class="border rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow bg-white hover:scale-105 transform duration-200">
-          
-          <h2 class="text-2xl font-semibold mb-4">{chapter.title}</h2>
-          
-          <div class="mb-4">
-            <h3 class="font-medium mb-2">Key Topics:</h3>
-            <ul class="list-disc list-inside">
-              {#each chapter.topics as topic}
-                <li>{topic}</li>
-              {/each}
-            </ul>
-          </div>
-          
-          <div class="mb-4">
-            <h3 class="font-medium mb-2">Practice:</h3>
-            <p>{chapter.workshop}</p>
-          </div>
-          
-          <a 
-            href={chapter.path}
-            class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
-          >
-          <button>Start Chapter</button>
-          </a>
-        </div>
-      {/each}
+    <div class="grid gap-6">
+        {#each chapters as chapter, i}
+            <div class="border rounded-lg shadow-md bg-white">
+                <!-- Toggle Header -->
+                <button 
+                    class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50"
+                    on:click={() => toggleChapter(i)}
+                >
+                    <h2 class="text-2xl font-semibold">{chapter.title}</h2>
+                    <span class="transform transition-transform duration-200" class:rotate-180={visibleChapters[i]}>
+                        ▼
+                    </span>
+                </button>
+                
+                <!-- Collapsible Content -->
+                {#if visibleChapters[i]}
+                    <div class="p-6 pt-0">
+                        <div class="mb-4">
+                            <h3 class="font-medium mb-2">Key Topics:</h3>
+                            <ul class="list-disc list-inside">
+                                {#each chapter.topics as topic}
+                                    <li>{topic}</li>
+                                {/each}
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="font-medium mb-2">Practice:</h3>
+                            <p>{chapter.workshop}</p>
+                        </div>
+                        
+                        <a 
+                            href={chapter.path}
+                            class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                        >
+                            Start Chapter
+                        </a>
+                    </div>
+                {/if}
+            </div>
+        {/each}
     </div>
-  </main>
+</main>
   
   <style>
 
