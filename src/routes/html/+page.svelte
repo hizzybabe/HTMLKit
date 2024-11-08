@@ -78,13 +78,13 @@
                 
                 <!-- Collapsible Content -->
                 {#if visibleChapters[i]}
-                    <div class="p-6 bg-white">
+                    <div class="p-6 bg-white mb-4">
                         <div class="mb-6">
                             <h3 class="font-semibold mb-3 text-lg text-gray-800">Key Topics:</h3>
                             <ul class="space-y-2">
                                 {#each chapter.topics as topic}
                                     <li class="flex items-center text-gray-700">
-                                        <span class="mr-2"></span>
+                                        <span class="mr-2">•</span>
                                         {topic}
                                     </li>
                                 {/each}
