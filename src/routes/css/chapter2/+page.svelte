@@ -18,7 +18,7 @@
       <div>Example: <code>p &lbrace; color: blue; &rbrace;</code> styles all <code>&lt;p&gt;</code> elements.</div>
     </li>
     <li><strong>ID Selector</strong>: Targets a specific element with a unique <code>id</code> attribute. The ID selector is represented with a <code>#</code>.
-      <div>Example: <code>#profile { color: green; }</code> styles the element with <code>id="profile"</code>.</div>
+      <div>Example: <code>#profile &lbrace; color: green; &rbrace;</code> styles the element with <code>id="profile"</code>.</div>
     </li>
     <li><strong>Class Selector</strong>: Targets all elements with a specific <code>class</code> attribute. The class selector is represented with a <code>.</code>.
       <div>Example: <code>.highlight { background-color: yellow; }</code> styles all elements with <code>class="highlight"</code>.</div>
