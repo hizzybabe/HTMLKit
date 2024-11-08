@@ -67,7 +67,7 @@
                     class="w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white transition-all duration-200"
                     on:click={() => toggleChapter(i)}
                 >
-                    <h2 class="text-xl font-semibold">{chapter.title}</h2>
+                    <h2 class="text-xl font-semibold text-white">{chapter.title}</h2>
                     <span 
                         class="transform transition-transform duration-300 text-white"
                         class:rotate-180={visibleChapters[i]}
@@ -78,7 +78,7 @@
                 
                 <!-- Collapsible Content -->
                 {#if visibleChapters[i]}
-                    <div class="p-6 bg-white">
+                    <div class="p-6 bg-white mb-4">
                         <div class="mb-6">
                             <h3 class="font-semibold mb-3 text-lg text-gray-800">Key Topics:</h3>
                             <ul class="space-y-2">
