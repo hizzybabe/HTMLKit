@@ -5,6 +5,11 @@
   <p></p>
 </div>
 
+<!-- Ad Banner Placeholder -->
+<div class="ad-banner">
+  <p>Ad Banner Placeholder</p>
+</div>
+
 <section class="features">
   <div class="feature">
     <h2>Learn HTML, CSS, and JavaScript</h2>
@@ -71,6 +76,15 @@
     * {
       font-family: 'Roboto', sans-serif;
     }
+
+  .ad-banner {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+  }
   </style>
 
   
