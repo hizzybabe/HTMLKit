@@ -1,3 +1,5 @@
+<div class="container mx-auto px-4 py-8">
+    
 <p>Here's a simple HTML cheatsheet to help you with essential HTML tags and attributes:</p>
 <p>---</p>
 
@@ -154,3 +156,5 @@
 
 <p>---</p>
 <p>This cheatsheet covers essential HTML tags and structures, perfect for quick reference as you build web pages!</p>
+
+</div>
