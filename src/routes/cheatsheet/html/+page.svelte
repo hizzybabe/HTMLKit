@@ -24,6 +24,8 @@
 
   <h1 class="text-2xl font-bold mb-4">📝 HTML Cheatsheet</h1>
 
+  <p class="text-sm text-gray-500">Click to expand section</p>
+
   <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
     on:click={() => toggleSection('structure')}

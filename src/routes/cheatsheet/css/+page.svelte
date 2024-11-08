@@ -18,6 +18,8 @@
   <p>Here's a handy CSS cheatsheet covering essential properties and concepts to help you style your web pages:</p>
   
   <h1>CSS Cheatsheet</h1>
+
+  <p class="text-sm text-gray-500">Click to expand section</p>
   
   <h2 on:click={() => showBasicSyntax = !showBasicSyntax} class="cursor-pointer">
     📝 1. Basic Syntax {showBasicSyntax ? '▼' : '▶'}
