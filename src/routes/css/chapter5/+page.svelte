@@ -74,19 +74,36 @@
 
 .gallery-item &#123;
     width: 30%;
-    margin-bottom: 2rem;
+    margin: 1vw;
 &#125;
 
-@media (max-width: 768px) &#123;
+.gallery-item img &#123;
+    width: 100%;
+    height: auto;
+&#125;
+
+/* Default layout for larger screens */
+.gallery-item &#123;
+    width: 30%;
+&#125;
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) &#123;
     .gallery-item &#123;
-        width: 48%;
+        width: 45%;
     &#125;
 &#125;
 
-@media (max-width: 480px) &#123;
+/* Small screens (mobiles) */
+@media (max-width: 767px) &#123;
     .gallery-item &#123;
         width: 100%;
     &#125;
+&#125;
+
+.gallery-item p &#123;
+    font-size: 1rem;
+    padding: 0.5em;
 &#125;</code></pre>
     </div>
 
