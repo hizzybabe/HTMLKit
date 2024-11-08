@@ -60,6 +60,8 @@
     <h1 class="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text">
         Learn HTML: Quick Course with Practical Examples
     </h1>
+
+    <p class="text-sm text-gray-500">Click to expand section</p>
     
     <div class="chapter-container">
         {#each chapters as chapter, i}
