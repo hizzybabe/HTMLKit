@@ -59,17 +59,17 @@
         Learn HTML: Quick Course with Practical Examples
     </h1>
     
-    <div class="space-y-8 [&>*]:mb-8">
+    <div class="chapter-container">
         {#each chapters as chapter, i}
-            <div class="rounded-xl overflow-hidden bg-white shadow-lg transition-all duration-200 hover:shadow-xl">
+            <div class="chapter-item rounded-xl overflow-hidden bg-white shadow-lg transition-all duration-200 hover:shadow-xl">
                 <!-- Toggle Header -->
                 <button 
-                    class="w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-500 transition-all duration-200"
+                    class="chapter-header w-full p-6 text-left flex justify-between items-center bg-gradient-to-r from-blue-600 to-cyan-500 transition-all duration-200"
                     on:click={() => toggleChapter(i)}
                 >
-                    <h2 class="text-xl font-semibold !text-white">{chapter.title}</h2>
+                    <h2 class="chapter-title text-xl font-semibold">{chapter.title}</h2>
                     <span 
-                        class="transform transition-transform duration-300 !text-white"
+                        class="chapter-arrow transform transition-transform duration-300"
                         class:rotate-180={visibleChapters[i]}
                     >
                         ▼
@@ -114,8 +114,25 @@
         background-color: #f8fafc;
     }
 
-    /* Add specific style override if needed */
-    :global(.text-white) {
+    .chapter-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .chapter-item {
+        margin-bottom: 2rem;
+    }
+
+    .chapter-header {
+        color: white !important;
+    }
+
+    .chapter-title {
+        color: white !important;
+    }
+
+    .chapter-arrow {
         color: white !important;
     }
 </style>
