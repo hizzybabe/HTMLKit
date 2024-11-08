@@ -198,19 +198,13 @@
   <div>Congratulations on adding a contact form to your profile page! Forms are crucial for interacting with users and collecting data effectively, a key skill in web development.</div>
 
   <!-- Workshop Section -->
-  <div class="bg-gray-100 p-6 rounded-lg">
-    <h2 class="text-2xl font-semibold mb-4">{chapterContent.workshop.title}</h2>
-    <p class="mb-4">{chapterContent.workshop.instructions}</p>
-    <pre class="bg-white p-4 rounded"><code>{chapterContent.workshop.codeExample}</code></pre>
-  </div>
+
 
   <!-- Navigation -->
-  <div class="mt-8 flex justify-between">
-    <a href="/html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-      Back to Chapters
-    </a>
-    <a href="/html/chapter2" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-      Next Chapter
-    </a>
-  </div>
+  <ChapterNavigation 
+  prevHref="/HTMLKit/html/chapter4" 
+  nextHref="/HTMLKit/html/chapter6" 
+/>
+
+
 </main>
