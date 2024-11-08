@@ -49,6 +49,8 @@
     display: flex;
     gap: 1rem;
     font-family: 'Roboto', sans-serif;
+    justify-content: space-around;
+    align-items: center;
   }
 
   nav a {
