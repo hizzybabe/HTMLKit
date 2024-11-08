@@ -1,43 +1,41 @@
-## Chapter 5: Responsive Web Design (RWD) & Media Queries
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+  let showCode = true;
+</script>
 
-In this chapter, you’ll learn the principles of responsive web design (RWD) and how to use media queries to create layouts that adapt to different screen sizes. You’ll also be introduced to flexible units like `%`, `em`, `rem`, `vw`, and `vh`, which allow your designs to adjust seamlessly across various devices. By the end of this chapter, you’ll be able to make a photo gallery responsive.
+<div class="container mx-auto px-4 py-8">
+  <h1>Chapter 5: Responsive Web Design & Media Queries</h1>
+  
+  <div class="chapter-intro">
+    <p>In this chapter, you'll learn the principles of responsive web design (RWD) and how to use media queries to create layouts that adapt to different screen sizes. You'll also be introduced to flexible units that allow your designs to adjust seamlessly across various devices.</p>
+    
+    <div class="chapter-details">
+      <p><strong>Duration:</strong> Approximately 2 hours</p>
+      <p><strong>Goal:</strong> Learn to create responsive layouts using media queries and flexible units.</p>
+    </div>
+  </div>
 
-### **Chapter 5 Overview:**
-- Duration: Approximately 2 hours
-- Goal: Learn to create responsive layouts using media queries and flexible units.
+  <hr/>
 
----
+  <h2>Theory</h2>
 
-### **Theory**
+  <h3>5.1 Principles of Responsive Web Design</h3>
+  <p>Responsive Web Design (RWD) ensures that web content looks good and functions well across a range of devices and screen sizes. The core principles include:</p>
 
-#### **5.1 Principles of Responsive Web Design**
+  <div class="concept-block">
+    <ul>
+      <li><strong>Fluid Layouts</strong>: Use flexible units like percentages instead of fixed pixel values</li>
+      <li><strong>Flexible Images</strong>: Use CSS to resize images and avoid overflowing containers</li>
+      <li><strong>Media Queries</strong>: CSS rules that apply different styles based on screen size</li>
+    </ul>
+  </div>
 
-Responsive Web Design (RWD) ensures that web content looks good and functions well across a range of devices and screen sizes. The core principles of RWD include:
+  <h3>5.2 Using Media Queries</h3>
+  <p>Media queries allow you to apply CSS rules based on certain conditions, such as screen width or height.</p>
 
-- **Fluid Layouts**: Use flexible units like percentages instead of fixed pixel values to make layouts adapt to screen width.
-- **Flexible Images**: Use CSS to resize images and avoid overflowing their containers.
-- **Media Queries**: CSS rules that apply different styles based on the screen size, device type, or orientation.
-
----
-
-#### **5.2 Using Media Queries for Different Screen Sizes**
-
-Media queries allow you to apply CSS rules based on certain conditions, such as screen width or height. Common breakpoints used in RWD include:
-
-- **Large screens**: Desktops and larger screens (e.g., `min-width: 1200px`).
-- **Medium screens**: Tablets and smaller laptops (e.g., `min-width: 768px`).
-- **Small screens**: Mobile devices (e.g., `max-width: 767px`).
-
-**Syntax**:
-```css
-@media (max-width: 767px) {
-    /* CSS rules for small screens */
-}
-```
-
-**Example**:
-```css
-/* Default layout */
+  <div class="concept-block">
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>/* Default layout */
 .gallery-item {
     width: 30%;
 }
@@ -47,11 +45,72 @@ Media queries allow you to apply CSS rules based on certain conditions, such as 
     .gallery-item {
         width: 100%;
     }
+}</code></pre>
+    </div>
+  </div>
+
+  <h3>5.3 Introduction to Flexible Units</h3>
+  <p>Flexible units help create responsive designs by adjusting elements based on screen size or user settings.</p>
+
+  <div class="concept-block">
+    <h4>Percentage (%)</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.container {
+    width: 80%;  /* Relative to parent */
+}</code></pre>
+    </div>
+
+    <h4>em and rem Units</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.text {
+    font-size: 1.2em;   /* Relative to parent font size */
+    margin: 1.5rem;     /* Relative to root font size */
+}</code></pre>
+    </div>
+
+    <h4>Viewport Units</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.hero {
+    height: 50vh;    /* 50% of viewport height */
+    width: 100vw;    /* 100% of viewport width */
+}</code></pre>
+    </div>
+  </div>
+
+  <h2 class="workshop-title">Practice Workshop: Making the Gallery Responsive</h2>
+  <div class="workshop-container">
+    <h3 class="task">Task: Update your photo gallery to be responsive across all devices</h3>
+    
+    <h4>Step 1: Update Gallery Layout</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
 }
-```
 
----
+.gallery-item {
+    width: 30%;
+    margin-bottom: 2rem;
+}
 
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%;
+    }
+}</code></pre>
+    </div>
+
+    <h3>Deliverables</h3>
+    <ul>
+      <li><strong>Updated Files</strong>: Modified gallery.html and gallery.css with responsive styles</li>
+      <li><strong>Screenshots</strong>: Gallery layout at different screen sizes (desktop, tablet, mobile)</li>
 #### **5.3 Introduction to Flexible Units (%, em, rem, vw, vh)**
 
 Flexible units help create responsive designs by adjusting elements based on screen size or user settings.
