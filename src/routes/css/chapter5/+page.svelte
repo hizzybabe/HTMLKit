@@ -7,7 +7,7 @@
   <h1>Chapter 5: Responsive Web Design & Media Queries</h1>
   
   <div class="chapter-intro">
-    <p>In this chapter, you'll learn the principles of responsive web design (RWD) and how to use media queries to create layouts that adapt to different screen sizes. You'll also be introduced to flexible units that allow your designs to adjust seamlessly across various devices.</p>
+    <p>In this chapter, you'll learn the principles of responsive web design (RWD) and how to use media queries to create layouts that adapt to different screen sizes. You'll also be introduced to flexible units like `%`, `em`, `rem`, `vw`, and `vh`, which allow your designs to adjust seamlessly across various devices. By the end of this chapter, you'll be able to make a photo gallery responsive.</p>
     
     <div class="chapter-details">
       <p><strong>Duration:</strong> Approximately 2 hours</p>
@@ -30,49 +30,27 @@
     </ul>
   </div>
 
-  <h3>5.2 Using Media Queries</h3>
-  <p>Media queries allow you to apply CSS rules based on certain conditions, such as screen width or height.</p>
+  <h3>5.2 Using Media Queries for Different Screen Sizes</h3>
+  <p>Media queries allow you to apply CSS rules based on certain conditions, such as screen width or height. Common breakpoints used in RWD include:</p>
 
   <div class="concept-block">
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>/* Default layout */
-.gallery-item &#123;
-    width: 30%;
-&#125;
-
-/* Small screens */
-@media (max-width: 767px) &#123;
-    .gallery-item &#123;
-        width: 100%;
-    &#125;
-&#125;</code></pre>
-    </div>
+    <ul>
+      <li><strong>Large screens</strong>: Desktops and larger screens (e.g., `min-width: 1200px`)</li>
+      <li><strong>Medium screens</strong>: Tablets and smaller laptops (e.g., `min-width: 768px`)</li>
+      <li><strong>Small screens</strong>: Mobile devices (e.g., `max-width: 767px`)</li>
+    </ul>
   </div>
 
   <h3>5.3 Introduction to Flexible Units</h3>
   <p>Flexible units help create responsive designs by adjusting elements based on screen size or user settings.</p>
 
   <div class="concept-block">
-    <h4>Percentage (%)</h4>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.container &#123;
-    width: 80%;  /* Relative to parent */
-&#125;</code></pre>
-    </div>
-
-    <h4>em and rem Units</h4>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>.text &#123;
-    font-size: 1.2em;   /* Relative to parent font size */
-    margin: 1.5rem;     /* Relative to root font size */
-&#125;</code></pre>
-    </div>
-
     <h4>Viewport Units</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>.hero &#123;
-    height: 50vh;    /* 50% of viewport height */
-    width: 100vw;    /* 100% of viewport width */
+    width: 50vw;    /* 50% of viewport width */
+    height: 50vh;   /* 50% of viewport height */
+    padding: 2vh 2vw; /* Responsive padding */
 &#125;</code></pre>
     </div>
   </div>
