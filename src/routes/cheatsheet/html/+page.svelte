@@ -1,15 +1,15 @@
 <script>
   // Create an object to track the visibility state of each section
   let visibleSections = {
-    structure: true,
-    text: true,
-    lists: true,
-    linksAndImages: true,
-    tables: true,
-    forms: true,
-    media: true,
-    entities: true,
-    semantic: true
+    structure: false,
+    text: false,
+    lists: false,
+    linksAndImages: false,
+    tables: false,
+    forms: false,
+    media: false,
+    entities: false,
+    semantic: false
   };
 
   // Toggle function
