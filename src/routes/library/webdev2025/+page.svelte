@@ -54,7 +54,7 @@
     <li>MDN Web Docs: JavaScript</li>
   </ul>
 
-  <h2></h2>3. Version Control with Git</h2>
+  <h2>3. Version Control with Git</h2>
 
   <p>Version control is crucial for tracking changes and collaborating on projects:</p>
 
