@@ -95,7 +95,11 @@ const blog = defineCollection({
     title: z.string(),
     date: z.date()
   })
-});</code></pre>
+});
+
+export const collections = {
+  blog
+};</code></pre>
     </div>
   {/if}
 
