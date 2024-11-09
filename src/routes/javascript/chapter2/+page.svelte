@@ -48,17 +48,17 @@ greet("Alice"); // Calls the function and logs "Hello, Alice"</code></pre>
     <h4>if/else Statement</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>let age = 18;
-if (age >= 18) {
+if (age >= 18) &#123;
   console.log("You are an adult.");
-} else {
+&#125; else &#123;
   console.log("You are a minor.");
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h4>switch Statement</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>let grade = "A";
-switch (grade) {
+switch (grade) &#123;
   case "A":
     console.log("Excellent");
     break;
@@ -67,7 +67,7 @@ switch (grade) {
     break;
   default:
     console.log("Needs Improvement");
-}</code></pre>
+&#125;</code></pre>
     </div>
   </div>
 
