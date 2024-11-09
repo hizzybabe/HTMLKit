@@ -1,5 +1,5 @@
 <script>
-  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -50,10 +50,7 @@
     <p class="conclusion">By following this roadmap and utilizing these resources, you'll be well-equipped to embark on your web development journey in 2025. Remember, persistence and continuous learning are vital in this ever-evolving field.</p>
   </div>
 
-  <ChapterNavigation 
-    prevHref="/HTMLKit/library" 
-    nextHref="/HTMLKit/library/resources" 
-  />
+
 </div>
 
 <style>
