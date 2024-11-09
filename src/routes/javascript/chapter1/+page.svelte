@@ -52,18 +52,18 @@
       
       {#if showCode1}
       <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+&lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
     &lt;title&gt;Hello JavaScript&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
     &lt;h1&gt;My First JavaScript Program&lt;/h1&gt;
-    &lt;button onclick="sayHello()"&gt;Click Me!&lt;/button&gt;
+    &lt;button onclick=&quot;sayHello()&quot;&gt;Click Me!&lt;/button&gt;
 
     &lt;script&gt;
         function sayHello() {
-            alert("Hello, World!");
+            alert(&quot;Hello, World!&quot;);
         }
     &lt;/script&gt;
 &lt;/body&gt;
