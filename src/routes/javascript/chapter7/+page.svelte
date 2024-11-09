@@ -51,9 +51,9 @@
     <p>Component-based architecture breaks down an application into independent, reusable pieces:</p>
     
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>function Greeting() {
-    return <h1>Hello, World!</h1>;
-}</code></pre>
+      <pre><code>function Greeting() &#123;
+    return &lt;h1&gt;Hello, World!&lt;/h1&gt;;
+&#125;</code></pre>
     </div>
   </div>
 
@@ -125,5 +125,10 @@ export default Counter;</code></pre>
 
   .code-preview {
     margin: 1rem 0;
+  }
+
+  .task {
+    color: #2563eb;
+    margin-bottom: 1rem;
   }
 </style>
