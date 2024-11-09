@@ -129,7 +129,7 @@ while (count < 5) {
 
     <h4>Step 3: JavaScript Implementation</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>function submitQuiz() {
+      <pre><code>function submitQuiz() &#123;
   // Get the user's answers
   let answer1 = parseInt(document.getElementById("q1").value);
   let answer2 = document.getElementById("q2").value.toLowerCase();
@@ -139,24 +139,24 @@ while (count < 5) {
   let feedback = "";
 
   // Check answers
-  if (answer1 === 4) {
+  if (answer1 === 4) &#123;
     score++;
     feedback += "Question 1 is correct! ";
-  } else {
+  &#125; else &#123;
     feedback += "Question 1 is incorrect. ";
-  }
+  &#125;
 
-  if (answer2 === "paris") {
+  if (answer2 === "paris") &#123;
     score++;
     feedback += "Question 2 is correct!";
-  } else {
+  &#125; else &#123;
     feedback += "Question 2 is incorrect.";
-  }
+  &#125;
 
   // Display results
   document.getElementById("result").textContent = 
-    `Score: ${score}/2. ${feedback}`;
-}</code></pre>
+    `Score: $&#123;score&#125;/2. $&#123;feedback&#125;`;
+&#125;</code></pre>
     </div>
 
     <h3>Deliverables</h3>
