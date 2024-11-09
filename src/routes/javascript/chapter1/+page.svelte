@@ -51,28 +51,28 @@
       </button>
       
       {#if showCode1}
-      <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Hello JavaScript&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;My First JavaScript Program&lt;/h1&gt;
-    &lt;button onclick=&quot;sayHello()&quot;&gt;Click Me!&lt;/button&gt;
+        <pre><code>{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello JavaScript</title>
+</head>
+<body>
+    <h1>My First JavaScript Program</h1>
+    <button onclick="sayHello()">Click Me!</button>
 
-    &lt;script&gt;
+    <script>
         function sayHello() {
-            alert(&quot;Hello, World!&quot;);
+            alert("Hello, World!");
         }
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    </script>
+</body>
+</html>`}</code></pre>
       {:else}
-      <div class="preview-content">
-        <h1>My First JavaScript Program</h1>
-        <button onclick="alert('Hello, World!')">Click Me!</button>
-      </div>
+        <div class="preview-content">
+          <h1>My First JavaScript Program</h1>
+          <button onclick="alert('Hello, World!')">Click Me!</button>
+        </div>
       {/if}
     </div>
   </div>
