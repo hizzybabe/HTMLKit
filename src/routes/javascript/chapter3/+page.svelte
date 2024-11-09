@@ -193,15 +193,15 @@ function renderTasks() &#123;
     
     tasks.forEach(task => &#123;
         const li = document.createElement('li');
-        li.innerHTML = `
+        li.innerHTML = \`
             &lt;input type="checkbox" 
-                   ${task.done ? 'checked' : ''} 
-                   onclick="toggleTask(${task.id})"&gt;
-            &lt;span style="${task.done ? 'text-decoration: line-through' : ''}"&gt;
-                ${task.text}
+                   \$&#123;task.done ? 'checked' : ''&#125; 
+                   onclick="toggleTask(\$&#123;task.id&#125;)"&gt;
+            &lt;span style="\$&#123;task.done ? 'text-decoration: line-through' : ''&#125;"&gt;
+                \$&#123;task.text&#125;
             &lt;/span&gt;
-            &lt;button onclick="deleteTask(${task.id})"&gt;Delete&lt;/button&gt;
-        `;
+            &lt;button onclick="deleteTask(\$&#123;task.id&#125;)"&gt;Delete&lt;/button&gt;
+        \`;
         list.appendChild(li);
     &#125;);
 &#125;
