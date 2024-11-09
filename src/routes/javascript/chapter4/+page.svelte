@@ -251,7 +251,7 @@ document.getElementById("gallery").addEventListener("mouseout", function(event) 
   }
 
   .workshop-container {
-    margin-top: 3rem;
+    /*  margin-top: 3rem; */
     padding: 2rem;
     background-color: #fff;
     border-radius: 8px;
