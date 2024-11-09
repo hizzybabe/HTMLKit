@@ -1,6 +1,9 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
-  let showCode = true;
+  let showCode1 = true;
+  let showCode2 = true;
+  let showCode3 = true;
+  let showCode4 = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -25,39 +28,49 @@
     <p>A closure is a function that has access to its own scope, the scope of the outer function, and the global scope. Closures are useful for creating private variables and functions.</p>
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>function createCounter() &#123;
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode1 = !showCode1}
+      >
+        {showCode1 ? 'Hide Code' : 'Show Code'}
+      </button>
+
+      {#if showCode1}
+        <pre><code>function createCounter() {
     let count = 0;
-    return function() &#123;
+    return function() {
         count++;
         return count;
-    &#125;;
-&#125;
+    };
+}
 
 const counter = createCounter();
 console.log(counter()); // Output: 1
 console.log(counter()); // Output: 2</code></pre>
+      {/if}
     </div>
 
     <h4>Module Pattern</h4>
     <p>The module pattern leverages closures to encapsulate code within a function, allowing you to create private variables and expose only the necessary parts.</p>
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>const ToDoModule = (function() &#123;
+      <pre><code>const ToDoModule = (function() {
     let tasks = []; // Private variable
 
-    function addTask(task) &#123;
+    function addTask(task) {
         tasks.push(task);
-    &#125;
+    }
 
-    function getTasks() &#123;
+    function getTasks() {
         return tasks;
-    &#125;
+    }
 
-    return &#123;
+    return {
         addTask,
         getTasks
-    &#125;;
-&#125;)();</code></pre>
+    };
+})();</code></pre>
     </div>
   </div>
 
@@ -67,12 +80,12 @@ console.log(counter()); // Output: 2</code></pre>
     <p>The 'this' keyword refers to the current execution context. Its value depends on how and where a function is called, not where it's defined.</p>
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>const person = &#123;
+      <pre><code>const person = {
     name: 'John',
-    greet: function() &#123;
-        console.log(\`Hello, I'm \${this.name}\`);
-    &#125;
-&#125;;
+    greet: function() {
+        console.log(`Hello, I'm ${this.name}`);
+    }
+};
 
 person.greet(); // Output: "Hello, I'm John"
 
@@ -85,18 +98,18 @@ greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
   <div class="concept-block">
     <h4>Error Handling</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>async function fetchUserData(userId) &#123;
-    try &#123;
-        const response = await fetch(\`/api/users/\${userId}\`);
-        if (!response.ok) &#123;
+      <pre><code>async function fetchUserData(userId) {
+    try {
+        const response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) {
             throw new Error('User not found');
-        &#125;
+        }
         return await response.json();
-    &#125; catch (error) &#123;
+    } catch (error) {
         console.error('Error fetching user:', error);
         throw error;
-    &#125;
-&#125;</code></pre>
+    }
+}</code></pre>
     </div>
   </div>
 
@@ -105,29 +118,29 @@ greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
     <h3 class="task">Task: Refactor the To-Do List application using advanced JavaScript concepts</h3>
     
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>const TodoApp = (function() &#123;
+      <pre><code>const TodoApp = (function() {
     let tasks = [];
     let nextId = 1;
 
-    function generateId() &#123;
+    function generateId() {
         return nextId++;
-    &#125;
+    }
 
-    return &#123;
-        addTask(title) &#123;
-            const task = &#123;
+    return {
+        addTask(title) {
+            const task = {
                 id: generateId(),
                 title,
                 completed: false
-            &#125;;
+            };
             tasks.push(task);
             return task;
-        &#125;,
-        getTasks() &#123;
+        },
+        getTasks() {
             return [...tasks];
-        &#125;
-    &#125;;
-&#125;)();</code></pre>
+        }
+    };
+})();</code></pre>
     </div>
 
     <h3>Deliverables</h3>
