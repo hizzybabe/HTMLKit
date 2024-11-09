@@ -204,6 +204,21 @@ function renderTasks() &#123;
         `;
         list.appendChild(li);
     &#125;);
+&#125;
+
+// Function to toggle task completion
+function toggleTask(id) &#123;
+    const task = tasks.find(t => t.id === id);
+    if (task) &#123;
+        task.done = !task.done;
+        renderTasks();
+    &#125;
+&#125;
+
+// Function to delete task
+function deleteTask(id) &#123;
+    tasks = tasks.filter(task => task.id !== id);
+    renderTasks();
 &#125;</code></pre>
       {:else}
       <div class="preview-content">
