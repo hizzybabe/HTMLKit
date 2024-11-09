@@ -63,7 +63,7 @@
 
     &lt;script&gt;
         function sayHello() {
-            alert('Hello, World!');
+            alert(&quot;Hello, World!&quot;);
         }
     &lt;/script&gt;
 &lt;/body&gt;
