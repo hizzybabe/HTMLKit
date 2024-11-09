@@ -5,6 +5,8 @@
   let showCode1 = true;
   let showCode2 = true;
   let showCode3 = true;
+  let showHtmlCode = false;
+  let showJsCode = false;
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -107,12 +109,12 @@ task.done = true;</code></pre>
       <button 
         class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
         style="background-color: rgb(59 130 246) !important"
-        on:click={() => showCode2 = !showCode2}
+        on:click={() => showHtmlCode = !showHtmlCode}
       >
-        {showCode2 ? 'Show Preview' : 'Show Code'}
+        {showHtmlCode ? 'Show Preview' : 'Show Code'}
       </button>
       
-      {#if showCode2}
+      {#if showHtmlCode}
       <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -157,12 +159,12 @@ task.done = true;</code></pre>
       <button 
         class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
         style="background-color: rgb(59 130 246) !important"
-        on:click={() => showCode3 = !showCode3}
+        on:click={() => showJsCode = !showJsCode}
       >
-        {showCode3 ? 'Show Preview' : 'Show Code'}
+        {showJsCode ? 'Show Preview' : 'Show Code'}
       </button>
       
-      {#if showCode3}
+      {#if showJsCode}
       <pre><code>// Array to store tasks
 let tasks = [];
 
