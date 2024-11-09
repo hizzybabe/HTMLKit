@@ -4,6 +4,7 @@
   let showCode = true;
   let showCode1 = true;
   let showCode2 = true;
+  let showCode3 = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -153,46 +154,60 @@ task.done = true;</code></pre>
     </ul>
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode3 = !showCode3}
+      >
+        {showCode3 ? 'Show Preview' : 'Show Code'}
+      </button>
+      
+      {#if showCode3}
       <pre><code>// Array to store tasks
 let tasks = [];
 
 // Function to add a new task
-function addTask() {
+function addTask() &#123;
     const input = document.getElementById('taskInput');
     const text = input.value.trim();
     
-    if (text) {
-        const task = {
+    if (text) &#123;
+        const task = &#123;
             id: Date.now(),
             text: text,
             done: false
-        };
+        &#125;;
         
         tasks.push(task);
         renderTasks();
         input.value = '';
-    }
-}
+    &#125;
+&#125;
 
 // Function to render tasks
-function renderTasks() {
+function renderTasks() &#123;
     const list = document.getElementById('taskList');
     list.innerHTML = '';
     
-    tasks.forEach(task => {
+    tasks.forEach(task => &#123;
         const li = document.createElement('li');
         li.innerHTML = `
-            <input type="checkbox" 
+            &lt;input type="checkbox" 
                    ${task.done ? 'checked' : ''} 
-                   onclick="toggleTask(${task.id})">
-            <span style="${task.done ? 'text-decoration: line-through' : ''}">
+                   onclick="toggleTask(${task.id})"&gt;
+            &lt;span style="${task.done ? 'text-decoration: line-through' : ''}"&gt;
                 ${task.text}
-            </span>
-            <button onclick="deleteTask(${task.id})">Delete</button>
+            &lt;/span&gt;
+            &lt;button onclick="deleteTask(${task.id})"&gt;Delete&lt;/button&gt;
         `;
         list.appendChild(li);
-    });
-}</code></pre>
+    &#125;);
+&#125;</code></pre>
+      {:else}
+      <div class="preview-content">
+        <p>JavaScript code for managing tasks</p>
+      </div>
+      {/if}
     </div>
 
     <h3>Deliverables</h3>
