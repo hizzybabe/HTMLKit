@@ -41,7 +41,7 @@
 
   <ul>
     <li>HTML (HyperText Markup Language): Structures the content on the web.</li>
-    <li>    </li>CSS (Cascading Style Sheets): Styles the structured content.</li>
+    <li>CSS (Cascading Style Sheets): Styles the structured content.</li>
     <li>JavaScript: Adds interactivity to web pages.</li>
   </ul>
 
