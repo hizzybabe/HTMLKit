@@ -77,12 +77,14 @@
     <li>GitHub: Understand how to host and share your projects. 🌍</li>
   </ul>
 
+  <div class="resources">
   <h3>Resources:</h3>
 
   <ul>
     <li><a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc" target="_blank" rel="noopener noreferrer">Git Tutorial for Beginners 🎥</a></li>
     <li><a href="https://guides.github.com/" target="_blank" rel="noopener noreferrer">GitHub Guides 📚</a></li>
   </ul>
+</div>
 
   <h2>4. Build Projects 🛠️</h2>
 
