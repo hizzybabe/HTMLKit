@@ -46,7 +46,7 @@
   </ul>
 
   <div class="resources">
-  <p>Resources:</p>
+    <h3>Resources:</h3>
 
   <ul>
     <li>freeCodeCamp's Responsive Web Design Certification</li>
@@ -65,7 +65,7 @@
     <li>GitHub: Understand how to host and share your projects.</li>
   </ul>
 
-  <p>Resources:</p>
+  <h3>Resources:</h3>
 
   <ul>
     <li>Git Tutorial for Beginners</li>
@@ -82,7 +82,7 @@
   </ul>
 
   <div class="resources">
-  <p>Resources:</p>
+  <h3>Resources:</h3>
 
   <ul>
     <li>freeCodeCamp's JavaScript Algorithms and Data Structures Certification</li>
@@ -100,7 +100,7 @@
   </ul>
 
   <div class="resources">
-  <p>Resources:</p>
+  <h3>Resources:</h3>
 
   <ul>
     <li>React Official Documentation</li>
@@ -119,11 +119,11 @@
   </ul>
 
   <div class="resources">
-  <p>Resources:</p>
+  <h3>Resources:</h3>
 
   <ul>
     <li>Node.js Official Documentation</li>
-Express.js Guide
+    <li>Express.js Guide</li>
     <li>MongoDB University</li>
   </ul>
   </div>
@@ -138,7 +138,7 @@ Express.js Guide
   </ul>
 
   <div class="resources">
-  <p>Resources:</p>
+  <h3>Resources:</h3>
 
   <ul>
     <li>Netlify Documentation</li>
@@ -156,7 +156,7 @@ Express.js Guide
   </ul>
 
   <div class="resources">
-  <p>Resources:</p>
+  <h3>Resources:</h3>
 
   <ul>
     <li>freeCodeCamp News</li>
