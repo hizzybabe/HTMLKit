@@ -87,6 +87,12 @@ let greeting = "Hi, " + name;  // String concatenation</code></pre>
   <h2 class="workshop-title">Practice Workshop: Hello, Interactive World!</h2>
   <div class="workshop-container">
     <h3 class="task">Task: Create your first JavaScript programs</h3>
+
+    <h3>Task 1: Display “Hello, World!” in an Alert Box</h3>
+
+    <p>Open hello.html in VSCode and create a basic HTML structure.</p>
+    <p>Add an inline &lt;script&gt; tag to write JavaScript directly within the HTML.</p>
+    <p>Write a script to display an alert box with “Hello, World!” when the page loads.</p>
     
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <button 
@@ -135,7 +141,7 @@ let greeting = "Hi, " + name;  // String concatenation</code></pre>
     /* margin-top: 2rem; */
     padding: 1rem;
     background-color: #f8f9fa;
-    border-radius: 8px;
+    /* border-radius: 8px; */
   }
 
   .task {
