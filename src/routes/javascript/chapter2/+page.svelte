@@ -35,9 +35,9 @@
 
     <h4>Example</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>function greet(name) {
+      <pre><code>function greet(name) &#123;
   console.log("Hello, " + name);
-}
+&#125;
 
 greet("Alice"); // Calls the function and logs "Hello, Alice"</code></pre>
     </div>
