@@ -4,14 +4,14 @@
 </script>
 
 <div class="container mx-auto px-4 py-8">
-  <h1>Chapter 4: DOM Manipulation & Events</h1>
+  <h1>Chapter 6: Advanced Topics & Best Practices</h1>
   
   <div class="chapter-intro">
-    <p>In this chapter, you'll learn about the Document Object Model (DOM), which allows JavaScript to interact with and manipulate HTML elements. You'll explore methods for selecting elements, modifying their properties, and responding to user interactions through events.</p>
+    <p>In this chapter, you'll dive into advanced JavaScript concepts such as closures, the module pattern, and the `this` context. These topics will help you write cleaner, more efficient, and secure code.</p>
     
     <div class="chapter-details">
-      <p><strong>Duration:</strong> Approximately 2 hours</p>
-      <p><strong>Goal:</strong> Understand the DOM, learn how to select and manipulate elements, and respond to user interactions through events.</p>
+      <p><strong>Duration:</strong> Approximately 2-3 hours</p>
+      <p><strong>Goal:</strong> Understand advanced JavaScript concepts and best practices to refactor code for better organization, security, and performance.</p>
     </div>
   </div>
 
@@ -19,59 +19,182 @@
 
   <h2>Theory</h2>
 
-  <h3>4.1 Understanding the Document Object Model (DOM)</h3>
-  <p>The DOM is a structured representation of an HTML document, where each element is represented as a node that JavaScript can access and manipulate. This allows JavaScript to dynamically modify HTML content, styles, and structure.</p>
-
+  <h3>6.1 Introduction to Closures and the Module Pattern</h3>
   <div class="concept-block">
-    <ul>
-      <li><strong>DOM Hierarchy</strong>: The document is structured as a tree, with the <code>document</code> object at the top, followed by child elements like <code>&lt;html&gt;</code>, <code>&lt;body&gt;</code>, and all other elements.</li>
-      <li><strong>DOM Nodes</strong>: Elements, attributes, and text within HTML are represented as nodes in the DOM, allowing JavaScript to access and update them.</li>
-    </ul>
-  </div>
-
-  <h3>4.2 Selecting and Manipulating DOM Elements</h3>
-  <p>JavaScript provides various methods to select and modify DOM elements:</p>
-
-  <div class="concept-block">
-    <h4>Selecting Elements</h4>
-    <ul>
-      <li><code>document.getElementById("id")</code>: Selects an element by its ID.</li>
-      <li><code>document.querySelector(".class")</code>: Selects the first matching element by class or tag.</li>
-      <li><code>document.querySelectorAll(".class")</code>: Selects all matching elements by class or tag.</li>
-    </ul>
-
-    <h4>Modifying Elements</h4>
-    <ul>
-      <li><code>element.textContent</code>: Changes the text of an element.</li>
-      <li><code>element.style.property</code>: Changes the CSS style of an element.</li>
-      <li><code>element.setAttribute("attribute", "value")</code>: Sets an attribute on an element.</li>
-      <li><code>element.classList.add("class")</code>: Adds a CSS class to an element.</li>
-    </ul>
+    <h4>Closures</h4>
+    <p>A closure is a function that has access to its own scope, the scope of the outer function, and the global scope. Closures are useful for creating private variables and functions.</p>
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <button 
-        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-        style="background-color: rgb(59 130 246) !important"
-        on:click={() => showCode = !showCode}
-      >
-        {showCode ? 'Show Code' : 'Show Preview'}
-      </button>
+      <pre><code>function createCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
 
-      {#if showCode}
-      <pre><code>let heading = document.getElementById("profile-name");
-heading.textContent = "John Doe"; // Changes the text content
+const counter = createCounter();
+console.log(counter()); // Output: 1
+console.log(counter()); // Output: 2</code></pre>
+    </div>
 
-let profilePic = document.querySelector(".profile-pic");
-profilePic.style.borderRadius = "50%"; // Adds a circular style to the image</code></pre>
-      {/if}
+    <h4>Module Pattern</h4>
+    <p>The module pattern leverages closures to encapsulate code within a function, allowing you to create private variables and expose only the necessary parts.</p>
+
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>const ToDoModule = (function() {
+    let tasks = []; // Private variable
+
+    function addTask(task) {
+        tasks.push(task);
+    }
+
+    function getTasks() {
+        return tasks;
+    }
+
+    return {
+        addTask,
+        getTasks
+    };
+})();
+
+ToDoModule.addTask("Learn JavaScript");
+console.log(ToDoModule.getTasks()); // Output: ["Learn JavaScript"]</code></pre>
     </div>
   </div>
 
-  <!-- Continue with the rest of the content following the same pattern -->
+  <h3>6.2 Understanding 'this' Context</h3>
+  <div class="concept-block">
+    <h4>The 'this' Keyword</h4>
+    <p>The 'this' keyword refers to the current execution context. Its value depends on how and where a function is called, not where it's defined.</p>
+
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>// Different contexts of 'this'
+const person = {
+    name: 'John',
+    greet: function() {
+        console.log(`Hello, I'm ${this.name}`);
+    }
+};
+
+person.greet(); // Output: "Hello, I'm John"
+
+const greetFunction = person.greet;
+greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
+    </div>
+
+    <h4>Arrow Functions and 'this'</h4>
+    <p>Arrow functions don't create their own 'this' context; they inherit it from the enclosing scope.</p>
+
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>const timer = {
+    seconds: 0,
+    start: function() {
+        setInterval(() => {
+            this.seconds++; // 'this' refers to timer object
+            console.log(this.seconds);
+        }, 1000);
+    }
+};
+
+timer.start(); // Counts up every second</code></pre>
+    </div>
+  </div>
+
+  <h3>6.3 Best Practices for Code Organization</h3>
+  <div class="concept-block">
+    <h4>Code Structure</h4>
+    <ul>
+      <li>Group related functionality together</li>
+      <li>Use meaningful names for variables and functions</li>
+      <li>Keep functions small and focused</li>
+      <li>Comment complex logic</li>
+    </ul>
+
+    <h4>Error Handling</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>function fetchUserData(userId) {
+    try {
+        // Attempt to fetch user data
+        const response = await fetch(`/api/users/${userId}`);
+        if (!response.ok) {
+            throw new Error('User not found');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching user:', error);
+        // Handle error appropriately
+        throw error;
+    }
+}</code></pre>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h2 class="workshop-title">Practice Workshop: Refactoring the To-Do List App</h2>
+  <div class="workshop-container">
+    <h3 class="task">Task: Refactor the To-Do List application using advanced JavaScript concepts</h3>
+    
+    <h4>Step 1: Module Pattern Implementation</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>const TodoApp = (function() {
+    // Private variables
+    let tasks = [];
+    let nextId = 1;
+
+    // Private functions
+    function generateId() {
+        return nextId++;
+    }
+
+    // Public interface
+    return {
+        addTask(title) {
+            const task = {
+                id: generateId(),
+                title,
+                completed: false
+            };
+            tasks.push(task);
+            return task;
+        },
+        
+        getTasks() {
+            return [...tasks]; // Return copy to maintain encapsulation
+        }
+    };
+})();</code></pre>
+    </div>
+
+    <h4>Step 2: Event Handling with Error Boundaries</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>function handleAddTask(event) {
+    try {
+        event.preventDefault();
+        const input = document.getElementById('taskInput');
+        if (!input.value.trim()) {
+            throw new Error('Task cannot be empty');
+        }
+        TodoApp.addTask(input.value);
+        input.value = '';
+        renderTasks();
+    } catch (error) {
+        showError(error.message);
+    }
+}</code></pre>
+    </div>
+
+    <h3>Deliverables</h3>
+    <ul>
+      <li>Refactored To-Do List application using advanced JavaScript concepts</li>
+    </ul>
+  </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter3" 
-    nextHref="/HTMLKit/javascript/chapter5"
+    prevHref="/HTMLKit/javascript/chapter5" 
+    nextHref="/HTMLKit/javascript/chapter7"
   />
 </div>
 
