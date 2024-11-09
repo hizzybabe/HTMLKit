@@ -114,7 +114,7 @@ timer.start(); // Counts up every second</code></pre>
 
     <h4>Error Handling</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>function fetchUserData(userId) &#123;
+      <pre><code>async function fetchUserData(userId) &#123;
     try &#123;
         // Attempt to fetch user data
         const response = await fetch(`/api/users/${userId}`);
