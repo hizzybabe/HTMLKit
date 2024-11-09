@@ -1,0 +1,142 @@
+<script>
+  const chapters = [
+    {
+      title: "Chapter 1: Introduction to Svelte & Setup",
+      topics: [
+        "What is Svelte?",
+        "Svelte vs Other Frameworks",
+        "Setting Up Your Development Environment",
+        "Understanding Svelte Files",
+        "Practice Workshop: Hello Svelte!"
+      ],
+      path: "/HTMLKit/svelte/chapter1"
+    },
+    {
+      title: "Chapter 2: Reactivity & State Management",
+      topics: [
+        "Reactive Declarations",
+        "Stores",
+        "Props",
+        "Component State",
+        "Practice Workshop: Counter App"
+      ],
+      path: "/HTMLKit/svelte/chapter2"
+    },
+    {
+      title: "Chapter 3: Components & Logic",
+      topics: [
+        "Component Structure",
+        "Logic Blocks",
+        "Event Handling",
+        "Lifecycle Methods",
+        "Practice Workshop: Todo List"
+      ],
+      path: "/HTMLKit/svelte/chapter3"
+    },
+    {
+      title: "Chapter 4: Styling & Animations",
+      topics: [
+        "Scoped Styles",
+        "CSS Transitions",
+        "Motion",
+        "Custom Animations",
+        "Practice Workshop: Animated UI"
+      ],
+      path: "/HTMLKit/svelte/chapter4"
+    },
+    {
+      title: "Chapter 5: Advanced Concepts",
+      topics: [
+        "Context API",
+        "Special Elements",
+        "Actions",
+        "Custom Stores",
+        "Practice Workshop: Data Dashboard"
+      ],
+      path: "/HTMLKit/svelte/chapter5"
+    }
+  ];
+</script>
+
+<div class="container">
+  <h1>Learn Svelte</h1>
+  <p class="intro">Master modern web development with Svelte's reactive approach</p>
+
+  <div class="chapters">
+    {#each chapters as chapter}
+      <div class="chapter-card">
+        <h2>{chapter.title}</h2>
+        <ul>
+          {#each chapter.topics as topic}
+            <li>{topic}</li>
+          {/each}
+        </ul>
+        <button on:click={() => window.location.href = chapter.path}>Start Chapter</button>
+      </div>
+    {/each}
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+
+  .chapters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .chapter-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .chapter-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .chapter-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .chapter-card li {
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  button:hover {
+    background: var(--secondary);
+  }
+</style>
