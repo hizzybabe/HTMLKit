@@ -66,7 +66,7 @@
     JavaScript uses simple syntax to declare variables, manipulate data, and perform operations. Here are some essential concepts:
   </p>
 
-  <p></p>Variables: Used to store data. Variables can be declared using let, const, or var.</p>
+  <p>Variables: Used to store data. Variables can be declared using let, const, or var.</p>
 
   <pre><code>let name = "Alice";
 const age = 30;</code></pre>
@@ -74,7 +74,7 @@ const age = 30;</code></pre>
   <p>Data Types:</p>
 
   <p>String: Textual data, enclosed in quotes ("Hello" or 'Hello').</p>
-  <p></p>Number: Numeric data (e.g., 10, 5.5).</p>
+  <p>Number: Numeric data (e.g., 10, 5.5).</p>
   <p>Boolean: Logical data, either true or false.</p>
 
   <p>Basic Operations: Arithmetic and string operations.</p>
