@@ -61,7 +61,7 @@
     <li>Browser Developer Tools ('press F12' in most browsers)</li>
   </ul>
 
-  <h3></h3>Basic Syntax and Data Types (Variables, Strings, Numbers)</h3>
+  <h3>Basic Syntax and Data Types (Variables, Strings, Numbers)</h3>
   <p>
     JavaScript uses simple syntax to declare variables, manipulate data, and perform operations. Here are some essential concepts:
   </p>
