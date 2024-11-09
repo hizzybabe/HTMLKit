@@ -70,19 +70,19 @@ npm start</code></pre>
 
     <h4>Step 2: Creating the Counter Component</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>import React, { useState } from 'react';
+      <pre><code>import React, &#123; useState &#125; from 'react';
 
-function Counter() {
+function Counter() &#123;
     const [count, setCount] = useState(0);
 
     return (
-        <div>
-            <h1>Counter: {count}</h1>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
-            <button onClick={() => setCount(count - 1)}>Decrement</button>
-        </div>
+        &lt;div&gt;
+            &lt;h1&gt;Counter: &#123;count&#125;&lt;/h1&gt;
+            &lt;button onClick=&#123;() => setCount(count + 1)&#125;&gt;Increment&lt;/button&gt;
+            &lt;button onClick=&#123;() => setCount(count - 1)&#125;&gt;Decrement&lt;/button&gt;
+        &lt;/div&gt;
     );
-}
+&#125;
 
 export default Counter;</code></pre>
     </div>
