@@ -20,7 +20,7 @@
     <a href="/HTMLKit/">Library ▼</a>
     <div class="dropdown-content">
       <a href="/HTMLKit/library/webdev2025">WebDev 2025</a>
-      <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/">2025 Tech Stacks</a>
+      <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/">2025 Tech Stacks (external)</a>
     </div>
   </div>
   
@@ -40,7 +40,7 @@
   <div class="dropdown">
     <a href="/HTMLKit/">WebDev Tools ▼</a>
     <div class="dropdown-content">
-      <a href="https://techwizard.club/lifetime-deals/">Lifetime Deals</a>
+      <a href="https://techwizard.club/lifetime-deals/">Lifetime Deals (external)</a>
     </div>
   </div>
   
