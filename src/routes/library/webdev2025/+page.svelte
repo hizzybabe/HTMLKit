@@ -45,6 +45,18 @@
     <li>JavaScript: Adds interactivity to web pages.</li>
   </ul>
 
+  <div class="learn-buttons">
+    <a href="/HTMLKit/html" class="learn-btn html-btn">
+      Learn HTML with Us
+    </a>
+    <a href="/HTMLKit/css" class="learn-btn css-btn">
+      Learn CSS with Us
+    </a>
+    <a href="/HTMLKit/javascript" class="learn-btn js-btn">
+      Learn JavaScript with Us
+    </a>
+  </div>
+
   <div class="resources">
     <h3>Resources:</h3>
 
@@ -215,5 +227,39 @@
     padding: 1rem;
     border-left: 4px solid #4f46e5;
     background-color: #f3f4f6;
+  }
+
+  .learn-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+  }
+
+  .learn-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .learn-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .html-btn {
+    background-color: #e34c26;
+    color: white;
+  }
+
+  .css-btn {
+    background-color: #264de4;
+    color: white;
+  }
+
+  .js-btn {
+    background-color: #f7df1e;
+    color: black;
   }
 </style>
