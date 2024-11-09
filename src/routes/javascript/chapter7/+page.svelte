@@ -4,14 +4,14 @@
 </script>
 
 <div class="container mx-auto px-4 py-8">
-  <h1>Chapter 4: DOM Manipulation & Events</h1>
+  <h1>Chapter 7: Introduction to Frontend Frameworks & Libraries</h1>
   
   <div class="chapter-intro">
-    <p>In this chapter, you'll learn about the Document Object Model (DOM), which allows JavaScript to interact with and manipulate HTML elements. You'll explore methods for selecting elements, modifying their properties, and responding to user interactions through events.</p>
+    <p>Frontend frameworks and libraries simplify the process of building complex user interfaces. In this chapter, you'll get an overview of popular tools like React, Angular, and Vue.js, and learn about component-based architecture.</p>
     
     <div class="chapter-details">
-      <p><strong>Duration:</strong> Approximately 2 hours</p>
-      <p><strong>Goal:</strong> Understand the DOM, learn how to select and manipulate elements, and respond to user interactions through events.</p>
+      <p><strong>Duration:</strong> Approximately 3 hours</p>
+      <p><strong>Goal:</strong> Understand the basics of frontend frameworks and libraries, learn the fundamentals of component-based architecture, and build a simple app using React.</p>
     </div>
   </div>
 
@@ -19,59 +19,84 @@
 
   <h2>Theory</h2>
 
-  <h3>4.1 Understanding the Document Object Model (DOM)</h3>
-  <p>The DOM is a structured representation of an HTML document, where each element is represented as a node that JavaScript can access and manipulate. This allows JavaScript to dynamically modify HTML content, styles, and structure.</p>
-
+  <h3>7.1 Overview of Popular Frontend Frameworks/Libraries</h3>
   <div class="concept-block">
+    <p>There are several popular frontend frameworks and libraries, each with its own strengths and ideal use cases:</p>
+
+    <h4>React</h4>
     <ul>
-      <li><strong>DOM Hierarchy</strong>: The document is structured as a tree, with the <code>document</code> object at the top, followed by child elements like <code>&lt;html&gt;</code>, <code>&lt;body&gt;</code>, and all other elements.</li>
-      <li><strong>DOM Nodes</strong>: Elements, attributes, and text within HTML are represented as nodes in the DOM, allowing JavaScript to access and update them.</li>
+      <li>A library for building user interfaces, developed by Facebook</li>
+      <li>Uses a virtual DOM for efficient rendering</li>
+      <li>Component-based architecture</li>
+      <li>Ideal for single-page applications (SPAs)</li>
+    </ul>
+
+    <h4>Angular</h4>
+    <ul>
+      <li>A full-featured frontend framework developed by Google</li>
+      <li>Includes built-in features like two-way data binding</li>
+      <li>Best suited for large-scale applications</li>
+    </ul>
+
+    <h4>Vue.js</h4>
+    <ul>
+      <li>A progressive framework designed to be incrementally adoptable</li>
+      <li>Combines features of both React and Angular</li>
+      <li>Great for projects that require a lightweight framework</li>
     </ul>
   </div>
 
-  <h3>4.2 Selecting and Manipulating DOM Elements</h3>
-  <p>JavaScript provides various methods to select and modify DOM elements:</p>
-
+  <h3>7.2 Component-Based Architecture</h3>
   <div class="concept-block">
-    <h4>Selecting Elements</h4>
-    <ul>
-      <li><code>document.getElementById("id")</code>: Selects an element by its ID.</li>
-      <li><code>document.querySelector(".class")</code>: Selects the first matching element by class or tag.</li>
-      <li><code>document.querySelectorAll(".class")</code>: Selects all matching elements by class or tag.</li>
-    </ul>
-
-    <h4>Modifying Elements</h4>
-    <ul>
-      <li><code>element.textContent</code>: Changes the text of an element.</li>
-      <li><code>element.style.property</code>: Changes the CSS style of an element.</li>
-      <li><code>element.setAttribute("attribute", "value")</code>: Sets an attribute on an element.</li>
-      <li><code>element.classList.add("class")</code>: Adds a CSS class to an element.</li>
-    </ul>
-
+    <p>Component-based architecture breaks down an application into independent, reusable pieces:</p>
+    
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <button 
-        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-        style="background-color: rgb(59 130 246) !important"
-        on:click={() => showCode = !showCode}
-      >
-        {showCode ? 'Show Code' : 'Show Preview'}
-      </button>
-
-      {#if showCode}
-      <pre><code>let heading = document.getElementById("profile-name");
-heading.textContent = "John Doe"; // Changes the text content
-
-let profilePic = document.querySelector(".profile-pic");
-profilePic.style.borderRadius = "50%"; // Adds a circular style to the image</code></pre>
-      {/if}
+      <pre><code>function Greeting() {
+    return <h1>Hello, World!</h1>;
+}</code></pre>
     </div>
   </div>
 
-  <!-- Continue with the rest of the content following the same pattern -->
+  <h2 class="workshop-title">Practice Workshop: First Steps with React</h2>
+  <div class="workshop-container">
+    <h3 class="task">Task: Create a simple React counter application</h3>
+    
+    <h4>Step 1: Setting Up React</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>npx create-react-app my-react-app
+cd my-react-app
+npm start</code></pre>
+    </div>
+
+    <h4>Step 2: Creating the Counter Component</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>import React, { useState } from 'react';
+
+function Counter() {
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            <h1>Counter: {count}</h1>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+            <button onClick={() => setCount(count - 1)}>Decrement</button>
+        </div>
+    );
+}
+
+export default Counter;</code></pre>
+    </div>
+
+    <h3>Deliverables</h3>
+    <ul>
+      <li>Complete React project with Counter component</li>
+      <li>Screenshot of the running application</li>
+    </ul>
+  </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter3" 
-    nextHref="/HTMLKit/javascript/chapter5"
+    prevHref="/HTMLKit/javascript/chapter6" 
+    nextHref="/HTMLKit/svelte/chapter1"
   />
 </div>
 
@@ -91,6 +116,11 @@ profilePic.style.borderRadius = "50%"; // Adds a circular style to the image</co
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #dee2e6;
+  }
+
+  .workshop-container {
+    padding: 1rem;
+    background-color: #f8f9fa;
   }
 
   .code-preview {
