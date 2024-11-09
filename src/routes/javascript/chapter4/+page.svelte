@@ -59,11 +59,11 @@
       </button>
 
       {#if showCode1}
-        <pre><code>let heading = document.getElementById("profile-name");
+        <pre><code>{`let heading = document.getElementById("profile-name");
 heading.textContent = "John Doe"; // Changes the text content
 
 let profilePic = document.querySelector(".profile-pic");
-profilePic.style.borderRadius = "50%"; // Adds a circular style to the image</code></pre>
+profilePic.style.borderRadius = "50%"; // Adds a circular style to the image`}</code></pre>
       {/if}
     </div>
   </div>
@@ -95,10 +95,10 @@ profilePic.style.borderRadius = "50%"; // Adds a circular style to the image</co
       </button>
 
       {#if showCode2}
-        <pre><code>let button = document.querySelector(".submit-btn");
+        <pre><code>{`let button = document.querySelector(".submit-btn");
 button.addEventListener("click", function() {
   alert("Button clicked!");
-});</code></pre>
+});`}</code></pre>
       {/if}
     </div>
   </div>
