@@ -32,23 +32,23 @@
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>// Example with Promises
-function fetchData() {
-    return new Promise((resolve, reject) => {
+function fetchData() &#123;
+    return new Promise((resolve, reject) => &#123;
         setTimeout(() => resolve("Data loaded"), 2000);
-    });
-}
+    &#125;);
+&#125;
 
 // Example with Async/Await
-async function fetchData() {
-    try {
-        let data = await new Promise((resolve) => {
+async function fetchData() &#123;
+    try &#123;
+        let data = await new Promise((resolve) => &#123;
             setTimeout(() => resolve("Data loaded"), 2000);
-        });
+        &#125;);
         console.log(data);
-    } catch (error) {
+    &#125; catch (error) &#123;
         console.log(error);
-    }
-}</code></pre>
+    &#125;
+&#125;</code></pre>
     </div>
   </div>
 
@@ -58,15 +58,15 @@ async function fetchData() {
   <div class="concept-block">
     <h4>Fetching Data from an API</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>async function getData() {
-    try {
+      <pre><code>async function getData() &#123;
+    try &#123;
         const response = await fetch("https://api.example.com/data");
         const data = await response.json();
         console.log(data);
-    } catch (error) {
+    &#125; catch (error) &#123;
         console.error("Error fetching data:", error);
-    }
-}</code></pre>
+    &#125;
+&#125;</code></pre>
     </div>
   </div>
 
@@ -98,28 +98,28 @@ async function fetchData() {
       <pre><code>// weather.js
 document.getElementById("getWeatherBtn").addEventListener("click", getWeather);
 
-async function getWeather() {
+async function getWeather() &#123;
     const city = document.getElementById("cityInput").value;
     const weatherInfo = document.getElementById("weatherInfo");
     
-    if (!city) {
+    if (!city) &#123;
         weatherInfo.textContent = "Please enter a city name.";
         return;
-    }
+    &#125;
 
     const apiKey = "YOUR_API_KEY";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=$&#123;city&#125;&appid=$&#123;apiKey&#125;&units=metric`;
 
-    try {
+    try &#123;
         const response = await fetch(apiUrl);
         if (!response.ok) throw new Error("City not found");
         
         const data = await response.json();
         displayWeather(data);
-    } catch (error) {
-        weatherInfo.textContent = `Error: ${error.message}`;
-    }
-}</code></pre>
+    &#125; catch (error) &#123;
+        weatherInfo.textContent = `Error: $&#123;error.message&#125;`;
+    &#125;
+&#125;</code></pre>
     </div>
 
     <h3>Deliverables</h3>
