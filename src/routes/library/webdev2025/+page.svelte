@@ -68,7 +68,7 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li><a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc" target="_blank" rel="noopener noreferrer"></a>Git Tutorial for Beginners</a></li>
+    <li><a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc" target="_blank" rel="noopener noreferrer">Git Tutorial for Beginners</a></li>
     <li><a href="https://guides.github.com/" target="_blank" rel="noopener noreferrer">GitHub Guides</a></li>
   </ul>
 
@@ -103,7 +103,7 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li><a href="https://react.dev/learn" target="_blank" rel="noopener noreferrer"></a>React Official Documentation</a></li>
+    <li><a href="https://react.dev/learn" target="_blank" rel="noopener noreferrer">React Official Documentation</a></li>
     <li><a href="https://vuejs.org/guide/introduction.html" target="_blank" rel="noopener noreferrer">Vue.js Official Guide</a></li>
   </ul>
   </div>
@@ -122,7 +122,7 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li><a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener noreferrer"></a>Node.js Official Documentation</a></li>
+    <li><a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener noreferrer">Node.js Official Documentation</a></li>
     <li><a href="https://expressjs.com/en/starter/installing.html" target="_blank" rel="noopener noreferrer">Express.js Guide</a></li>
     <li><a href="https://university.mongodb.com/" target="_blank" rel="noopener noreferrer">MongoDB University</a></li>
   </ul>
@@ -141,7 +141,7 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li><a href="https://docs.netlify.com/" target="_blank" rel="noopener noreferrer"></a>Netlify Documentation</a></li>
+    <li><a href="https://docs.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify Documentation</a></li>
     <li><a href="https://vercel.com/docs" target="_blank" rel="noopener noreferrer">Vercel Documentation</a></li>
   </ul>
   </div>
@@ -159,7 +159,7 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li><a href="https://www.freecodecamp.org/news" target="_blank" rel="noopener noreferrer"></a>freeCodeCamp News</a></li>
+    <li><a href="https://www.freecodecamp.org/news" target="_blank" rel="noopener noreferrer">freeCodeCamp News</a></li>
     <li><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow</a></li>
   </ul>
   </div>
