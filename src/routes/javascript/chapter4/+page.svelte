@@ -1,23 +1,17 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
-
   let showCode = true;
-  let showCode1 = true;
-  let showCode2 = true;
-  let showCode3 = true;
-  let showHtmlCode = false;
-  let showJsCode = false;
 </script>
 
 <div class="container mx-auto px-4 py-8">
-  <h1>Chapter 3: Working with Arrays & Objects</h1>
+  <h1>Chapter 4: DOM Manipulation & Events</h1>
   
   <div class="chapter-intro">
-    <p>In this chapter, we'll explore two essential JavaScript data structures: arrays and objects. Arrays allow you to store lists of values, while objects organize data with key-value pairs. We'll also introduce JSON, a data format widely used for transmitting data in web applications.</p>
+    <p>In this chapter, you'll learn about the Document Object Model (DOM), which allows JavaScript to interact with and manipulate HTML elements. You'll explore methods for selecting elements, modifying their properties, and responding to user interactions through events.</p>
     
     <div class="chapter-details">
       <p><strong>Duration:</strong> Approximately 2 hours</p>
-      <p><strong>Goal:</strong> Understand and manipulate arrays and objects in JavaScript, and apply these skills in a To-Do List app.</p>
+      <p><strong>Goal:</strong> Understand the DOM, learn how to select and manipulate elements, and respond to user interactions through events.</p>
     </div>
   </div>
 
@@ -25,228 +19,67 @@
 
   <h2>Theory</h2>
 
-  <h3>3.1 Understanding and Manipulating Arrays</h3>
-  <p>Arrays are used to store collections of data in JavaScript. Each item in an array has an index, starting from 0, and you can use various methods to manipulate array contents.</p>
+  <h3>4.1 Understanding the Document Object Model (DOM)</h3>
+  <p>The DOM is a structured representation of an HTML document, where each element is represented as a node that JavaScript can access and manipulate. This allows JavaScript to dynamically modify HTML content, styles, and structure.</p>
 
   <div class="concept-block">
-    <h4>Array Syntax and Methods</h4>
+    <ul>
+      <li><strong>DOM Hierarchy</strong>: The document is structured as a tree, with the <code>document</code> object at the top, followed by child elements like <code>&lt;html&gt;</code>, <code>&lt;body&gt;</code>, and all other elements.</li>
+      <li><strong>DOM Nodes</strong>: Elements, attributes, and text within HTML are represented as nodes in the DOM, allowing JavaScript to access and update them.</li>
+    </ul>
+  </div>
+
+  <h3>4.2 Selecting and Manipulating DOM Elements</h3>
+  <p>JavaScript provides various methods to select and modify DOM elements:</p>
+
+  <div class="concept-block">
+    <h4>Selecting Elements</h4>
+    <ul>
+      <li><code>document.getElementById("id")</code>: Selects an element by its ID.</li>
+      <li><code>document.querySelector(".class")</code>: Selects the first matching element by class or tag.</li>
+      <li><code>document.querySelectorAll(".class")</code>: Selects all matching elements by class or tag.</li>
+    </ul>
+
+    <h4>Modifying Elements</h4>
+    <ul>
+      <li><code>element.textContent</code>: Changes the text of an element.</li>
+      <li><code>element.style.property</code>: Changes the CSS style of an element.</li>
+      <li><code>element.setAttribute("attribute", "value")</code>: Sets an attribute on an element.</li>
+      <li><code>element.classList.add("class")</code>: Adds a CSS class to an element.</li>
+    </ul>
+
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <button 
         class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
         style="background-color: rgb(59 130 246) !important"
         on:click={() => showCode = !showCode}
       >
-        {showCode ? 'Show Preview' : 'Show Code'}
+        {showCode ? 'Show Code' : 'Show Preview'}
       </button>
-      
+
       {#if showCode}
-      <pre><code>let colors = ["red", "green", "blue"];
+      <pre><code>let heading = document.getElementById("profile-name");
+heading.textContent = "John Doe"; // Changes the text content
 
-// Common Array Methods
-let tasks = ["Do laundry", "Write code"];
-tasks.push("Read a book");     // Adds to end
-tasks.splice(1, 1);           // Removes item at index 1
-tasks.forEach(task => console.log(task));</code></pre>
-      {:else}
-      <div class="preview-content">
-        <p>Output in console:</p>
-        <p>Do laundry</p>
-        <p>Read a book</p>
-      </div>
+let profilePic = document.querySelector(".profile-pic");
+profilePic.style.borderRadius = "50%"; // Adds a circular style to the image</code></pre>
       {/if}
     </div>
   </div>
 
-  <h3>3.2 Working with Objects</h3>
-  <p>Objects store data as key-value pairs, allowing you to organize related data under a single entity.</p>
-
-  <div class="concept-block">
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <button 
-        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-        style="background-color: rgb(59 130 246) !important"
-        on:click={() => showCode1 = !showCode1}
-      >
-        {showCode1 ? 'Show Preview' : 'Show Code'}
-      </button>
-      
-      {#if showCode1}
-      <pre><code>let task = &#123;
-  text: "Do laundry",
-  done: false
-&#125;;
-
-// Accessing properties
-console.log(task.text);      // Using dot notation
-console.log(task["done"]);   // Using bracket notation
-
-// Modifying properties
-task.done = true;</code></pre>
-      {:else}
-      <div class="preview-content">
-        <p>Console output:</p>
-        <p>"Do laundry"</p>
-        <p>false</p>
-      </div>
-      {/if}
-    </div>
-  </div>
-
-  <!-- Continue with workshop section -->
-  <h2 class="workshop-title">Practice Workshop: "To-Do List App"</h2>
-  <div class="workshop-container">
-    <h3 class="task">Task: Create a basic To-Do List application using arrays and objects</h3>
-    
-    <h4>Step 1: Set Up Your Files</h4>
-    <div>Create two new files:</div>
-    <ul>
-      <li><code>todo.html</code> - for the HTML structure</li>
-      <li><code>todo.js</code> - for the JavaScript code</li>
-    </ul>
-
-    <h4>Step 2: Create the HTML Structure</h4>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <button 
-        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-        style="background-color: rgb(59 130 246) !important"
-        on:click={() => showHtmlCode = !showHtmlCode}
-      >
-        {showHtmlCode ? 'Show Preview' : 'Show Code'}
-      </button>
-      
-      {#if showHtmlCode}
-      <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;To-Do List App&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;My To-Do List&lt;/h1&gt;
-    
-    &lt;div&gt;
-        &lt;input type="text" id="taskInput" placeholder="Enter new task"&gt;
-        &lt;button onclick="addTask()"&gt;Add Task&lt;/button&gt;
-    &lt;/div&gt;
-    
-    &lt;ul id="taskList"&gt;&lt;/ul&gt;
-
-    &lt;script src="todo.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-      {:else}
-      <div class="preview-content">
-        <h1>My To-Do List</h1>
-        <div>
-          <input type="text" placeholder="Enter new task" disabled>
-          <button disabled>Add Task</button>
-        </div>
-        <ul></ul>
-      </div>
-      {/if}
-    </div>
-
-    <h4>Step 3: Implement the JavaScript Logic</h4>
-    <div>In your <code>todo.js</code> file, implement the following functionality:</div>
-    <ul>
-      <li>Store tasks in an array of objects</li>
-      <li>Add new tasks</li>
-      <li>Toggle task completion status</li>
-      <li>Delete tasks</li>
-    </ul>
-
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <button 
-        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-        style="background-color: rgb(59 130 246) !important"
-        on:click={() => showJsCode = !showJsCode}
-      >
-        {showJsCode ? 'Show Preview' : 'Show Code'}
-      </button>
-      
-      {#if showJsCode}
-      <pre><code>// Array to store tasks
-let tasks = [];
-
-// Function to add a new task
-function addTask() &#123;
-    const input = document.getElementById('taskInput');
-    const text = input.value.trim();
-    
-    if (text) &#123;
-        const task = &#123;
-            id: Date.now(),
-            text: text,
-            done: false
-        &#125;;
-        
-        tasks.push(task);
-        renderTasks();
-        input.value = '';
-    &#125;
-&#125;
-
-// Function to render tasks
-function renderTasks() &#123;
-    const list = document.getElementById('taskList');
-    list.innerHTML = '';
-    
-    tasks.forEach(task => &#123;
-        const li = document.createElement('li');
-        li.innerHTML = \`
-            &lt;input type="checkbox" 
-                   \$&#123;task.done ? 'checked' : ''&#125; 
-                   onclick="toggleTask(\$&#123;task.id&#125;)"&gt;
-            &lt;span style="\$&#123;task.done ? 'text-decoration: line-through' : ''&#125;"&gt;
-                \$&#123;task.text&#125;
-            &lt;/span&gt;
-            &lt;button onclick="deleteTask(\$&#123;task.id&#125;)"&gt;Delete&lt;/button&gt;
-        \`;
-        list.appendChild(li);
-    &#125;);
-&#125;
-
-// Function to toggle task completion
-function toggleTask(id) &#123;
-    const task = tasks.find(t => t.id === id);
-    if (task) &#123;
-        task.done = !task.done;
-        renderTasks();
-    &#125;
-&#125;
-
-// Function to delete task
-function deleteTask(id) &#123;
-    tasks = tasks.filter(task => task.id !== id);
-    renderTasks();
-&#125;</code></pre>
-      {:else}
-      <div class="preview-content">
-        <p>JavaScript code for managing tasks</p>
-      </div>
-      {/if}
-    </div>
-
-    <h3>Deliverables</h3>
-    <ul>
-      <li>Complete todo.html and todo.js files</li>
-      <li>Working To-Do List application that can:</li>
-      <ul>
-        <li>Add new tasks</li>
-        <li>Mark tasks as complete</li>
-        <li>Delete tasks</li>
-      </ul>
-      <li>Screenshot of your working application</li>
-    </ul>
-  </div>
+  <!-- Continue with the rest of the content following the same pattern -->
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter2" 
-    nextHref="/HTMLKit/javascript/chapter4"
+    prevHref="/HTMLKit/javascript/chapter3" 
+    nextHref="/HTMLKit/javascript/chapter5"
   />
 </div>
 
 <style>
+  .concept-block {
+    margin-bottom: 2rem;
+  }
+  
   .chapter-intro {
     background-color: #f8f9fa;
     padding: 1.5rem;
@@ -260,22 +93,7 @@ function deleteTask(id) &#123;
     border-top: 1px solid #dee2e6;
   }
 
-  .concept-block {
-    margin-bottom: 2rem;
-  }
-
-  .workshop-container {
-    padding: 1rem;
-    background-color: #f8f9fa;
-  }
-
   .code-preview {
     margin: 1rem 0;
-  }
-  
-  .preview-content {
-    padding: 1rem;
-    background: white;
-    border-radius: 4px;
   }
 </style>
