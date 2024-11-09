@@ -68,10 +68,10 @@ tasks.forEach(task => console.log(task));</code></pre>
       </button>
       
       {#if showCode1}
-      <pre><code>let task = {
+      <pre><code>let task = &#123;
   text: "Do laundry",
   done: false
-};
+&#125;;
 
 // Accessing properties
 console.log(task.text);      // Using dot notation
