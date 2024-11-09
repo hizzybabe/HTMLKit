@@ -128,6 +128,63 @@ let greeting = "Hi, " + name;  // String concatenation</code></pre>
         </div>
       {/if}
     </div>
+
+    <h3>Task 2: Create a Simple Calculator</h3>
+
+    <p>In calculator.html, create an HTML form that allows users to input two numbers and calculate their sum.</p>
+
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode2 = !showCode2}
+      >
+        {showCode2 ? 'Show Preview' : 'Show Code'}
+      </button>
+      
+      {#if showCode2}
+        <pre><code>{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <label for="num1">Enter First Number:</label>
+    <input type="number" id="num1">
+    <br>
+    <label for="num2">Enter Second Number:</label>
+    <input type="number" id="num2">
+    <br><br>
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateSum() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let sum = num1 + num2;
+            document.getElementById("result").textContent = "Sum: " + sum;
+        }
+    </script>
+</body>
+</html>`}</code></pre>
+      {:else}
+        <div class="preview-content">
+          <h1>Simple Calculator</h1>
+          <label for="calc-num1">Enter First Number:</label>
+          <input type="number" id="calc-num1">
+          <br>
+          <label for="calc-num2">Enter Second Number:</label>
+          <input type="number" id="calc-num2">
+          <br><br>
+          <button onclick="let n1 = parseFloat(document.getElementById('calc-num1').value); let n2 = parseFloat(document.getElementById('calc-num2').value); document.getElementById('calc-result').textContent = 'Sum: ' + (n1 + n2);">Calculate Sum</button>
+          <p id="calc-result"></p>
+        </div>
+      {/if}
+    </div>
   </div>
 
   <ChapterNavigation 
