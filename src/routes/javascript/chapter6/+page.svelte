@@ -90,17 +90,27 @@ console.log(counter()); // Output: 2`}</code></pre>
     <p>The 'this' keyword refers to the current execution context. Its value depends on how and where a function is called, not where it's defined.</p>
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>const person = {
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode3 = !showCode3}
+      >
+        {showCode3 ? 'Hide Code' : 'Show Code'}
+      </button>
+
+      {#if showCode3}
+        <pre><code>{`const person = {
     name: 'John',
     greet: function() {
-        console.log(`Hello, I'm ${this.name}`);
+        console.log(\`Hello, I'm \${this.name}\`);
     }
 };
 
 person.greet(); // Output: "Hello, I'm John"
 
 const greetFunction = person.greet;
-greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
+greetFunction(); // Output: "Hello, I'm undefined"`}</code></pre>
+      {/if}
     </div>
   </div>
 
@@ -108,9 +118,18 @@ greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
   <div class="concept-block">
     <h4>Error Handling</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>async function fetchUserData(userId) {
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode4 = !showCode4}
+      >
+        {showCode4 ? 'Hide Code' : 'Show Code'}
+      </button>
+
+      {#if showCode4}
+        <pre><code>{`async function fetchUserData(userId) {
     try {
-        const response = await fetch(`/api/users/${userId}`);
+        const response = await fetch(\`/api/users/\${userId}\`);
         if (!response.ok) {
             throw new Error('User not found');
         }
@@ -119,7 +138,8 @@ greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
         console.error('Error fetching user:', error);
         throw error;
     }
-}</code></pre>
+}`}</code></pre>
+      {/if}
     </div>
   </div>
 
@@ -128,7 +148,7 @@ greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
     <h3 class="task">Task: Refactor the To-Do List application using advanced JavaScript concepts</h3>
     
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>const TodoApp = (function() {
+      <pre><code>{`const TodoApp = (function() {
     let tasks = [];
     let nextId = 1;
 
@@ -145,12 +165,9 @@ greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
             };
             tasks.push(task);
             return task;
-        },
-        getTasks() {
-            return [...tasks];
         }
     };
-})();</code></pre>
+})();`}</code></pre>
     </div>
 
     <h3>Deliverables</h3>
