@@ -37,7 +37,7 @@
       </button>
 
       {#if showCode1}
-        <pre><code>function createCounter() {
+        <pre><code>{`function createCounter() {
     let count = 0;
     return function() {
         count++;
@@ -47,7 +47,7 @@
 
 const counter = createCounter();
 console.log(counter()); // Output: 1
-console.log(counter()); // Output: 2</code></pre>
+console.log(counter()); // Output: 2`}</code></pre>
       {/if}
     </div>
 
