@@ -15,6 +15,13 @@
       <a href="/HTMLKit/astro">Astro</a>
     </div>
   </div>
+
+  <div class="dropdown">
+    <a href="/HTMLKit/">Library ▼</a>
+    <div class="dropdown-content">
+      <a href="/HTMLKit/html">WebDev2025</a>
+    </div>
+  </div>
   
   <a href="/HTMLKit/practice">Practice</a>
 
@@ -26,6 +33,13 @@
       <a href="/HTMLKit/cheatsheet/javascript">JavaScript Cheatsheet</a>
       <a href="/HTMLKit/cheatsheet/svelte">Svelte Cheatsheet</a>
       <a href="/HTMLKit/cheatsheet/astro">Astro Cheatsheet</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="/HTMLKit/">WebDev Tools ▼</a>
+    <div class="dropdown-content">
+      <a href="/HTMLKit/html">Lifetime Deals</a>
     </div>
   </div>
   
