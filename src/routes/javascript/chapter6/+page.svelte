@@ -70,9 +70,14 @@ console.log(counter()); // Output: 2</code></pre>
       <pre><code>const person = &#123;
     name: 'John',
     greet: function() &#123;
-        console.log(`Hello, I'm ${this.name}`);
+        console.log(\`Hello, I'm \${this.name}\`);
     &#125;
-&#125;;</code></pre>
+&#125;;
+
+person.greet(); // Output: "Hello, I'm John"
+
+const greetFunction = person.greet;
+greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
     </div>
   </div>
 
@@ -82,7 +87,7 @@ console.log(counter()); // Output: 2</code></pre>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>async function fetchUserData(userId) &#123;
     try &#123;
-        const response = await fetch(`/api/users/${userId}`);
+        const response = await fetch(\`/api/users/\${userId}\`);
         if (!response.ok) &#123;
             throw new Error('User not found');
         &#125;
