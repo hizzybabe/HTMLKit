@@ -132,7 +132,7 @@ let greeting = "Hi, " + name;  // String concatenation</code></pre>
 
 <style>
   .workshop-container {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     padding: 1rem;
     background-color: #f8f9fa;
     border-radius: 8px;
