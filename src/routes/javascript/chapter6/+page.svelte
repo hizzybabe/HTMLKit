@@ -188,7 +188,10 @@ timer.start(); // Counts up every second</code></pre>
 
     <h3>Deliverables</h3>
     <ul>
-      <li>Refactored To-Do List application using advanced JavaScript concepts</li>
+      <li>Refactored To-Do List application using the module pattern</li>
+      <li>Improved error handling and user feedback</li>
+      <li>Documentation explaining your refactoring decisions</li>
+      <li>Code that follows best practices for organization and maintainability</li>
     </ul>
   </div>
 
@@ -199,10 +202,6 @@ timer.start(); // Counts up every second</code></pre>
 </div>
 
 <style>
-  .concept-block {
-    margin-bottom: 2rem;
-  }
-  
   .chapter-intro {
     background-color: #f8f9fa;
     padding: 1.5rem;
@@ -214,6 +213,15 @@ timer.start(); // Counts up every second</code></pre>
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #dee2e6;
+  }
+
+  .concept-block {
+    margin-bottom: 2rem;
+  }
+
+  .workshop-container {
+    padding: 1rem;
+    background-color: #f8f9fa;
   }
 
   .code-preview {
