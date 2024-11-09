@@ -50,7 +50,7 @@
 
   <ul>
     <li><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design" target="_blank" rel="noopener noreferrer">freeCodeCamp's Responsive Web Design Certification</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer"></a>MDN Web Docs: HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs: HTML</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN Web Docs: CSS</a></li>
       <li>MDN Web Docs: JavaScript</li>
     </ul>
