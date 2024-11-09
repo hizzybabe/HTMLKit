@@ -75,18 +75,18 @@ switch (grade) &#123;
   <div class="concept-block">
     <h4>for Loop</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>for (let i = 0; i < 5; i++) {
+      <pre><code>for (let i = 0; i &lt; 5; i++) &#123;
   console.log("Count: " + i);
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h4>while Loop</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>let count = 0;
-while (count < 5) {
+while (count &lt; 5) &#123;
   console.log("Count: " + count);
   count++;
-}</code></pre>
+&#125;</code></pre>
     </div>
   </div>
 
