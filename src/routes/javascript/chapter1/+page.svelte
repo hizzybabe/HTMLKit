@@ -90,9 +90,9 @@ let greeting = "Hi, " + name;  // String concatenation</code></pre>
 
     <h3>Task 1: Display “Hello, World!” in an Alert Box</h3>
 
-    <p>Open hello.html in VSCode and create a basic HTML structure.</p>
-    <p>Add an inline &lt;script&gt; tag to write JavaScript directly within the HTML.</p>
-    <p>Write a script to display an alert box with “Hello, World!” when the page loads.</p>
+    <li>Open hello.html in VSCode and create a basic HTML structure.</li>
+    <li>Add an inline &lt;script&gt; tag to write JavaScript directly within the HTML.</li>
+    <li>Write a script to display an alert box with “Hello, World!” when the page loads.</li>
     
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <button 
@@ -185,6 +185,31 @@ let greeting = "Hi, " + name;  // String concatenation</code></pre>
         </div>
       {/if}
     </div>
+
+    <h3 class="mt-8">Deliverables</h3>
+    <h4>HTML Files:</h4>
+    <ul class="list-disc ml-6">
+      <li><code>hello.html</code> with JavaScript to display an alert.</li>
+      <li><code>calculator.html</code> with a calculator that sums two numbers.</li>
+    </ul>
+
+    <h4 class="mt-4">Screenshots:</h4>
+    <ul class="list-disc ml-6">
+      <li>Take screenshots of the alert box in hello.html and the calculator in action in calculator.html.</li>
+    </ul>
+
+    <h3 class="mt-8">Summary and Key Takeaways</h3>
+    <ul class="list-disc ml-6">
+      <li>
+        <strong>JavaScript Basics:</strong> JavaScript allows you to add interactivity to web pages with alert boxes, input handling, and simple calculations.
+      </li>
+      <li>
+        <strong>Variables and Data Types:</strong> Understanding JavaScript variables and data types is essential for building interactive scripts.
+      </li>
+      <li>
+        <strong>DOM Manipulation:</strong> JavaScript can retrieve and modify HTML elements to create dynamic content.
+      </li>
+    </ul>
   </div>
 
   <ChapterNavigation 
