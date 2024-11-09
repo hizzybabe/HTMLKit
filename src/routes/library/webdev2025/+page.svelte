@@ -85,7 +85,7 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer"></a>freeCodeCamp's JavaScript Algorithms and Data Structures Certification</a></li>
+    <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">freeCodeCamp's JavaScript Algorithms and Data Structures Certification</a></li>
     <li><a href="https://www.theodinproject.com/paths/full-stack-javascript" target="_blank" rel="noopener noreferrer">The Odin Project: Full Stack JavaScript</a></li>
     </ul>
   </div>
