@@ -39,7 +39,7 @@
   <div class="dropdown">
     <a href="/HTMLKit/">WebDev Tools ▼</a>
     <div class="dropdown-content">
-      <a href="/HTMLKit/html">Lifetime Deals</a>
+      <a href="https://techwizard.club/lifetime-deals/">Lifetime Deals</a>
     </div>
   </div>
   
