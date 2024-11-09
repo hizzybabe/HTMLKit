@@ -55,7 +55,16 @@ console.log(counter()); // Output: 2`}</code></pre>
     <p>The module pattern leverages closures to encapsulate code within a function, allowing you to create private variables and expose only the necessary parts.</p>
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>const ToDoModule = (function() {
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode2 = !showCode2}
+      >
+        {showCode2 ? 'Hide Code' : 'Show Code'}
+      </button>
+
+      {#if showCode2}
+        <pre><code>{`const ToDoModule = (function() {
     let tasks = []; // Private variable
 
     function addTask(task) {
@@ -70,7 +79,8 @@ console.log(counter()); // Output: 2`}</code></pre>
         addTask,
         getTasks
     };
-})();</code></pre>
+})();`}</code></pre>
+      {/if}
     </div>
   </div>
 
