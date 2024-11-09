@@ -108,12 +108,6 @@
     margin-bottom: 1rem;
   }
 
-  .intro {
-    text-align: center;
-    color: #666;
-    margin-bottom: 3rem;
-  }
-
   .chapters {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -136,25 +130,5 @@
     list-style-type: none;
     padding: 0;
     margin-bottom: 1.5rem;
-  }
-
-  li {
-    padding: 0.5rem 0;
-    color: #666;
-  }
-
-  button {
-    width: 100%;
-    padding: 0.75rem;
-    background: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-
-  button:hover {
-    background: #2563eb;
   }
 </style>
