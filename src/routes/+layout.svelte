@@ -19,7 +19,7 @@
   <div class="dropdown">
     <a href="/HTMLKit/">Library ▼</a>
     <div class="dropdown-content">
-      <a href="/HTMLKit/html">WebDev2025</a>
+      <a href="/library/webdev2025">WebDev2025</a>
     </div>
   </div>
   
