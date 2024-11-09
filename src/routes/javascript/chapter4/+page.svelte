@@ -1,6 +1,7 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
-  let showCode = true;
+  let showCode1 = true;
+  let showCode2 = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -52,13 +53,13 @@
       <button 
         class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
         style="background-color: rgb(59 130 246) !important"
-        on:click={() => showCode = !showCode}
+        on:click={() => showCode1 = !showCode1}
       >
-        {showCode ? 'Show Code' : 'Show Preview'}
+        {showCode1 ? 'Hide Code' : 'Show Code'}
       </button>
 
-      {#if showCode}
-      <pre><code>let heading = document.getElementById("profile-name");
+      {#if showCode1}
+        <pre><code>let heading = document.getElementById("profile-name");
 heading.textContent = "John Doe"; // Changes the text content
 
 let profilePic = document.querySelector(".profile-pic");
@@ -88,17 +89,78 @@ profilePic.style.borderRadius = "50%"; // Adds a circular style to the image</co
       <button 
         class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
         style="background-color: rgb(59 130 246) !important"
-        on:click={() => showCode = !showCode}
+        on:click={() => showCode2 = !showCode2}
       >
-        {showCode ? 'Show Code' : 'Show Preview'}
+        {showCode2 ? 'Hide Code' : 'Show Code'}
       </button>
 
-      {#if showCode}
-      <pre><code>let button = document.querySelector(".submit-btn");
+      {#if showCode2}
+        <pre><code>let button = document.querySelector(".submit-btn");
 button.addEventListener("click", function() {
   alert("Button clicked!");
 });</code></pre>
       {/if}
+    </div>
+  </div>
+
+  <div class="workshop-container">
+    <h2>Workshop: Interactive Form Validation</h2>
+    
+    <div class="chapter-intro">
+      <p>In this workshop, you'll create a registration form with real-time validation using DOM manipulation and event handling.</p>
+    </div>
+
+    <h3>Requirements</h3>
+    <ul>
+      <li>Create a registration form with the following fields:</li>
+      <ul>
+        <li>Username (must be at least 4 characters)</li>
+        <li>Email (must be a valid email format)</li>
+        <li>Password (must be at least 8 characters with numbers and letters)</li>
+        <li>Confirm Password (must match password)</li>
+      </ul>
+      <li>Add real-time validation as users type</li>
+      <li>Show success/error messages below each field</li>
+      <li>Enable/disable submit button based on form validity</li>
+    </ul>
+
+    <h3>Step-by-Step Guide</h3>
+    <ol>
+      <li>Create the HTML structure:
+        <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+          <pre><code>&lt;form id="registrationForm"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" required&gt;
+    &lt;div class="error-message"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  // Add other form fields similarly
+  &lt;button type="submit" disabled&gt;Register&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </li>
+      <li>Add event listeners for input validation</li>
+      <li>Implement validation functions</li>
+      <li>Update UI based on validation results</li>
+    </ol>
+
+    <h3>Deliverables</h3>
+    <ul>
+      <li>Complete HTML file with form structure</li>
+      <li>JavaScript file with validation logic</li>
+      <li>Working form with real-time validation</li>
+      <li>CSS styling for success/error states</li>
+      <li>Documentation of your validation rules</li>
+    </ul>
+
+    <div class="tips">
+      <h4>Tips</h4>
+      <ul>
+        <li>Use <code>input</code> event for real-time validation</li>
+        <li>Create reusable validation functions</li>
+        <li>Use CSS classes to show validation states</li>
+        <li>Consider using regular expressions for email validation</li>
+      </ul>
     </div>
   </div>
 
@@ -128,5 +190,21 @@ button.addEventListener("click", function() {
 
   .code-preview {
     margin: 1rem 0;
+  }
+
+  .workshop-container {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .tips {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid #0d6efd;
+    border-radius: 4px;
   }
 </style>
