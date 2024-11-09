@@ -1,4 +1,3 @@
-
 <script>
   const chapters = [
     {
@@ -10,7 +9,8 @@
         "Setting Up a Code Editor/IDE",
         "Basic Syntax and Data Types",
         "Practice Workshop: Hello, Interactive World!"
-      ]
+      ],
+      path: "/HTMLKit/javascript/chapter1"
     },
     {
       title: "Chapter 2: Functions, Conditional Statements, & Loops",
@@ -20,7 +20,8 @@
         "Loops (for, while, do-while)",
         "Introduction to Scope and Context",
         "Practice Workshop: Quiz Time"
-      ]
+      ],
+      path: "/HTMLKit/javascript/chapter2"
     },
     {
       title: "Chapter 3: Working with Arrays & Objects",
@@ -29,7 +30,8 @@
         "Working with Objects",
         "Introduction to JSON",
         "Practice Workshop: To-Do List App"
-      ]
+      ],
+      path: "/HTMLKit/javascript/chapter3"
     },
     {
       title: "Chapter 4: DOM Manipulation & Events",
@@ -38,7 +40,8 @@
         "Selecting and Manipulating DOM Elements",
         "Working with Events",
         "Practice Workshop: Interactive Profile Page"
-      ]
+      ],
+      path: "/HTMLKit/javascript/chapter4"
     },
     {
       title: "Chapter 5: Asynchronous JavaScript & API Fetching",
@@ -47,7 +50,8 @@
         "Understanding and Working with APIs",
         "Error Handling",
         "Practice Workshop: Weather App"
-      ]
+      ],
+      path: "/HTMLKit/javascript/chapter5"
     },
     {
       title: "Chapter 6: Advanced Topics & Best Practices",
@@ -56,7 +60,8 @@
         "Understanding this Context",
         "Best Practices for Code Organization",
         "Practice Workshop: Refactoring the To-Do List App"
-      ]
+      ],
+      path: "/HTMLKit/javascript/chapter6"
     },
     {
       title: "Chapter 7: Frontend Frameworks & Libraries",
@@ -65,7 +70,8 @@
         "Introduction to Component-Based Architecture",
         "Choosing the Right Tool",
         "Practice Workshop: First Steps with React"
-      ]
+      ],
+      path: "/HTMLKit/javascript/chapter7"
     }
   ];
 </script>
@@ -83,14 +89,72 @@
             <li>{topic}</li>
           {/each}
         </ul>
-        <button>Start Chapter</button>
+        <button on:click={() => window.location.href = chapter.path}>Start Chapter</button>
       </div>
     {/each}
   </div>
 </div>
 
 <style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
 
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
-  
+  .intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+
+  .chapters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .chapter-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    padding: 0.5rem 0;
+    color: #666;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background: #2563eb;
+  }
 </style>
