@@ -28,9 +28,9 @@
   <div class="concept-block">
     <h4>Basic Function Syntax</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>function functionName(parameters) {
+      <pre><code>function functionName(parameters) &#123;
   // Code to execute
-}</code></pre>
+&#125;</code></pre>
     </div>
 
     <h4>Example</h4>
