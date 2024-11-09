@@ -94,8 +94,118 @@ task.done = true;</code></pre>
   <div class="workshop-container">
     <h3 class="task">Task: Create a basic To-Do List application using arrays and objects</h3>
     
-    <!-- Rest of the workshop content -->
-    <!-- ... -->
+    <h4>Step 1: Set Up Your Files</h4>
+    <div>Create two new files:</div>
+    <ul>
+      <li><code>todo.html</code> - for the HTML structure</li>
+      <li><code>todo.js</code> - for the JavaScript code</li>
+    </ul>
+
+    <h4>Step 2: Create the HTML Structure</h4>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode2 = !showCode2}
+      >
+        {showCode2 ? 'Show Preview' : 'Show Code'}
+      </button>
+      
+      {#if showCode2}
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;To-Do List App&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My To-Do List&lt;/h1&gt;
+    
+    &lt;div&gt;
+        &lt;input type="text" id="taskInput" placeholder="Enter new task"&gt;
+        &lt;button onclick="addTask()"&gt;Add Task&lt;/button&gt;
+    &lt;/div&gt;
+    
+    &lt;ul id="taskList"&gt;&lt;/ul&gt;
+
+    &lt;script src="todo.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      {:else}
+      <div class="preview-content">
+        <h1>My To-Do List</h1>
+        <div>
+          <input type="text" placeholder="Enter new task" disabled>
+          <button disabled>Add Task</button>
+        </div>
+        <ul></ul>
+      </div>
+      {/if}
+    </div>
+
+    <h4>Step 3: Implement the JavaScript Logic</h4>
+    <div>In your <code>todo.js</code> file, implement the following functionality:</div>
+    <ul>
+      <li>Store tasks in an array of objects</li>
+      <li>Add new tasks</li>
+      <li>Toggle task completion status</li>
+      <li>Delete tasks</li>
+    </ul>
+
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>// Array to store tasks
+let tasks = [];
+
+// Function to add a new task
+function addTask() {
+    const input = document.getElementById('taskInput');
+    const text = input.value.trim();
+    
+    if (text) {
+        const task = {
+            id: Date.now(),
+            text: text,
+            done: false
+        };
+        
+        tasks.push(task);
+        renderTasks();
+        input.value = '';
+    }
+}
+
+// Function to render tasks
+function renderTasks() {
+    const list = document.getElementById('taskList');
+    list.innerHTML = '';
+    
+    tasks.forEach(task => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <input type="checkbox" 
+                   ${task.done ? 'checked' : ''} 
+                   onclick="toggleTask(${task.id})">
+            <span style="${task.done ? 'text-decoration: line-through' : ''}">
+                ${task.text}
+            </span>
+            <button onclick="deleteTask(${task.id})">Delete</button>
+        `;
+        list.appendChild(li);
+    });
+}</code></pre>
+    </div>
+
+    <h3>Deliverables</h3>
+    <ul>
+      <li>Complete todo.html and todo.js files</li>
+      <li>Working To-Do List application that can:</li>
+      <ul>
+        <li>Add new tasks</li>
+        <li>Mark tasks as complete</li>
+        <li>Delete tasks</li>
+      </ul>
+      <li>Screenshot of your working application</li>
+    </ul>
   </div>
 
   <ChapterNavigation 
