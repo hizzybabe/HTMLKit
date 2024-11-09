@@ -49,9 +49,9 @@
     <h3>Resources:</h3>
 
   <ul>
-    <li>freeCodeCamp's Responsive Web Design Certification</li>
-    <li>MDN Web Docs: HTML</li>
-    <li>MDN Web Docs: CSS</li>
+    <li><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design" target="_blank" rel="noopener noreferrer">freeCodeCamp's Responsive Web Design Certification</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer"></a>MDN Web Docs: HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN Web Docs: CSS</a></li>
       <li>MDN Web Docs: JavaScript</li>
     </ul>
   </div>
@@ -68,8 +68,8 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li>Git Tutorial for Beginners</li>
-    <li>GitHub Guides</li>
+    <li><a href="https://www.youtube.com/watch?v=SWYqp7iY_Tc" target="_blank" rel="noopener noreferrer"></a>Git Tutorial for Beginners</a></li>
+    <li><a href="https://guides.github.com/" target="_blank" rel="noopener noreferrer">GitHub Guides</a></li>
   </ul>
 
   <h2>4. Build Projects</h2>
@@ -85,8 +85,8 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li>freeCodeCamp's JavaScript Algorithms and Data Structures Certification</li>
-    <li>The Odin Project: Full Stack JavaScript</li>
+    <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer"></a>freeCodeCamp's JavaScript Algorithms and Data Structures Certification</a></li>
+    <li><a href="https://www.theodinproject.com/paths/full-stack-javascript" target="_blank" rel="noopener noreferrer">The Odin Project: Full Stack JavaScript</a></li>
     </ul>
   </div>
 
@@ -103,8 +103,8 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li>React Official Documentation</li>
-    <li>Vue.js Official Guide</li>
+    <li><a href="https://react.dev/learn" target="_blank" rel="noopener noreferrer"></a>React Official Documentation</a></li>
+    <li><a href="https://vuejs.org/guide/introduction.html" target="_blank" rel="noopener noreferrer">Vue.js Official Guide</a></li>
   </ul>
   </div>
 
@@ -122,9 +122,9 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li>Node.js Official Documentation</li>
-    <li>Express.js Guide</li>
-    <li>MongoDB University</li>
+    <li><a href="https://nodejs.org/en/docs/" target="_blank" rel="noopener noreferrer"></a>Node.js Official Documentation</a></li>
+    <li><a href="https://expressjs.com/en/starter/installing.html" target="_blank" rel="noopener noreferrer">Express.js Guide</a></li>
+    <li><a href="https://university.mongodb.com/" target="_blank" rel="noopener noreferrer">MongoDB University</a></li>
   </ul>
   </div>
 
@@ -141,8 +141,8 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li>Netlify Documentation</li>
-    <li>Vercel Documentation</li>
+    <li><a href="https://docs.netlify.com/" target="_blank" rel="noopener noreferrer"></a>Netlify Documentation</a></li>
+    <li><a href="https://vercel.com/docs" target="_blank" rel="noopener noreferrer">Vercel Documentation</a></li>
   </ul>
   </div>
 
@@ -159,10 +159,10 @@
   <h3>Resources:</h3>
 
   <ul>
-    <li>freeCodeCamp News</li>
-    <li>Stack Overflow</li>
+    <li><a href="https://www.freecodecamp.org/news" target="_blank" rel="noopener noreferrer"></a>freeCodeCamp News</a></li>
+    <li><a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">Stack Overflow</a></li>
   </ul>
-</div>
+  </div>
 
 
   <div class="concept-block">
