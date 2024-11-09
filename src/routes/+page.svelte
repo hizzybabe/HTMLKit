@@ -5,10 +5,10 @@
   <p></p>
 </div>
 
-<!-- Ad Banner Placeholder -->
+<!-- Ad Banner Placeholder 
 <div class="ad-banner">
   <p>Ad Banner Placeholder</p>
-</div>
+</div> -->
 
 <section class="features">
   <div class="feature">
@@ -37,10 +37,10 @@
 </div>
 </section>
 
-<!-- Ad Banner Placeholder -->
+<!-- Ad Banner Placeholder 
 <div class="ad-banner">
   <p>Ad Banner Placeholder</p>
-</div>
+</div> -->
 
 <h1>🚀 Welcome to HTMLKIT</h1>
 
@@ -48,10 +48,10 @@
   Embark on your journey to becoming a proficient web developer with HTMLKIT. Our platform offers a comprehensive curriculum that covers HTML, CSS, and JavaScript, equipping you with the fundamental skills to create stunning websites. Additionally, dive into the world of Svelte, a modern JavaScript framework that simplifies the process of building interactive and dynamic user interfaces.
 </div>
 
-<!-- Ad Banner Placeholder -->
+<!-- Ad Banner Placeholder 
 <div class="ad-banner">
   <p>Ad Banner Placeholder</p>
-</div>
+</div> -->
 
 </div>
 
