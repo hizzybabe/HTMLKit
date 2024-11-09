@@ -2,6 +2,7 @@
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
   let showCode1 = true;
   let showCode2 = true;
+  let showCode3 = true;
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -104,64 +105,121 @@ button.addEventListener("click", function() {
   </div>
 
   <div class="workshop-container">
-    <h2>Workshop: Interactive Form Validation</h2>
+    <h2 class="workshop-title">Practice Workshop: Interactive Profile Page</h2>
     
-    <div class="chapter-intro">
-      <p>In this workshop, you'll create a registration form with real-time validation using DOM manipulation and event handling.</p>
-    </div>
+    <p>In this workshop, you'll enhance a personal profile page by dynamically updating elements based on user input, adding event listeners for hover effects and button clicks, and creating a dynamic gallery that responds to user interactions.</p>
 
-    <h3>Requirements</h3>
+    <h3>Workshop Tasks</h3>
+    
+    <h4>1. Set Up Your Files</h4>
     <ul>
-      <li>Create a registration form with the following fields:</li>
-      <ul>
-        <li>Username (must be at least 4 characters)</li>
-        <li>Email (must be a valid email format)</li>
-        <li>Password (must be at least 8 characters with numbers and letters)</li>
-        <li>Confirm Password (must match password)</li>
-      </ul>
-      <li>Add real-time validation as users type</li>
-      <li>Show success/error messages below each field</li>
-      <li>Enable/disable submit button based on form validity</li>
+      <li>Open your existing profile.html file and create a new JavaScript file named profile.js.</li>
+      <li>Link profile.js to profile.html by adding this line in the &lt;head&gt; section:</li>
     </ul>
 
-    <h3>Step-by-Step Guide</h3>
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <pre><code>&lt;script src="profile.js" defer&gt;&lt;/script&gt;</code></pre>
+    </div>
+
+    <h4>2. HTML Structure for the Profile Page</h4>
+    <p>Add elements that users can interact with, such as a text input for updating a profile name, a button, and an empty gallery section.</p>
+
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode2 = !showCode2}
+      >
+        {showCode2 ? 'Hide Code' : 'Show Code'}
+      </button>
+
+      {#if showCode2}
+        <pre><code>{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Profile Page</title>
+</head>
+<body>
+    <h1 id="profile-name">Your Name</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button id="update-btn">Update Name</button>
+    <div id="gallery" class="gallery">
+        <p>Click a button to add images to the gallery:</p>
+        <button id="add-img-btn">Add Image</button>
+    </div>
+</body>
+</html>`}</code></pre>
+      {/if}
+    </div>
+
+    <h4>3. JavaScript Code for Interactive Features</h4>
+    <p>In profile.js, add functions to handle user interactions and dynamically update the profile page.</p>
+
+    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
+      <button 
+        class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
+        style="background-color: rgb(59 130 246) !important"
+        on:click={() => showCode3 = !showCode3}
+      >
+        {showCode3 ? 'Hide Code' : 'Show Code'}
+      </button>
+
+      {#if showCode3}
+        <pre><code>{`// Function to update profile name
+document.getElementById("update-btn").addEventListener("click", function() {
+    const nameInput = document.getElementById("nameInput").value;
+    const profileName = document.getElementById("profile-name");
+    if (nameInput) {
+        profileName.textContent = nameInput;
+        document.getElementById("nameInput").value = ""; // Clear the input field
+    } else {
+        alert("Please enter a name!");
+    }
+});
+
+// Function to add an image to the gallery
+document.getElementById("add-img-btn").addEventListener("click", function() {
+    const gallery = document.getElementById("gallery");
+    const newImage = document.createElement("img");
+    newImage.src = "https://via.placeholder.com/150";
+    newImage.alt = "Gallery Image";
+    newImage.classList.add("gallery-img");
+    newImage.style.margin = "5px";
+    newImage.style.width = "150px";
+    gallery.appendChild(newImage);
+});
+
+// Hover effect for images
+document.getElementById("gallery").addEventListener("mouseover", function(event) {
+    if (event.target.tagName === "IMG") {
+        event.target.style.opacity = "0.7";
+    }
+});
+
+document.getElementById("gallery").addEventListener("mouseout", function(event) {
+    if (event.target.tagName === "IMG") {
+        event.target.style.opacity = "1";
+    }
+});`}</code></pre>
+      {/if}
+    </div>
+
+    <h4>Explanation</h4>
+    <ul>
+      <li><strong>Update Name</strong>: The update-btn button gets the user's input, updates the profile name heading, and clears the input field.</li>
+      <li><strong>Add Image to Gallery</strong>: The add-img-btn button creates a new image element and appends it to the gallery. Each image is styled to have a margin and a fixed width.</li>
+      <li><strong>Hover Effect</strong>: mouseover and mouseout events change the opacity of images when the mouse hovers over or leaves them.</li>
+    </ul>
+
+    <h4>Testing the Interactive Profile Page</h4>
     <ol>
-      <li>Create the HTML structure:
-        <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-          <pre><code>&lt;form id="registrationForm"&gt;
-  &lt;div class="form-group"&gt;
-    &lt;label for="username"&gt;Username:&lt;/label&gt;
-    &lt;input type="text" id="username" required&gt;
-    &lt;div class="error-message"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-  // Add other form fields similarly
-  &lt;button type="submit" disabled&gt;Register&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-        </div>
-      </li>
-      <li>Add event listeners for input validation</li>
-      <li>Implement validation functions</li>
-      <li>Update UI based on validation results</li>
+      <li>Open profile.html in your browser.</li>
+      <li>Test entering a new name and clicking "Update Name" to see the profile name change.</li>
+      <li>Click "Add Image" to add images to the gallery.</li>
+      <li>Hover over each image to see the opacity change.</li>
     </ol>
-
-    <h3>Deliverables</h3>
-    <ul>
-      <li>Complete HTML file with form structure</li>
-      <li>JavaScript file with validation logic</li>
-      <li>Working form with real-time validation</li>
-      <li>CSS styling for success/error states</li>
-      <li>Documentation of your validation rules</li>
-    </ul>
-
-    <div class="tips">
-      <h4>Tips</h4>
-      <ul>
-        <li>Use <code>input</code> event for real-time validation</li>
-        <li>Create reusable validation functions</li>
-        <li>Use CSS classes to show validation states</li>
-        <li>Consider using regular expressions for email validation</li>
-      </ul>
-    </div>
   </div>
 
   <ChapterNavigation 
