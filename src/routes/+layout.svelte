@@ -19,7 +19,8 @@
   <div class="dropdown">
     <a href="/HTMLKit/">Library ▼</a>
     <div class="dropdown-content">
-      <a href="/library/webdev2025">WebDev2025</a>
+      <a href="/library/webdev2025">WebDev 2025</a>
+      <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/">Rising Tech Stacks 2025</a>
     </div>
   </div>
   
