@@ -45,14 +45,16 @@
     <li>JavaScript: Adds interactivity to web pages.</li>
   </ul>
 
+  <div class="resources">
   <p>Resources:</p>
 
   <ul>
     <li>freeCodeCamp's Responsive Web Design Certification</li>
     <li>MDN Web Docs: HTML</li>
     <li>MDN Web Docs: CSS</li>
-    <li>MDN Web Docs: JavaScript</li>
-  </ul>
+      <li>MDN Web Docs: JavaScript</li>
+    </ul>
+  </div>
 
   <h2>3. Version Control with Git</h2>
 
@@ -79,12 +81,14 @@
     <li>Simple Web Applications: Create interactive applications to solidify your understanding.</li>
   </ul>
 
+  <div class="resources">
   <p>Resources:</p>
 
   <ul>
     <li>freeCodeCamp's JavaScript Algorithms and Data Structures Certification</li>
     <li>The Odin Project: Full Stack JavaScript</li>
-  </ul>
+    </ul>
+  </div>
 
   <h2>5. Explore Front-End Frameworks</h2>
 
@@ -95,12 +99,14 @@
     <li>Vue.js: A progressive framework for building user interfaces.</li>
   </ul>
 
+  <div class="resources">
   <p>Resources:</p>
 
   <ul>
     <li>React Official Documentation</li>
     <li>Vue.js Official Guide</li>
   </ul>
+  </div>
 
   <h2>6. Understand Back-End Development</h2>
 
@@ -112,6 +118,7 @@
     <li>Databases: Understand relational (e.g., PostgreSQL) and NoSQL (e.g., MongoDB) databases.</li>
   </ul>
 
+  <div class="resources">
   <p>Resources:</p>
 
   <ul>
@@ -119,6 +126,7 @@
 Express.js Guide
     <li>MongoDB University</li>
   </ul>
+  </div>
 
   <h2>7. Deployment and Hosting</h2>
 
@@ -129,12 +137,14 @@ Express.js Guide
     <li>Domain Names and SSL Certificates: Understand how to secure your website.</li>
   </ul>
 
+  <div class="resources">
   <p>Resources:</p>
 
   <ul>
     <li>Netlify Documentation</li>
     <li>Vercel Documentation</li>
   </ul>
+  </div>
 
   <h2>8. Continuous Learning and Community Engagement</h2>
 
@@ -145,12 +155,15 @@ Express.js Guide
     <li>Join Communities: Participate in forums like Stack Overflow, Reddit’s webdev community, or local meetups.</li>
   </ul>
 
+  <div class="resources">
   <p>Resources:</p>
 
   <ul>
     <li>freeCodeCamp News</li>
     <li>Stack Overflow</li>
   </ul>
+</div>
+
 
   <div class="concept-block">
     <h2>Additional Tips for Success</h2>
