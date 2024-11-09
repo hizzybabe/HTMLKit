@@ -57,10 +57,7 @@ console.log(counter()); // Output: 2</code></pre>
         addTask,
         getTasks
     &#125;;
-&#125;)();
-
-ToDoModule.addTask("Learn JavaScript");
-console.log(ToDoModule.getTasks()); // Output: ["Learn JavaScript"]</code></pre>
+&#125;)();</code></pre>
     </div>
   </div>
 
@@ -70,53 +67,21 @@ console.log(ToDoModule.getTasks()); // Output: ["Learn JavaScript"]</code></pre>
     <p>The 'this' keyword refers to the current execution context. Its value depends on how and where a function is called, not where it's defined.</p>
 
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>// Different contexts of 'this'
-const person = &#123;
+      <pre><code>const person = &#123;
     name: 'John',
     greet: function() &#123;
         console.log(`Hello, I'm ${this.name}`);
     &#125;
-&#125;;
-
-person.greet(); // Output: "Hello, I'm John"
-
-const greetFunction = person.greet;
-greetFunction(); // Output: "Hello, I'm undefined"</code></pre>
-    </div>
-
-    <h4>Arrow Functions and 'this'</h4>
-    <p>Arrow functions don't create their own 'this' context; they inherit it from the enclosing scope.</p>
-
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>const timer = &#123;
-    seconds: 0,
-    start: function() &#123;
-        setInterval(() => &#123;
-            this.seconds++; // 'this' refers to timer object
-            console.log(this.seconds);
-        &#125;, 1000);
-    &#125;
-&#125;;
-
-timer.start(); // Counts up every second</code></pre>
+&#125;;</code></pre>
     </div>
   </div>
 
   <h3>6.3 Best Practices for Code Organization</h3>
   <div class="concept-block">
-    <h4>Code Structure</h4>
-    <ul>
-      <li>Group related functionality together</li>
-      <li>Use meaningful names for variables and functions</li>
-      <li>Keep functions small and focused</li>
-      <li>Comment complex logic</li>
-    </ul>
-
     <h4>Error Handling</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>async function fetchUserData(userId) &#123;
     try &#123;
-        // Attempt to fetch user data
         const response = await fetch(`/api/users/${userId}`);
         if (!response.ok) &#123;
             throw new Error('User not found');
@@ -124,32 +89,25 @@ timer.start(); // Counts up every second</code></pre>
         return await response.json();
     &#125; catch (error) &#123;
         console.error('Error fetching user:', error);
-        // Handle error appropriately
         throw error;
     &#125;
 &#125;</code></pre>
     </div>
   </div>
 
-  <hr/>
-
   <h2 class="workshop-title">Practice Workshop: Refactoring the To-Do List App</h2>
   <div class="workshop-container">
     <h3 class="task">Task: Refactor the To-Do List application using advanced JavaScript concepts</h3>
     
-    <h4>Step 1: Module Pattern Implementation</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>const TodoApp = (function() &#123;
-    // Private variables
     let tasks = [];
     let nextId = 1;
 
-    // Private functions
     function generateId() &#123;
         return nextId++;
     &#125;
 
-    // Public interface
     return &#123;
         addTask(title) &#123;
             const task = &#123;
@@ -160,30 +118,11 @@ timer.start(); // Counts up every second</code></pre>
             tasks.push(task);
             return task;
         &#125;,
-        
         getTasks() &#123;
-            return [...tasks]; // Return copy to maintain encapsulation
+            return [...tasks];
         &#125;
     &#125;;
 &#125;)();</code></pre>
-    </div>
-
-    <h4>Step 2: Event Handling with Error Boundaries</h4>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code>function handleAddTask(event) &#123;
-    try &#123;
-        event.preventDefault();
-        const input = document.getElementById('taskInput');
-        if (!input.value.trim()) &#123;
-            throw new Error('Task cannot be empty');
-        &#125;
-        TodoApp.addTask(input.value);
-        input.value = '';
-        renderTasks();
-    &#125; catch (error) &#123;
-        showError(error.message);
-    &#125;
-&#125;</code></pre>
     </div>
 
     <h3>Deliverables</h3>
@@ -226,5 +165,10 @@ timer.start(); // Counts up every second</code></pre>
 
   .code-preview {
     margin: 1rem 0;
+  }
+
+  .task {
+    color: #2563eb;
+    margin-bottom: 1rem;
   }
 </style>
