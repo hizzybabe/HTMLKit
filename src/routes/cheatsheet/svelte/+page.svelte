@@ -49,17 +49,17 @@
       </li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   let name = "World";
-&lt;/script&gt;
+</script>
 
-&lt;style&gt;
+<style>
   h1 {
     color: blue;
   }
-&lt;/style&gt;
+</style>
 
-&lt;h1&gt;Hello, {name}!&lt;/h1&gt;</code></pre>
+<h1>Hello, {name}!</h1></code></pre>
     </div>
   {/if}
 
@@ -76,31 +76,31 @@
       <li><strong>Auto-Reactivity</strong>: Assigning a new value to a variable makes it reactive.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   let count = 0;
 
   function increment() {
     count += 1;
   }
-&lt;/script&gt;
+</script>
 
-&lt;button on:click={increment}&gt;
+<button on:click={increment}>
   Clicked {count} {count === 1 ? 'time' : 'times'}
-&lt;/button&gt;</code></pre>
+</button></code></pre>
     </div>
 
     <ul>
       <li><strong>Reactive Statements</strong>: <code>$:</code> re-runs a statement whenever a dependency changes.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   let a = 1;
   let b = 2;
 
   $: sum = a + b;
-&lt;/script&gt;
+</script>
 
-&lt;p&gt;Sum is {sum}&lt;/p&gt;</code></pre>
+<p>Sum is {sum}</p></code></pre>
     </div>
   {/if}
 
@@ -117,14 +117,14 @@
       <li><strong>Passing Props</strong>: Use props to pass data from a parent component to a child component.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;ChildComponent name="Svelte" /&gt;</code></pre>
+      <pre><code class="language-svelte"><ChildComponent name="Svelte" /></code></pre>
     </div>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   export let name;
-&lt;/script&gt;
+</script>
 
-&lt;p&gt;Hello, {name}!&lt;/p&gt;</code></pre>
+<p>Hello, {name}!</p></code></pre>
     </div>
   {/if}
 
@@ -141,12 +141,12 @@
       <li><strong>Two-Way Binding</strong>: Use <code>bind:</code> to create two-way data bindings.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   let name = "Svelte";
-&lt;/script&gt;
+</script>
 
-&lt;input bind:value={name} /&gt;
-&lt;p&gt;Hello, {name}!&lt;/p&gt;</code></pre>
+<input bind:value={name} />
+<p>Hello, {name}!</p></code></pre>
     </div>
   {/if}
 
@@ -163,14 +163,14 @@
       <li><strong>Using {#if}</strong>: Conditional rendering with the {#if} block.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   let isVisible = true;
-&lt;/script&gt;
+</script>
 
 {#if isVisible}
-  &lt;p&gt;This is visible!&lt;/p&gt;
+  <p>This is visible!</p>
 {:else}
-  &lt;p&gt;This is hidden!&lt;/p&gt;
+  <p>This is hidden!</p>
 {/if}</code></pre>
     </div>
   {/if}
@@ -188,12 +188,12 @@
       <li><strong>Using {#each}</strong>: Loop through arrays with the {#each} block.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   let items = ['Apple', 'Banana', 'Cherry'];
-&lt;/script&gt;
+</script>
 
 {#each items as item}
-  &lt;p&gt;{item}&lt;/p&gt;
+  <p>{item}</p>
 {/each}</code></pre>
     </div>
   {/if}
@@ -211,13 +211,13 @@
       <li><strong>Event Handling</strong>: Use <code>on:event</code> to handle events.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   function handleClick() {
     alert('Button clicked!');
   }
-&lt;/script&gt;
+</script>
 
-&lt;button on:click={handleClick}&gt;Click Me&lt;/button&gt;</code></pre>
+<button on:click={handleClick}>Click Me</button></code></pre>
     </div>
   {/if}
 
@@ -239,11 +239,11 @@
 const count = writable(0);</code></pre>
     </div>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   import { count } from './store.js';
-&lt;/script&gt;
+</script>
 
-&lt;button on:click={() => count.update(n =&gt; n + 1)}&gt;Increment&lt;/button&gt;</code></pre>
+<button on:click={() => count.update(n => n + 1)}>Increment</button></code></pre>
     </div>
   {/if}
 
@@ -260,7 +260,7 @@ const count = writable(0);</code></pre>
       <li><strong>Using Slots</strong>: Allow parent components to pass content to child components.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;slot&gt;Default content&lt;/slot&gt;</code></pre>
+      <pre><code class="language-svelte"><slot>Default content</slot></code></pre>
     </div>
   {/if}
 
@@ -277,11 +277,11 @@ const count = writable(0);</code></pre>
       <li><strong>Using Transitions</strong>: Animate elements entering or leaving the DOM.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   import { fade } from 'svelte/transition';
-&lt;/script&gt;
+</script>
 
-&lt;div transition:fade&gt;This will fade in and out&lt;/div&gt;</code></pre>
+<div transition:fade>This will fade in and out</div></code></pre>
     </div>
   {/if}
 
@@ -298,11 +298,11 @@ const count = writable(0);</code></pre>
       <li><strong>Using Context API</strong>: Share data between components without props drilling.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   import { setContext, getContext } from 'svelte';
   const key = 'myKey';
   setContext(key, 'some value');
-&lt;/script&gt;</code></pre>
+</script></code></pre>
     </div>
   {/if}
 
@@ -319,13 +319,13 @@ const count = writable(0);</code></pre>
       <li><strong>Lifecycle Functions</strong>: Use functions like <code>onMount</code> and <code>beforeUpdate</code>.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
+      <pre><code class="language-svelte"><script>
   import { onMount } from 'svelte';
 
-  onMount(() =&gt; {
+  onMount(() => {
     console.log('Component mounted');
   });
-&lt;/script&gt;</code></pre>
+</script></code></pre>
     </div>
   {/if}
 </div>
