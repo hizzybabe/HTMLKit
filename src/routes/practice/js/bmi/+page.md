@@ -97,9 +97,9 @@ function calculateBMI() {
 
 3. **Weight Category**:
    - Determines the user’s weight category based on BMI value:
-     - Underweight: BMI < 18.5
-     - Normal weight: 18.5 ≤ BMI < 24.9
-     - Overweight: 25 ≤ BMI < 29.9
+     - Underweight: BMI &lt; 18.5
+     - Normal weight: 18.5 ≤ BMI &lt; 24.9
+     - Overweight: 25 ≤ BMI &lt; 29.9
      - Obesity: BMI ≥ 30
 
 4. **Display Result**:
