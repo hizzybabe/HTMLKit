@@ -45,6 +45,7 @@
   <div class="dropdown">
     <a href="/">WebDev Tools ▼</a>
     <div class="dropdown-content">
+      <a href="https://techwizard.club" target="_blank" rel="noopener noreferrer">Cloud Directory ↗️</a>
       <a href="https://techwizard.club/lifetime-deals/" target="_blank" rel="noopener noreferrer">Lifetime Deals ↗️</a>
     </div>
   </div>
