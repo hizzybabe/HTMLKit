@@ -49,7 +49,7 @@
     </div>
   </div>
   
-  <a href="/templates"><s>FREE Templates</s> (Coming Soon)</a>
+  <a href="/templates"><s>FREE Templates</s> (⌛Soon)</a>
 </nav>
 
 <slot />
