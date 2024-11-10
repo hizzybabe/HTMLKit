@@ -10,7 +10,7 @@ const config = {
       fallback: 'index.html'
     }),
     paths: {
-      base: '/HTMLKit'
+      base: ''
     }
   },
   extensions: ['.svelte', '.md', '.mdx'],
