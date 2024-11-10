@@ -1,90 +1,77 @@
-# HTMLKit
+# TW Academy (previously HTMLKit)
 
-HTMLKit is a comprehensive educational platform designed to teach the fundamentals of HTML, CSS, and JavaScript. This project includes a series of chapters that cover various topics, practical workshops, and hands-on exercises to help users build their web development skills.
-
-## Table of Contents
-
-- [HTMLKit](#htmlkit)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Chapters](#chapters)
-  - [Contributing](#contributing)
-  - [License](#license)
+TW Academy is a comprehensive web development learning platform that provides interactive tutorials and hands-on practice for HTML, CSS, JavaScript, and modern web frameworks.
 
 ## Features
 
-- Interactive lessons on HTML, CSS, and JavaScript.
-- Practical workshops for hands-on experience.
-- Code previews and examples for better understanding.
-- Responsive design for accessibility on various devices.
+- 📚 Structured learning paths for web development fundamentals
+- 💻 Interactive code examples and previews
+- 🛠️ Hands-on practice workshops
+- 🎯 Project-based learning approach
+- 📱 Responsive design for all devices
 
-## Installation
+## Tech Stack
 
-To get started with HTMLKit, follow these steps:
+- SvelteKit
+- MDsveX for Markdown processing
+- Vite for build tooling
+- TailwindCSS for styling
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/HTMLKit.git
-   ```
+Getting Started
 
-2. Navigate to the project directory:
-   ```bash
-   cd HTMLKit
-   ```
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Build for production: `npm run build`
+5. Run the production server: `npm run preview`
 
-3. Install the dependencies:
-   ```bash
-   npm install
-   ```
+## Project Structure
 
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
+HTMLKit/
+├── src/
+│ ├── routes/ # File-based routing
+│ │ ├── practice/ # Practice exercises
+│ │ ├── html/ # HTML tutorials
+│ │ ├── css/ # CSS tutorials
+│ │ └── javascript/ # JavaScript tutorials
+│ ├── app.html # Base HTML template
+│ └── app.css # Global styles
+├── static/ # Static assets
+└── package.json # Project dependencies
 
-5. Open your browser and go to `http://localhost:3000` to view the application.
+## Features in Detail
 
-## Usage
+### Interactive Tutorials
+- Step-by-step guides for web development concepts
+- Live code previews
+- Toggle between code and preview modes
 
-HTMLKit is structured into chapters, each focusing on different aspects of web development. Users can navigate through the chapters to learn and practice various topics. Each chapter includes:
+### Practice Workshops
+- Hands-on exercises for each topic
+- Real-world project examples
+- Code snippets and starter templates
 
-- Theory sections explaining key concepts.
-- Code examples that can be toggled between preview and code view.
-- Practical workshops to apply what you've learned.
-
-## Chapters
-
-1. **Chapter 1: Introduction to HTML & Setup**
-2. **Chapter 2: Basic HTML Structure & Elements**
-3. **Chapter 3: Text and Links**
-4. **Chapter 4: Images, Lists, and Tables**
-5. **Chapter 5: Forms and Input Elements**
-6. **Chapter 6: Semantic HTML & Accessibility**
-7. **Chapter 7: Advanced Topics & Best Practices**
-
-Each chapter contains a mix of theoretical content and practical exercises to reinforce learning.
+### Topics Covered
+- HTML fundamentals and semantic markup
+- CSS styling and layouts
+- JavaScript programming basics
+- Modern web development practices
+- Responsive design principles
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/YourFeature
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Add some feature"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/YourFeature
-   ```
-5. Open a pull request.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Built with SvelteKit
+- Styled with TailwindCSS
+- Markdown processing by MDsveX
+
+---
+
+Made with ❤️ by TechWizard.club
