@@ -1,3 +1,7 @@
+<script>
+  import SolutionChecker from '$lib/components/SolutionChecker.svelte';
+</script>
+
 <h1>Practice Projects</h1>
 
 <div class="container mx-auto px-4">
@@ -24,6 +28,8 @@
       <li><a href="/HTMLKit/practice/htmlcss18">Coming Soon Page</a></li>
     </ul>
   </section>
+
+  <SolutionChecker />
 
   <section>
     <h2>JavaScript Projects</h2>
@@ -53,6 +59,8 @@
     </ul>
   </section>
 
+  <SolutionChecker />
+
   <section>
     <h2>Astro Projects</h2>
     <ul>
@@ -61,6 +69,8 @@
       <li><a href="/HTMLKit/practice/astro-company">Astro Company Website</a></li>
     </ul>
   </section>
+
+  <SolutionChecker />
 </div>
 
 <style>
