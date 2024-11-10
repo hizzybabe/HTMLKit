@@ -17,7 +17,7 @@
       <li><a href="/HTMLKit/practice/htmlcss7">Newsletter Signup Form</a></li>
       <li><a href="/HTMLKit/practice/htmlcss8">CSS-Only Navigation Menu</a></li>
       <li><a href="/HTMLKit/practice/htmlcss9">Restaurant Menu</a></li>
-      <li><a href="/HTMLKit/practice/htmlcss10">Simple Blog Post Layout</a></li>
+      <s><li><a href="/HTMLKit/practice/htmlcss10">Simple Blog Post Layout</a></li>
       <li><a href="/HTMLKit/practice/htmlcss11">Product Card</a></li>
       <li><a href="/HTMLKit/practice/htmlcss12">Event Invitation Page</a></li>
       <li><a href="/HTMLKit/practice/htmlcss13">Digital Business Card</a></li>
@@ -25,14 +25,14 @@
       <li><a href="/HTMLKit/practice/htmlcss15">CSS Art</a></li>
       <li><a href="/HTMLKit/practice/htmlcss16">Weather Card</a></li>
       <li><a href="/HTMLKit/practice/htmlcss17">User Profile Page</a></li>
-      <li><a href="/HTMLKit/practice/htmlcss18">Coming Soon Page</a></li>
+      <li><a href="/HTMLKit/practice/htmlcss18">Coming Soon Page</a></li></s>
     </ul>
   </section>
 
   <section>
-    <h2>JavaScript Projects</h2>
+    <h2>JavaScript Projects (*WIP* - Coming Soon)</h2>
     <ul>
-      <li><a href="/HTMLKit/practice/js-todo">Todo List</a></li>
+      <s><li><a href="/HTMLKit/practice/js-todo">Todo List</a></li>
       <li><a href="/HTMLKit/practice/js-quiz">Quiz App</a></li>
       <li><a href="/HTMLKit/practice/js-calculator">Calculator</a></li>
       <li><a href="/HTMLKit/practice/js-countdown">Countdown Timer</a></li>
@@ -53,16 +53,16 @@
       <li><a href="/HTMLKit/practice/js-password">Password Generator</a></li>
       <li><a href="/HTMLKit/practice/js-drawing">Simple Drawing App</a></li>
       <li><a href="/HTMLKit/practice/js-modal">Popup Modal</a></li>
-      <li><a href="/HTMLKit/practice/js-accordion">Accordion FAQ Section</a></li>
+      <li><a href="/HTMLKit/practice/js-accordion">Accordion FAQ Section</a></li></s>
     </ul>
   </section>
 
   <section>
-    <h2>Astro Projects</h2>
+    <h2>Astro Projects (*WIP* - Coming Soon)</h2>
     <ul>
-      <li><a href="/HTMLKit/practice/astro-blog">Astro Blog</a></li>
+      <s><li><a href="/HTMLKit/practice/astro-blog">Astro Blog</a></li>
       <li><a href="/HTMLKit/practice/astro-landing">Astro Landing Page</a></li>
-      <li><a href="/HTMLKit/practice/astro-company">Astro Company Website</a></li>
+      <li><a href="/HTMLKit/practice/astro-company">Astro Company Website</a></li></s>
     </ul>
   </section>
 
