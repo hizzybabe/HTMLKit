@@ -49,7 +49,7 @@
     </div>
   </div>
   
-  <a href="/HTMLKit/templates">FREE Templates</a>
+  <a href="/HTMLKit/templates"><s>FREE Templates</s> (Coming Soon)</a>
 </nav>
 
 <slot />
