@@ -165,7 +165,7 @@ task.done = true;</code></pre>
       </button>
       
       {#if showJsCode}
-      <pre><code>// Array to store tasks
+      <pre><code>false// Array to store tasks
         let tasks = [];
         
         // Function to add a new task
@@ -197,10 +197,10 @@ task.done = true;</code></pre>
                     &lt;input type="checkbox" 
                            $&#123;task.done ? 'checked' : ''&#125; 
                            onclick="toggleTask($&#123;task.id&#125;)"&gt;
-                    &lt;span style="$&#123;task.done ? 'text-decoration: line-through' : ''&#125;"&gt;
+                    <span style="$&#123;task.done ? 'text-decoration: line-through' : ''&#125;"&gt;
                         $&#123;task.text&#125;
-                    &lt;/span&gt;
-                    &lt;button onclick="deleteTask($&#123;task.id&#125;)"&gt;Delete&lt;/button&gt;
+                    </span&gt;
+                    <button onclick="deleteTask($&#123;task.id&#125;)"&gt;Delete</button&gt;
                 `;
                 list.appendChild(li);
             &#125;);
