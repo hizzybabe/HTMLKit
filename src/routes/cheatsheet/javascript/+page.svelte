@@ -130,13 +130,13 @@ switch(day) &#123;
   </h2>
   {#if visibleSections.loops}
     <pre><code class="language-javascript">// For Loop
-for (let i = 0; i < 5; i++) &#123;
+for (let i = 0; i &lt; 5; i++) &#123;
   console.log(i);
 &#125;
 
 // While Loop
 let count = 0;
-while (count < 5) &#123;
+while (count &lt; 5) &#123;
   console.log(count);
   count++;
 &#125;
