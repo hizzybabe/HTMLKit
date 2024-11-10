@@ -1,5 +1,6 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+  import SolutionChecker from '$lib/components/SolutionChecker.svelte';
 
   let showCode = true;
   let showCode1 = true;

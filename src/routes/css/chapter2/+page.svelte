@@ -1,5 +1,6 @@
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+  import SolutionChecker from '$lib/components/SolutionChecker.svelte';
 </script>
 
 <div class="container mx-auto px-4 py-8">
