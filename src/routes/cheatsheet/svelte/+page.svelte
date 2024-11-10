@@ -160,18 +160,18 @@
   </h2>
   {#if visibleSections.conditionals}
     <ul>
-      <li><strong>Using {#if}</strong>: Conditional rendering with the {#if} block.</li>
+      <li><strong>Using &#123;#if&#125;</strong>: Conditional rendering with the &#123;#if&#125; block.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
+      <pre><code class="language-svelte">&lt;script&gt;
   let isVisible = true;
-</script>
+&lt;/script&gt;
 
-{#if isVisible}
-  <p>This is visible!</p>
-{:else}
-  <p>This is hidden!</p>
-{/if}</code></pre>
+&#123;#if isVisible&#125;
+  &lt;p&gt;This is visible!&lt;/p&gt;
+&#123;:else&#125;
+  &lt;p&gt;This is hidden!&lt;/p&gt;
+&#123;/if&#125;</code></pre>
     </div>
   {/if}
 
