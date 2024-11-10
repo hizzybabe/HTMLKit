@@ -1,4 +1,4 @@
-
+<div class="container mx-auto px-4 py-8">
 
 <main>
     <h1>Check Your Workshop Coding Efforts</h1>
@@ -20,6 +20,4 @@
     </p>
 </main>
 
-<style>
-    /* ... existing styles ... */
-</style>
+</div>
