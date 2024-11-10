@@ -31,13 +31,13 @@
   </section>
 
   <section>
-    <h2>JavaScript Projects (*WIP* - Coming Soon)</h2>
+    <h2>JavaScript Projects</h2>
     <ul>
-      <s><li><a href="/HTMLKit/practice/js/todo">Todo List</a></li>
+      <li><a href="/HTMLKit/practice/js/todo">Todo List</a></li>
       <li><a href="/HTMLKit/practice/js-quiz">Quiz App</a></li>
       <li><a href="/HTMLKit/practice/js-calculator">Calculator</a></li>
       <li><a href="/HTMLKit/practice/js-countdown">Countdown Timer</a></li>
-      <li><a href="/HTMLKit/practice/js-weather">Weather App</a></li>
+      <s><li><a href="/HTMLKit/practice/js-weather">Weather App</a></li>
       <li><a href="/HTMLKit/practice/js-rps">Rock, Paper, Scissors Game</a></li>  
       <li><a href="/HTMLKit/practice/js-quote">Random Quote Generator</a></li>
       <li><a href="/HTMLKit/practice/js-stopwatch">Stopwatch</a></li>
