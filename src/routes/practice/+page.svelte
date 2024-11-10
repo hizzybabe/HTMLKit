@@ -17,6 +17,7 @@
       <li><a href="/HTMLKit/practice/htmlcss7">Newsletter Signup Form</a></li>
       <li><a href="/HTMLKit/practice/htmlcss8">CSS-Only Navigation Menu</a></li>
       <li><a href="/HTMLKit/practice/htmlcss9">Restaurant Menu</a></li>
+      <li><strong>below here = *WIP* - coming soon</strong></li>
       <s><li><a href="/HTMLKit/practice/htmlcss10">Simple Blog Post Layout</a></li>
       <li><a href="/HTMLKit/practice/htmlcss11">Product Card</a></li>
       <li><a href="/HTMLKit/practice/htmlcss12">Event Invitation Page</a></li>
