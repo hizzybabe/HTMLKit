@@ -83,6 +83,13 @@
     </ul>
   </section>
 
+  <section>
+    <h2>Next.js Projects (*WIP* - Coming Soon)</h2>
+    <ul>
+      <s><li><a href="/practice/nextjs/directory">Next.js Directory</a></li></s>
+    </ul>
+  </section>
+
 </div>
 
 <style>
