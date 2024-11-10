@@ -1,10 +1,13 @@
-Here’s a basic JavaScript cheatsheet covering key syntax and concepts:
+<div class="container mx-auto px-4 py-8">
+
+
+<p>Here’s a basic JavaScript cheatsheet covering key syntax and concepts:</p>
 
 ---
 
-&lt;h2&gt;JavaScript Basics&lt;/h2&gt;
+<h2>JavaScript Basics</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // Declaring Variables
 let x = 10; // Block-scoped
 const y = 5; // Block-scoped, cannot be re-assigned
@@ -29,13 +32,13 @@ parseFloat("10.5"); // 10.5
 // Template Literals
 let name = "World";
 console.log(`Hello, $&#123;name&#125;!`); // Hello, World!
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Operators&lt;/h2&gt;
+<h2>Operators</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // Arithmetic Operators: +, -, *, /, %
 let sum = 5 + 10;
 
@@ -47,13 +50,13 @@ let isAdult = age &gt;= 18 && age &lt; 65;
 
 // Ternary Operator
 let result = condition ? "True" : "False";
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Conditionals&lt;/h2&gt;
+<h2>Conditionals</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // If...Else
 if (condition) &#123;
   // Code if true
@@ -75,13 +78,13 @@ switch(day) &#123;
   default:
     console.log("Unknown day");
 &#125;
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Loops&lt;/h2&gt;
+<h2>Loops</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // For Loop
 for (let i = 0; i &lt; 5; i++) &#123;
   console.log(i);
@@ -103,13 +106,13 @@ for (let item of arr) &#123;
 for (let key in obj) &#123;
   console.log(key, obj[key]);
 &#125;
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Functions&lt;/h2&gt;
+<h2>Functions</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // Function Declaration
 function greet(name) &#123;
   return `Hello, $&#123;name&#125;`;
@@ -127,13 +130,13 @@ function multiply(a, b = 1) &#123;
 (function() &#123;
   console.log("This runs immediately!");
 &#125;)();
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Arrays&lt;/h2&gt;
+<h2>Arrays</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 let arr = [1, 2, 3, 4];
 
 // Array Methods
@@ -148,13 +151,13 @@ arr.forEach(item =&gt; console.log(item));
 let newArr = arr.map(x =&gt; x * 2);
 let filteredArr = arr.filter(x =&gt; x &gt; 2);
 let sum = arr.reduce((acc, x) =&gt; acc + x, 0);
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Objects&lt;/h2&gt;
+<h2>Objects</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // Object Declaration
 let person = &#123;
   name: "John",
@@ -173,13 +176,13 @@ let &#123; name, age &#125; = person;
 
 // Adding Properties
 person.city = "New York";
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;ES6 Features&lt;/h2&gt;
+<h2>ES6 Features</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // Spread Operator
 let arr1 = [1, 2, 3];
 let arr2 = [...arr1, 4, 5];
@@ -191,13 +194,13 @@ function sum(...args) &#123;
 
 // Destructuring Arrays
 let [first, second] = arr;
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Classes&lt;/h2&gt;
+<h2>Classes</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 class Animal &#123;
   constructor(name) &#123;
     this.name = name;
@@ -216,13 +219,13 @@ class Dog extends Animal &#123;
 
 let dog = new Dog("Rex");
 dog.speak();
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Promises & Async/Await&lt;/h2&gt;
+<h2>Promises & Async/Await</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // Promise
 let promise = new Promise((resolve, reject) =&gt; &#123;
   let success = true;
@@ -241,13 +244,13 @@ async function fetchData() &#123;
     console.error(error);
   &#125;
 &#125;
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;DOM Manipulation&lt;/h2&gt;
+<h2>DOM Manipulation</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 // Selecting Elements
 let element = document.getElementById("id");
 let elements = document.querySelectorAll(".class");
@@ -261,13 +264,13 @@ element.classList.add("new-class");
 element.addEventListener("click", function() &#123;
   console.log("Element clicked!");
 &#125;);
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-&lt;h2&gt;Error Handling&lt;/h2&gt;
+<h2>Error Handling</h2>
 
-&lt;pre&gt;&lt;code class="language-javascript"&gt;
+<pre><code class="language-javascript">
 try &#123;
   // Code that might throw an error
 &#125; catch (error) &#123;
@@ -275,8 +278,10 @@ try &#123;
 &#125; finally &#123;
   console.log("This always runs");
 &#125;
-&lt;/code&gt;&lt;/pre&gt;
+</code></pre>
 
 ---
 
-This cheatsheet covers core concepts, helping you quickly reference JavaScript fundamentals!
+<p>This cheatsheet covers core concepts, helping you quickly reference JavaScript fundamentals!</p>
+
+</div>
