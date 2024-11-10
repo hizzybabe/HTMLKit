@@ -2,11 +2,11 @@
   import SolutionChecker from '$lib/components/SolutionChecker.svelte';
 </script>
 
-<h1>Practice Projects</h1>
+<h1>🎨 Practice Projects</h1>
 
 <div class="container mx-auto px-4">
   <section>
-    <h2>HTML, CSS Projects</h2>
+    <h2>🌐 HTML, CSS Projects</h2>
     <ul>
       <li><a href="/HTMLKit/practice/htmlcss1">Personal Portfolio</a></li>
       <li><a href="/HTMLKit/practice/htmlcss2">Single-Page Resume</a></li>
@@ -31,7 +31,7 @@
   </section>
 
   <section>
-    <h2>JavaScript Projects</h2>
+    <h2>💻 JavaScript Projects</h2>
     <ul>
       <li><a href="/HTMLKit/practice/js/todo">Todo List</a></li>
       <li><a href="/HTMLKit/practice/js/quiz">Quiz App</a></li>
@@ -60,7 +60,7 @@
   </section>
 
   <section>
-    <h2>Astro Projects (*WIP* - Coming Soon)</h2>
+    <h2>🚀 Astro Projects (*WIP* - Coming Soon)</h2>
     <ul>
       <li><a href="/HTMLKit/practice/astro/blog">Astro Blog</a></li>
       <li><a href="/HTMLKit/practice/astro/landing">Astro Landing Page</a></li>
@@ -71,5 +71,46 @@
 </div>
 
 <style>
-  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #0056b3;
+  }
+
+  strong {
+    color: #FF5733; /* Highlighting the WIP text */
+  }
 </style>
