@@ -181,4 +181,4 @@ Open `index.html` in a web browser to see how your restaurant menu looks. Adjust
 
 ---
 
-This setup provides a clean, visually appealing restaurant menu. Let me know if you want to add special styles or new sections like beverages or sides!
+This setup provides a clean, visually appealing restaurant menu.

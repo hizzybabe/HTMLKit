@@ -189,4 +189,4 @@ Open `index.html` in a web browser to see your pricing table in action. Adjust s
 
 ---
 
-This setup gives you a clean, professional pricing table. Let me know if you want to add additional features, like tooltips or animations!
+This setup gives you a clean, professional pricing table.

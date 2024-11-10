@@ -17,12 +17,12 @@
       <li><a href="/HTMLKit/practice/htmlcss7">Newsletter Signup Form</a></li>
       <li><a href="/HTMLKit/practice/htmlcss8">CSS-Only Navigation Menu</a></li>
       <li><a href="/HTMLKit/practice/htmlcss9">Restaurant Menu</a></li>
-      <li><strong>below here = *WIP* - coming soon</strong></li>
-      <s><li><a href="/HTMLKit/practice/htmlcss10">Simple Blog Post Layout</a></li>
+      <li><a href="/HTMLKit/practice/htmlcss10">Simple Blog Post Layout</a></li>
       <li><a href="/HTMLKit/practice/htmlcss11">Product Card</a></li>
       <li><a href="/HTMLKit/practice/htmlcss12">Event Invitation Page</a></li>
       <li><a href="/HTMLKit/practice/htmlcss13">Digital Business Card</a></li>
-      <li><a href="/HTMLKit/practice/htmlcss14">Simple Portfolio Grid</a></li>
+      <li><strong>below here = *WIP* - coming soon</strong></li>
+      <s></s><li><a href="/HTMLKit/practice/htmlcss14">Simple Portfolio Grid</a></li>
       <li><a href="/HTMLKit/practice/htmlcss15">CSS Art</a></li>
       <li><a href="/HTMLKit/practice/htmlcss16">Weather Card</a></li>
       <li><a href="/HTMLKit/practice/htmlcss17">User Profile Page</a></li>
@@ -33,7 +33,7 @@
   <section>
     <h2>JavaScript Projects (*WIP* - Coming Soon)</h2>
     <ul>
-      <s><li><a href="/HTMLKit/practice/js-todo">Todo List</a></li>
+      <s><li><a href="/HTMLKit/practice/js/todo">Todo List</a></li>
       <li><a href="/HTMLKit/practice/js-quiz">Quiz App</a></li>
       <li><a href="/HTMLKit/practice/js-calculator">Calculator</a></li>
       <li><a href="/HTMLKit/practice/js-countdown">Countdown Timer</a></li>

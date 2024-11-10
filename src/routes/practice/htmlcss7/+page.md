@@ -143,4 +143,4 @@ Open `index.html` in your web browser to see the signup form. Test how it looks 
 
 ---
 
-This setup gives you a clean and straightforward newsletter signup form. Let me know if you want to add validation, more fields, or extra design elements!
+This setup gives you a clean and straightforward newsletter signup form.
