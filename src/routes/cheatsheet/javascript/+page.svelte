@@ -156,12 +156,12 @@ for (let key in obj) &#123;
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('functions')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.functions ? '▼' : '▶'}</span>
     🎯 Functions
   </h2>
-  {#if visibleSections.basics}
+  {#if visibleSections.functions}
     <pre><code class="language-javascript">
 // Function Declaration
 function greet(name) &#123;
@@ -187,12 +187,12 @@ function multiply(a, b = 1) &#123;
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('arrays')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.arrays ? '▼' : '▶'}</span>
     📦 Arrays
   </h2>
-  {#if visibleSections.basics}
+  {#if visibleSections.arrays}
 <pre><code class="language-javascript">
 let arr = [1, 2, 3, 4];
 
@@ -215,12 +215,12 @@ let sum = arr.reduce((acc, x) =&gt; acc + x, 0);
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('objects')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.objects ? '▼' : '▶'}</span>
     🗃️ Objects
   </h2>
-  {#if visibleSections.basics}
+  {#if visibleSections.objects}
 <pre><code class="language-javascript">
 // Object Declaration
 let person = &#123;
@@ -247,12 +247,12 @@ person.city = "New York";
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('es6')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.es6 ? '▼' : '▶'}</span>
     ✨ ES6 Features
   </h2>
-  {#if visibleSections.basics}
+  {#if visibleSections.es6}
 <pre><code class="language-javascript">
 // Spread Operator
 let arr1 = [1, 2, 3];
@@ -272,12 +272,12 @@ let [first, second] = arr;
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('classes')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.classes ? '▼' : '▶'}</span>
     🏗️ Classes
   </h2>
-  {#if visibleSections.basics}
+  {#if visibleSections.classes}
 <pre><code class="language-javascript">
 class Animal &#123;
   constructor(name) &#123;
@@ -304,12 +304,12 @@ dog.speak();
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('promises')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.promises ? '▼' : '▶'}</span>
     ⏳ Promises & Async/Await
   </h2>
-  {#if visibleSections.basics}
+  {#if visibleSections.promises}
 <pre><code class="language-javascript">
 // Promise
 let promise = new Promise((resolve, reject) =&gt; &#123;
@@ -336,12 +336,12 @@ async function fetchData() &#123;
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('dom')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.dom ? '▼' : '▶'}</span>
     🎨 DOM Manipulation
   </h2>
-  {#if visibleSections.basics}
+  {#if visibleSections.dom}
 <pre><code class="language-javascript">
 // Selecting Elements
 let element = document.getElementById("id");
@@ -363,9 +363,9 @@ element.addEventListener("click", function() &#123;
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('errorHandling')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.errorHandling ? '▼' : '▶'}</span>
     ⚠️ Error Handling
   </h2>
 
