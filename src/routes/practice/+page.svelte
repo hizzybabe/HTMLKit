@@ -68,6 +68,15 @@
     </ul>
   </section>
 
+  <section>
+    <h2>⚡ Svelte Projects (*WIP* - Coming Soon)</h2>
+    <ul>
+      <s><li><a href="/practice/svelte/blog">Svelte Blog</a></li>
+      <li><a href="/practice/svelte/landing">Svelte Landing Page</a></li>
+      <li><a href="/practice/svelte/company">Svelte Company Website</a></li></s>
+    </ul>
+  </section>
+
 </div>
 
 <style>
