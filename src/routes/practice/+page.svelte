@@ -1,8 +1,8 @@
 <script>
-  import SolutionChecker from '$lib/components/SolutionChecker.svelte';
+
 </script>
 
-<h1>🎨 Practice Projects</h1>
+<h1>Practice Projects</h1>
 
 <div class="container mx-auto px-4">
   <section>
@@ -15,7 +15,7 @@
       <li><a href="/HTMLKit/practice/htmlcss5">Recipe Card</a></li>
       <li><a href="/HTMLKit/practice/htmlcss6">Pricing Table</a></li>
       <li><a href="/HTMLKit/practice/htmlcss7">Newsletter Signup Form</a></li>
-      <li><a href="/HTMLKit/practice/htmlcss8">CSS-Only Navigation Menu</a></li>
+      <s><li><a href="/HTMLKit/practice/htmlcss8">CSS-Only Navigation Menu</a></li></s>
       <li><a href="/HTMLKit/practice/htmlcss9">Restaurant Menu</a></li>
       <li><a href="/HTMLKit/practice/htmlcss10">Simple Blog Post Layout</a></li>
       <li><a href="/HTMLKit/practice/htmlcss11">Product Card</a></li>
@@ -62,9 +62,9 @@
   <section>
     <h2>🚀 Astro Projects (*WIP* - Coming Soon)</h2>
     <ul>
-      <li><a href="/HTMLKit/practice/astro/blog">Astro Blog</a></li>
+      <s><li><a href="/HTMLKit/practice/astro/blog">Astro Blog</a></li>
       <li><a href="/HTMLKit/practice/astro/landing">Astro Landing Page</a></li>
-      <li><a href="/HTMLKit/practice/astro/company">Astro Company Website</a></li>
+      <li><a href="/HTMLKit/practice/astro/company">Astro Company Website</a></li></s>
     </ul>
   </section>
 
