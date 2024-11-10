@@ -15,7 +15,7 @@
       <li><a href="/practice/htmlcss5">Recipe Card</a></li>
       <li><a href="/practice/htmlcss6">Pricing Table</a></li>
       <li><a href="/practice/htmlcss7">Newsletter Signup Form</a></li>
-      <s><li><a href="/practice/htmlcss8">CSS-Only Navigation Menu</a></li></s>
+      <s><li><a href="/practice/htmlcss8">CSS-Only Navigation Menu (⌛Soon)</a></li></s>
       <li><a href="/practice/htmlcss9">Restaurant Menu</a></li>
       <li><a href="/practice/htmlcss10">Simple Blog Post Layout</a></li>
       <li><a href="/practice/htmlcss11">Product Card</a></li>
