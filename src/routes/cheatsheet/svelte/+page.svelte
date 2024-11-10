@@ -54,9 +54,9 @@
 &lt;/script&gt;
 
 &lt;style&gt;
-  h1 {
+  h1 &#123;
     color: blue;
-  }
+  &#125;
 &lt;/style&gt;
 
 &lt;h1&gt;Hello, &#123;name&#125;!&lt;/h1&gt;</code></pre>
@@ -79,9 +79,9 @@
       <pre><code class="language-svelte">&lt;script&gt;
   let count = 0;
 
-  function increment() {
+  function increment() &#123;
     count += 1;
-  }
+  &#125;
 &lt;/script&gt;
 
 &lt;button on:click=&#123;increment&#125;&gt;
@@ -125,207 +125,6 @@
 &lt;/script&gt;
 
 &lt;p&gt;Hello, &#123;name&#125;!&lt;/p&gt;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Bindings Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('bindings')}
-  >
-    <span class="mr-2">{visibleSections.bindings ? '▼' : '▶'}</span>
-    🔗 Bindings
-  </h2>
-  {#if visibleSections.bindings}
-    <ul>
-      <li><strong>Two-Way Binding</strong>: Use <code>bind:</code> to create two-way data bindings.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
-  let name = "Svelte";
-&lt;/script&gt;
-
-&lt;input bind:value=&#123;name&#125; /&gt;
-&lt;p&gt;Hello, &#123;name&#125;!&lt;/p&gt;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Conditionals Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('conditionals')}
-  >
-    <span class="mr-2">{visibleSections.conditionals ? '▼' : '▶'}</span>
-    ❓ Conditionals
-  </h2>
-  {#if visibleSections.conditionals}
-    <ul>
-      <li><strong>Using &#123;#if&#125;</strong>: Conditional rendering with the &#123;#if&#125; block.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
-  let isVisible = true;
-&lt;/script&gt;
-
-&#123;#if isVisible&#125;
-  &lt;p&gt;This is visible!&lt;/p&gt;
-&#123;:else&#125;
-  &lt;p&gt;This is hidden!&lt;/p&gt;
-&#123;/if&#125;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Looping Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('looping')}
-  >
-    <span class="mr-2">{visibleSections.looping ? '▼' : '▶'}</span>
-    🔄 Looping
-  </h2>
-  {#if visibleSections.looping}
-    <ul>
-      <li><strong>Using &#123;#each&#125;</strong>: Loop through arrays with the &#123;#each&#125; block.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
-  let items = ['Apple', 'Banana', 'Cherry'];
-&lt;/script&gt;
-
-&#123;#each items as item&#125;
-  &lt;p&gt;&#123;item&#125;&lt;/p&gt;
-&#123;/each&#125;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Events Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('events')}
-  >
-    <span class="mr-2">{visibleSections.events ? '▼' : '▶'}</span>
-    🎉 Events
-  </h2>
-  {#if visibleSections.events}
-    <ul>
-      <li><strong>Event Handling</strong>: Use <code>on:event</code> to handle events.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
-  function handleClick() {
-    alert('Button clicked!');
-  }
-&lt;/script&gt;
-
-&lt;button on:click=&#123;handleClick&#125;&gt;Click Me&lt;/button&gt;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Stores Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('stores')}
-  >
-    <span class="mr-2">{visibleSections.stores ? '▼' : '▶'}</span>
-    🏪 Stores
-  </h2>
-  {#if visibleSections.stores}
-    <ul>
-      <li><strong>Creating a Store</strong>: Use Svelte's built-in stores for state management.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-javascript">import &#123; writable &#125; from 'svelte/store';
-
-const count = writable(0);</code></pre>
-    </div>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
-  import &#123; count &#125; from './store.js';
-&lt;/script&gt;
-
-&lt;button on:click=&#123;() => count.update(n => n + 1)&#125;&gt;Increment&lt;/button&gt;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Slots Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('slots')}
-  >
-    <span class="mr-2">{visibleSections.slots ? '▼' : '▶'}</span>
-    📦 Slots
-  </h2>
-  {#if visibleSections.slots}
-    <ul>
-      <li><strong>Using Slots</strong>: Allow parent components to pass content to child components.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;slot&gt;Default content&lt;/slot&gt;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Transitions Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('transitions')}
-  >
-    <span class="mr-2">{visibleSections.transitions ? '▼' : '▶'}</span>
-    🎭 Transitions
-  </h2>
-  {#if visibleSections.transitions}
-    <ul>
-      <li><strong>Using Transitions</strong>: Animate elements entering or leaving the DOM.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
-  import &#123; fade &#125; from 'svelte/transition';
-&lt;/script&gt;
-
-&lt;div transition:fade&gt;This will fade in and out&lt;/div&gt;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Context Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('context')}
-  >
-    <span class="mr-2">{visibleSections.context ? '▼' : '▶'}</span>
-    🧩 Context
-  </h2>
-  {#if visibleSections.context}
-    <ul>
-      <li><strong>Using Context API</strong>: Share data between components without props drilling.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
-  import &#123; setContext, getContext &#125; from 'svelte';
-  const key = 'myKey';
-  setContext(key, 'some value');
-&lt;/script&gt;</code></pre>
-    </div>
-  {/if}
-
-  <!-- Lifecycles Section -->
-  <h2 
-    class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('lifecycles')}
-  >
-    <span class="mr-2">{visibleSections.lifecycles ? '▼' : '▶'}</span>
-    ⏳ Lifecycles
-  </h2>
-  {#if visibleSections.lifecycles}
-    <ul>
-      <li><strong>Lifecycle Functions</strong>: Use functions like <code>onMount</code> and <code>beforeUpdate</code>.</li>
-    </ul>
-    <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte">&lt;script&gt;
-  import &#123; onMount &#125; from 'svelte';
-
-  onMount(() => &#123;
-    console.log('Component mounted');
-  &#125;);
-&lt;/script&gt;</code></pre>
     </div>
   {/if}
 </div>
