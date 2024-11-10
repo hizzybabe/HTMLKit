@@ -25,21 +25,7 @@ Getting Started
 4. Build for production: `npm run build`
 5. Run the production server: `npm run preview`
 
-## Project Structure
-
-HTMLKit/
-├── src/
-│ ├── routes/ # File-based routing
-│ │ ├── practice/ # Practice exercises
-│ │ ├── html/ # HTML tutorials
-│ │ ├── css/ # CSS tutorials
-│ │ └── javascript/ # JavaScript tutorials
-│ ├── app.html # Base HTML template
-│ └── app.css # Global styles
-├── static/ # Static assets
-└── package.json # Project dependencies
-
-## Features in Detail
+## Features
 
 ### Interactive Tutorials
 - Step-by-step guides for web development concepts
