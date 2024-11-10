@@ -11,13 +11,13 @@
       <a href="/html">HTML</a>
       <a href="/css">CSS</a>
       <a href="/javascript">JavaScript</a>
-      <a href="/svelte" class="wip"><s>Svelte</s> (Coming Soon)</a>
-      <a href="/astro" class="wip"><s>Astro</s> (Coming Soon)</a>
-      <a href="/python" class="wip"><s>Python</s> (Coming Soon)</a>
-      <a href="/react" class="wip"><s>React</s> (Coming Soon)</a>
-      <a href="/php" class="wip"><s>PHP</s> (Coming Soon)</a>
-      <a href="/nextjs" class="wip"><s>Next.js</s> (Coming Soon)</a>
-      <a href="/wordpress" class="wip"><s>WordPress</s> (Coming Soon)</a>
+      <a href="/svelte" class="wip"><s>Svelte</s> (⌛Soon)</a>
+      <a href="/astro" class="wip"><s>Astro</s> (⌛Soon)</a>
+      <a href="/python" class="wip"><s>Python</s> (⌛Soon)</a>
+      <a href="/react" class="wip"><s>React</s> (⌛Soon)</a>
+      <a href="/php" class="wip"><s>PHP</s> (⌛Soon)</a>
+      <a href="/nextjs" class="wip"><s>Next.js</s> (⌛Soon)</a>
+      <a href="/wordpress" class="wip"><s>WordPress</s> (⌛Soon)</a>
     </div>
   </div>
 
