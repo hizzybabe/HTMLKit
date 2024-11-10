@@ -180,7 +180,7 @@ h1 &lbrace;
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/css/chapter1" 
-    nextHref="/HTMLKit/css/chapter3" 
+    prevHref="/css/chapter1" 
+    nextHref="/css/chapter3" 
   />
 </div>

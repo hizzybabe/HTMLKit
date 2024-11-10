@@ -181,8 +181,8 @@ h2::before &#123;
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/css/chapter5" 
-    nextHref="/HTMLKit/css/chapter7"
+    prevHref="/css/chapter5" 
+    nextHref="/css/chapter7"
   />
 </div>
 

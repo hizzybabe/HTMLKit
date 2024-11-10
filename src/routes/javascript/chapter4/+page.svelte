@@ -226,8 +226,8 @@ document.getElementById("gallery").addEventListener("mouseout", function(event) 
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter3" 
-    nextHref="/HTMLKit/javascript/chapter5"
+    prevHref="/javascript/chapter3" 
+    nextHref="/javascript/chapter5"
   />
 </div>
 

@@ -216,8 +216,8 @@ let greeting = "Hi, " + name;  // String concatenation</code></pre>
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript" 
-    nextHref="/HTMLKit/javascript/chapter2"
+    prevHref="/javascript" 
+    nextHref="/javascript/chapter2"
   />
 </div>
 

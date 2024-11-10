@@ -134,8 +134,8 @@ async function getWeather() &#123;
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter4" 
-    nextHref="/HTMLKit/javascript/chapter6"
+    prevHref="/javascript/chapter4" 
+    nextHref="/javascript/chapter6"
   />
 </div>
 

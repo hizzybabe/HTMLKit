@@ -252,8 +252,8 @@ greetFunction(); // Output: "Hello, I'm undefined"`}</code></pre>
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter5" 
-    nextHref="/HTMLKit/javascript/chapter7"
+    prevHref="/javascript/chapter5" 
+    nextHref="/javascript/chapter7"
   />
 </div>
 

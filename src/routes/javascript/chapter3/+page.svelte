@@ -271,8 +271,8 @@ task.done = true;</code></pre>
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter2" 
-    nextHref="/HTMLKit/javascript/chapter4"
+    prevHref="/javascript/chapter2" 
+    nextHref="/javascript/chapter4"
   />
 </div>
 

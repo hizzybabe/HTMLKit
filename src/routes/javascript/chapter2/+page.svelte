@@ -170,8 +170,8 @@ while (count &lt; 5) &#123;
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter1" 
-    nextHref="/HTMLKit/javascript/chapter3"
+    prevHref="/javascript/chapter1" 
+    nextHref="/javascript/chapter3"
   />
 </div>
 

@@ -159,8 +159,8 @@
 
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/css/chapter3" 
-    nextHref="/HTMLKit/css/chapter5"
+    prevHref="/css/chapter3" 
+    nextHref="/css/chapter5"
   />
 </div>
 

@@ -97,7 +97,7 @@ p {
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/css" 
-    nextHref="/HTMLKit/css/chapter2" 
+    prevHref="/css" 
+    nextHref="/css/chapter2" 
   />
 </div>

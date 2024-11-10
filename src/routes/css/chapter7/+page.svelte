@@ -158,8 +158,8 @@ $secondary: #2ecc71;
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/css/chapter6" 
-    nextHref="/HTMLKit/javascript/chapter1"
+    prevHref="/css/chapter6" 
+    nextHref="/javascript/chapter1"
   />
 </div>
 

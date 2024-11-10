@@ -115,8 +115,8 @@ contact.html (Contact Page)</code></pre>
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/html/chapter6" 
-    nextHref="/HTMLKit/css/chapter1" 
+    prevHref="/html/chapter6" 
+    nextHref="/css/chapter1" 
   />
 </div>
 

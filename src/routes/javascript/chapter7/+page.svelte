@@ -98,8 +98,8 @@ export default Counter;</code></pre>
   </div>
 
   <ChapterNavigation 
-    prevHref="/HTMLKit/javascript/chapter6" 
-    nextHref="/HTMLKit/svelte/chapter1"
+    prevHref="/javascript/chapter6" 
+    nextHref="/svelte/chapter1"
   />
 </div>
 
