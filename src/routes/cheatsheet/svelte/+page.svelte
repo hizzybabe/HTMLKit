@@ -49,17 +49,17 @@
       </li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
+      <pre><code class="language-svelte">&lt;script&gt;
   let name = "World";
-</script>
+&lt;/script&gt;
 
-<style>
+&lt;style&gt;
   h1 {
     color: blue;
   }
-</style>
+&lt;/style&gt;
 
-<h1>Hello, {name}!</h1></code></pre>
+&lt;h1&gt;Hello, &#123;name&#125;!&lt;/h1&gt;</code></pre>
     </div>
   {/if}
 
@@ -76,31 +76,31 @@
       <li><strong>Auto-Reactivity</strong>: Assigning a new value to a variable makes it reactive.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
+      <pre><code class="language-svelte">&lt;script&gt;
   let count = 0;
 
   function increment() {
     count += 1;
   }
-</script>
+&lt;/script&gt;
 
-<button on:click={increment}>
-  Clicked {count} {count === 1 ? 'time' : 'times'}
-</button></code></pre>
+&lt;button on:click=&#123;increment&#125;&gt;
+  Clicked &#123;count&#125; &#123;count === 1 ? 'time' : 'times'&#125;
+&lt;/button&gt;</code></pre>
     </div>
 
     <ul>
       <li><strong>Reactive Statements</strong>: <code>$:</code> re-runs a statement whenever a dependency changes.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
+      <pre><code class="language-svelte">&lt;script&gt;
   let a = 1;
   let b = 2;
 
   $: sum = a + b;
-</script>
+&lt;/script&gt;
 
-<p>Sum is {sum}</p></code></pre>
+&lt;p&gt;Sum is &#123;sum&#125;&lt;/p&gt;</code></pre>
     </div>
   {/if}
 
@@ -117,14 +117,14 @@
       <li><strong>Passing Props</strong>: Use props to pass data from a parent component to a child component.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><ChildComponent name="Svelte" /></code></pre>
+      <pre><code class="language-svelte">&lt;ChildComponent name="Svelte" /&gt;</code></pre>
     </div>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
+      <pre><code class="language-svelte">&lt;script&gt;
   export let name;
-</script>
+&lt;/script&gt;
 
-<p>Hello, {name}!</p></code></pre>
+&lt;p&gt;Hello, &#123;name&#125;!&lt;/p&gt;</code></pre>
     </div>
   {/if}
 
@@ -141,12 +141,12 @@
       <li><strong>Two-Way Binding</strong>: Use <code>bind:</code> to create two-way data bindings.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
+      <pre><code class="language-svelte">&lt;script&gt;
   let name = "Svelte";
-</script>
+&lt;/script&gt;
 
-<input bind:value={name} />
-<p>Hello, {name}!</p></code></pre>
+&lt;input bind:value=&#123;name&#125; /&gt;
+&lt;p&gt;Hello, &#123;name&#125;!&lt;/p&gt;</code></pre>
     </div>
   {/if}
 
@@ -185,16 +185,16 @@
   </h2>
   {#if visibleSections.looping}
     <ul>
-      <li><strong>Using {#each}</strong>: Loop through arrays with the {#each} block.</li>
+      <li><strong>Using &#123;#each&#125;</strong>: Loop through arrays with the &#123;#each&#125; block.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
+      <pre><code class="language-svelte">&lt;script&gt;
   let items = ['Apple', 'Banana', 'Cherry'];
-</script>
+&lt;/script&gt;
 
-{#each items as item}
-  <p>{item}</p>
-{/each}</code></pre>
+&#123;#each items as item&#125;
+  &lt;p&gt;&#123;item&#125;&lt;/p&gt;
+&#123;/each&#125;</code></pre>
     </div>
   {/if}
 
@@ -211,13 +211,13 @@
       <li><strong>Event Handling</strong>: Use <code>on:event</code> to handle events.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
+      <pre><code class="language-svelte">&lt;script&gt;
   function handleClick() {
     alert('Button clicked!');
   }
-</script>
+&lt;/script&gt;
 
-<button on:click={handleClick}>Click Me</button></code></pre>
+&lt;button on:click=&#123;handleClick&#125;&gt;Click Me&lt;/button&gt;</code></pre>
     </div>
   {/if}
 
@@ -234,16 +234,16 @@
       <li><strong>Creating a Store</strong>: Use Svelte's built-in stores for state management.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-javascript">import { writable } from 'svelte/store';
+      <pre><code class="language-javascript">import &#123; writable &#125; from 'svelte/store';
 
 const count = writable(0);</code></pre>
     </div>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
-  import { count } from './store.js';
-</script>
+      <pre><code class="language-svelte">&lt;script&gt;
+  import &#123; count &#125; from './store.js';
+&lt;/script&gt;
 
-<button on:click={() => count.update(n => n + 1)}>Increment</button></code></pre>
+&lt;button on:click=&#123;() => count.update(n => n + 1)&#125;&gt;Increment&lt;/button&gt;</code></pre>
     </div>
   {/if}
 
@@ -260,7 +260,7 @@ const count = writable(0);</code></pre>
       <li><strong>Using Slots</strong>: Allow parent components to pass content to child components.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><slot>Default content</slot></code></pre>
+      <pre><code class="language-svelte">&lt;slot&gt;Default content&lt;/slot&gt;</code></pre>
     </div>
   {/if}
 
@@ -277,11 +277,11 @@ const count = writable(0);</code></pre>
       <li><strong>Using Transitions</strong>: Animate elements entering or leaving the DOM.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
-  import { fade } from 'svelte/transition';
-</script>
+      <pre><code class="language-svelte">&lt;script&gt;
+  import &#123; fade &#125; from 'svelte/transition';
+&lt;/script&gt;
 
-<div transition:fade>This will fade in and out</div></code></pre>
+&lt;div transition:fade&gt;This will fade in and out&lt;/div&gt;</code></pre>
     </div>
   {/if}
 
@@ -298,11 +298,11 @@ const count = writable(0);</code></pre>
       <li><strong>Using Context API</strong>: Share data between components without props drilling.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
-  import { setContext, getContext } from 'svelte';
+      <pre><code class="language-svelte">&lt;script&gt;
+  import &#123; setContext, getContext &#125; from 'svelte';
   const key = 'myKey';
   setContext(key, 'some value');
-</script></code></pre>
+&lt;/script&gt;</code></pre>
     </div>
   {/if}
 
@@ -319,13 +319,13 @@ const count = writable(0);</code></pre>
       <li><strong>Lifecycle Functions</strong>: Use functions like <code>onMount</code> and <code>beforeUpdate</code>.</li>
     </ul>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-      <pre><code class="language-svelte"><script>
-  import { onMount } from 'svelte';
+      <pre><code class="language-svelte">&lt;script&gt;
+  import &#123; onMount &#125; from 'svelte';
 
-  onMount(() => {
+  onMount(() => &#123;
     console.log('Component mounted');
-  });
-</script></code></pre>
+  &#125;);
+&lt;/script&gt;</code></pre>
     </div>
   {/if}
 </div>
