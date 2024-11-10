@@ -3,53 +3,53 @@
 </script>
 
 <nav>
-  <a href="/HTMLKit/">Home</a>
+  <a href="/">Home</a>
 
   <div class="dropdown">
-    <a href="/HTMLKit/">Learn ▼</a>
+    <a href="/">Learn ▼</a>
     <div class="dropdown-content">
-      <a href="/HTMLKit/html">HTML</a>
-      <a href="/HTMLKit/css">CSS</a>
-      <a href="/HTMLKit/javascript">JavaScript</a>
-      <a href="/HTMLKit/svelte" class="wip"><s>Svelte</s> (Coming Soon)</a>
-      <a href="/HTMLKit/astro" class="wip"><s>Astro</s> (Coming Soon)</a>
-      <a href="/HTMLKit/python" class="wip"><s>Python</s> (Coming Soon)</a>
-      <a href="/HTMLKit/react" class="wip"><s>React</s> (Coming Soon)</a>
-      <a href="/HTMLKit/php" class="wip"><s>PHP</s> (Coming Soon)</a>
-      <a href="/HTMLKit/nextjs" class="wip"><s>Next.js</s> (Coming Soon)</a>
-      <a href="/HTMLKit/wordpress" class="wip"><s>WordPress</s> (Coming Soon)</a>
+      <a href="/html">HTML</a>
+      <a href="/css">CSS</a>
+      <a href="/javascript">JavaScript</a>
+      <a href="/svelte" class="wip"><s>Svelte</s> (Coming Soon)</a>
+      <a href="/astro" class="wip"><s>Astro</s> (Coming Soon)</a>
+      <a href="/python" class="wip"><s>Python</s> (Coming Soon)</a>
+      <a href="/react" class="wip"><s>React</s> (Coming Soon)</a>
+      <a href="/php" class="wip"><s>PHP</s> (Coming Soon)</a>
+      <a href="/nextjs" class="wip"><s>Next.js</s> (Coming Soon)</a>
+      <a href="/wordpress" class="wip"><s>WordPress</s> (Coming Soon)</a>
     </div>
   </div>
 
   <div class="dropdown">
-    <a href="/HTMLKit/">Library ▼</a>
+    <a href="/">Library ▼</a>
     <div class="dropdown-content">
-      <a href="/HTMLKit/library/webdev2025">WebDev 2025</a>
+      <a href="/library/webdev2025">WebDev 2025</a>
       <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/" target="_blank" rel="noopener noreferrer">2025 Tech Stacks ↗️</a>
     </div>
   </div>
   
-  <a href="/HTMLKit/practice">Practice</a>
+  <a href="/practice">Practice</a>
 
   <div class="dropdown">
-    <a href="/HTMLKit/cheatsheet">Cheatsheet ▼</a>
+    <a href="/cheatsheet">Cheatsheet ▼</a>
     <div class="dropdown-content">
-      <a href="/HTMLKit/cheatsheet/html">HTML Cheatsheet</a>
-      <a href="/HTMLKit/cheatsheet/css">CSS Cheatsheet</a>
-      <a href="/HTMLKit/cheatsheet/javascript">JavaScript Cheatsheet</a>
-      <a href="/HTMLKit/cheatsheet/svelte">Svelte Cheatsheet</a>
-      <a href="/HTMLKit/cheatsheet/astro">Astro Cheatsheet</a>
+      <a href="/cheatsheet/html">HTML Cheatsheet</a>
+      <a href="/cheatsheet/css">CSS Cheatsheet</a>
+      <a href="/cheatsheet/javascript">JavaScript Cheatsheet</a>
+      <a href="/cheatsheet/svelte">Svelte Cheatsheet</a>
+      <a href="/cheatsheet/astro">Astro Cheatsheet</a>
     </div>
   </div>
 
   <div class="dropdown">
-    <a href="/HTMLKit/">WebDev Tools ▼</a>
+    <a href="/">WebDev Tools ▼</a>
     <div class="dropdown-content">
       <a href="https://techwizard.club/lifetime-deals/" target="_blank" rel="noopener noreferrer">Lifetime Deals ↗️</a>
     </div>
   </div>
   
-  <a href="/HTMLKit/templates"><s>FREE Templates</s> (Coming Soon)</a>
+  <a href="/templates"><s>FREE Templates</s> (Coming Soon)</a>
 </nav>
 
 <slot />
@@ -57,9 +57,9 @@
 <footer>
   <p>© 2024 HTMLKit. Built with SvelteKit</p>
   <nav>
-    <a href="/HTMLKit/about">About</a>
-    <a href="/HTMLKit/contact">Contact Us</a>
-    <a href="/HTMLKit/blog">Blog</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact Us</a>
+    <a href="/blog">Blog</a>
   </nav>
 </footer>
 
