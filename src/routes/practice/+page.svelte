@@ -22,8 +22,8 @@
       <li><a href="/practice/htmlcss12">Event Invitation Page</a></li>
       <li><a href="/practice/htmlcss13">Digital Business Card</a></li>
       <li><a href="/practice/htmlcss14">Simple Portfolio Grid</a></li>
-      <s><li><a href="/practice/htmlcss15">CSS Art</a></li> (⌛Soon)
-      <li><a href="/practice/htmlcss16">Weather Card</a></li> (⌛Soon)</s>
+      <s><li><a href="/practice/htmlcss15">CSS Art</a> (⌛Soon)</li>
+      <li><a href="/practice/htmlcss16">Weather Card</a> (⌛Soon)</li></s>
       <li><a href="/practice/htmlcss17">User Profile Page</a></li>
       <li><a href="/practice/htmlcss18">Coming Soon Page</a></li>
       <li><a href="/practice/htmlcss19">Magazine Article Layout</a></li>
