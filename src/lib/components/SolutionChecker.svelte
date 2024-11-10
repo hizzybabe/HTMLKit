@@ -2,7 +2,7 @@
   <div class="content">
     <h3>Want to check your work?</h3>
     <p>Compare your solution with our example implementation to ensure you're on the right track.</p>
-    <a href="/HTMLKit/workshopexample" class="check-btn">
+    <a href="/workshopexample" class="check-btn">
       View Example Solution
     </a>
   </div>
