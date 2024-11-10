@@ -99,7 +99,7 @@ export default Counter;</code></pre>
 
   <ChapterNavigation 
     prevHref="/javascript/chapter6" 
-    nextHref="/svelte/chapter1"
+    nextHref="/practice"
   />
 </div>
 
