@@ -201,6 +201,8 @@
         <li>Updated profile.html file with the contact form</li>
         <li>Screenshot of the rendered form in browser</li>
       </ol>
+
+      <SolutionChecker />
     </div>
   </div>
 

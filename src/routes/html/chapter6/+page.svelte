@@ -167,6 +167,8 @@
         <li>Ensure all images have appropriate alt attributes</li>
         <li>Implement ARIA attributes where necessary</li>
       </ul>
+
+      <SolutionChecker />
     </div>
   </div>
 

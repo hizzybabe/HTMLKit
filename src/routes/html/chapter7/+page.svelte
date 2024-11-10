@@ -108,6 +108,8 @@ contact.html (Contact Page)</code></pre>
         <li>Proper use of semantic HTML and best practices</li>
         <li>Ensure all pages are linked correctly</li>
       </ul>
+
+      <SolutionChecker />
     </div>
   </div>
 

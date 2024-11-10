@@ -208,6 +208,8 @@
         <li>Both ordered and unordered lists</li>
         <li>A comparison table</li>
       </ul>
+
+      <SolutionChecker />
     </div>
   </div>
 

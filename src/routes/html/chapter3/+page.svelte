@@ -228,6 +228,9 @@
     <li>Submit both the updated HTML file and the screenshot as required by your course guidelines.</li>
   </ul>
 
+
+  <SolutionChecker />
+
   <div>Congratulations on enhancing your profile page! With the knowledge of text formatting and creating hyperlinks, you're building a solid foundation for more advanced web content.</div>
 </div>
   
