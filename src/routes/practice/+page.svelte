@@ -34,36 +34,37 @@
     <h2>JavaScript Projects</h2>
     <ul>
       <li><a href="/HTMLKit/practice/js/todo">Todo List</a></li>
-      <li><a href="/HTMLKit/practice/js-quiz">Quiz App</a></li>
-      <li><a href="/HTMLKit/practice/js-calculator">Calculator</a></li>
-      <li><a href="/HTMLKit/practice/js-countdown">Countdown Timer</a></li>
-      <s><li><a href="/HTMLKit/practice/js-weather">Weather App</a></li>
-      <li><a href="/HTMLKit/practice/js-rps">Rock, Paper, Scissors Game</a></li>  
-      <li><a href="/HTMLKit/practice/js-quote">Random Quote Generator</a></li>
-      <li><a href="/HTMLKit/practice/js-stopwatch">Stopwatch</a></li>
-      <li><a href="/HTMLKit/practice/js-memory">Memory Game</a></li>  
-      <li><a href="/HTMLKit/practice/js-expense">Expense Tracker</a></li>
-      <li><a href="/HTMLKit/practice/js-typing">Typing Speed Test</a></li>
-      <li><a href="/HTMLKit/practice/js-recipe">Recipe Finder</a></li>
-      <li><a href="/HTMLKit/practice/js-temperature">Temperature Converter</a></li>
-      <li><a href="/HTMLKit/practice/js-drum">Drum Kit</a></li>
-      <li><a href="/HTMLKit/practice/js-clock">Digital Clock</a></li>
-      <li><a href="/HTMLKit/practice/js-color">Color Flipper</a></li>
-      <li><a href="/HTMLKit/practice/js-survey">Survey Form</a></li>
-      <li><a href="/HTMLKit/practice/js-carousel">Image Carousel</a></li>
-      <li><a href="/HTMLKit/practice/js-password">Password Generator</a></li>
-      <li><a href="/HTMLKit/practice/js-drawing">Simple Drawing App</a></li>
-      <li><a href="/HTMLKit/practice/js-modal">Popup Modal</a></li>
-      <li><a href="/HTMLKit/practice/js-accordion">Accordion FAQ Section</a></li></s>
+      <li><a href="/HTMLKit/practice/js/quiz">Quiz App</a></li>
+      <li><a href="/HTMLKit/practice/js/calculator">Calculator</a></li>
+      <li><a href="/HTMLKit/practice/js/countdown">Countdown Timer</a></li>
+      <s><li><a href="/HTMLKit/practice/js/weather">Weather App</a></li></s>
+      <li><a href="/HTMLKit/practice/js/rps">Rock, Paper, Scissors Game</a></li>  
+      <li><a href="/HTMLKit/practice/js/quote">Random Quote Generator</a></li>
+      <li><a href="/HTMLKit/practice/js/stopwatch">Stopwatch</a></li>
+      <li><a href="/HTMLKit/practice/js/memory">Memory Game</a></li>  
+      <li><a href="/HTMLKit/practice/js/expense">Expense Tracker</a></li>
+      <li><a href="/HTMLKit/practice/js/typing">Typing Speed Test</a></li>
+      <li><strong>below here = *WIP* - coming soon</strong></li>
+      <s><li><a href="/HTMLKit/practice/js/recipe">Recipe Finder</a></li>
+      <li><a href="/HTMLKit/practice/js/temperature">Temperature Converter</a></li>
+      <li><a href="/HTMLKit/practice/js/drum">Drum Kit</a></li>
+      <li><a href="/HTMLKit/practice/js/clock">Digital Clock</a></li>
+      <li><a href="/HTMLKit/practice/js/color">Color Flipper</a></li>
+      <li><a href="/HTMLKit/practice/js/survey">Survey Form</a></li>
+      <li><a href="/HTMLKit/practice/js/carousel">Image Carousel</a></li>
+      <li><a href="/HTMLKit/practice/js/password">Password Generator</a></li>
+      <li><a href="/HTMLKit/practice/js/drawing">Simple Drawing App</a></li>
+      <li><a href="/HTMLKit/practice/js/modal">Popup Modal</a></li>
+      <li><a href="/HTMLKit/practice/js/accordion">Accordion FAQ Section</a></li></s>
     </ul>
   </section>
 
   <section>
     <h2>Astro Projects (*WIP* - Coming Soon)</h2>
     <ul>
-      <s><li><a href="/HTMLKit/practice/astro-blog">Astro Blog</a></li>
-      <li><a href="/HTMLKit/practice/astro-landing">Astro Landing Page</a></li>
-      <li><a href="/HTMLKit/practice/astro-company">Astro Company Website</a></li></s>
+      <li><a href="/HTMLKit/practice/astro/blog">Astro Blog</a></li>
+      <li><a href="/HTMLKit/practice/astro/landing">Astro Landing Page</a></li>
+      <li><a href="/HTMLKit/practice/astro/company">Astro Company Website</a></li>
     </ul>
   </section>
 
