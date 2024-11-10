@@ -66,7 +66,7 @@
   </section>
 
   <section>
-    <h2>🚀 Astro Projects (*WIP* - Coming Soon)</h2>
+    <h2>🚀 Astro Projects (*WIP* - Coming Soon⌛)</h2>
     <ul>
       <s><a href="/practice/astro/blog">Astro Blog</a></li>
       <li><a href="/practice/astro/landing">Astro Landing Page</a></li>
@@ -75,7 +75,7 @@
   </section>
 
   <section>
-    <h2>⚡ Svelte Projects (*WIP* - Coming Soon)</h2>
+    <h2>⚡ Svelte Projects (*WIP* - Coming Soon⌛)</h2>
     <ul>
       <s><li><a href="/practice/svelte/blog">Svelte Blog</a></li>
       <li><a href="/practice/svelte/landing">Svelte Landing Page</a></li>
@@ -84,7 +84,7 @@
   </section>
 
   <section>
-    <h2>Next.js Projects (*WIP* - Coming Soon)</h2>
+    <h2>Next.js Projects (*WIP* - Coming Soon⌛)</h2>
     <ul>
       <s><li><a href="/practice/nextjs/directory">Next.js Directory</a></li></s>
     </ul>
