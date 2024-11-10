@@ -60,7 +60,7 @@
       <li><a href="/practice/js/weather">Weather App</a> (⌛Soon)</li>
       <li><a href="/practice/js/gallery">Portfolio Gallery with Filter</a> (⌛Soon)</li>
       <li>Local Storage Shopping List (⌛Soon)</li>
-      <li>Random Joke Generator (⌛Soon) </s> </li>
+      <li>Random Joke Generator (⌛Soon)</s></li>
 
     </ul>
   </section>
