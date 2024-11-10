@@ -175,4 +175,4 @@ Open `index.html` in your web browser to view the business card. Test the respon
 
 ---
 
-This setup provides a professional and stylish digital business card that’s easy to adapt for different industries or personal brands. Let me know if you’d like to add animations, change the color scheme, or make other adjustments!
+This setup provides a professional and stylish digital business card that’s easy to adapt for different industries or personal brands.

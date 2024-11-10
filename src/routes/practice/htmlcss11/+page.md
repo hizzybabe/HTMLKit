@@ -147,4 +147,4 @@ Open `index.html` in your web browser to see the product card in action. Adjust 
 
 ---
 
-This setup provides a clean, modern product card layout with hover effects and emphasis on price and button. Let me know if you'd like to add additional features, like star ratings or animation effects!
+This setup provides a clean, modern product card layout with hover effects and emphasis on price and button.

@@ -21,12 +21,12 @@
       <li><a href="/practice/htmlcss11">Product Card</a></li>
       <li><a href="/practice/htmlcss12">Event Invitation Page</a></li>
       <li><a href="/practice/htmlcss13">Digital Business Card</a></li>
-      <li><strong>below here = *WIP* - coming soon</strong></li>
-      <s><li><a href="/practice/htmlcss14">Simple Portfolio Grid</a></li>
-      <li><a href="/practice/htmlcss15">CSS Art</a></li>
-      <li><a href="/practice/htmlcss16">Weather Card</a></li>
+      <li><a href="/practice/htmlcss14">Simple Portfolio Grid</a></li>
+      <s><li><a href="/practice/htmlcss15">CSS Art</a></li> (⌛Soon)
+      <li><a href="/practice/htmlcss16">Weather Card</a></li> (⌛Soon)</s>
       <li><a href="/practice/htmlcss17">User Profile Page</a></li>
-      <li><a href="/practice/htmlcss18">Coming Soon Page</a></li></s>
+      <li><a href="/practice/htmlcss18">Coming Soon Page</a></li>
+      <li><a href="/practice/htmlcss19">Magazine Article Layout</a></li>
     </ul>
   </section>
 
@@ -44,18 +44,21 @@
       <li><a href="/practice/js/memory">Memory Game</a></li>  
       <li><a href="/practice/js/expense">Expense Tracker</a></li>
       <li><a href="/practice/js/typing">Typing Speed Test</a></li>
-      <li><strong>below here = *WIP* - coming soon</strong></li>
-      <s><li><a href="/practice/js/recipe">Recipe Finder</a></li>
       <li><a href="/practice/js/temperature">Temperature Converter</a></li>
       <li><a href="/practice/js/drum">Drum Kit</a></li>
       <li><a href="/practice/js/clock">Digital Clock</a></li>
       <li><a href="/practice/js/color">Color Flipper</a></li>
-      <li><a href="/practice/js/survey">Survey Form</a></li>
-      <li><a href="/practice/js/carousel">Image Carousel</a></li>
       <li><a href="/practice/js/password">Password Generator</a></li>
+      <s><li><a href="/practice/js/survey">Survey Form</a></li>
+      <li><a href="/practice/js/carousel">Image Carousel</a></li>
       <li><a href="/practice/js/drawing">Simple Drawing App</a></li>
       <li><a href="/practice/js/modal">Popup Modal</a></li>
       <li><a href="/practice/js/accordion">Accordion FAQ Section</a></li></s>
+      <li><a href="/practice/js/notes">Notes App</a></li>
+      <li><a href="/practice/js/todo">Todo App with Date Filtering</a></li>
+      <li><a href="/practice/js/bmi">BMI Calculator</a></li>
+      <li><a href="/practice/js/recipe">Recipe Finder</a></li></s>
+      
     </ul>
   </section>
 

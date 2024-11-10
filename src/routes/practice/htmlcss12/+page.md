@@ -227,4 +227,4 @@ Open `index.html` in your web browser to see the event invitation page. Adjust s
 
 ---
 
-This setup provides a clean, welcoming invitation page with sections for all necessary details. Let me know if you’d like to add animations, social media links, or any other custom elements!
+This setup provides a clean, welcoming invitation page with sections for all necessary details.
