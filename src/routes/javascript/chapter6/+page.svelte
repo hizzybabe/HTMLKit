@@ -149,8 +149,6 @@ greetFunction(); // Output: "Hello, I'm undefined"`}</code></pre>
     
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>
-
-
         const ToDoApp = (function() &123;
         // Private array to store tasks
         let tasks = [];
@@ -238,8 +236,6 @@ greetFunction(); // Output: "Hello, I'm undefined"`}</code></pre>
             removeTask
         &125;;
       &125;)();
-
-
       </code></pre>
     </div>
 

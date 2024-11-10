@@ -114,7 +114,7 @@ h1::before &#123;
       <p>Open your existing <code>profile.html</code> and <code>profile.css</code> files.</p>
 
       <h4>2. Applying Advanced Selectors</h4>
-      <p>2. **Applying Advanced Selectors**:<br/> - Use attribute selectors to style specific inputs in forms (if your profile page includes a form).<br/> - Use `nth-child` selectors to add background colors or styles to alternating sections.<br/></p>
+      <p>2. Applying Advanced Selectors:<br/> - Use attribute selectors to style specific inputs in forms (if your profile page includes a form).<br/> - Use `nth-child` selectors to add background colors or styles to alternating sections.<br/></p>
       <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
         <pre><code>/* Style only the text inputs */
 input[type="text"] &#123;
@@ -130,7 +130,7 @@ ul li:nth-child(odd) &#123;
       </div>
 
       <h4>3. Adding Interactivity with Pseudo-Classes</h4>
-      <p>3. **Adding Interactivity with Pseudo-Classes**:<br/> - Add hover effects to links and buttons, changing color or background on hover.<br/> - Use `:active` to give buttons a &ldquo;pressed&rdquo; effect when clicked.<br/></p>
+      <p>3. Adding Interactivity with Pseudo-Classes:<br/> - Add hover effects to links and buttons, changing color or background on hover.<br/> - Use `:active` to give buttons a &ldquo;pressed&rdquo; effect when clicked.<br/></p>
       <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
         <pre><code>.cta-button:hover &#123;
     background-color: #3498db;
@@ -143,7 +143,7 @@ ul li:nth-child(odd) &#123;
       </div>
 
       <h4>4. Styling with Pseudo-Elements</h4>
-      <p>4. **Styling with Pseudo-Elements for Decorative Purposes**:<br/> - Add `::before` and `::after` elements to create decorative borders, icons, or lines around text.<br/> - Use pseudo-elements to create a unique style for the profile heading.<br/></p>
+      <p>4. Styling with Pseudo-Elements for Decorative Purposes:<br/> - Add `::before` and `::after` elements to create decorative borders, icons, or lines around text.<br/> - Use pseudo-elements to create a unique style for the profile heading.<br/></p>
       <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
         <pre><code>/* Decorative border for headings */
 h2::before &#123;
