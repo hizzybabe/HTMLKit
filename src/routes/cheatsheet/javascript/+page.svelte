@@ -127,4 +127,207 @@ while (condition) &#123;
   // code
 &#125;</code></pre>
     {/if}
+  
+    <!-- Functions -->
+    <h2 
+      class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
+      on:click={() => toggleSection('functions')}
+    >
+      <span class="mr-2">{visibleSections.functions ? '▼' : '▶'}</span>
+      🎯 Functions
+    </h2>
+    {#if visibleSections.functions}
+      <pre><code class="language-javascript">// Function Declaration
+function greet(name) &#123;
+  return `Hello, $&#123;name&#125;!`;
+&#125;
+
+// Arrow Function
+const greet = (name) => &#123;
+  return `Hello, $&#123;name&#125;!`;
+&#125;
+
+// Function Expression
+const greet = function(name) &#123;
+  return `Hello, $&#123;name&#125;!`;
+&#125;</code></pre>
+    {/if}
+  
+    <!-- Arrays -->
+    <h2 
+      class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
+      on:click={() => toggleSection('arrays')}
+    >
+      <span class="mr-2">{visibleSections.arrays ? '▼' : '▶'}</span>
+      📦 Arrays
+    </h2>
+    {#if visibleSections.arrays}
+      <pre><code class="language-javascript">// Array Methods
+let arr = [1, 2, 3, 4, 5];
+
+arr.push(6);       // Add to end
+arr.pop();         // Remove from end
+arr.unshift(0);    // Add to start
+arr.shift();       // Remove from start
+
+// Array Operations
+arr.map(x => x * 2);     // Transform elements
+arr.filter(x => x > 2);  // Filter elements
+arr.reduce((a,b) => a+b); // Reduce to single value
+arr.forEach(x => console.log(x)); // Loop through</code></pre>
+    {/if}
+  
+    <!-- Objects -->
+    <h2 
+      class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
+      on:click={() => toggleSection('objects')}
+    >
+      <span class="mr-2">{visibleSections.objects ? '▼' : '▶'}</span>
+      🗃️ Objects
+    </h2>
+    {#if visibleSections.objects}
+      <pre><code class="language-javascript">// Object Creation
+let person = &#123;
+  name: "John",
+  age: 30,
+  greet() &#123;
+    return `Hello, I'm $&#123;this.name&#125;`;
+  &#125;
+&#125;;
+
+// Object Operations
+Object.keys(person);    // Get keys
+Object.values(person);  // Get values
+Object.entries(person); // Get key-value pairs</code></pre>
+    {/if}
+  
+    <!-- ES6 Features -->
+    <h2 
+      class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
+      on:click={() => toggleSection('es6')}
+    >
+      <span class="mr-2">{visibleSections.es6 ? '▼' : '▶'}</span>
+      ✨ ES6 Features
+    </h2>
+    {#if visibleSections.es6}
+      <pre><code class="language-javascript">// Destructuring
+let &#123;name, age&#125; = person;
+let [first, second] = arr;
+
+// Spread Operator
+let newArr = [...arr];
+let newObj = &#123;...person&#125;;
+
+// Default Parameters
+function greet(name = "Guest") &#123;
+  return `Hello, $&#123;name&#125;!`;
+&#125;
+
+// Template Literals
+let greeting = `Hello, $&#123;name&#125;!`;</code></pre>
+    {/if}
+  
+    <!-- Classes -->
+    <h2 
+      class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
+      on:click={() => toggleSection('classes')}
+    >
+      <span class="mr-2">{visibleSections.classes ? '▼' : '▶'}</span>
+      🏗️ Classes
+    </h2>
+    {#if visibleSections.classes}
+      <pre><code class="language-javascript">// Class Definition
+class Person &#123;
+  constructor(name) &#123;
+    this.name = name;
+  &#125;
+
+  greet() &#123;
+    return `Hello, I'm $&#123;this.name&#125;`;
+  &#125;
+&#125;
+
+// Inheritance
+class Employee extends Person &#123;
+  constructor(name, role) &#123;
+    super(name);
+    this.role = role;
+  &#125;
+&#125;</code></pre>
+    {/if}
+  
+    <!-- Promises -->
+    <h2 
+      class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
+      on:click={() => toggleSection('promises')}
+    >
+      <span class="mr-2">{visibleSections.promises ? '▼' : '▶'}</span>
+      ⏳ Promises & Async/Await
+    </h2>
+    {#if visibleSections.promises}
+      <pre><code class="language-javascript">// Promise
+const promise = new Promise((resolve, reject) => &#123;
+  // Async operation
+  if (success) resolve(data);
+  else reject(error);
+&#125;);
+
+// Async/Await
+async function getData() &#123;
+  try &#123;
+    const result = await fetch(url);
+    return await result.json();
+  &#125; catch (error) &#123;
+    console.error(error);
+  &#125;
+&#125;</code></pre>
+    {/if}
+  
+    <!-- DOM -->
+    <h2 
+      class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
+      on:click={() => toggleSection('dom')}
+    >
+      <span class="mr-2">{visibleSections.dom ? '▼' : '▶'}</span>
+      🎨 DOM Manipulation
+    </h2>
+    {#if visibleSections.dom}
+      <pre><code class="language-javascript">// Selecting Elements
+const el = document.querySelector('.class');
+const els = document.querySelectorAll('.class');
+
+// Modifying Elements
+el.textContent = 'New text';
+el.innerHTML = '&lt;span&gt;HTML&lt;/span&gt;';
+el.classList.add('new-class');
+el.style.color = 'red';</code></pre>
+    {/if}
+  
+    <!-- Error Handling -->
+    <h2 
+      class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
+      on:click={() => toggleSection('errorHandling')}
+    >
+      <span class="mr-2">{visibleSections.errorHandling ? '▼' : '▶'}</span>
+      ⚠️ Error Handling
+    </h2>
+    {#if visibleSections.errorHandling}
+      <pre><code class="language-javascript">// Try-Catch
+try &#123;
+  // Code that might throw an error
+  throw new Error('Something went wrong');
+&#125; catch (error) &#123;
+  console.error(error);
+&#125; finally &#123;
+  // Always executes
+&#125;
+
+// Custom Error
+class CustomError extends Error &#123;
+  constructor(message) &#123;
+    super(message);
+    this.name = 'CustomError';
+  &#125;
+&#125;</code></pre>
+    {/if}
   </div>
