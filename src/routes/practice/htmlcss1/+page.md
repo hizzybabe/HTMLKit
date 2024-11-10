@@ -172,4 +172,4 @@ Open the `index.html` file in a web browser to view your portfolio. You can expe
 
 ---
 
-This tutorial sets up a clean, simple portfolio layout. Let me know if you’d like any additions, like a contact form or adding a navigation bar!
+This tutorial sets up a clean, simple portfolio layout.

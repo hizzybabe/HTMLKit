@@ -54,6 +54,7 @@
   <nav>
     <a href="/HTMLKit/about">About</a>
     <a href="/HTMLKit/contact">Contact Us</a>
+    <a href="/HTMLKit/blog">Blog</a>
   </nav>
 </footer>
 

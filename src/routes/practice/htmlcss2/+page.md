@@ -190,4 +190,4 @@ Open `index.html` in a web browser to see your single-page resume. You can edit 
 
 ---
 
-This basic layout is ready to use, and you can build on it for more customization or interactivity. Let me know if you want to add any additional elements!
+This basic layout is ready to use, and you can build on it for more customization or interactivity.

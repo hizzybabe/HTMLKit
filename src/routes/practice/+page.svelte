@@ -29,8 +29,6 @@
     </ul>
   </section>
 
-  <SolutionChecker />
-
   <section>
     <h2>JavaScript Projects</h2>
     <ul>
@@ -59,8 +57,6 @@
     </ul>
   </section>
 
-  <SolutionChecker />
-
   <section>
     <h2>Astro Projects</h2>
     <ul>
@@ -70,7 +66,6 @@
     </ul>
   </section>
 
-  <SolutionChecker />
 </div>
 
 <style>

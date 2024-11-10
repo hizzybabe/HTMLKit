@@ -199,4 +199,4 @@ Open `index.html` in your web browser to see how the page looks. Adjust spacing,
 
 ---
 
-This basic landing page template is a starting point. Let me know if you want to add animations, form functionality, or more advanced styles!
+This basic landing page template is a starting point.
