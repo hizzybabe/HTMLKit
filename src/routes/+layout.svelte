@@ -11,8 +11,8 @@
       <a href="/HTMLKit/html">HTML</a>
       <a href="/HTMLKit/css">CSS</a>
       <a href="/HTMLKit/javascript">JavaScript</a>
-      <a href="/HTMLKit/svelte">Svelte</a>
-      <a href="/HTMLKit/astro">Astro</a>
+      <a href="/HTMLKit/svelte" class="wip"><s>Svelte</s> (Coming Soon)</a>
+      <a href="/HTMLKit/astro" class="wip"><s>Astro</s> (Coming Soon)</a>
     </div>
   </div>
 
