@@ -11,19 +11,19 @@
       <h2 class="text-2xl font-semibold mb-6">How to Use This Resource</h2>
       <ol class="space-y-4 text-gray-700">
         <li class="flex items-start">
-          <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3 mt-0.5">1</span>
+          <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3 mt-0.5"></span>
           <span>Browse to your desired chapter</span>
         </li>
         <li class="flex items-start">
-          <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3 mt-0.5">2</span>
+          <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3 mt-0.5"></span>
           <span>Click on the files to view the example code</span>
         </li>
         <li class="flex items-start">
-          <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3 mt-0.5">3</span>
+          <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3 mt-0.5"></span>
           <span>Download files using the 'download raw file' button in the top right of the file view</span>
         </li>
         <li class="flex items-start">
-          <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3 mt-0.5">4</span>
+          <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mr-3 mt-0.5"></span>
           <span>Or copy the code directly to compare with your work</span>
         </li>
       </ol>
