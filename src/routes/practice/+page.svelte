@@ -22,7 +22,7 @@
       <li><a href="/HTMLKit/practice/htmlcss12">Event Invitation Page</a></li>
       <li><a href="/HTMLKit/practice/htmlcss13">Digital Business Card</a></li>
       <li><strong>below here = *WIP* - coming soon</strong></li>
-      <s></s><li><a href="/HTMLKit/practice/htmlcss14">Simple Portfolio Grid</a></li>
+      <s><li><a href="/HTMLKit/practice/htmlcss14">Simple Portfolio Grid</a></li>
       <li><a href="/HTMLKit/practice/htmlcss15">CSS Art</a></li>
       <li><a href="/HTMLKit/practice/htmlcss16">Weather Card</a></li>
       <li><a href="/HTMLKit/practice/htmlcss17">User Profile Page</a></li>
