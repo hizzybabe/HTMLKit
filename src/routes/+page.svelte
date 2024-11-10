@@ -12,7 +12,7 @@
 
 <section class="features">
   <div class="feature">
-    <h2>🌐 Learn <a href="/HTMLKit/html">HTML</a>, <a href="/HTMLKit/css">CSS</a>, and <a href="/HTMLKit/javascript">JavaScript</a></h2>
+    <h2>🌐 Learn <a href="/html">HTML</a>, <a href="/css">CSS</a>, and <a href="/javascript">JavaScript</a></h2>
     <p>The Foundation of Web Development</p>
   </div>
   <div class="feature">
