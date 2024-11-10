@@ -140,7 +140,7 @@ initializeGame();
 3. **Initialize Game**: `initializeGame()` shuffles cards, resets moves and matched pairs, and creates clickable card elements.
 4. **Flip Card**: The `flipCard()` function flips a card by showing the symbol, adding it to `flippedCards`. If two cards are flipped, it increments the moves counter and calls `checkForMatch()`.
 5. **Check for Match**: The `checkForMatch()` function compares two flipped cards for a match. If matched, they stay flipped; otherwise, they flip back after a delay.
-6. **Update Score**: The `updateScore()` function displays a star-based score, based on moves (3 stars for <= 12 moves, 2 stars for <= 18 moves, and 1 star for more).
+6. **Update Score**: The `updateScore()` function displays a star-based score, based on moves (3 stars for &le; 12 moves, 2 stars for &le; 18 moves, and 1 star for more).
 7. **Winning Condition**: Once all pairs are matched, the game alerts the player of their win with the moves count.
 
 ### Styling (CSS)
