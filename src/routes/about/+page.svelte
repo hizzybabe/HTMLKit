@@ -1,9 +1,9 @@
 <div class="container mx-auto px-4 py-8">
-  <h1>About HTMLKit</h1>
+  <h1>About TechWizard Academy</h1>
   
   <section class="hero">
     <h2>🚀 Your Journey to Web Development Excellence</h2>
-    <p>HTMLKit is a comprehensive learning platform designed to help aspiring web developers master the fundamentals of modern web development.</p>
+    <p>TechWizard Academy is a comprehensive learning platform designed to help aspiring web developers master the fundamentals of modern web development.</p>
   </section>
 
   <section class="features">
@@ -25,7 +25,7 @@
 
   <section class="mission">
     <h2>Our Mission</h2>
-    <p>At HTMLKit, we believe that learning web development should be accessible, practical, and enjoyable. Our mission is to provide high-quality, structured learning resources that help students build a strong foundation in web development technologies.</p>
+    <p>At TechWizard Academy, we believe that learning web development should be accessible, practical, and enjoyable. Our mission is to provide high-quality, structured learning resources that help students build a strong foundation in web development technologies.</p>
   </section>
 
   <section class="team">
