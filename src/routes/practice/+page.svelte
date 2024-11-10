@@ -68,7 +68,7 @@
   <section>
     <h2>🚀 Astro Projects (*WIP* - Coming Soon⌛)</h2>
     <ul>
-      <s><a href="/practice/astro/blog">Astro Blog</a></li>
+      <s><li></li><a href="/practice/astro/blog">Astro Blog</a></li>
       <li><a href="/practice/astro/landing">Astro Landing Page</a></li>
       <li><a href="/practice/astro/company">Astro Company Website</a></li></s>
     </ul>
