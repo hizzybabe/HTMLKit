@@ -165,7 +165,31 @@ task.done = true;</code></pre>
       </button>
       
       {#if showJsCode}
-      <pre><code>false// Array to store tasks
+      <pre><code>
+
+
+        false// Array to store tasks
+        let tasks = [];
+        
+        // Function to add a new task
+        function addTask() &#123;
+            const input = document.getElementById('taskInput');
+            const text = input.value.trim();
+            
+            if (text) &#123;
+                const task = &#123;
+                    id: Date.now(),
+                    text: text,
+                    done: false
+                &#125;;
+                
+                tasks.push(task);
+                renderTasks();
+                input.value = '';
+            &#125;
+        &#125;
+        
+        false// Array to store tasks
         let tasks = [];
         
         // Function to add a new task
@@ -197,10 +221,10 @@ task.done = true;</code></pre>
                     &lt;input type="checkbox" 
                            $&#123;task.done ? 'checked' : ''&#125; 
                            onclick="toggleTask($&#123;task.id&#125;)"&gt;
-                    <span style="$&#123;task.done ? 'text-decoration: line-through' : ''&#125;"&gt;
+                    &lt;span style="$&#123;task.done ? 'text-decoration: line-through' : ''&#125;"&gt;
                         $&#123;task.text&#125;
-                    </span&gt;
-                    <button onclick="deleteTask($&#123;task.id&#125;)"&gt;Delete</button&gt;
+                    &lt;/span&gt;
+                    &lt;button onclick="deleteTask($&#123;task.id&#125;)"&gt;Delete&lt;/button&gt;
                 `;
                 list.appendChild(li);
             &#125;);
@@ -218,7 +242,11 @@ task.done = true;</code></pre>
         function deleteTask(id) &#123;
             tasks = tasks.filter(task =&gt; task.id !== id);
             renderTasks();
-        &#125;</code></pre>
+        &#125;
+
+
+
+      </code></pre>
       {:else}
       <div class="preview-content">
         <p>JavaScript code for managing tasks</p>
