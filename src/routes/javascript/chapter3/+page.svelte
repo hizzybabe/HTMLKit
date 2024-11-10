@@ -166,60 +166,59 @@ task.done = true;</code></pre>
       
       {#if showJsCode}
       <pre><code>// Array to store tasks
-let tasks = [];
-
-// Function to add a new task
-function addTask() &#123;
-    const input = document.getElementById('taskInput');
-    const text = input.value.trim();
-    
-    if (text) &#123;
-        const task = &#123;
-            id: Date.now(),
-            text: text,
-            done: false
-        &#125;;
+        let tasks = [];
         
-        tasks.push(task);
-        renderTasks();
-        input.value = '';
-    &#125;
-&#125;
-
-// Function to render tasks
-function renderTasks() &#123;
-    const list = document.getElementById('taskList');
-    list.innerHTML = '';
-    
-    tasks.forEach(task => &#123;
-        const li = document.createElement('li');
-        li.innerHTML = \`
-            &lt;input type="checkbox" 
-                   \$&#123;task.done ? 'checked' : ''&#125; 
-                   onclick="toggleTask(\$&#123;task.id&#125;)"&gt;
-            &lt;span style="\$&#123;task.done ? 'text-decoration: line-through' : ''&#125;"&gt;
-                \$&#123;task.text&#125;
-            &lt;/span&gt;
-            &lt;button onclick="deleteTask(\$&#123;task.id&#125;)"&gt;Delete&lt;/button&gt;
-        \`;
-        list.appendChild(li);
-    &#125;);
-&#125;
-
-// Function to toggle task completion
-function toggleTask(id) &#123;
-    const task = tasks.find(t => t.id === id);
-    if (task) &#123;
-        task.done = !task.done;
-        renderTasks();
-    &#125;
-&#125;
-
-// Function to delete task
-function deleteTask(id) &#123;
-    tasks = tasks.filter(task => task.id !== id);
-    renderTasks();
-&#125;</code></pre>
+        // Function to add a new task
+        function addTask() &#123;
+            const input = document.getElementById('taskInput');
+            const text = input.value.trim();
+            
+            if (text) &#123;
+                const task = &#123;
+                    id: Date.now(),
+                    text: text,
+                    done: false
+                &#125;;
+                
+                tasks.push(task);
+                renderTasks();
+                input.value = '';
+            &#125;
+        &#125;
+        
+        // Function to render tasks
+        function renderTasks() &#123;
+            const list = document.getElementById('taskList');
+            list.innerHTML = '';
+            
+            tasks.forEach(task =&gt; &#123;
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    &lt;input type="checkbox" 
+                           $&#123;task.done ? 'checked' : ''&#125; 
+                           onclick="toggleTask($&#123;task.id&#125;)"&gt;
+                    &lt;span style="$&#123;task.done ? 'text-decoration: line-through' : ''&#125;"&gt;
+                        $&#123;task.text&#125;
+                    &lt;/span&gt;
+                    &lt;button onclick="deleteTask($&#123;task.id&#125;)"&gt;Delete&lt;/button&gt;
+                `;
+                list.appendChild(li);
+            &#125;);
+        &#125;
+        // Function to toggle task completion
+        function toggleTask(id) &#123;
+            const task = tasks.find(t =&gt; t.id === id);
+            if (task) &#123;
+                task.done = !task.done;
+                renderTasks();
+            &#125;
+        &#125;
+        
+        // Function to delete task
+        function deleteTask(id) &#123;
+            tasks = tasks.filter(task =&gt; task.id !== id);
+            renderTasks();
+        &#125;</code></pre>
       {:else}
       <div class="preview-content">
         <p>JavaScript code for managing tasks</p>
