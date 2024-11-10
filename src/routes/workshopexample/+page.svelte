@@ -36,7 +36,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        View Examples on GitHub
+        View Examples on GitHub ↗️
       </a>
     </div>
 
