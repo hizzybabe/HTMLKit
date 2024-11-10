@@ -220,6 +220,8 @@ document.getElementById("gallery").addEventListener("mouseout", function(event) 
       <li>Click "Add Image" to add images to the gallery.</li>
       <li>Hover over each image to see the opacity change.</li>
     </ol>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

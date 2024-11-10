@@ -152,6 +152,8 @@ $secondary: #2ecc71;
       <li>Organized CSS/SCSS files following best practices</li>
       <li>Documentation of your implementation choices</li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

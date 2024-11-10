@@ -128,6 +128,8 @@ async function getWeather() &#123;
       <li>Screenshot of the working Weather App</li>
       <li>Documentation of your implementation choices</li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

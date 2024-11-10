@@ -89,6 +89,8 @@ p {
       <li>Take a screenshot of the output displayed in the web browser.</li>
       <li>Submit both the CSS file and the screenshot as required by the course guidelines.</li>
     </ul>
+
+    <SolutionChecker />
     
     <div>Congratulations on creating your first CSS styles! This fundamental skill sets the stage for more advanced web development topics.</div>
   </div>

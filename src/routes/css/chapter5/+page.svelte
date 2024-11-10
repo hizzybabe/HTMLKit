@@ -112,6 +112,8 @@
       <li><strong>Updated Files</strong>: Modified gallery.html and gallery.css with responsive styles</li>
       <li><strong>Screenshots</strong>: Gallery layout at different screen sizes (desktop, tablet, mobile)</li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

@@ -265,6 +265,8 @@ task.done = true;</code></pre>
       </ul>
       <li>Screenshot of your working application</li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

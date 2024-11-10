@@ -164,6 +164,8 @@ while (count &lt; 5) &#123;
       <li>Complete quiz.html and quiz.js files</li>
       <li>Screenshot showing the working quiz with feedback</li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

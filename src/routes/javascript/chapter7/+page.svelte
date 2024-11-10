@@ -92,6 +92,8 @@ export default Counter;</code></pre>
       <li>Complete React project with Counter component</li>
       <li>Screenshot of the running application</li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

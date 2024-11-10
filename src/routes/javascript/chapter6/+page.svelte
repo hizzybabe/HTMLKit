@@ -246,6 +246,8 @@ greetFunction(); // Output: "Hello, I'm undefined"`}</code></pre>
       <li>Documentation explaining your refactoring decisions</li>
       <li>Code that follows best practices for organization and maintainability</li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

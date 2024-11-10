@@ -210,6 +210,8 @@ let greeting = "Hi, " + name;  // String concatenation</code></pre>
         <strong>DOM Manipulation:</strong> JavaScript can retrieve and modify HTML elements to create dynamic content.
       </li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

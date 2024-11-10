@@ -174,6 +174,8 @@ h2::before &#123;
         <li>Updated profile.html and profile.css files</li>
         <li>Interactive screenshot or video showing the enhancements</li>
       </ul>
+
+      <SolutionChecker />
     </div>
   </div>
 

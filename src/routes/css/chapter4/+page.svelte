@@ -152,7 +152,10 @@
       <li><strong>CSS File</strong>: Styled hero.css implementing colors, backgrounds, and gradients</li>
       <li><strong>Screenshot</strong>: Final hero section with gradient overlay and styled button</li>
     </ul>
+
+    <SolutionChecker />
   </div>
+
 
   <ChapterNavigation 
     prevHref="/HTMLKit/css/chapter3" 

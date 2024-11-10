@@ -202,6 +202,8 @@
       <li><strong>CSS File</strong>: Styled gallery.css implementing all layout properties</li>
       <li><strong>Screenshots</strong>: Desktop and mobile views of your gallery</li>
     </ul>
+
+    <SolutionChecker />
   </div>
 
   <ChapterNavigation 

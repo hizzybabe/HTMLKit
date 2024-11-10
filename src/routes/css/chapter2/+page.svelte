@@ -172,6 +172,8 @@ h1 &lbrace;
     <li><strong>Box Model</strong>: Padding, borders, and margins are crucial for layout and spacing.</li>
   </ul>
 
+  <SolutionChecker />
+
   <div>
     This chapter covered essential CSS selectors and properties, equipping you with the tools to create well-structured, visually pleasing web pages. Keep experimenting with different styles and layouts to develop your CSS skills further.
   </div>
