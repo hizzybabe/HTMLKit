@@ -37,7 +37,6 @@
       <li><a href="/practice/js/quiz">Quiz App</a></li>
       <li><a href="/practice/js/calculator">Calculator</a></li>
       <li><a href="/practice/js/countdown">Countdown Timer</a></li>
-      <li><a href="/practice/js/weather">Weather App</a></li></s>
       <li><a href="/practice/js/rps">Rock, Paper, Scissors Game</a></li>  
       <li><a href="/practice/js/quote">Random Quote Generator</a></li>
       <li><a href="/practice/js/stopwatch">Stopwatch</a></li>
@@ -57,10 +56,11 @@
       <li><a href="/practice/js/carousel">Image Carousel</a></li>
       <li><a href="/practice/js/survey">Survey Form</a></li>   
       <li><a href="/practice/js/tododate">Todo App with Date Filtering</a></li>
-      <s><li><a href="/practice/js/recipe">Recipe Finder</a> (⌛Soon)</s></li>
-      <s><li><a href="/practice/js/gallery">Portfolio Gallery with Filter</a> (⌛Soon)</s></li>
-      <s><li>Local Storage Shopping List (⌛Soon)</s></li>
-      <s><li>Random Joke Generator (⌛Soon)</s></li>
+      <s> <li><a href="/practice/js/recipe">Recipe Finder</a> (⌛Soon)</li>
+      <li><a href="/practice/js/weather">Weather App</a> (⌛Soon)</li>
+      <li><a href="/practice/js/gallery">Portfolio Gallery with Filter</a> (⌛Soon)</li>
+      <li>Local Storage Shopping List (⌛Soon)</li>
+      <li>Random Joke Generator (⌛Soon) </s> </li>
 
     </ul>
   </section>
