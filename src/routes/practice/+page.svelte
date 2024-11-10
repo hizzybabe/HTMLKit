@@ -60,7 +60,7 @@
       <s><li><a href="/practice/js/recipe">Recipe Finder</a> (⌛Soon)</s></li>
       <s><li><a href="/practice/js/gallery">Portfolio Gallery with Filter</a> (⌛Soon)</s></li>
       <s><li>Local Storage Shopping List (⌛Soon)</s></li>
-      <s><li></li>Random Joke Generator (⌛Soon)</s></li>
+      <s><li>Random Joke Generator (⌛Soon)</s></li>
 
     </ul>
   </section>
@@ -68,7 +68,7 @@
   <section>
     <h2>🚀 Astro Projects (*WIP* - Coming Soon)</h2>
     <ul>
-      <s><li><a href="/practice/astro/blog">Astro Blog</a></li>
+      <s><a href="/practice/astro/blog">Astro Blog</a></li>
       <li><a href="/practice/astro/landing">Astro Landing Page</a></li>
       <li><a href="/practice/astro/company">Astro Company Website</a></li></s>
     </ul>
