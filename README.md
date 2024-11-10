@@ -17,7 +17,7 @@ TW Academy is a comprehensive web development learning platform that provides in
 - Vite for build tooling
 - TailwindCSS for styling
 
-Getting Started
+## Getting Started
 
 1. Clone the repository
 2. Install dependencies: `npm install`
