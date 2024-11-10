@@ -96,7 +96,7 @@ function calculateBMI() {
    - Converts height to meters, calculates BMI using `weight / (height in meters)^2`, and rounds it to two decimal places.
 
 3. **Weight Category**:
-   - Determines the user’s weight category based on BMI value:
+   - Determines the user's weight category based on BMI value:
      - Underweight: BMI &lt; 18.5
      - Normal weight: 18.5 ≤ BMI &lt; 24.9
      - Overweight: 25 ≤ BMI &lt; 29.9
