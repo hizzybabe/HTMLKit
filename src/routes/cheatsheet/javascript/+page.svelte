@@ -90,14 +90,13 @@ console.log(`Hello, $&#123;name&#125;!`); // Hello, World!</code></pre>
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('operators')}
+    on:click={() => toggleSection('conditionals')}
   >
-    <span class="mr-2">{visibleSections.operators ? '▼' : '▶'}</span>
-    🔄 Operators
+    <span class="mr-2">{visibleSections.conditionals ? '▼' : '▶'}</span>
+    🔄 Conditionals
   </h2>
-  {#if visibleSections.operators}
-    <pre><code class="language-javascript">
-// If...Else
+  {#if visibleSections.conditionals}
+    <pre><code class="language-javascript">// If...Else
 if (condition) &#123;
   // Code if true
 &#125; else if (anotherCondition) &#123;
@@ -117,29 +116,27 @@ switch(day) &#123;
     break;
   default:
     console.log("Unknown day");
-&#125;
-</code></pre>
-{/if}
+&#125;</code></pre>
+  {/if}
 
 ---
 
 <h2 
     class="text-xl font-bold mt-6 mb-3 cursor-pointer flex items-center"
-    on:click={() => toggleSection('basics')}
+    on:click={() => toggleSection('loops')}
   >
-    <span class="mr-2">{visibleSections.basics ? '▼' : '▶'}</span>
+    <span class="mr-2">{visibleSections.loops ? '▼' : '▶'}</span>
     🔁 Loops
   </h2>
-  {#if visibleSections.basics}
-    <pre><code class="language-javascript">
-// For Loop
-for (let i = 0; i &lt; 5; i++) &#123;
+  {#if visibleSections.loops}
+    <pre><code class="language-javascript">// For Loop
+for (let i = 0; i < 5; i++) &#123;
   console.log(i);
 &#125;
 
 // While Loop
 let count = 0;
-while (count &lt; 5) &#123;
+while (count < 5) &#123;
   console.log(count);
   count++;
 &#125;
@@ -152,8 +149,7 @@ for (let item of arr) &#123;
 // For...in (for Objects)
 for (let key in obj) &#123;
   console.log(key, obj[key]);
-&#125;
-</code></pre>
+&#125;</code></pre>
   {/if}
 
 ---
