@@ -13,6 +13,11 @@
       <a href="/HTMLKit/javascript">JavaScript</a>
       <a href="/HTMLKit/svelte" class="wip"><s>Svelte</s> (Coming Soon)</a>
       <a href="/HTMLKit/astro" class="wip"><s>Astro</s> (Coming Soon)</a>
+      <a href="/HTMLKit/python" class="wip"><s>Python</s> (Coming Soon)</a>
+      <a href="/HTMLKit/react" class="wip"><s>React</s> (Coming Soon)</a>
+      <a href="/HTMLKit/php" class="wip"><s>PHP</s> (Coming Soon)</a>
+      <a href="/HTMLKit/nextjs" class="wip"><s>Next.js</s> (Coming Soon)</a>
+      <a href="/HTMLKit/wordpress" class="wip"><s>WordPress</s> (Coming Soon)</a>
     </div>
   </div>
 
