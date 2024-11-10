@@ -56,7 +56,7 @@
 <slot />
 
 <footer>
-  <p>© 2024 HTMLKit. Built with SvelteKit</p>
+  <p>© 2024 TechWizard.club. Built with SvelteKit</p>
   <nav>
     <a href="/about">About</a>
     <a href="/contact">Contact Us</a>
