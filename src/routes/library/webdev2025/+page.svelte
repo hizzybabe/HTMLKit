@@ -58,7 +58,7 @@
   </div>
 
   <div class="resources">
-    <h3>Resources:</h3>
+    <h3>Other Resources:</h3>
 
   <ul>
     <li><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design" target="_blank" rel="noopener noreferrer">freeCodeCamp's Responsive Web Design Certification 🎓</a></li>
@@ -108,7 +108,7 @@
   </div>
 
   <div class="resources">
-  <h3>Resources:</h3>
+  <h3>Other Resources:</h3>
 
   <ul>
     <li><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">freeCodeCamp's JavaScript Algorithms and Data Structures Certification 🎓</a></li>
