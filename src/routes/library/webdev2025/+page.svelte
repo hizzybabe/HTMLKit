@@ -164,7 +164,7 @@
   </ul>
 
   <div class="learn-buttons">
-    <a href="https://techwizard.club" class="learn-btn">
+    <a href="https://techwizard.club" class="learn-btn single-btn">
       Visit Cloud Provider Directory ☁️
     </a>
   </div>
@@ -278,6 +278,11 @@
 
   .js-btn {
     background-color: #f7df1e;
+    color: black;
+  }
+
+  .single-btn {
+    background-color: #7eddb5;
     color: black;
   }
 </style>
