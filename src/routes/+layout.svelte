@@ -231,7 +231,7 @@
   }
 
   .hamburger {
-    display: block;
+    display: none;
     width: 24px;
     height: 2px;
     background: white;
