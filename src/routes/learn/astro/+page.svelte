@@ -1,66 +1,66 @@
 <script>
   const chapters = [
     {
-      title: "Chapter 1: Introduction to Svelte & Setup",
+      title: "Chapter 1: Introduction to Astro & Setup",
       topics: [
-        "What is Svelte?",
-        "Svelte vs Other Frameworks",
-        "Setting Up Your Development Environment",
-        "Understanding Svelte Files",
-        "Practice Workshop: Hello Svelte!"
+        "What is Astro?",
+        "Static Site Generation vs Server-Side Rendering",
+        "Setting Up Your First Astro Project",
+        "Understanding Project Structure",
+        "Practice Workshop: Hello Astro!"
       ],
-      path: "/HTMLKit/svelte/chapter1"
+      path: "/learn/astro/ch1"
     },
     {
-      title: "Chapter 2: Reactivity & State Management",
+      title: "Chapter 2: Astro Components & Pages",
       topics: [
-        "Reactive Declarations",
-        "Stores",
-        "Props",
-        "Component State",
-        "Practice Workshop: Counter App"
+        "Astro Component Syntax",
+        "Creating Pages",
+        "File-based Routing",
+        "Static & Dynamic Content",
+        "Practice Workshop: Building a Blog Layout"
       ],
-      path: "/HTMLKit/svelte/chapter2"
+      path: "/learn/astro/ch2"
     },
     {
-      title: "Chapter 3: Components & Logic",
+      title: "Chapter 3: Markdown & MDX",
       topics: [
-        "Component Structure",
-        "Logic Blocks",
-        "Event Handling",
-        "Lifecycle Methods",
-        "Practice Workshop: Todo List"
+        "Working with Markdown Files",
+        "MDX Integration",
+        "Frontmatter",
+        "Content Collections",
+        "Practice Workshop: Blog Post System"
       ],
-      path: "/HTMLKit/svelte/chapter3"
+      path: "/learn/astro/ch3"
     },
     {
-      title: "Chapter 4: Styling & Animations",
+      title: "Chapter 4: Styling in Astro",
       topics: [
+        "CSS in Astro",
         "Scoped Styles",
-        "CSS Transitions",
-        "Motion",
-        "Custom Animations",
-        "Practice Workshop: Animated UI"
+        "Tailwind CSS Integration",
+        "Global Styles",
+        "Practice Workshop: Responsive Portfolio"
       ],
-      path: "/HTMLKit/svelte/chapter4"
+      path: "/learn/astro/ch4"
     },
     {
-      title: "Chapter 5: Advanced Concepts",
+      title: "Chapter 5: Integrations & UI Frameworks",
       topics: [
-        "Context API",
-        "Special Elements",
-        "Actions",
-        "Custom Stores",
-        "Practice Workshop: Data Dashboard"
+        "Using React Components",
+        "Using Svelte Components",
+        "Component Islands",
+        "Hydration Strategies",
+        "Practice Workshop: Interactive Widget"
       ],
-      path: "/HTMLKit/svelte/chapter5"
+      path: "/learn/astro/ch5"
     }
   ];
 </script>
 
 <div class="container">
-  <h1>Learn Svelte</h1>
-  <p class="intro">Master modern web development with Svelte's reactive approach</p>
+  <h1>Learn Astro</h1>
+  <p class="intro">Master modern static site generation with Astro</p>
 
   <div class="chapters">
     {#each chapters as chapter}
