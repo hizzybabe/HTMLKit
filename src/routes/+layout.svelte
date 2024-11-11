@@ -8,7 +8,6 @@
   };
   
   const toggleDropdown = (index, event) => {
-    // Prevent both the click propagation and default link behavior
     event.preventDefault();
     event.stopPropagation();
     
@@ -18,7 +17,7 @@
       } else {
         activeDropdowns.add(index);
       }
-      activeDropdowns = activeDropdowns; // Trigger reactivity
+      activeDropdowns = activeDropdowns;
     }
   };
 </script>
@@ -151,50 +150,23 @@
     text-align: left;
   }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
+  /* Desktop hover behavior */
+  @media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
   }
 
-  .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
-
-  .hamburger {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: white;
-    position: relative;
-    transition: all 0.3s;
-  }
-
-  .hamburger::before,
-  .hamburger::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    background: white;
-    transition: all 0.3s;
-  }
-
-  .hamburger::before {
-    top: -6px;
-  }
-
-  .hamburger::after {
-    bottom: -6px;
-  }
-
+  /* Mobile click behavior */
   @media (max-width: 768px) {
+    .dropdown:hover .dropdown-content {
+      display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+
     .mobile-menu-btn {
       display: block;
       position: absolute;
@@ -238,18 +210,35 @@
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* Remove hover behavior on mobile */
-    .dropdown:hover .dropdown-content {
-      display: none;
-    }
-
-    /* Show dropdown content when active class is present */
-    .dropdown.active .dropdown-content {
-      display: block;
-    }
-
     .dropdown-content a {
       padding: 0.8rem 1rem;
     }
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before {
+    top: -6px;
+  }
+
+  .hamburger::after {
+    bottom: -6px;
   }
 </style>
