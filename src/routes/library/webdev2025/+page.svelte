@@ -163,6 +163,12 @@
     <li>Domain Names and SSL Certificates: Understand how to secure your website. 🔒</li>
   </ul>
 
+  <div class="learn-buttons">
+    <a href="https://techwizard.club" class="learn-btn">
+      Visit Cloud Provider Directory ☁️
+    </a>
+  </div>
+  
   <div class="resources">
   <h3>Resources:</h3>
 
