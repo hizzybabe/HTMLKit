@@ -1,187 +1,263 @@
 ---
-title: Introduction to Svelte & Setup
+title: Styling & Animations
 ---
 
-## Chapter 1: Introduction to Svelte & Setup
+## Chapter 4: Styling & Animations
 
-In this chapter, you’ll learn about Svelte, a modern JavaScript framework for building user interfaces. Unlike other frameworks, Svelte shifts much of the work to compile time, resulting in faster, more efficient applications. This chapter covers what makes Svelte unique, how to set up your development environment, and how to create your first Svelte component.
+In this chapter, you’ll explore styling and animations in Svelte. Svelte makes it easy to apply scoped styles, add smooth transitions, and create custom animations. By the end of the chapter, you’ll build an Animated UI that combines these techniques to create an engaging, interactive experience.
 
-### **Chapter 1 Overview:**
-- Duration: Approximately 1-2 hours
-- Goal: Understand what Svelte is, how it differs from other frameworks, and how to set up a basic Svelte project.
+### **Chapter 4 Overview:**
+- Duration: Approximately 3 hours
+- Goal: Learn how to style Svelte components with scoped CSS, apply transitions, use built-in motion effects, and create custom animations.
 
 ---
 
 ### **Theory**
 
-#### **1.1 What is Svelte?**
+#### **4.1 Scoped Styles**
 
-Svelte is a component-based JavaScript framework that focuses on simplicity, reactivity, and performance. Unlike frameworks like React or Vue, Svelte doesn’t use a virtual DOM. Instead, it compiles components into optimized JavaScript at build time, resulting in lean, highly performant code.
+Svelte’s CSS is scoped to the component by default, meaning that styles you apply in a component only affect elements within that component. This prevents styles from unintentionally affecting other parts of the app, making it easier to maintain and structure CSS.
 
-**Key Features of Svelte**:
-- **Compile-Time Optimizations**: Svelte shifts most work to compile time, resulting in minimal runtime overhead.
-- **Reactivity**: Built-in reactivity makes state management easy without complex setup.
-- **Simple Syntax**: Svelte’s syntax is straightforward, with less boilerplate code compared to other frameworks.
-
----
-
-#### **1.2 Svelte vs Other Frameworks**
-
-Understanding how Svelte differs from other popular frameworks can help you choose the right tool for your project. Here’s a comparison:
-
-- **Virtual DOM**: Unlike React and Vue, Svelte doesn’t use a virtual DOM. Instead, it compiles components to minimal, efficient JavaScript, directly updating the DOM when needed.
-- **Component Structure**: Svelte’s components are self-contained files with HTML, CSS, and JavaScript, allowing for a natural separation of concerns.
-- **Performance**: Svelte apps tend to have smaller bundle sizes and faster loading times due to compile-time optimizations.
-- **Reactivity**: Svelte has built-in reactivity based on simple variable assignments, removing the need for complex state management libraries.
-
-#### **1.3 Setting Up Your Development Environment**
-
-To work with Svelte, you’ll need to set up your development environment. Follow these steps:
-
-1. **Install Node.js**:
-   - Download and install Node.js from [https://nodejs.org](https://nodejs.org).
-   - Verify the installation by running `node -v` and `npm -v` in your terminal.
-
-2. **Create a New Svelte Project**:
-   - Use the Svelte template to set up a new project:
-     ```bash
-     npx degit sveltejs/template hello-svelte
-     ```
-   - This creates a new folder named `hello-svelte` with the necessary project files.
-
-3. **Navigate to Your Project Directory**:
-   ```bash
-   cd hello-svelte
-   ```
-
-4. **Install Dependencies**:
-   - Run the following command to install project dependencies:
-     ```bash
-     npm install
-     ```
-
-5. **Start the Development Server**:
-   - Start the Svelte development server to view your project in the browser:
-     ```bash
-     npm run dev
-     ```
-   - Open `http://localhost:5000` in your browser to view the default Svelte project.
-
----
-
-#### **1.4 Understanding Svelte Files**
-
-A typical Svelte component file has three main sections: `<script>`, `<style>`, and HTML markup. Here’s a breakdown:
-
-- **`<script>`**: Contains JavaScript code to define variables, functions, and imports. Svelte automatically re-renders components when reactive variables change.
-- **`<style>`**: Contains CSS to style the component. Svelte’s styling is scoped by default, meaning styles in one component don’t affect others.
-- **HTML Markup**: Contains the component’s HTML structure, which Svelte compiles to optimized JavaScript.
-
-**Example of a Basic Svelte Component**:
+**Example of Scoped Styles**:
 ```svelte
 <script>
-    let name = "World";
+    let isActive = false;
 </script>
 
 <style>
-    h1 {
-        color: purple;
+    .button {
+        padding: 10px 20px;
+        background-color: teal;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .button.active {
+        background-color: darkorange;
     }
 </style>
 
-<h1>Hello, {name}!</h1>
+<button class="button {isActive ? 'active' : ''}" on:click={() => isActive = !isActive}>
+    Toggle
+</button>
 ```
 
-In this example:
-- **`name`** is a reactive variable that Svelte re-renders automatically when it changes.
-- **CSS** is scoped to this component, so it won’t affect other components with `h1` elements.
+In this example, the styles are applied to the button within the component only, even if another component has a `.button` class.
 
 ---
 
-### **Practice Workshop: Hello Svelte!**
+#### **4.2 CSS Transitions**
 
-In this workshop, you’ll create a simple “Hello, Svelte!” component. This will introduce you to the structure of a Svelte component and help you verify that your setup is correct.
+CSS transitions in Svelte are straightforward, allowing elements to animate between styles. You can define transitions directly in CSS, such as for color, position, and opacity.
+
+**Example**:
+```svelte
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .box:hover {
+        transform: scale(1.1);
+        background-color: darksalmon;
+    }
+</style>
+
+<div class="box"></div>
+```
+
+Here, the `box` element scales and changes color smoothly when hovered over.
+
+---
+
+#### **4.3 Motion (Built-in Transitions)**
+
+Svelte offers built-in motion functions, such as `fade`, `slide`, `fly`, and `scale`, for easily adding animations to components. You can import these from `svelte/transition` and use them with directives like `in:` and `out:` to define how elements enter and exit the DOM.
+
+**Example of `fade`**:
+```svelte
+<script>
+    import { fade } from 'svelte/transition';
+    let isVisible = true;
+</script>
+
+<button on:click={() => isVisible = !isVisible}>Toggle Box</button>
+
+{#if isVisible}
+    <div in:fade={{ duration: 500 }} class="box"></div>
+{/if}
+```
+
+**Explanation**:
+- **`in:fade`**: Adds a fade-in effect with a specified duration when the element enters the DOM.
+
+---
+
+#### **4.4 Custom Animations**
+
+Custom animations in Svelte allow you to control the movement of elements with keyframes or JavaScript. Use CSS `@keyframes` or Svelte’s `animate` functions to create tailored animations.
+
+**Example with `@keyframes`**:
+```svelte
+<style>
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+    }
+
+    .bouncing-box {
+        animation: bounce 1s infinite;
+        width: 100px;
+        height: 100px;
+        background-color: deepskyblue;
+    }
+</style>
+
+<div class="bouncing-box"></div>
+```
+
+In this example, `@keyframes` is used to make the box bounce up and down.
+
+---
+
+### **Practice Workshop: Animated UI**
+
+In this workshop, you’ll create an Animated UI that combines scoped styles, transitions, and custom animations. This will include buttons with hover effects, animated cards, and a slide-in panel.
 
 #### **Workshop Tasks**
 
-1. **Navigate to Your Project Directory**:
-   - Open your `hello-svelte` project folder in a code editor.
+1. **Set Up Your Project**
+   - If you’re continuing from a previous project, you can use the same setup. Otherwise, set up a new Svelte project.
+   - Create a new file named `AnimatedUI.svelte` in the `src` folder.
 
-2. **Edit `App.svelte`**:
-   - In the `src` folder, open the `App.svelte` file. This is the main component in your project.
-   - Modify the content to display a custom greeting using a variable.
+2. **Creating the Animated UI Component**
 
-   **App.svelte**:
+   **AnimatedUI.svelte**:
    ```svelte
    <script>
-       let name = "Svelte Developer";
+       import { fade, fly } from 'svelte/transition';
+
+       let showPanel = false;
+       let cards = ["Card 1", "Card 2", "Card 3"];
    </script>
 
    <style>
-       h1 {
-           color: teal;
-           font-family: Arial, sans-serif;
+       .container {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           padding: 20px;
+       }
+
+       .toggle-button {
+           margin: 10px;
+           padding: 10px 20px;
+           font-size: 16px;
+           cursor: pointer;
+           background-color: teal;
+           color: white;
+           border: none;
+           transition: background-color 0.3s ease;
+       }
+
+       .toggle-button:hover {
+           background-color: darkorange;
+       }
+
+       .panel {
+           width: 300px;
+           height: 200px;
+           background-color: lightgray;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 20px;
+           margin-top: 20px;
+           border-radius: 8px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       }
+
+       .card {
+           margin: 10px;
+           padding: 20px;
+           width: 150px;
+           height: 100px;
+           background-color: cornflowerblue;
+           color: white;
+           font-size: 18px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           border-radius: 5px;
+           transition: transform 0.3s ease;
+       }
+
+       .card:hover {
+           transform: translateY(-10px);
        }
    </style>
 
-   <h1>Hello, {name}!</h1>
-   ```
+   <div class="container">
+       <button class="toggle-button" on:click={() => showPanel = !showPanel}>
+           Toggle Panel
+       </button>
 
-3. **Running Your Svelte App**:
-   - Ensure the development server is running by entering `npm run dev` in your terminal.
-   - Open `http://localhost:5000` in your browser, and you should see “Hello, Svelte Developer!” displayed.
+       {#if showPanel}
+           <div in:fly={{ y: 200, duration: 600 }} out:fade class="panel">
+               Slide-In Panel
+           </div>
+       {/if}
 
-4. **Experiment with Styling and Variables**:
-   - Try changing the `name` variable to see how Svelte updates the display.
-   - Modify the CSS styling to explore how Svelte applies scoped styles.
-
-5. **Adding an Input for Interaction**:
-   - Add an input element to make the greeting dynamic. Update the `name` variable whenever the user types in the input.
-
-   **Updated App.svelte**:
-   ```svelte
-   <script>
-       let name = "Svelte Developer";
-   </script>
-
-   <style>
-       h1 {
-           color: teal;
-           font-family: Arial, sans-serif;
-       }
-
-       input {
-           margin-top: 10px;
-           padding: 5px;
-       }
-   </style>
-
-   <h1>Hello, {name}!</h1>
-   <input type="text" bind:value={name} placeholder="Enter your name">
+       <div>
+           {#each cards as card (card)}
+               <div class="card" in:fade={{ duration: 300 }}>{card}</div>
+           {/each}
+       </div>
+   </div>
    ```
 
    **Explanation**:
-   - **`bind:value={name}`**: This creates a two-way binding between the input field and the `name` variable, automatically updating the `name` variable as the user types.
+   - **Toggle Button**: The button toggles the visibility of the slide-in panel using `showPanel`.
+   - **Slide-In Panel**: This panel uses the `fly` transition to slide in from the bottom and a `fade` transition to fade out.
+   - **Animated Cards**: The cards are displayed in a grid with a `fade` transition on load. Hovering over each card applies a CSS `transform` effect to lift the card.
 
-6. **Testing the Interactive Component**:
-   - In your browser, try typing a new name in the input field, and observe how the greeting updates instantly.
+3. **Testing the Animated UI**
+
+   - Start the development server (`npm run dev`) and open `http://localhost:5000` in your browser.
+   - Test each animation by interacting with the toggle button and hovering over the cards.
+   - Confirm that the panel slides in and out and that the cards fade in on load and animate on hover.
 
 ---
 
 ### **Deliverables**
 
 1. **Svelte Project Folder**:
-   - Submit a zipped version of your `hello-svelte` project with the updated `App.svelte` component.
+   - Submit a zipped version of your Svelte project, including `AnimatedUI.svelte`.
 
-2. **Screenshot**:
-   - Take a screenshot showing the running app with the interactive greeting feature.
+2. **Screenshot or GIF**:
+   - Capture a screenshot or GIF showing the Animated UI in action, including the panel sliding in and the cards animating.
 
 ---
 
 ### **Summary and Key Takeaways**
 
-- **Svelte Overview**: Svelte is a compile-time framework that generates highly efficient JavaScript, focusing on simplicity and reactivity.
-- **Setting Up**: Use `npx degit sveltejs/template` to quickly set up a Svelte project.
-- **Svelte Files**: Svelte components consist of `<script>`, `<style>`, and HTML sections, with scoped CSS and reactivity by default.
+- **Scoped Styles**: Svelte components have scoped styles by default, keeping CSS local to each component.
+- **CSS Transitions**: Use CSS transitions for smooth animations on hover or between states.
+- **Motion**: Svelte’s built-in motion functions like `fade`, `fly`, `slide`, and `scale` make it easy to add entry and exit animations.
+- **Custom Animations**: Use `@keyframes` or JavaScript for custom, complex animations.
 
-This chapter introduced you to the basics of Svelte and set up your first component. Practicing with Svelte’s syntax and reactivity will deepen your understanding as you work on more advanced features.
+This chapter covered styling and animations in Svelte, giving you the tools to create polished and interactive interfaces. These animation techniques can enhance user experience by making your app feel more responsive and engaging.
+
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+</script>
+
+<ChapterNavigation 
+    prevHref="/learn/svelte/ch3" 
+    nextHref="/learn/svelte/ch5"
+  />

@@ -2,10 +2,6 @@
 title: Reactivity & State Management
 ---
 
-<script>
-  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
-</script>
-
 ## Chapter 2: Reactivity & State Management
 
 In this chapter, you’ll explore Svelte’s reactivity model, which allows you to automatically update the UI when variables change. You’ll also learn about managing component state, using props for data flow between components, and leveraging stores for centralized state management. By the end of this chapter, you’ll build a Counter App to practice Svelte’s reactive declarations and state management techniques.
@@ -239,6 +235,10 @@ In this workshop, you’ll create a Counter App using Svelte’s reactivity, sta
 - **Component State**: Svelte manages state with local variables, keeping UI elements responsive to changes.
 
 This chapter covered Svelte’s powerful reactivity and state management features, enabling you to build interactive components. Practicing these techniques will help you understand how to manage component-level and global state in Svelte applications.
+
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+</script>
 
 <ChapterNavigation 
     prevHref="/learn/svelte/ch1" 

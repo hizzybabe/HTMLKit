@@ -1,187 +1,286 @@
 ---
-title: Introduction to Svelte & Setup
+title: Advanced Concepts
 ---
 
-## Chapter 1: Introduction to Svelte & Setup
+## Chapter 5: Advanced Concepts
 
-In this chapter, you’ll learn about Svelte, a modern JavaScript framework for building user interfaces. Unlike other frameworks, Svelte shifts much of the work to compile time, resulting in faster, more efficient applications. This chapter covers what makes Svelte unique, how to set up your development environment, and how to create your first Svelte component.
+In this chapter, you’ll explore advanced Svelte features such as the Context API, special elements, actions, and custom stores. These tools allow for enhanced component communication, customization, and data management in larger applications. By the end of this chapter, you’ll apply these concepts by building a Data Dashboard to manage and display dynamic data.
 
-### **Chapter 1 Overview:**
-- Duration: Approximately 1-2 hours
-- Goal: Understand what Svelte is, how it differs from other frameworks, and how to set up a basic Svelte project.
+### **Chapter 5 Overview:**
+- Duration: Approximately 3 hours
+- Goal: Learn and apply advanced Svelte features for inter-component communication, custom functionality, and complex state management.
 
 ---
 
 ### **Theory**
 
-#### **1.1 What is Svelte?**
+#### **5.1 Context API**
 
-Svelte is a component-based JavaScript framework that focuses on simplicity, reactivity, and performance. Unlike frameworks like React or Vue, Svelte doesn’t use a virtual DOM. Instead, it compiles components into optimized JavaScript at build time, resulting in lean, highly performant code.
+The Context API in Svelte allows components to share data across the component tree without prop drilling. The API has two main functions:
 
-**Key Features of Svelte**:
-- **Compile-Time Optimizations**: Svelte shifts most work to compile time, resulting in minimal runtime overhead.
-- **Reactivity**: Built-in reactivity makes state management easy without complex setup.
-- **Simple Syntax**: Svelte’s syntax is straightforward, with less boilerplate code compared to other frameworks.
+- **`setContext`**: Sets a value in the component context, making it available to child components.
+- **`getContext`**: Retrieves a value from the context in child components.
 
----
-
-#### **1.2 Svelte vs Other Frameworks**
-
-Understanding how Svelte differs from other popular frameworks can help you choose the right tool for your project. Here’s a comparison:
-
-- **Virtual DOM**: Unlike React and Vue, Svelte doesn’t use a virtual DOM. Instead, it compiles components to minimal, efficient JavaScript, directly updating the DOM when needed.
-- **Component Structure**: Svelte’s components are self-contained files with HTML, CSS, and JavaScript, allowing for a natural separation of concerns.
-- **Performance**: Svelte apps tend to have smaller bundle sizes and faster loading times due to compile-time optimizations.
-- **Reactivity**: Svelte has built-in reactivity based on simple variable assignments, removing the need for complex state management libraries.
-
-#### **1.3 Setting Up Your Development Environment**
-
-To work with Svelte, you’ll need to set up your development environment. Follow these steps:
-
-1. **Install Node.js**:
-   - Download and install Node.js from [https://nodejs.org](https://nodejs.org).
-   - Verify the installation by running `node -v` and `npm -v` in your terminal.
-
-2. **Create a New Svelte Project**:
-   - Use the Svelte template to set up a new project:
-     ```bash
-     npx degit sveltejs/template hello-svelte
-     ```
-   - This creates a new folder named `hello-svelte` with the necessary project files.
-
-3. **Navigate to Your Project Directory**:
-   ```bash
-   cd hello-svelte
-   ```
-
-4. **Install Dependencies**:
-   - Run the following command to install project dependencies:
-     ```bash
-     npm install
-     ```
-
-5. **Start the Development Server**:
-   - Start the Svelte development server to view your project in the browser:
-     ```bash
-     npm run dev
-     ```
-   - Open `http://localhost:5000` in your browser to view the default Svelte project.
-
----
-
-#### **1.4 Understanding Svelte Files**
-
-A typical Svelte component file has three main sections: `<script>`, `<style>`, and HTML markup. Here’s a breakdown:
-
-- **`<script>`**: Contains JavaScript code to define variables, functions, and imports. Svelte automatically re-renders components when reactive variables change.
-- **`<style>`**: Contains CSS to style the component. Svelte’s styling is scoped by default, meaning styles in one component don’t affect others.
-- **HTML Markup**: Contains the component’s HTML structure, which Svelte compiles to optimized JavaScript.
-
-**Example of a Basic Svelte Component**:
+**Example**:
 ```svelte
+// Parent.svelte
 <script>
-    let name = "World";
+    import { setContext } from "svelte";
+    setContext("user", { name: "Alice", age: 30 });
 </script>
 
-<style>
-    h1 {
-        color: purple;
-    }
-</style>
+<Child />
 
-<h1>Hello, {name}!</h1>
+// Child.svelte
+<script>
+    import { getContext } from "svelte";
+    const user = getContext("user");
+</script>
+
+<p>User: {user.name}, Age: {user.age}</p>
 ```
 
-In this example:
-- **`name`** is a reactive variable that Svelte re-renders automatically when it changes.
-- **CSS** is scoped to this component, so it won’t affect other components with `h1` elements.
+This example shares a `user` object from the parent component to any descendant that calls `getContext("user")`.
 
 ---
 
-### **Practice Workshop: Hello Svelte!**
+#### **5.2 Special Elements**
 
-In this workshop, you’ll create a simple “Hello, Svelte!” component. This will introduce you to the structure of a Svelte component and help you verify that your setup is correct.
+Svelte includes a few special elements for conditionally including code or rendering raw HTML:
+
+- **`<svelte:component>`**: Dynamically renders a component based on a variable.
+- **`<svelte:window>`**: Listens to events on the `window` object (e.g., resizing).
+- **`<svelte:body>` and `<svelte:head>`**: Attach elements to the body or head of the document.
+
+**Example of `<svelte:component>`**:
+```svelte
+<script>
+    import ComponentA from './ComponentA.svelte';
+    import ComponentB from './ComponentB.svelte';
+
+    let currentComponent = ComponentA;
+</script>
+
+<svelte:component this={currentComponent} />
+<button on:click={() => currentComponent = currentComponent === ComponentA ? ComponentB : ComponentA}>
+    Toggle Component
+</button>
+```
+
+Here, `<svelte:component>` dynamically renders either `ComponentA` or `ComponentB` based on the value of `currentComponent`.
+
+---
+
+#### **5.3 Actions**
+
+Actions in Svelte are custom functions that can be applied to any HTML element to enhance its behavior. Actions can be used for things like tooltips, modals, or animations.
+
+**Basic Action Example**:
+```svelte
+<script>
+    function focusOnMount(node) {
+        node.focus();
+        return {
+            destroy() {
+                // Cleanup code if needed
+            }
+        };
+    }
+</script>
+
+<input use:focusOnMount />
+```
+
+In this example, `focusOnMount` is an action that focuses the input field when it’s mounted.
+
+---
+
+#### **5.4 Custom Stores**
+
+While Svelte provides `writable`, `readable`, and `derived` stores, you can create custom stores to encapsulate more complex logic. Custom stores allow you to define functions for updating and transforming data.
+
+**Example of a Custom Store**:
+```javascript
+// counterStore.js
+import { writable } from "svelte/store";
+
+function createCounter() {
+    const { subscribe, set, update } = writable(0);
+
+    return {
+        subscribe,
+        increment: () => update(n => n + 1),
+        decrement: () => update(n => n - 1),
+        reset: () => set(0)
+    };
+}
+
+export const counter = createCounter();
+```
+
+In a component, you can use this custom store as:
+```svelte
+<script>
+    import { counter } from './counterStore.js';
+</script>
+
+<button on:click={counter.increment}>Increment</button>
+<button on:click={counter.decrement}>Decrement</button>
+<button on:click={counter.reset}>Reset</button>
+<p>Counter: {$counter}</p>
+```
+
+This custom store includes `increment`, `decrement`, and `reset` functions that encapsulate the logic for managing the counter.
+
+---
+
+### **Practice Workshop: Data Dashboard**
+
+In this workshop, you’ll create a Data Dashboard that incorporates context sharing, special elements, custom actions, and custom stores. The dashboard will include dynamic components, responsive actions, and data stored in custom stores.
 
 #### **Workshop Tasks**
 
-1. **Navigate to Your Project Directory**:
-   - Open your `hello-svelte` project folder in a code editor.
+1. **Set Up Your Project**
+   - If you’re continuing from a previous project, use the same setup. Otherwise, create a new Svelte project.
+   - Create a new file named `DataDashboard.svelte` in the `src` folder.
 
-2. **Edit `App.svelte`**:
-   - In the `src` folder, open the `App.svelte` file. This is the main component in your project.
-   - Modify the content to display a custom greeting using a variable.
+2. **Creating the Custom Store for Dashboard Data**
+
+   **dataStore.js**:
+   ```javascript
+   import { writable } from "svelte/store";
+
+   function createDataStore() {
+       const data = writable([
+           { id: 1, label: "Revenue", value: 3000 },
+           { id: 2, label: "Expenses", value: 1500 },
+           { id: 3, label: "Profit", value: 1500 }
+       ]);
+
+       return {
+           subscribe: data.subscribe,
+           addData: (label, value) => data.update(items => [...items, { id: Date.now(), label, value }]),
+           resetData: () => data.set([])
+       };
+   }
+
+   export const dashboardData = createDataStore();
+   ```
+
+   **Explanation**:
+   - `dashboardData` is a custom store that manages a list of data points for the dashboard.
+   - The store includes `addData` and `resetData` functions to manipulate the data.
+
+3. **Setting Up Context in the DataDashboard Component**
+
+   **DataDashboard.svelte**:
+   ```svelte
+   <script>
+       import { setContext, getContext } from "svelte";
+       import { dashboardData } from './dataStore.js';
+
+       setContext("dashboardData", dashboardData);
+   </script>
+
+   <h1>Data Dashboard</h1>
+   <DataDisplay />
+   <DataControls />
+   ```
+
+   This component sets `dashboardData` in the context, making it accessible to child components.
+
+4. **Creating a Data Display Component**
+
+   **DataDisplay.svelte**:
+   ```svelte
+   <script>
+       import { getContext } from "svelte";
+       const dashboardData = getContext("dashboardData");
+   </script>
+
+   <ul>
+       {#each $dashboardData as { id, label, value }}
+           <li>{label}: ${value}</li>
+       {/each}
+   </ul>
+   ```
+
+   This component retrieves `dashboardData` from the context and displays each item in a list.
+
+5. **Creating Data Controls with Actions and Customization**
+
+   **DataControls.svelte**:
+   ```svelte
+   <script>
+       import { getContext } from "svelte";
+       const dashboardData = getContext("dashboardData");
+
+       let label = "";
+       let value = 0;
+
+       function handleAdd() {
+           if (label.trim() && value > 0) {
+               dashboardData.addData(label, value);
+               label = "";
+               value = 0;
+           }
+       }
+   </script>
+
+   <div>
+       <input type="text" bind:value={label} placeholder="Label" />
+       <input type="number" bind:value={value} placeholder="Value" />
+       <button on:click={handleAdd}>Add Data</button>
+       <button on:click={dashboardData.resetData}>Reset Data</button>
+   </div>
+   ```
+
+   **Explanation**:
+   - **Adding Data**: The `handleAdd` function adds a new data item to the store, accessed via the context.
+   - **Resetting Data**: The reset button clears all data using `resetData` from the custom store.
+
+6. **Integrating and Testing the Data Dashboard**
+
+   - In `App.svelte`, import `DataDashboard` and include it in the main layout.
 
    **App.svelte**:
    ```svelte
    <script>
-       let name = "Svelte Developer";
+       import DataDashboard from './DataDashboard.svelte';
    </script>
 
-   <style>
-       h1 {
-           color: teal;
-           font-family: Arial, sans-serif;
-       }
-   </style>
-
-   <h1>Hello, {name}!</h1>
+   <DataDashboard />
    ```
 
-3. **Running Your Svelte App**:
-   - Ensure the development server is running by entering `npm run dev` in your terminal.
-   - Open `http://localhost:5000` in your browser, and you should see “Hello, Svelte Developer!” displayed.
-
-4. **Experiment with Styling and Variables**:
-   - Try changing the `name` variable to see how Svelte updates the display.
-   - Modify the CSS styling to explore how Svelte applies scoped styles.
-
-5. **Adding an Input for Interaction**:
-   - Add an input element to make the greeting dynamic. Update the `name` variable whenever the user types in the input.
-
-   **Updated App.svelte**:
-   ```svelte
-   <script>
-       let name = "Svelte Developer";
-   </script>
-
-   <style>
-       h1 {
-           color: teal;
-           font-family: Arial, sans-serif;
-       }
-
-       input {
-           margin-top: 10px;
-           padding: 5px;
-       }
-   </style>
-
-   <h1>Hello, {name}!</h1>
-   <input type="text" bind:value={name} placeholder="Enter your name">
-   ```
-
-   **Explanation**:
-   - **`bind:value={name}`**: This creates a two-way binding between the input field and the `name` variable, automatically updating the `name` variable as the user types.
-
-6. **Testing the Interactive Component**:
-   - In your browser, try typing a new name in the input field, and observe how the greeting updates instantly.
+   - Start the development server with `npm run dev` and open `http://localhost:5000` in your browser.
+   - Test the app by adding and resetting data and ensuring the DataDisplay component updates dynamically.
 
 ---
 
 ### **Deliverables**
 
 1. **Svelte Project Folder**:
-   - Submit a zipped version of your `hello-svelte` project with the updated `App.svelte` component.
+   - Submit a zipped version of your Svelte project, including `DataDashboard.svelte`, `DataDisplay.svelte`, `DataControls.svelte`, and `dataStore.js`.
 
 2. **Screenshot**:
-   - Take a screenshot showing the running app with the interactive greeting feature.
+   - Capture a screenshot showing the Data Dashboard with a few data entries displayed.
 
 ---
 
 ### **Summary and Key Takeaways**
 
-- **Svelte Overview**: Svelte is a compile-time framework that generates highly efficient JavaScript, focusing on simplicity and reactivity.
-- **Setting Up**: Use `npx degit sveltejs/template` to quickly set up a Svelte project.
-- **Svelte Files**: Svelte components consist of `<script>`, `<style>`, and HTML sections, with scoped CSS and reactivity by default.
+- **Context API**: Shares data between parent and child components without prop drilling.
+- **Special Elements**: Elements like `<svelte:component>` and `<svelte:window>` provide unique functionality.
+- **Actions**: Custom functions applied to elements to add behaviors like focus, animations, or other effects.
+- **Custom Stores**: Enable complex data management with encapsulated functions for updating data.
 
-This chapter introduced you to the basics of Svelte and set up your first component. Practicing with Svelte’s syntax and reactivity will deepen your understanding as you work on more advanced features.
+This chapter introduced advanced Svelte concepts that enhance data handling, user interaction, and component communication. These techniques allow you to build more robust and feature-rich applications.
+
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+</script>
+
+<ChapterNavigation 
+    prevHref="/learn/svelte/ch4" 
+    nextHref="/learn/practice"
+  />

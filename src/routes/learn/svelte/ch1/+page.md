@@ -185,3 +185,8 @@ In this workshop, you’ll create a simple “Hello, Svelte!” component. This 
 - **Svelte Files**: Svelte components consist of `<script>`, `<style>`, and HTML sections, with scoped CSS and reactivity by default.
 
 This chapter introduced you to the basics of Svelte and set up your first component. Practicing with Svelte’s syntax and reactivity will deepen your understanding as you work on more advanced features.
+
+<ChapterNavigation 
+    prevHref="/learn/svelte" 
+    nextHref="/learn/svelte/ch2"
+  />

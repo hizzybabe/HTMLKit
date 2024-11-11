@@ -1,187 +1,243 @@
 ---
-title: Introduction to Svelte & Setup
+title: Components & Logic
 ---
 
-## Chapter 1: Introduction to Svelte & Setup
+## Chapter 3: Components & Logic
 
-In this chapter, you’ll learn about Svelte, a modern JavaScript framework for building user interfaces. Unlike other frameworks, Svelte shifts much of the work to compile time, resulting in faster, more efficient applications. This chapter covers what makes Svelte unique, how to set up your development environment, and how to create your first Svelte component.
+In this chapter, you’ll dive into Svelte’s component structure, learn to use logic blocks for conditional rendering and loops, handle user interactions with events, and explore lifecycle methods. These features allow you to create responsive, interactive components. By the end of the chapter, you’ll apply these concepts by building a Todo List app.
 
-### **Chapter 1 Overview:**
-- Duration: Approximately 1-2 hours
-- Goal: Understand what Svelte is, how it differs from other frameworks, and how to set up a basic Svelte project.
+### **Chapter 3 Overview:**
+- Duration: Approximately 3 hours
+- Goal: Learn to structure components, use logic blocks, handle events, and understand Svelte’s lifecycle methods.
 
 ---
 
 ### **Theory**
 
-#### **1.1 What is Svelte?**
+#### **3.1 Component Structure**
 
-Svelte is a component-based JavaScript framework that focuses on simplicity, reactivity, and performance. Unlike frameworks like React or Vue, Svelte doesn’t use a virtual DOM. Instead, it compiles components into optimized JavaScript at build time, resulting in lean, highly performant code.
+In Svelte, a component is a self-contained file that includes its JavaScript logic, HTML markup, and CSS styling. Components are organized with a `<script>` section for JavaScript, an HTML structure, and a `<style>` section for scoped CSS.
 
-**Key Features of Svelte**:
-- **Compile-Time Optimizations**: Svelte shifts most work to compile time, resulting in minimal runtime overhead.
-- **Reactivity**: Built-in reactivity makes state management easy without complex setup.
-- **Simple Syntax**: Svelte’s syntax is straightforward, with less boilerplate code compared to other frameworks.
-
----
-
-#### **1.2 Svelte vs Other Frameworks**
-
-Understanding how Svelte differs from other popular frameworks can help you choose the right tool for your project. Here’s a comparison:
-
-- **Virtual DOM**: Unlike React and Vue, Svelte doesn’t use a virtual DOM. Instead, it compiles components to minimal, efficient JavaScript, directly updating the DOM when needed.
-- **Component Structure**: Svelte’s components are self-contained files with HTML, CSS, and JavaScript, allowing for a natural separation of concerns.
-- **Performance**: Svelte apps tend to have smaller bundle sizes and faster loading times due to compile-time optimizations.
-- **Reactivity**: Svelte has built-in reactivity based on simple variable assignments, removing the need for complex state management libraries.
-
-#### **1.3 Setting Up Your Development Environment**
-
-To work with Svelte, you’ll need to set up your development environment. Follow these steps:
-
-1. **Install Node.js**:
-   - Download and install Node.js from [https://nodejs.org](https://nodejs.org).
-   - Verify the installation by running `node -v` and `npm -v` in your terminal.
-
-2. **Create a New Svelte Project**:
-   - Use the Svelte template to set up a new project:
-     ```bash
-     npx degit sveltejs/template hello-svelte
-     ```
-   - This creates a new folder named `hello-svelte` with the necessary project files.
-
-3. **Navigate to Your Project Directory**:
-   ```bash
-   cd hello-svelte
-   ```
-
-4. **Install Dependencies**:
-   - Run the following command to install project dependencies:
-     ```bash
-     npm install
-     ```
-
-5. **Start the Development Server**:
-   - Start the Svelte development server to view your project in the browser:
-     ```bash
-     npm run dev
-     ```
-   - Open `http://localhost:5000` in your browser to view the default Svelte project.
-
----
-
-#### **1.4 Understanding Svelte Files**
-
-A typical Svelte component file has three main sections: `<script>`, `<style>`, and HTML markup. Here’s a breakdown:
-
-- **`<script>`**: Contains JavaScript code to define variables, functions, and imports. Svelte automatically re-renders components when reactive variables change.
-- **`<style>`**: Contains CSS to style the component. Svelte’s styling is scoped by default, meaning styles in one component don’t affect others.
-- **HTML Markup**: Contains the component’s HTML structure, which Svelte compiles to optimized JavaScript.
-
-**Example of a Basic Svelte Component**:
+**Example of Component Structure**:
 ```svelte
 <script>
-    let name = "World";
+    let message = "Hello, Svelte!";
 </script>
 
 <style>
-    h1 {
-        color: purple;
+    p {
+        color: blue;
     }
 </style>
 
-<h1>Hello, {name}!</h1>
+<p>{message}</p>
 ```
-
-In this example:
-- **`name`** is a reactive variable that Svelte re-renders automatically when it changes.
-- **CSS** is scoped to this component, so it won’t affect other components with `h1` elements.
 
 ---
 
-### **Practice Workshop: Hello Svelte!**
+#### **3.2 Logic Blocks**
 
-In this workshop, you’ll create a simple “Hello, Svelte!” component. This will introduce you to the structure of a Svelte component and help you verify that your setup is correct.
+Svelte provides control flow blocks for conditional rendering and looping over data.
+
+- **`{#if ...}`**: Used for conditional rendering.
+- **`{#each ...}`**: Used to loop over arrays.
+- **`{:else}`**: Provides an alternative output when conditions are not met.
+
+**Example of Logic Blocks**:
+```svelte
+<script>
+    let showMessage = true;
+    let items = ["Apple", "Banana", "Cherry"];
+</script>
+
+{#if showMessage}
+    <p>Hello, this is a conditional message!</p>
+{:else}
+    <p>The message is hidden.</p>
+{/if}
+
+<ul>
+    {#each items as item}
+        <li>{item}</li>
+    {/each}
+</ul>
+```
+
+In this example:
+- The first `if` block displays a message based on the `showMessage` variable.
+- The `each` block loops through an array of items and displays each item in an unordered list.
+
+---
+
+#### **3.3 Event Handling**
+
+Svelte simplifies event handling with the `on:` directive, which listens for events like clicks, keypresses, and form submissions. You can define event handlers inline or reference external functions.
+
+**Example of Event Handling**:
+```svelte
+<script>
+    function handleClick() {
+        alert("Button clicked!");
+    }
+</script>
+
+<button on:click={handleClick}>Click Me</button>
+```
+
+You can also pass parameters to event handlers:
+```svelte
+<script>
+    function showAlert(message) {
+        alert(message);
+    }
+</script>
+
+<button on:click={() => showAlert("Hello, Svelte!")}>Alert</button>
+```
+
+---
+
+#### **3.4 Lifecycle Methods**
+
+Svelte provides lifecycle methods that allow you to run code at specific points in a component’s lifecycle:
+
+- **`onMount`**: Runs after the component is first rendered.
+- **`beforeUpdate`**: Runs before reactive updates.
+- **`afterUpdate`**: Runs after reactive updates.
+- **`onDestroy`**: Runs when a component is removed from the DOM.
+
+**Example of `onMount`**:
+```svelte
+<script>
+    import { onMount } from "svelte";
+
+    let data;
+
+    onMount(() => {
+        // Fetch data or run setup code
+        data = "Component mounted!";
+    });
+</script>
+
+<p>{data}</p>
+```
+
+---
+
+### **Practice Workshop: Todo List**
+
+In this workshop, you’ll create a Todo List app that allows users to add, mark as complete, and delete tasks. This project will help you apply component structure, logic blocks, event handling, and lifecycle methods.
 
 #### **Workshop Tasks**
 
-1. **Navigate to Your Project Directory**:
-   - Open your `hello-svelte` project folder in a code editor.
+1. **Set Up Your Project**
+   - If you’re continuing from a previous project, use the same setup. Otherwise, set up a new Svelte project.
+   - Create a new file named `TodoList.svelte` in the `src` folder for the main todo list component.
 
-2. **Edit `App.svelte`**:
-   - In the `src` folder, open the `App.svelte` file. This is the main component in your project.
-   - Modify the content to display a custom greeting using a variable.
+2. **Creating the Todo List Component**
+
+   **TodoList.svelte**:
+   ```svelte
+   <script>
+       import { onMount } from "svelte";
+
+       let newTask = "";
+       let todos = [];
+
+       function addTask() {
+           if (newTask.trim()) {
+               todos = [...todos, { text: newTask, completed: false }];
+               newTask = ""; // Clear the input field
+           }
+       }
+
+       function toggleTask(index) {
+           todos = todos.map((task, i) => i === index ? { ...task, completed: !task.completed } : task);
+       }
+
+       function deleteTask(index) {
+           todos = todos.filter((_, i) => i !== index);
+       }
+
+       // Sample onMount functionality (optional)
+       onMount(() => {
+           console.log("TodoList component mounted!");
+       });
+   </script>
+
+   <style>
+       .completed {
+           text-decoration: line-through;
+           color: gray;
+       }
+   </style>
+
+   <h2>Todo List</h2>
+   <input type="text" bind:value={newTask} placeholder="Enter a new task" />
+   <button on:click={addTask}>Add Task</button>
+
+   <ul>
+       {#each todos as { text, completed }, index}
+           <li class={completed ? "completed" : ""}>
+               <input type="checkbox" checked={completed} on:change={() => toggleTask(index)} />
+               {text}
+               <button on:click={() => deleteTask(index)}>Delete</button>
+           </li>
+       {/each}
+   </ul>
+   ```
+
+   **Explanation**:
+   - **Adding Tasks**: The `addTask` function adds a new task to the `todos` array if the input is not empty.
+   - **Marking Tasks as Complete**: The `toggleTask` function toggles the `completed` status of a task by modifying the `todos` array.
+   - **Deleting Tasks**: The `deleteTask` function removes a task from the `todos` array based on its index.
+   - **Logic Blocks**: The `each` block loops through `todos` and displays each task as a list item.
+   - **Styling**: The `.completed` class strikes through completed tasks.
+
+3. **Integrating the TodoList Component**
+
+   Open `App.svelte` and import the `TodoList` component to use it in the main app.
 
    **App.svelte**:
    ```svelte
    <script>
-       let name = "Svelte Developer";
+       import TodoList from './TodoList.svelte';
    </script>
 
-   <style>
-       h1 {
-           color: teal;
-           font-family: Arial, sans-serif;
-       }
-   </style>
-
-   <h1>Hello, {name}!</h1>
+   <h1>Svelte Todo List App</h1>
+   <TodoList />
    ```
 
-3. **Running Your Svelte App**:
-   - Ensure the development server is running by entering `npm run dev` in your terminal.
-   - Open `http://localhost:5000` in your browser, and you should see “Hello, Svelte Developer!” displayed.
-
-4. **Experiment with Styling and Variables**:
-   - Try changing the `name` variable to see how Svelte updates the display.
-   - Modify the CSS styling to explore how Svelte applies scoped styles.
-
-5. **Adding an Input for Interaction**:
-   - Add an input element to make the greeting dynamic. Update the `name` variable whenever the user types in the input.
-
-   **Updated App.svelte**:
-   ```svelte
-   <script>
-       let name = "Svelte Developer";
-   </script>
-
-   <style>
-       h1 {
-           color: teal;
-           font-family: Arial, sans-serif;
-       }
-
-       input {
-           margin-top: 10px;
-           padding: 5px;
-       }
-   </style>
-
-   <h1>Hello, {name}!</h1>
-   <input type="text" bind:value={name} placeholder="Enter your name">
-   ```
-
-   **Explanation**:
-   - **`bind:value={name}`**: This creates a two-way binding between the input field and the `name` variable, automatically updating the `name` variable as the user types.
-
-6. **Testing the Interactive Component**:
-   - In your browser, try typing a new name in the input field, and observe how the greeting updates instantly.
+4. **Testing the Todo List App**
+   - Start the development server (`npm run dev`) and open `http://localhost:5000` in your browser.
+   - Test the app by adding tasks, marking them as complete, and deleting them. Ensure that each function works as expected.
 
 ---
 
 ### **Deliverables**
 
 1. **Svelte Project Folder**:
-   - Submit a zipped version of your `hello-svelte` project with the updated `App.svelte` component.
+   - Submit a zipped version of your Svelte project, including `TodoList.svelte` and `App.svelte`.
 
 2. **Screenshot**:
-   - Take a screenshot showing the running app with the interactive greeting feature.
+   - Take a screenshot showing the Todo List App with some tasks, both completed and uncompleted, and buttons for interaction.
 
 ---
 
 ### **Summary and Key Takeaways**
 
-- **Svelte Overview**: Svelte is a compile-time framework that generates highly efficient JavaScript, focusing on simplicity and reactivity.
-- **Setting Up**: Use `npx degit sveltejs/template` to quickly set up a Svelte project.
-- **Svelte Files**: Svelte components consist of `<script>`, `<style>`, and HTML sections, with scoped CSS and reactivity by default.
+- **Component Structure**: Svelte’s components allow you to combine HTML, CSS, and JavaScript in a single file.
+- **Logic Blocks**: Use `if` and `each` blocks to conditionally render content and loop through data.
+- **Event Handling**: Attach event listeners with `on:` and create responsive, interactive components.
+- **Lifecycle Methods**: Use lifecycle methods like `onMount` for tasks that need to run at specific points in the component lifecycle.
 
-This chapter introduced you to the basics of Svelte and set up your first component. Practicing with Svelte’s syntax and reactivity will deepen your understanding as you work on more advanced features.
+This chapter covered the fundamental building blocks of interactive applications in Svelte. By completing the Todo List app, you’ve practiced using Svelte’s component structure, events, logic blocks, and lifecycle methods. These skills form a strong foundation for building more advanced applications.
+
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+</script>
+
+<ChapterNavigation 
+    prevHref="/learn/svelte/ch2" 
+    nextHref="/learn/svelte/ch4"
+  />
