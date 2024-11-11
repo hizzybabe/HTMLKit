@@ -211,10 +211,10 @@ task.done = true;</code></pre>
 
   <pre><code>
     // Object destructuring
-const { title, dueDate } = task;
+const &#123; title, dueDate &#125; = task;
 
 // Spread operator with objects
-let taskCopy = { ...task };
+let taskCopy = &#123; ...task &#125;;
 
 // Object methods
 console.log(Object.keys(task));     // Get all keys
