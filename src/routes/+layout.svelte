@@ -11,14 +11,12 @@
     event.preventDefault();
     event.stopPropagation();
     
-    if (window.innerWidth <= 768) {
-      if (activeDropdowns.has(index)) {
-        activeDropdowns.delete(index);
-      } else {
-        activeDropdowns.add(index);
-      }
-      activeDropdowns = activeDropdowns;
+    if (activeDropdowns.has(index)) {
+      activeDropdowns.delete(index);
+    } else {
+      activeDropdowns.add(index);
     }
+    activeDropdowns = activeDropdowns;
   };
 </script>
 
@@ -263,5 +261,36 @@
     gap: 2.5rem;
     flex: 1;
     justify-content: space-evenly;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide by default on mobile */
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+      z-index: 99;
+    }
+
+    /* Only show when mobile-active class is present */
+    .nav-links.mobile-active {
+      display: flex;
+    }
+
+    /* Override hover behavior for dropdowns on mobile */
+    .dropdown:hover .dropdown-content {
+      display: none;
+    }
+
+    /* Show dropdown content when active class is present */
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
   }
 </style>
