@@ -61,35 +61,35 @@ tasks.forEach(task => console.log(task));</code></pre>
 <h4>Additional array methods</h4>
 
   <pre><code>// Creating arrays
-    let colors = ["red", "green", "blue"]&semi;
-    let numbers = [1, 2, 3, 4, 5]&semi;
-    let mixed = [1, "hello", true, 3.14]&semi; // Arrays can store different types
+    let colors = ["red", "green", "blue"];
+    let numbers = [1, 2, 3, 4, 5];
+    let mixed = [1, "hello", true, 3.14]; // Arrays can store different types
     
     // Accessing elements
-    console.log(colors[0])&semi;  // Output: "red"
-    console.log(colors[1])&semi;  // Output: "green"
-    console.log(colors.length)&semi;  // Output: 3
+    console.log(colors[0]);  // Output: "red"
+    console.log(colors[1]);  // Output: "green"
+    console.log(colors.length);  // Output: 3
     
     // Common Array Methods
-    let tasks = ["Do laundry", "Write code"]&semi;
+    let tasks = ["Do laundry", "Write code"];
     
     // Adding elements
-    tasks.push("Read a book")&semi;     // Adds to end
-    tasks.unshift("Exercise")&semi;     // Adds to beginning
+    tasks.push("Read a book");     // Adds to end
+    tasks.unshift("Exercise");     // Adds to beginning
     
     // Removing elements
-    tasks.pop()&semi;                   // Removes from end
-    tasks.shift()&semi;                // Removes from beginning
-    tasks.splice(1, 1)&semi;           // Removes 1 item starting at index 1
+    tasks.pop();                   // Removes from end
+    tasks.shift();                 // Removes from beginning
+    tasks.splice(1, 1);           // Removes 1 item starting at index 1
     
     // Iterating through arrays
-    tasks.forEach(task => console.log(task))&semi;  // Prints each task
+    tasks.forEach(task => console.log(task));  // Prints each task
     
     // Other useful array methods
-    let numbers = [1, 2, 3, 4, 5]&semi;
-    let doubled = numbers.map(num => num * 2)&semi;    // Creates new array [2, 4, 6, 8, 10]&semi;
-    let evenNumbers = numbers.filter(num => num % 2 === 0)&semi;  // Creates new array [2, 4]&semi;
-    let sum = numbers.reduce((acc, curr) => acc + curr, 0)&semi; // Sums all numbers</code></pre>
+    let numbers = [1, 2, 3, 4, 5];
+    let doubled = numbers.map(num => num * 2);    // Creates new array [2, 4, 6, 8, 10]
+    let evenNumbers = numbers.filter(num => num % 2 === 0);  // Creates new array [2, 4]
+    let sum = numbers.reduce((acc, curr) => acc + curr, 0); // Sums all numbers</code></pre>
 
   <h4>Practical Array Examples</h4>
 
@@ -98,11 +98,11 @@ tasks.forEach(task => console.log(task));</code></pre>
 let cart = [];
 
 function addItem(item) {
-    cart.push(item);
+    cart.push(item)&semi;
 }
 
 function removeItem(index) {
-    cart.splice(index, 1);
+    cart.splice(index, 1)&semi;
 }
 
 addItem({ name: "T-shirt", price: 15.99 });
