@@ -1,187 +1,242 @@
 ---
-title: Introduction to Svelte & Setup
+title: Reactivity & State Management
 ---
 
-## Chapter 1: Introduction to Svelte & Setup
+## Chapter 2: Reactivity & State Management
 
-In this chapter, you’ll learn about Svelte, a modern JavaScript framework for building user interfaces. Unlike other frameworks, Svelte shifts much of the work to compile time, resulting in faster, more efficient applications. This chapter covers what makes Svelte unique, how to set up your development environment, and how to create your first Svelte component.
+In this chapter, you’ll explore Svelte’s reactivity model, which allows you to automatically update the UI when variables change. You’ll also learn about managing component state, using props for data flow between components, and leveraging stores for centralized state management. By the end of this chapter, you’ll build a Counter App to practice Svelte’s reactive declarations and state management techniques.
 
-### **Chapter 1 Overview:**
-- Duration: Approximately 1-2 hours
-- Goal: Understand what Svelte is, how it differs from other frameworks, and how to set up a basic Svelte project.
+### **Chapter 2 Overview:**
+- Duration: Approximately 2-3 hours
+- Goal: Understand and apply Svelte’s reactivity model, component state, props, and stores to create dynamic and interactive applications.
 
 ---
 
 ### **Theory**
 
-#### **1.1 What is Svelte?**
+#### **2.1 Reactive Declarations**
 
-Svelte is a component-based JavaScript framework that focuses on simplicity, reactivity, and performance. Unlike frameworks like React or Vue, Svelte doesn’t use a virtual DOM. Instead, it compiles components into optimized JavaScript at build time, resulting in lean, highly performant code.
+In Svelte, reactivity is automatic. Variables are reactive by default, meaning that changes to a variable automatically trigger re-renders of any parts of the UI that depend on that variable.
 
-**Key Features of Svelte**:
-- **Compile-Time Optimizations**: Svelte shifts most work to compile time, resulting in minimal runtime overhead.
-- **Reactivity**: Built-in reactivity makes state management easy without complex setup.
-- **Simple Syntax**: Svelte’s syntax is straightforward, with less boilerplate code compared to other frameworks.
+**Reactive Declarations with `$:`**:
+- You can use `$:` to create reactive statements, which automatically re-run whenever any referenced variables change.
 
----
-
-#### **1.2 Svelte vs Other Frameworks**
-
-Understanding how Svelte differs from other popular frameworks can help you choose the right tool for your project. Here’s a comparison:
-
-- **Virtual DOM**: Unlike React and Vue, Svelte doesn’t use a virtual DOM. Instead, it compiles components to minimal, efficient JavaScript, directly updating the DOM when needed.
-- **Component Structure**: Svelte’s components are self-contained files with HTML, CSS, and JavaScript, allowing for a natural separation of concerns.
-- **Performance**: Svelte apps tend to have smaller bundle sizes and faster loading times due to compile-time optimizations.
-- **Reactivity**: Svelte has built-in reactivity based on simple variable assignments, removing the need for complex state management libraries.
-
-#### **1.3 Setting Up Your Development Environment**
-
-To work with Svelte, you’ll need to set up your development environment. Follow these steps:
-
-1. **Install Node.js**:
-   - Download and install Node.js from [https://nodejs.org](https://nodejs.org).
-   - Verify the installation by running `node -v` and `npm -v` in your terminal.
-
-2. **Create a New Svelte Project**:
-   - Use the Svelte template to set up a new project:
-     ```bash
-     npx degit sveltejs/template hello-svelte
-     ```
-   - This creates a new folder named `hello-svelte` with the necessary project files.
-
-3. **Navigate to Your Project Directory**:
-   ```bash
-   cd hello-svelte
-   ```
-
-4. **Install Dependencies**:
-   - Run the following command to install project dependencies:
-     ```bash
-     npm install
-     ```
-
-5. **Start the Development Server**:
-   - Start the Svelte development server to view your project in the browser:
-     ```bash
-     npm run dev
-     ```
-   - Open `http://localhost:5000` in your browser to view the default Svelte project.
-
----
-
-#### **1.4 Understanding Svelte Files**
-
-A typical Svelte component file has three main sections: `<script>`, `<style>`, and HTML markup. Here’s a breakdown:
-
-- **`<script>`**: Contains JavaScript code to define variables, functions, and imports. Svelte automatically re-renders components when reactive variables change.
-- **`<style>`**: Contains CSS to style the component. Svelte’s styling is scoped by default, meaning styles in one component don’t affect others.
-- **HTML Markup**: Contains the component’s HTML structure, which Svelte compiles to optimized JavaScript.
-
-**Example of a Basic Svelte Component**:
+**Example**:
 ```svelte
 <script>
-    let name = "World";
+    let count = 0;
+    
+    $: double = count * 2; // This will update whenever 'count' changes
 </script>
 
-<style>
-    h1 {
-        color: purple;
-    }
-</style>
-
-<h1>Hello, {name}!</h1>
+<p>Count: {count}</p>
+<p>Double: {double}</p>
+<button on:click={() => count++}>Increment</button>
 ```
 
-In this example:
-- **`name`** is a reactive variable that Svelte re-renders automatically when it changes.
-- **CSS** is scoped to this component, so it won’t affect other components with `h1` elements.
+In this example, `double` is a reactive declaration that recalculates whenever `count` changes.
 
 ---
 
-### **Practice Workshop: Hello Svelte!**
+#### **2.2 Stores**
 
-In this workshop, you’ll create a simple “Hello, Svelte!” component. This will introduce you to the structure of a Svelte component and help you verify that your setup is correct.
+Stores in Svelte provide a way to manage state outside of components, making it easier to share data between components. Svelte provides three main types of stores:
+
+- **Writable Store**: Allows both reading and updating of a value.
+- **Readable Store**: Allows reading of a value without direct updates.
+- **Derived Store**: Computes a value based on other stores.
+
+To create a writable store:
+1. Import `writable` from `svelte/store`.
+2. Initialize the store with an initial value.
+3. Subscribe to the store or bind its value to elements in your components.
+
+**Example**:
+```javascript
+// store.js
+import { writable } from 'svelte/store';
+
+export const count = writable(0);
+```
+
+In a Svelte component, you can subscribe to the store:
+```svelte
+<script>
+    import { count } from './store.js';
+</script>
+
+<button on:click={() => count.update(n => n + 1)}>Increment</button>
+<p>Count: {$count}</p>
+```
+
+Using `$count` automatically subscribes to the store and re-renders the component whenever `count` changes.
+
+---
+
+#### **2.3 Props**
+
+Props allow you to pass data from a parent component to a child component, making it easier to share data between components. In Svelte, props are defined by declaring variables with the `export` keyword in the child component.
+
+**Example**:
+1. **Child Component (Counter.svelte)**:
+   ```svelte
+   <script>
+       export let initialCount = 0;
+       let count = initialCount;
+   </script>
+
+   <button on:click={() => count++}>Count: {count}</button>
+   ```
+
+2. **Parent Component (App.svelte)**:
+   ```svelte
+   <script>
+       import Counter from './Counter.svelte';
+   </script>
+
+   <Counter initialCount={10} />
+   ```
+
+The `initialCount` prop allows the parent component to pass an initial value to the child component.
+
+---
+
+#### **2.4 Component State**
+
+Component state in Svelte is managed using local variables. Since variables in Svelte are reactive by default, updating the state variable will automatically update the UI.
+
+For example:
+```svelte
+<script>
+    let name = "Svelte";
+</script>
+
+<p>Hello, {name}!</p>
+<input type="text" bind:value={name}>
+```
+
+In this example, `name` is a state variable bound to the input field, so any changes to the input are automatically reflected in the UI.
+
+---
+
+### **Practice Workshop: Counter App**
+
+In this workshop, you’ll create a Counter App using Svelte’s reactivity, state management, and props. The app will have three main features:
+- A counter that can be incremented and decremented.
+- A reset button to reset the counter.
+- The ability to set an initial count value from a parent component.
 
 #### **Workshop Tasks**
 
-1. **Navigate to Your Project Directory**:
-   - Open your `hello-svelte` project folder in a code editor.
+1. **Set Up Your Project**
+   - If you’re continuing from the previous chapter, you can use the same project.
+   - Create a new file named `Counter.svelte` in the `src` folder for the counter component.
 
-2. **Edit `App.svelte`**:
-   - In the `src` folder, open the `App.svelte` file. This is the main component in your project.
-   - Modify the content to display a custom greeting using a variable.
+2. **Creating the Counter Component**
+
+   **Counter.svelte**:
+   ```svelte
+   <script>
+       export let initialCount = 0;
+       let count = initialCount;
+
+       function increment() {
+           count++;
+       }
+
+       function decrement() {
+           count--;
+       }
+
+       function reset() {
+           count = initialCount;
+       }
+   </script>
+
+   <style>
+       button {
+           margin: 5px;
+           padding: 5px 10px;
+       }
+   </style>
+
+   <h2>Counter: {count}</h2>
+   <button on:click={increment}>Increment</button>
+   <button on:click={decrement}>Decrement</button>
+   <button on:click={reset}>Reset</button>
+   ```
+
+   **Explanation**:
+   - **Props**: `initialCount` is defined as a prop with the `export` keyword, allowing the parent component to set the starting value.
+   - **Functions**: The `increment`, `decrement`, and `reset` functions manage the counter’s state and are called when buttons are clicked.
+
+3. **Integrating the Counter Component**
+
+   Open `App.svelte` and import the `Counter` component to use it in the main app.
 
    **App.svelte**:
    ```svelte
    <script>
-       let name = "Svelte Developer";
+       import Counter from './Counter.svelte';
    </script>
 
-   <style>
-       h1 {
-           color: teal;
-           font-family: Arial, sans-serif;
-       }
-   </style>
-
-   <h1>Hello, {name}!</h1>
-   ```
-
-3. **Running Your Svelte App**:
-   - Ensure the development server is running by entering `npm run dev` in your terminal.
-   - Open `http://localhost:5000` in your browser, and you should see “Hello, Svelte Developer!” displayed.
-
-4. **Experiment with Styling and Variables**:
-   - Try changing the `name` variable to see how Svelte updates the display.
-   - Modify the CSS styling to explore how Svelte applies scoped styles.
-
-5. **Adding an Input for Interaction**:
-   - Add an input element to make the greeting dynamic. Update the `name` variable whenever the user types in the input.
-
-   **Updated App.svelte**:
-   ```svelte
-   <script>
-       let name = "Svelte Developer";
-   </script>
-
-   <style>
-       h1 {
-           color: teal;
-           font-family: Arial, sans-serif;
-       }
-
-       input {
-           margin-top: 10px;
-           padding: 5px;
-       }
-   </style>
-
-   <h1>Hello, {name}!</h1>
-   <input type="text" bind:value={name} placeholder="Enter your name">
+   <h1>Svelte Counter App</h1>
+   <Counter initialCount={10} />
    ```
 
    **Explanation**:
-   - **`bind:value={name}`**: This creates a two-way binding between the input field and the `name` variable, automatically updating the `name` variable as the user types.
+   - **Prop Passing**: The `initialCount` prop is set to `10`, so the counter starts at this value. You can change it to test different starting points.
 
-6. **Testing the Interactive Component**:
-   - In your browser, try typing a new name in the input field, and observe how the greeting updates instantly.
+4. **Adding a Store for Global State (Optional)**
+
+   Create a store to manage a global count value. This is optional but demonstrates how to use a store for shared state.
+
+   **store.js**:
+   ```javascript
+   import { writable } from 'svelte/store';
+
+   export const globalCount = writable(0);
+   ```
+
+   **Using the Store in Counter.svelte**:
+   ```svelte
+   <script>
+       import { globalCount } from './store.js';
+   </script>
+
+   <button on:click={() => globalCount.update(n => n + 1)}>Global Increment</button>
+   <p>Global Count: {$globalCount}</p>
+   ```
+
+   This optional section adds a global counter that multiple components could access and modify, demonstrating how stores can help manage shared state.
+
+5. **Running Your App**
+   - Make sure your development server is running (`npm run dev`).
+   - Open `http://localhost:5000` to see the Counter App in action.
+   - Test each button and observe how the count updates.
 
 ---
 
 ### **Deliverables**
 
 1. **Svelte Project Folder**:
-   - Submit a zipped version of your `hello-svelte` project with the updated `App.svelte` component.
+   - Submit a zipped version of your Svelte project, including `Counter.svelte` and `App.svelte`.
 
 2. **Screenshot**:
-   - Take a screenshot showing the running app with the interactive greeting feature.
+   - Take a screenshot showing the Counter App with different button states (e.g., after incrementing and resetting).
 
 ---
 
 ### **Summary and Key Takeaways**
 
-- **Svelte Overview**: Svelte is a compile-time framework that generates highly efficient JavaScript, focusing on simplicity and reactivity.
-- **Setting Up**: Use `npx degit sveltejs/template` to quickly set up a Svelte project.
-- **Svelte Files**: Svelte components consist of `<script>`, `<style>`, and HTML sections, with scoped CSS and reactivity by default.
+- **Reactivity in Svelte**: Reactive declarations with `$:` allow automatic updates when variables change.
+- **Stores**: Svelte’s stores provide an efficient way to manage shared state across components.
+- **Props**: Props pass data from parent to child components, promoting reusability.
+- **Component State**: Svelte manages state with local variables, keeping UI elements responsive to changes.
 
-This chapter introduced you to the basics of Svelte and set up your first component. Practicing with Svelte’s syntax and reactivity will deepen your understanding as you work on more advanced features.
+This chapter covered Svelte’s powerful reactivity and state management features, enabling you to build interactive components. Practicing these techniques will help you understand how to manage component-level and global state in Svelte applications.
+
+<ChapterNavigation 
+    prevHref="/learn/svelte/ch1" 
+    nextHref="/learn/svelte/ch3"
+  />
