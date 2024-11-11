@@ -1,10 +1,10 @@
-<script>
-  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
-</script>
-
 ---
 title: Reactivity & State Management
 ---
+
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+</script>
 
 ## Chapter 2: Reactivity & State Management
 
