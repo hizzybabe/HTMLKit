@@ -76,7 +76,7 @@
     <h2>Before You Begin</h2>
     <p>To get the most out of this course, please ensure you have:</p>
     <ul>
-      <li>Basic understanding of <a href="/html"></a>HTML</a>, <a href="/css">CSS</a>, and <a href="/javascript">JavaScript</a></li>
+      <li>Basic understanding of <a href="/html">HTML</a>, <a href="/css">CSS</a>, and <a href="/javascript">JavaScript</a></li>
     </ul>
   </div>
 
