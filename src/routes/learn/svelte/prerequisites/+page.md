@@ -141,5 +141,5 @@ This guide should get your Svelte app up and running on GitHub Pages, ready to s
 
 <ChapterNavigation 
     prevHref="/learn/svelte" 
-    nextHref="/learn/svelte/ch2"
+    nextHref="/learn/svelte/ch1"
   />
