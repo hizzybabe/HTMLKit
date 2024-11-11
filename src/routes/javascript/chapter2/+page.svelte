@@ -112,7 +112,8 @@ switch (grade) &#123;
       </ul>
       <p>Output would be:</p>
       <div>
-      <pre><code>Count: 0
+      <pre><code>
+        Count: 0
         Count: 1
         Count: 2
         Count: 3
