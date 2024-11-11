@@ -23,6 +23,7 @@
       <li>SvelteKit</li>
       <li>Bootstrap</li>
       <li>Tailwind CSS</li>
+      <li>GitHub</li>
     </ul>
   </section>
 </div>
