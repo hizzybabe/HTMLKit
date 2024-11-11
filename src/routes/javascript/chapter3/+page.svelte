@@ -98,11 +98,11 @@ tasks.forEach(task => console.log(task));</code></pre>
 let cart = [];
 
 function addItem(item) {
-    cart.push(item)&semi;
+    cart.push(item)&#59;
 }
 
 function removeItem(index) {
-    cart.splice(index, 1)&semi;
+    cart.splice(index, 1)&#59;
 }
 
 addItem({ name: "T-shirt", price: 15.99 });
