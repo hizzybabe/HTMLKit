@@ -58,7 +58,7 @@
 <section class="features">
 
   <div class="feature">
-    <h2>Course <a href="/coursestatus">Statuses</a></h2>
+    <h2>⌛ Course <a href="/coursestatus">Statuses</a></h2>
     <p>Check out the status of each upcoming course</p>
   </div>
 <div class="feature">
