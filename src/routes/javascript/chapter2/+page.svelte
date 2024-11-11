@@ -102,6 +102,23 @@ switch (grade) &#123;
 &#125;</code></pre>
     </div>
 
+    <h4>for Loop example explanation</h4>
+    <p>Think of this like a countdown (or count-up) with a clear plan:</p>
+      <ul>
+      <li>It starts at 0 (<code>let i = 0</code>)</li>
+      <li>Continues as long as i is less than 5 (<code>i &lt; 5</code>)</li>
+      <li>Adds 1 each time (<code>i++</code>)</li>
+      <li>Each time through the loop, it prints "Count: " followed by the number</li>
+      </ul>
+      <p>Output would be:</p>
+      <div>
+      <pre><code>Count: 0
+        Count: 1
+        Count: 2
+        Count: 3
+        Count: 4</code></pre>
+    </div>
+
     <h4>while Loop</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>let count = 0;
