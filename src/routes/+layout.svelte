@@ -323,5 +323,9 @@
       display: block !important;
     }
   }
+
+  .mobile-menu-btn {
+    display: none; /* Hidden by default for large screens */
+  }
 </style>
 
