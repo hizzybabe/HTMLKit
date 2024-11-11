@@ -20,7 +20,7 @@
     <p>A modern, lean Javascript framework</p>
   </div>
   <div class="feature">
-    <h2>🌟 Learn Astro</h2>
+    <h2>🌟 Learn <a href="/learn/astro">Astro</a></h2>
     <p>Static-site generator with support for many frontend frameworks</p>
   </div>
 <div class="feature">
