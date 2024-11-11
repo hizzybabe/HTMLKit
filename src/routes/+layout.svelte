@@ -170,63 +170,65 @@
       display: block;
     }
 
+    nav {
+      padding: 1rem;
+      justify-content: space-between;
+    }
+
     .mobile-menu-btn {
       display: block;
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
+      position: relative;
       z-index: 100;
+      background: none;
+      border: none;
+      padding: 0.5rem;
     }
 
     .nav-links {
       display: none;
-      position: fixed;
-      top: 0;
+      position: absolute;
+      top: 60px;
       left: 0;
       right: 0;
-      bottom: 0;
       background: linear-gradient(45deg, var(--primary), var(--secondary));
       flex-direction: column;
-      padding: 5rem 2rem 2rem;
-      gap: 1.5rem;
+      padding: 1rem;
+      gap: 1rem;
       z-index: 99;
-      overflow-y: auto;
     }
 
     .nav-links.active {
       display: flex;
-      align-items: flex-start;
     }
 
     .nav-links a {
-      font-size: 1.1rem;
-      padding: 0.5rem 0;
+      padding: 0.5rem;
       width: 100%;
+      text-align: left;
     }
 
     .dropdown {
       width: 100%;
     }
 
-    .dropdown > a {
-      display: block;
-      width: 100%;
-      padding: 0.5rem 0;
-    }
-
     .dropdown-content {
       position: static;
       width: 100%;
       box-shadow: none;
-      margin: 0.5rem 0;
-      padding-left: 1rem;
+      margin-top: 0.5rem;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 4px;
     }
 
     .dropdown-content a {
       padding: 0.8rem 1rem;
-      font-size: 1rem;
+    }
+
+    .nav-links {
+      position: absolute;
+      height: auto;
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
     }
   }
 
