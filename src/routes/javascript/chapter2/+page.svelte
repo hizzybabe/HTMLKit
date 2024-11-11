@@ -133,7 +133,13 @@ while (count &lt; 5) &#123;
   </div>
 
   <h4>while Loop example explanation</h4>
-  <p>This is similar but written differently. Think of it like saying "keep doing this while something is true": Starts with count at 0 (let count = 0) Keeps going as long as count is less than 5 (count &lt; 5) Each time through, it prints the count and adds 1 (count++) The output would be exactly the same:</p>
+  <p>This is similar but written differently. Think of it like saying "keep doing this while something is true":</p >
+    <ul>
+      <li>Starts with count at 0 (let count = 0)</li>
+      <li>Keeps going as long as count is less than 5 (count &lt; 5)</li>
+      <li>Each time through, it prints the count and adds 1 (count++)</li>
+    </ul>
+    <p>The output would be exactly the same:</p>
       <pre><code>
         Count: 0
         Count: 1
