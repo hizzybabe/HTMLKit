@@ -77,6 +77,9 @@
     <p>To get the most out of this course, please ensure you have:</p>
     <ul>
       <li>Basic understanding of HTML, CSS, and JavaScript</li>
+    </ul>
+  </div>
+
   <div class="chapters">
     {#each chapters as chapter}
       <div class="chapter-card">
