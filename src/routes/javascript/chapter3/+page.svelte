@@ -97,17 +97,16 @@ tasks.forEach(task => console.log(task));</code></pre>
     // Shopping cart example
 let cart = [];
 
-function addItem(item) {
-    cart.push(item)&semi;
-}
+function addItem(item) &#123;
+    cart.push(item)&#59;
+&#125;
 
-function removeItem(index) {
-    cart.splice(index, 1)&semi;
-}
+function removeItem(index) &#123;
+    cart.splice(index, 1)&#59;
+&#125;
 
-addItem({ name: "T-shirt", price: 15.99 })&semi;
-addItem({ name: "Jeans", price: 39.99 })&semi;
-</code></pre>
+addItem(&#123; name: "T-shirt", price: 15.99 &#125;)&#59;
+addItem(&#123; name: "Jeans", price: 39.99 &#125;)&#59;</code></pre>
 
   <h3>3.2 Working with Objects</h3>
   <p>Objects store data as key-value pairs, allowing you to organize related data under a single entity.</p>
