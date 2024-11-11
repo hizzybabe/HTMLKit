@@ -1,6 +1,16 @@
 <script>
   const chapters = [
     {
+      title: "Prerequisites",
+      topics: [
+        "Setting Up Development Environment",
+        "Deploying to Vercel",
+        "Deploying to Netlify",
+        "Basic HTML/CSS/JavaScript Knowledge"
+      ],
+      path: "/learn/svelte/prerequisites"
+    },
+    {
       title: "Chapter 1: Introduction to Astro & Setup",
       topics: [
         "What is Astro?",
