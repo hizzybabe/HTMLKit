@@ -195,12 +195,12 @@ task.done = true;</code></pre>
         
         toggleComplete() &#123;
             this.completed = !this.completed;
-        },
+        &#125;,
         
-        isOverdue() {
-            return new Date(this.dueDate) < new Date();
-        }
-    };
+        isOverdue() &#123;
+            return new Date(this.dueDate) &lt; new Date();
+        &#125;
+    &#125;;
     
     // Using the task object
     task.toggleComplete();  // Marks task as complete
