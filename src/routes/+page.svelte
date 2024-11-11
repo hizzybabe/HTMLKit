@@ -70,10 +70,6 @@
     <p>coming soon⌛</p>
   </div>
   <div class="feature">
-    <h2>Learn <a href="#">MDSVEX</a></h2>
-    <p>coming soon⌛</p>
-  </div>
-  <div class="feature">
     <h2>Learn <a href="#">SvelteKit</a></h2>
     <p>coming soon⌛</p>
   </div>
