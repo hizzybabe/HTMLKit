@@ -24,7 +24,7 @@
   <a href="/">Home</a>
   
   <div class="mobile-menu-btn" on:click={toggleMenu}>
-    <span class="hamburger"></span>
+    <span class="hamburger" class:open={isMenuOpen}></span>
   </div>
 
   <div class="nav-links" class:mobile-active={isMenuOpen}>
@@ -229,7 +229,7 @@
   }
 
   .hamburger {
-    display: none;
+    display: block;
     width: 24px;
     height: 2px;
     background: white;
@@ -290,7 +290,38 @@
 
     /* Show dropdown content when active class is present */
     .dropdown.active .dropdown-content {
-      display: block;
+      display: block !important;
+    }
+  }
+
+  /* Add hamburger animation states */
+  .hamburger.open {
+    background: transparent;
+  }
+
+  .hamburger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .hamburger.open::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+
+  /* Update media queries to handle medium screens */
+  @media (max-width: 768px) {
+    // ... existing mobile styles ...
+
+    /* Remove this override to fix medium screen dropdowns */
+    .dropdown:hover .dropdown-content {
+      display: none;
+    }
+
+    /* Show dropdown content when active class is present */
+    .dropdown.active .dropdown-content {
+      display: block !important;
     }
   }
 </style>
+
