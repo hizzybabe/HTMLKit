@@ -8,7 +8,8 @@
   };
   
   const toggleDropdown = (index, event) => {
-    // Prevent the click from closing the mobile menu
+    // Prevent both the click propagation and default link behavior
+    event.preventDefault();
     event.stopPropagation();
     
     if (window.innerWidth <= 768) {
@@ -47,7 +48,7 @@
     </div>
     
     <div class="dropdown" class:active={activeDropdowns.has(1)}>
-      <a href="/" on:click={(e) => toggleDropdown(1, e)}>Library ▼</a>
+      <a href="#" on:click={(e) => toggleDropdown(1, e)}>Library ▼</a>
       <div class="dropdown-content">
         <a href="/library/webdev2025">WebDev 2025</a>
         <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/" target="_blank" rel="noopener noreferrer">2025 Tech Stacks ↗️</a>
