@@ -83,7 +83,7 @@ switch (grade) &#123;
   </div>
 
   <h4>switch Statement example explanation</h4>
-  <p>This is like a grading system where you have multiple choices:
+  <p>This is like a grading system where you have multiple choices:</p>
     <ul>
       <li>We start with a grade (in this case "A")</li>
       <li>Then we check which case matches:</li>
@@ -91,7 +91,6 @@ switch (grade) &#123;
       <li>If it's "B", print "Good"</li>
       <li>If it doesn't match any case above, print "Needs Improvement" (this is what 'default' does)</li>
     </ul>
-  </p>
   <p>Think of it like a report card machine:<br/>- Grade A &rarr; "Excellent!"<br/>- Grade B &rarr; "Good!"<br/>- Any other grade &rarr; "Needs Improvement"</p>
 
   <h3>2.3 Loops</h3>
