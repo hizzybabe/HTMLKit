@@ -25,13 +25,11 @@
 <nav>
   <a href="/">Home</a>
   
-  <div class="mobile-only">
-    <button class="mobile-menu-btn" on:click={toggleMenu}>
-      <span class="hamburger"></span>
-    </button>
-  </div>
+  <button class="mobile-menu-btn" on:click={toggleMenu}>
+    <span class="hamburger"></span>
+  </button>
 
-  <div class="nav-links" class:active={isMenuOpen}>
+  <div class="nav-links" class:mobile-active={isMenuOpen}>
     <div class="dropdown" class:active={activeDropdowns.has(0)}>
       <a href="/" on:click={(e) => toggleDropdown(0, e)}>Learn ▼</a>
       <div class="dropdown-content">
