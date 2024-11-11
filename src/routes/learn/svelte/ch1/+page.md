@@ -99,6 +99,8 @@ In this example:
 ---
 
 ### **Practice Workshop: Hello Svelte!**
+<h2 class="workshop-title">Practice Workshop: Hello Svelte!</h2>
+<div class="workshop-container">
 
 In this workshop, you’ll create a simple “Hello, Svelte!” component. This will introduce you to the structure of a Svelte component and help you verify that your setup is correct.
 
@@ -185,6 +187,7 @@ In this workshop, you’ll create a simple “Hello, Svelte!” component. This 
 - **Svelte Files**: Svelte components consist of `<script>`, `<style>`, and HTML sections, with scoped CSS and reactivity by default.
 
 This chapter introduced you to the basics of Svelte and set up your first component. Practicing with Svelte’s syntax and reactivity will deepen your understanding as you work on more advanced features.
+</div>
 
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
