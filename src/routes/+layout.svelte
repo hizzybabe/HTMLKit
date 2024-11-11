@@ -97,15 +97,16 @@
     background: linear-gradient(45deg, var(--primary), var(--secondary));
     padding: 1rem 2rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 2rem;
     font-family: 'Roboto', sans-serif;
-    justify-content: flex-start;
-    align-items: center;
   }
 
   nav a {
     color: white;
     text-decoration: none;
+    white-space: nowrap;
   }
 
   footer {
@@ -196,7 +197,7 @@
 
     nav {
       position: relative;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
 
     .dropdown {
@@ -251,5 +252,13 @@
 
   .hamburger::after {
     bottom: -6px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex: 1;
+    justify-content: space-evenly;
   }
 </style>
