@@ -56,7 +56,14 @@ if (age >= 18) &#123;
 &#125;</code></pre>
     </div>
 
-    <p>1. <strong>if/else Statement</strong><br/>This is like making a simple decision:<br/>- First, we set an age (in this case, 18)<br/>- Then we ask a question: "Is the age 18 or higher?"<br/>- If the answer is YES (age &gt;= 18), it prints "You are an adult."<br/>- If the answer is NO, it prints "You are a minor."</p>
+    <h4>if/else Statement example explanation</h4>
+    <p>This is like making a simple decision:
+      <ul>
+        <li>First, we set an age (in this case, 18)</li>
+        <li>Then we ask a question: "Is the age 18 or higher?"</li>
+        <li>If the answer is YES (age &gt;= 18), it prints "You are an adult."</li>
+        <li>If the answer is NO, it prints "You are a minor."</li>
+      </ul>
     <p>Think of it like a bouncer at a club:<br/>- "Are you 18 or older? Yes? Come in, you're an adult!"<br/>- "No? Sorry, you're a minor."</p>
 
     <h4>switch Statement</h4>
@@ -75,7 +82,7 @@ switch (grade) &#123;
     </div>
   </div>
 
-  <p>2. <strong>switch Statement</strong><br/>This is like a grading system where you have multiple choices:<br/>- We start with a grade (in this case "A")<br/>- Then we check which case matches:<br/> - If it's "A", print "Excellent"<br/> - If it's "B", print "Good"<br/> - If it doesn't match any case above, print "Needs Improvement" (this is what 'default' does)</p>
+  <p><strong>switch Statement</strong><br/>This is like a grading system where you have multiple choices:<br/>- We start with a grade (in this case "A")<br/>- Then we check which case matches:<br/> - If it's "A", print "Excellent"<br/> - If it's "B", print "Good"<br/> - If it doesn't match any case above, print "Needs Improvement" (this is what 'default' does)</p>
   <p>Think of it like a report card machine:<br/>- Grade A &rarr; "Excellent!"<br/>- Grade B &rarr; "Good!"<br/>- Any other grade &rarr; "Needs Improvement"</p>
 
   <h3>2.3 Loops</h3>
