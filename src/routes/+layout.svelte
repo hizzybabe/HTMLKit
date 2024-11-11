@@ -311,7 +311,7 @@
 
   /* Update media queries to handle medium screens */
   @media (max-width: 768px) {
-    // ... existing mobile styles ...
+    /* existing mobile styles */
 
     /* Remove this override to fix medium screen dropdowns */
     .dropdown:hover .dropdown-content {
