@@ -125,7 +125,8 @@ In this example, `@keyframes` is used to make the box bounce up and down.
 
 ---
 
-### **Practice Workshop: Animated UI**
+<h2 class="workshop-title">Practice Workshop: Animated UI</h2>
+<div class="workshop-container">
 
 In this workshop, you’ll create an Animated UI that combines scoped styles, transitions, and custom animations. This will include buttons with hover effects, animated cards, and a slide-in panel.
 
@@ -252,6 +253,8 @@ In this workshop, you’ll create an Animated UI that combines scoped styles, tr
 - **Custom Animations**: Use `@keyframes` or JavaScript for custom, complex animations.
 
 This chapter covered styling and animations in Svelte, giving you the tools to create polished and interactive interfaces. These animation techniques can enhance user experience by making your app feel more responsive and engaging.
+
+</div>
 
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';

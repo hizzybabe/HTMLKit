@@ -134,7 +134,8 @@ This custom store includes `increment`, `decrement`, and `reset` functions that 
 
 ---
 
-### **Practice Workshop: Data Dashboard**
+<h2 class="workshop-title">Practice Workshop: Data Dashboard</h2>
+<div class="workshop-container">
 
 In this workshop, you’ll create a Data Dashboard that incorporates context sharing, special elements, custom actions, and custom stores. The dashboard will include dynamic components, responsive actions, and data stored in custom stores.
 
@@ -275,6 +276,8 @@ In this workshop, you’ll create a Data Dashboard that incorporates context sha
 - **Custom Stores**: Enable complex data management with encapsulated functions for updating data.
 
 This chapter introduced advanced Svelte concepts that enhance data handling, user interaction, and component communication. These techniques allow you to build more robust and feature-rich applications.
+
+</div>
 
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';

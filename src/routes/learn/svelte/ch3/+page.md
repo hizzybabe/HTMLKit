@@ -124,7 +124,8 @@ Svelte provides lifecycle methods that allow you to run code at specific points 
 
 ---
 
-### **Practice Workshop: Todo List**
+<h2 class="workshop-title">Practice Workshop: Todo List</h2>
+<div class="workshop-container">
 
 In this workshop, you’ll create a Todo List app that allows users to add, mark as complete, and delete tasks. This project will help you apply component structure, logic blocks, event handling, and lifecycle methods.
 
@@ -232,6 +233,8 @@ In this workshop, you’ll create a Todo List app that allows users to add, mark
 - **Lifecycle Methods**: Use lifecycle methods like `onMount` for tasks that need to run at specific points in the component lifecycle.
 
 This chapter covered the fundamental building blocks of interactive applications in Svelte. By completing the Todo List app, you’ve practiced using Svelte’s component structure, events, logic blocks, and lifecycle methods. These skills form a strong foundation for building more advanced applications.
+
+</div>
 
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';

@@ -119,7 +119,8 @@ In this example, `name` is a state variable bound to the input field, so any cha
 
 ---
 
-### **Practice Workshop: Counter App**
+<h2 class="workshop-title">Practice Workshop: Counter App</h2>
+<div class="workshop-container">
 
 In this workshop, you’ll create a Counter App using Svelte’s reactivity, state management, and props. The app will have three main features:
 - A counter that can be incremented and decremented.
@@ -235,6 +236,8 @@ In this workshop, you’ll create a Counter App using Svelte’s reactivity, sta
 - **Component State**: Svelte manages state with local variables, keeping UI elements responsive to changes.
 
 This chapter covered Svelte’s powerful reactivity and state management features, enabling you to build interactive components. Practicing these techniques will help you understand how to manage component-level and global state in Svelte applications.
+
+</div>
 
 <script>
   import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';

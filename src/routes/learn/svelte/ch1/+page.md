@@ -98,7 +98,6 @@ In this example:
 
 ---
 
-### **Practice Workshop: Hello Svelte!**
 <h2 class="workshop-title">Practice Workshop: Hello Svelte!</h2>
 <div class="workshop-container">
 
