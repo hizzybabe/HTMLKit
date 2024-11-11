@@ -105,7 +105,7 @@
     <a href="/practice" class="learn-btn js-btn">
       Try our JavaScript Practice Projects ⚙️
     </a>
-    <a href="/aidev" class="learn-btn single-btn">
+    <a href="/library/aidev" class="learn-btn single-btn">
       AI Coding Assistants 🤖
     </a>
   </div>
@@ -130,7 +130,7 @@
   </ul>
 
   <div class="learn-buttons">
-    <a href="/frontend" class="learn-btn single-btn">
+    <a href="/library/frontend2025" class="learn-btn single-btn">
       Frontend Development Roadmap 2025 📚
     </a>
   </div>
@@ -155,7 +155,7 @@
   </ul>
 
   <div class="learn-buttons">
-    <a href="/backend" class="learn-btn single-btn">
+    <a href="/library/backend2025" class="learn-btn single-btn">
       Backend Development Roadmap 2025 📚
     </a>
   </div>
