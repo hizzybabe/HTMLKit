@@ -53,6 +53,25 @@
   <p>Ad Banner Placeholder</p>
 </div> -->
 
+<h1>Course Statuses</h1>
+<section class="course-statuses">
+  <h2>In Progress:</h2>
+  <ul>
+    <li>Python</li>
+    <li>React</li>
+  </ul>
+  <h2>Planned:</h2>
+  <ul>
+    <li>Next.js</li>
+    <li>PHP</li>
+    <li>WordPress</li>
+    <li>MDSVEX</li>
+    <li>SvelteKit</li>
+    <li>Bootstrap</li>
+    <li>Tailwind CSS</li>
+  </ul>
+</section>
+
 <h1>Dig Even Deeper</h1>
 
 <section class="features">
