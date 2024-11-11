@@ -15,27 +15,9 @@
   <h3>SEO Meta Tags</h3>
   <div>Meta tags provide structured metadata about a web page and play a crucial role in search engine optimization (SEO). These tags, placed within the <code>&lt;head&gt;</code> section of your HTML document, help search engines understand the content of your page and improve your site’s visibility in search results.</div>
 
-  <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
-    <button 
-      class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
-      style="background-color: rgb(59 130 246) !important"
-      on:click={() => showCode = !showCode}
-    >
-      {showCode ? 'Show Preview' : 'Show Code'}
-    </button>
-    
-    {#if showCode}
     <pre><code>&lt;meta name="description" content="A brief description of your web page"&gt;
 &lt;meta name="keywords" content="HTML, CSS, personal website, web development"&gt;
 &lt;meta name="author" content="Your Name"&gt;</code></pre>
-    {:else}
-    <div class="preview-content">
-      <meta name="description" content="A brief description of your web page">
-      <meta name="keywords" content="HTML, CSS, personal website, web development">
-      <meta name="author" content="Your Name">
-    </div>
-    {/if}
-  </div>
 
   <h3>Understanding and Using HTML Entities</h3>
   <div>HTML entities are special characters or reserved symbols that can’t be directly typed into HTML because they are reserved for markup syntax. You can use these entities to represent characters that might otherwise confuse the parser.</div>
