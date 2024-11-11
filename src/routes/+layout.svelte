@@ -34,7 +34,7 @@
         <a href="/html">HTML</a>
         <a href="/css">CSS</a>
         <a href="/javascript">JavaScript</a>
-        <a href="/learn/svelte" class="wip"><s>Svelte</s> (⌛Soon)</a>
+        <a href="/learn/svelte" class="wip">Svelte</a>
         <a href="/learn/astro" class="wip"><s>Astro</s> (⌛Soon)</a>
         <a href="/learn/python" class="wip"><s>Python</s> (⌛Soon)</a>
         <a href="/learn/react" class="wip"><s>React</s> (⌛Soon)</a>

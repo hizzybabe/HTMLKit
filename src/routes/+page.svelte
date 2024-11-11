@@ -16,7 +16,7 @@
     <p>The Foundation of Web Development</p>
   </div>
   <div class="feature">
-    <h2>⚡ Learn Svelte</h2>
+    <h2>⚡ Learn <a href="/learn/svelte"></a>Svelte</a></h2>
     <p>A modern, lean Javascript framework</p>
   </div>
   <div class="feature">
