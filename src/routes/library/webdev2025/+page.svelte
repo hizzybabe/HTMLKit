@@ -105,7 +105,11 @@
     <a href="/practice" class="learn-btn js-btn">
       Try our JavaScript Practice Projects ⚙️
     </a>
+    <a href="/aidev" class="learn-btn single-btn">
+      AI Coding Assistants 🤖
+    </a>
   </div>
+
 
   <div class="resources">
   <h3>Other Resources:</h3>
@@ -125,6 +129,12 @@
     <li>Vue.js: A progressive framework for building user interfaces. 🌈</li>
   </ul>
 
+  <div class="learn-buttons">
+    <a href="/frontend" class="learn-btn single-btn">
+      Frontend Development Roadmap 2025 📚
+    </a>
+  </div>
+
   <div class="resources">
   <h3>Resources:</h3>
 
@@ -143,6 +153,12 @@
     <li>Express.js: A web application framework for Node.js. 🛠️</li>
     <li>Databases: Understand relational (e.g., PostgreSQL) and NoSQL (e.g., MongoDB) databases. 🗄️</li>
   </ul>
+
+  <div class="learn-buttons">
+    <a href="/backend" class="learn-btn single-btn">
+      Backend Development Roadmap 2025 📚
+    </a>
+  </div>
 
   <div class="resources">
   <h3>Resources:</h3>
