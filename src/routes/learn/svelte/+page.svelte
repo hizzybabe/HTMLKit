@@ -1,6 +1,16 @@
 <script>
   const chapters = [
     {
+      title: "Prerequisites",
+      topics: [
+        "Setting Up Git & GitHub",
+        "Deploying Svelte to GitHub Pages",
+        "Development Environment Setup",
+        "Basic HTML/CSS/JavaScript Knowledge"
+      ],
+      path: "/learn/svelte/prerequisites"
+    },
+    {
       title: "Chapter 1: Introduction to Svelte & Setup",
       topics: [
         "What is Svelte?",
@@ -62,6 +72,11 @@
   <h1>Learn Svelte</h1>
   <p class="intro">Master modern web development with Svelte's reactive approach</p>
 
+  <div class="prerequisites-note">
+    <h2>Before You Begin</h2>
+    <p>To get the most out of this course, please ensure you have:</p>
+    <ul>
+      <li>Basic understanding of HTML, CSS, and JavaScript</li>
   <div class="chapters">
     {#each chapters as chapter}
       <div class="chapter-card">
