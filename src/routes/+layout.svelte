@@ -52,6 +52,7 @@
         <a href="/library/frontend2025">Frontend Roadmap 2025</a>
         <a href="/library/backend2025">Backend Roadmap 2025</a>
         <a href="/library/aidev">Code with AI 🤖</a>
+        <a href="/library/ainewlang">Learn New Languages with AI 🤖</a>
       </div>
     </div>
     
