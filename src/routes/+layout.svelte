@@ -1,9 +1,24 @@
 <script>
   import '../app.css';
   let isMenuOpen = false;
+  let activeDropdowns = new Set();
   
   const toggleMenu = () => {
     isMenuOpen = !isMenuOpen;
+  };
+  
+  const toggleDropdown = (index, event) => {
+    // Prevent the click from closing the mobile menu
+    event.stopPropagation();
+    
+    if (window.innerWidth <= 768) {
+      if (activeDropdowns.has(index)) {
+        activeDropdowns.delete(index);
+      } else {
+        activeDropdowns.add(index);
+      }
+      activeDropdowns = activeDropdowns; // Trigger reactivity
+    }
   };
 </script>
 
@@ -15,8 +30,8 @@
   </button>
 
   <div class="nav-links" class:active={isMenuOpen}>
-    <div class="dropdown">
-      <a href="/">Learn ▼</a>
+    <div class="dropdown" class:active={activeDropdowns.has(0)}>
+      <a href="/" on:click={(e) => toggleDropdown(0, e)}>Learn ▼</a>
       <div class="dropdown-content">
         <a href="/html">HTML</a>
         <a href="/css">CSS</a>
@@ -31,8 +46,8 @@
       </div>
     </div>
     
-    <div class="dropdown">
-      <a href="/">Library ▼</a>
+    <div class="dropdown" class:active={activeDropdowns.has(1)}>
+      <a href="/" on:click={(e) => toggleDropdown(1, e)}>Library ▼</a>
       <div class="dropdown-content">
         <a href="/library/webdev2025">WebDev 2025</a>
         <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/" target="_blank" rel="noopener noreferrer">2025 Tech Stacks ↗️</a>
@@ -41,8 +56,8 @@
     
     <a href="/practice">Practice</a>
     
-    <div class="dropdown">
-      <a href="/cheatsheet">Cheatsheet ▼</a>
+    <div class="dropdown" class:active={activeDropdowns.has(2)}>
+      <a href="/cheatsheet" on:click={(e) => toggleDropdown(2, e)}>Cheatsheet ▼</a>
       <div class="dropdown-content">
         <a href="/cheatsheet/html">HTML Cheatsheet</a>
         <a href="/cheatsheet/css">CSS Cheatsheet</a>
@@ -52,8 +67,8 @@
       </div>
     </div>
     
-    <div class="dropdown">
-      <a href="/">WebDev Tools ▼</a>
+    <div class="dropdown" class:active={activeDropdowns.has(3)}>
+      <a href="/" on:click={(e) => toggleDropdown(3, e)}>WebDev Tools ▼</a>
       <div class="dropdown-content">
         <a href="https://techwizard.club" target="_blank" rel="noopener noreferrer">Cloud Directory ↗️</a>
         <a href="https://techwizard.club/lifetime-deals/" target="_blank" rel="noopener noreferrer">Lifetime Deals ↗️</a>
@@ -197,6 +212,7 @@
       flex-direction: column;
       padding: 4rem 1rem 1rem;
       gap: 1rem;
+      z-index: 99;
     }
 
     .nav-links.active {
@@ -213,18 +229,26 @@
     }
 
     .dropdown-content {
+      display: none;
       position: static;
       width: 100%;
       box-shadow: none;
       margin-top: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
     }
 
+    /* Remove hover behavior on mobile */
     .dropdown:hover .dropdown-content {
       display: none;
     }
 
+    /* Show dropdown content when active class is present */
     .dropdown.active .dropdown-content {
       display: block;
+    }
+
+    .dropdown-content a {
+      padding: 0.8rem 1rem;
     }
   }
 </style>
