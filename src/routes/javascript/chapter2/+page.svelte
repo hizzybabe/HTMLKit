@@ -82,7 +82,16 @@ switch (grade) &#123;
     </div>
   </div>
 
-  <p><strong>switch Statement</strong><br/>This is like a grading system where you have multiple choices:<br/>- We start with a grade (in this case "A")<br/>- Then we check which case matches:<br/> - If it's "A", print "Excellent"<br/> - If it's "B", print "Good"<br/> - If it doesn't match any case above, print "Needs Improvement" (this is what 'default' does)</p>
+  <h4>switch Statement example explanation</h4>
+  <p>This is like a grading system where you have multiple choices:
+    <ul>
+      <li>We start with a grade (in this case "A")</li>
+      <li>Then we check which case matches:</li>
+      <li>If it's "A", print "Excellent"</li>
+      <li>If it's "B", print "Good"</li>
+      <li>If it doesn't match any case above, print "Needs Improvement" (this is what 'default' does)</li>
+    </ul>
+  </p>
   <p>Think of it like a report card machine:<br/>- Grade A &rarr; "Excellent!"<br/>- Grade B &rarr; "Good!"<br/>- Any other grade &rarr; "Needs Improvement"</p>
 
   <h3>2.3 Loops</h3>
