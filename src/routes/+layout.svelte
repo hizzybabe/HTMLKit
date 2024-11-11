@@ -49,6 +49,9 @@
       <div class="dropdown-content">
         <a href="/library/webdev2025">WebDev 2025</a>
         <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/" target="_blank" rel="noopener noreferrer">2025 Tech Stacks ↗️</a>
+        <a href="/library/frontend2025">Frontend Roadmap 2025</a>
+        <a href="/library/backend2025">Backend Roadmap 2025</a>
+        <a href="/library/aidev">Code with AI 🤖</a>
       </div>
     </div>
     
