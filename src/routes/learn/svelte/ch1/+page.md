@@ -186,6 +186,10 @@ In this workshop, you’ll create a simple “Hello, Svelte!” component. This 
 
 This chapter introduced you to the basics of Svelte and set up your first component. Practicing with Svelte’s syntax and reactivity will deepen your understanding as you work on more advanced features.
 
+<script>
+  import ChapterNavigation from '$lib/components/ChapterNavigation.svelte';
+</script>
+
 <ChapterNavigation 
     prevHref="/learn/svelte" 
     nextHref="/learn/svelte/ch2"
