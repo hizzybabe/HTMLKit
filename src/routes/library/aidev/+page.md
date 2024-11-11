@@ -2,8 +2,7 @@
 title: Code with AI 🤖
 ---
 
-<div class="container mx-auto px-4 py-8">
-  <h1>AI Coding Assistants</h1>
+# AI Coding Assistants
 
   In 2025, AI has become an integral part of the software development process, offering tools that enhance productivity, code quality, and efficiency. Here's how you can leverage AI to assist in your coding endeavors:
 
@@ -37,7 +36,6 @@ title: Code with AI 🤖
 
 By thoughtfully integrating these AI tools into your development process, you can streamline tasks, reduce errors, and focus more on creative and complex aspects of coding. 
 
-</div>
 
 <style>
   .concept-block {
