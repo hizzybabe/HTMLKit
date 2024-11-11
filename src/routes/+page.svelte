@@ -53,8 +53,9 @@
   <p>Ad Banner Placeholder</p>
 </div> -->
 
-<section class="features">
 <h1>Dig Even Deeper</h1>
+
+<section class="features">
 
 <div class="feature">
   <h2>💨 Learn Tailwind CSS</h2>
