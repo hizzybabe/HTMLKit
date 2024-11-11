@@ -25,9 +25,9 @@
 <nav>
   <a href="/">Home</a>
   
-  <button class="mobile-menu-btn" on:click={toggleMenu}>
+  <div class="mobile-menu-btn" on:click={toggleMenu}>
     <span class="hamburger"></span>
-  </button>
+  </div>
 
   <div class="nav-links" class:mobile-active={isMenuOpen}>
     <div class="dropdown" class:active={activeDropdowns.has(0)}>
@@ -180,6 +180,7 @@
       background: none;
       border: none;
       padding: 0.5rem;
+      cursor: pointer;
     }
 
     .nav-links {
@@ -192,10 +193,9 @@
       flex-direction: column;
       padding: 1rem;
       gap: 1rem;
-      z-index: 99;
     }
 
-    .nav-links.active {
+    .nav-links.mobile-active {
       display: flex;
     }
 
