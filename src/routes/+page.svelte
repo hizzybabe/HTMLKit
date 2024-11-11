@@ -25,15 +25,15 @@
   </div>
 <div class="feature">
   <h2>📚 Make a Multi-Page Website</h2>
-  <p>HTML, CSS, and JavaScript special crash course. Helps you build a multi-page website from scratch.</p>
+  <p>HTML, CSS, and JavaScript special crash course. Helps you build a multi-page website from scratch. coming soon⌛</p>
 </div>
 <div class="feature">
   <h2>🎯 Make a One-Page Website, Landing Page</h2>
-  <p>HTML, CSS, and JavaScript special crash course. Helps you build a one-page website from scratch.</p>
+  <p>HTML, CSS, and JavaScript special crash course. Helps you build a one-page website from scratch. coming soon⌛</p>
 </div>
 <div class="feature">
-  <h2>💨 Learn Tailwind CSS</h2>
-  <p>Learn Tailwind CSS, a utility-first CSS framework.</p>
+  <h2>WordPress</h2>
+  <p>coming soon⌛</p>
 </div>
 </section>
 
@@ -52,6 +52,31 @@
 <div class="ad-banner">
   <p>Ad Banner Placeholder</p>
 </div> -->
+
+<section class="features">
+<h1>Dig Even Deeper</h1>
+
+<div class="feature">
+  <h2>💨 Learn Tailwind CSS</h2>
+  <p>Learn Tailwind CSS, a utility-first CSS framework. coming soon⌛</p>
+</div>
+  <div class="feature">
+    <h2>Learn <a href="#">Bootstrap</a></h2>
+    <p>coming soon⌛</p>
+  </div>
+  <div class="feature">
+    <h2>Learn <a href="#">MDSVEX</a></h2>
+    <p>coming soon⌛</p>
+  </div>
+  <div class="feature">
+    <h2>Learn <a href="#">MDSVEX</a></h2>
+    <p>coming soon⌛</p>
+  </div>
+  <div class="feature">
+    <h2>Learn <a href="#">SvelteKit</a></h2>
+    <p>coming soon⌛</p>
+  </div>
+</section>
 
 </div>
 
