@@ -152,16 +152,16 @@ task.done = true;</code></pre>
 
   <pre><code>
     // Creating objects
-    let person = {
+    let person = &#123;
         name: "John",
         age: 30,
         isEmployed: true,
         hobbies: ["reading", "gaming"],
-        address: {
+        address: &#123;
             street: "123 Main St",
             city: "Boston"
-        }
-    };
+        &#125;
+    &#125;;
     
     // Accessing properties
     console.log(person.name);        // Using dot notation
@@ -172,14 +172,14 @@ task.done = true;</code></pre>
     person.email = "john@example.com";  // Adding new property
     
     // Object methods
-    let calculator = {
-        add: function(a, b) {
+    let calculator = &#123;
+        add: function(a, b) &#123;
             return a + b;
-        },
-        subtract(a, b) {  // Shorthand method syntax
+        &#125;,
+        subtract(a, b) &#123;  // Shorthand method syntax
             return a - b;
-        }
-    };
+        &#125;
+    &#125;;
     
     console.log(calculator.add(5, 3));      // Output: 8</code></pre>
 
