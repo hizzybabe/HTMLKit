@@ -30,7 +30,7 @@
   <p>Arrays are used to store collections of data in JavaScript. Each item in an array has an index, starting from 0, and you can use various methods to manipulate array contents.</p>
 
   <div class="concept-block">
-    <h4>Array Syntax and Methods</h4>
+    <h4>Array Syntax and Methods (To-Do list exmaple)</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <button 
         class="toggle-btn mb-2 px-2 py-1 text-sm text-white rounded"
@@ -60,7 +60,8 @@ tasks.forEach(task => console.log(task));</code></pre>
 
 <h4>Additional array methods</h4>
 
-  <pre><code>// Creating arrays
+  <pre><code>
+    // Creating arrays
     let colors = ["red", "green", "blue"];
     let numbers = [1, 2, 3, 4, 5];
     let mixed = [1, "hello", true, 3.14]; // Arrays can store different types
@@ -91,7 +92,7 @@ tasks.forEach(task => console.log(task));</code></pre>
     let evenNumbers = numbers.filter(num => num % 2 === 0);  // Creates new array [2, 4]
     let sum = numbers.reduce((acc, curr) => acc + curr, 0); // Sums all numbers</code></pre>
 
-  <h4>Practical Array Examples</h4>
+  <h4>Other Practical Array Examples</h4>
 
   <pre><code>
     // Shopping cart example
@@ -109,7 +110,10 @@ addItem(&#123; name: "T-shirt", price: 15.99 &#125;)&#59;
 addItem(&#123; name: "Jeans", price: 39.99 &#125;)&#59;</code></pre>
 
   <h3>3.2 Working with Objects</h3>
-  <p>Objects store data as key-value pairs, allowing you to organize related data under a single entity.</p>
+  <p>Objects in JavaScript are collections of key-value pairs, similar to a dictionary. They help organize related data and behaviors together.</p>
+
+
+  <h4>Objects example (To-Do list exmaple)</h4>
 
   <div class="concept-block">
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
@@ -122,7 +126,8 @@ addItem(&#123; name: "Jeans", price: 39.99 &#125;)&#59;</code></pre>
       </button>
       
       {#if showCode1}
-      <pre><code>let task = &#123;
+      <pre><code>
+        let task = &#123;
   text: "Do laundry",
   done: false
 &#125;;
@@ -142,6 +147,80 @@ task.done = true;</code></pre>
       {/if}
     </div>
   </div>
+
+  <h4>Other Object Basics and Usage</h4>
+
+  <pre><code>
+    // Creating objects
+    let person = {
+        name: "John",
+        age: 30,
+        isEmployed: true,
+        hobbies: ["reading", "gaming"],
+        address: {
+            street: "123 Main St",
+            city: "Boston"
+        }
+    };
+    
+    // Accessing properties
+    console.log(person.name);        // Using dot notation
+    console.log(person["age"]);      // Using bracket notation
+    
+    // Modifying properties
+    person.age = 31;
+    person.email = "john@example.com";  // Adding new property
+    
+    // Object methods
+    let calculator = {
+        add: function(a, b) {
+            return a + b;
+        },
+        subtract(a, b) {  // Shorthand method syntax
+            return a - b;
+        }
+    };
+    
+    console.log(calculator.add(5, 3));      // Output: 8</code></pre>
+
+  <h4>Other Object Examples (Task manager exmaple)</h4>
+
+  <pre><code>
+    // Task manager example
+    let task = &#123;
+        title: "Complete project",
+        dueDate: "2024-12-31",
+        priority: "high",
+        completed: false,
+        
+        toggleComplete() &#123;
+            this.completed = !this.completed;
+        },
+        
+        isOverdue() {
+            return new Date(this.dueDate) < new Date();
+        }
+    };
+    
+    // Using the task object
+    task.toggleComplete();  // Marks task as complete
+    console.log(task.completed);  // Output: true
+  </code></pre>
+
+  <h4>Advanced Object Concepts</h4>
+
+  <pre><code>
+    // Object destructuring
+const { title, dueDate } = task;
+
+// Spread operator with objects
+let taskCopy = { ...task };
+
+// Object methods
+console.log(Object.keys(task));     // Get all keys
+console.log(Object.values(task));   // Get all values
+console.log(Object.entries(task));  // Get key-value pairs
+  </code></pre>
 
   <!-- Continue with workshop section -->
   <h2 class="workshop-title">Practice Workshop: "To-Do List App"</h2>
