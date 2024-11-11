@@ -108,7 +108,7 @@
         "Parsing JSON data from API responses."
       ],
       path: "/learn/python/ch13"
-    }
+    },
     {
       title: "Chapter 14: Projects - Bringing It All Together",
       topics: [
