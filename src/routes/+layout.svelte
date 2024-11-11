@@ -180,50 +180,53 @@
 
     .nav-links {
       display: none;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
+      bottom: 0;
       background: linear-gradient(45deg, var(--primary), var(--secondary));
       flex-direction: column;
-      padding: 4rem 1rem 1rem;
-      gap: 1rem;
+      padding: 5rem 2rem 2rem;
+      gap: 1.5rem;
       z-index: 99;
+      overflow-y: auto;
     }
 
     .nav-links.active {
       display: flex;
+      align-items: flex-start;
     }
 
-    nav {
-      position: relative;
-      justify-content: flex-start;
+    .nav-links a {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      width: 100%;
     }
 
     .dropdown {
       width: 100%;
     }
 
+    .dropdown > a {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+
     .dropdown-content {
       position: static;
       width: 100%;
       box-shadow: none;
-      margin-top: 0.5rem;
+      margin: 0.5rem 0;
+      padding-left: 1rem;
       background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
     }
 
     .dropdown-content a {
       padding: 0.8rem 1rem;
-    }
-
-    /* Override hover behavior on mobile */
-    .dropdown:hover .dropdown-content {
-      display: none;
-    }
-
-    /* Show dropdown content when active class is present */
-    .dropdown.active .dropdown-content {
-      display: block;
+      font-size: 1rem;
     }
   }
 
