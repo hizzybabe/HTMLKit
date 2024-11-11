@@ -25,9 +25,11 @@
 <nav>
   <a href="/">Home</a>
   
-  <button class="mobile-menu-btn" on:click={toggleMenu}>
-    <span class="hamburger"></span>
-  </button>
+  <div class="mobile-only">
+    <button class="mobile-menu-btn" on:click={toggleMenu}>
+      <span class="hamburger"></span>
+    </button>
+  </div>
 
   <div class="nav-links" class:active={isMenuOpen}>
     <div class="dropdown" class:active={activeDropdowns.has(0)}>
@@ -130,6 +132,10 @@
     text-decoration: underline;
   }
 
+  .mobile-only {
+    display: none;
+  }
+
   .dropdown {
     position: relative;
     display: inline-block;
@@ -159,11 +165,7 @@
 
   /* Mobile click behavior */
   @media (max-width: 768px) {
-    .dropdown:hover .dropdown-content {
-      display: none;
-    }
-
-    .dropdown.active .dropdown-content {
+    .mobile-only {
       display: block;
     }
 
@@ -202,7 +204,6 @@
     }
 
     .dropdown-content {
-      display: none;
       position: static;
       width: 100%;
       box-shadow: none;
@@ -212,6 +213,16 @@
 
     .dropdown-content a {
       padding: 0.8rem 1rem;
+    }
+
+    /* Override hover behavior on mobile */
+    .dropdown:hover .dropdown-content {
+      display: none;
+    }
+
+    /* Show dropdown content when active class is present */
+    .dropdown.active .dropdown-content {
+      display: block;
     }
   }
 
