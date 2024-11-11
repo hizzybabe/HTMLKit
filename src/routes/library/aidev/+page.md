@@ -1,6 +1,6 @@
-<script>
-
-</script>
+---
+title: Code with AI 🤖
+---
 
 <div class="container mx-auto px-4 py-8">
   <h1>AI Coding Assistants</h1>
