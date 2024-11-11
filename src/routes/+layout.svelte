@@ -1,56 +1,67 @@
 <script>
   import '../app.css';
+  let isMenuOpen = false;
+  
+  const toggleMenu = () => {
+    isMenuOpen = !isMenuOpen;
+  };
 </script>
 
 <nav>
   <a href="/">Home</a>
-
-  <div class="dropdown">
-    <a href="/">Learn ▼</a>
-    <div class="dropdown-content">
-      <a href="/html">HTML</a>
-      <a href="/css">CSS</a>
-      <a href="/javascript">JavaScript</a>
-      <a href="/svelte" class="wip"><s>Svelte</s> (⌛Soon)</a>
-      <a href="/astro" class="wip"><s>Astro</s> (⌛Soon)</a>
-      <a href="/python" class="wip"><s>Python</s> (⌛Soon)</a>
-      <a href="/react" class="wip"><s>React</s> (⌛Soon)</a>
-      <a href="/php" class="wip"><s>PHP</s> (⌛Soon)</a>
-      <a href="/nextjs" class="wip"><s>Next.js</s> (⌛Soon)</a>
-      <a href="/wordpress" class="wip"><s>WordPress</s> (⌛Soon)</a>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <a href="/">Library ▼</a>
-    <div class="dropdown-content">
-      <a href="/library/webdev2025">WebDev 2025</a>
-      <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/" target="_blank" rel="noopener noreferrer">2025 Tech Stacks ↗️</a>
-    </div>
-  </div>
   
-  <a href="/practice">Practice</a>
+  <button class="mobile-menu-btn" on:click={toggleMenu}>
+    <span class="hamburger"></span>
+  </button>
 
-  <div class="dropdown">
-    <a href="/cheatsheet">Cheatsheet ▼</a>
-    <div class="dropdown-content">
-      <a href="/cheatsheet/html">HTML Cheatsheet</a>
-      <a href="/cheatsheet/css">CSS Cheatsheet</a>
-      <a href="/cheatsheet/javascript">JavaScript Cheatsheet</a>
-      <a href="/cheatsheet/svelte">Svelte Cheatsheet</a>
-      <a href="/cheatsheet/astro">Astro Cheatsheet</a>
+  <div class="nav-links" class:active={isMenuOpen}>
+    <div class="dropdown">
+      <a href="/">Learn ▼</a>
+      <div class="dropdown-content">
+        <a href="/html">HTML</a>
+        <a href="/css">CSS</a>
+        <a href="/javascript">JavaScript</a>
+        <a href="/svelte" class="wip"><s>Svelte</s> (⌛Soon)</a>
+        <a href="/astro" class="wip"><s>Astro</s> (⌛Soon)</a>
+        <a href="/python" class="wip"><s>Python</s> (⌛Soon)</a>
+        <a href="/react" class="wip"><s>React</s> (⌛Soon)</a>
+        <a href="/php" class="wip"><s>PHP</s> (⌛Soon)</a>
+        <a href="/nextjs" class="wip"><s>Next.js</s> (⌛Soon)</a>
+        <a href="/wordpress" class="wip"><s>WordPress</s> (⌛Soon)</a>
+      </div>
     </div>
-  </div>
-
-  <div class="dropdown">
-    <a href="/">WebDev Tools ▼</a>
-    <div class="dropdown-content">
-      <a href="https://techwizard.club" target="_blank" rel="noopener noreferrer">Cloud Directory ↗️</a>
-      <a href="https://techwizard.club/lifetime-deals/" target="_blank" rel="noopener noreferrer">Lifetime Deals ↗️</a>
+    
+    <div class="dropdown">
+      <a href="/">Library ▼</a>
+      <div class="dropdown-content">
+        <a href="/library/webdev2025">WebDev 2025</a>
+        <a href="https://techwizard.club/blog/top-web-development-tech-stacks-2025/" target="_blank" rel="noopener noreferrer">2025 Tech Stacks ↗️</a>
+      </div>
     </div>
+    
+    <a href="/practice">Practice</a>
+    
+    <div class="dropdown">
+      <a href="/cheatsheet">Cheatsheet ▼</a>
+      <div class="dropdown-content">
+        <a href="/cheatsheet/html">HTML Cheatsheet</a>
+        <a href="/cheatsheet/css">CSS Cheatsheet</a>
+        <a href="/cheatsheet/javascript">JavaScript Cheatsheet</a>
+        <a href="/cheatsheet/svelte">Svelte Cheatsheet</a>
+        <a href="/cheatsheet/astro">Astro Cheatsheet</a>
+      </div>
+    </div>
+    
+    <div class="dropdown">
+      <a href="/">WebDev Tools ▼</a>
+      <div class="dropdown-content">
+        <a href="https://techwizard.club" target="_blank" rel="noopener noreferrer">Cloud Directory ↗️</a>
+        <a href="https://techwizard.club/lifetime-deals/" target="_blank" rel="noopener noreferrer">Lifetime Deals ↗️</a>
+      </div>
+    </div>
+    
+    <a href="/templates"><s>FREE Templates</s> (⌛Soon)</a>
   </div>
-  
-  <a href="/templates"><s>FREE Templates</s> (⌛Soon)</a>
 </nav>
 
 <slot />
@@ -130,5 +141,90 @@
 
   .dropdown-content a:hover {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before {
+    top: -6px;
+  }
+
+  .hamburger::after {
+    bottom: -6px;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      z-index: 100;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      flex-direction: column;
+      padding: 4rem 1rem 1rem;
+      gap: 1rem;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    nav {
+      position: relative;
+      justify-content: space-between;
+    }
+
+    .dropdown {
+      width: 100%;
+    }
+
+    .dropdown-content {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      margin-top: 0.5rem;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
   }
 </style>

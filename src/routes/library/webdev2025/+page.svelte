@@ -46,13 +46,13 @@
   </ul>
 
   <div class="learn-buttons">
-    <a href="/HTMLKit/html" class="learn-btn html-btn">
+    <a href="/html" class="learn-btn html-btn">
       Learn HTML with Us 📚
     </a>
-    <a href="/HTMLKit/css" class="learn-btn css-btn">
+    <a href="/css" class="learn-btn css-btn">
       Learn CSS with Us 🎨
     </a>
-    <a href="/HTMLKit/javascript" class="learn-btn js-btn">
+    <a href="/javascript" class="learn-btn js-btn">
       Learn JavaScript with Us ⚙️
     </a>
   </div>
@@ -94,6 +94,18 @@
     <li>Personal Portfolio: Showcase your skills and projects. 🌟</li>
     <li>Simple Web Applications: Create interactive applications to solidify your understanding. 💻</li>
   </ul>
+
+  <div class="learn-buttons">
+    <a href="/practice" class="learn-btn html-btn">
+      Try our HTML Practice Projects 📚
+    </a>
+    <a href="/practice" class="learn-btn css-btn">
+      Try our CSS Practice Projects 🎨
+    </a>
+    <a href="/practice" class="learn-btn js-btn">
+      Try our JavaScript Practice Projects ⚙️
+    </a>
+  </div>
 
   <div class="resources">
   <h3>Resources:</h3>
