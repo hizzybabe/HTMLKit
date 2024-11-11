@@ -1,21 +1,19 @@
-
-
 <div class="container mx-auto px-4 py-8">
   <h1 class="text-3xl font-bold mb-6">Course Statuses</h1>
   
   <section class="course-status">
-    <h2 class="text-2xl font-semibold mb-4 live">Live</h2>
+    <h2 class="text-2xl font-semibold mb-4 live">Live 🌟</h2>
     <ul class="live">
-      <li>Svelte (creating workshop example files)</li>
-      <li>Astro (creating workshop example files)</li>
+      <li>Svelte (creating workshop example files 🚧)</li>
+      <li>Astro (creating workshop example files 🚧)</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold mb-4 in-progress">In Progress</h2>
+    <h2 class="text-2xl font-semibold mb-4 in-progress">In Progress 🚧</h2>
     <ul class="in-progress">
       <li>Python</li>
     </ul>
     
-    <h2 class="text-2xl font-semibold mt-6 mb-4 planned">Planned</h2>
+    <h2 class="text-2xl font-semibold mt-6 mb-4 planned">Planned 📅</h2>
     <ul class="planned">
       <li>React</li>
       <li>Next.js</li>
