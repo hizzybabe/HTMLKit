@@ -81,7 +81,7 @@
             <li>{topic}</li>
           {/each}
         </ul>
-        <button on:click={() => window.location.href=`/HTMLKit/css/chapter${index + 1}`}>Start Chapter</button>
+        <button on:click={() => window.location.href=`/css/chapter${index + 1}`}>Start Chapter</button>
       </div>
     {/each}
   </div>

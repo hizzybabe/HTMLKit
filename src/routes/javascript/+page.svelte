@@ -10,7 +10,7 @@
         "Basic Syntax and Data Types",
         "Practice Workshop: Hello, Interactive World!"
       ],
-      path: "/HTMLKit/javascript/chapter1"
+      path: "/javascript/chapter1"
     },
     {
       title: "Chapter 2: Functions, Conditional Statements, & Loops",
@@ -21,7 +21,7 @@
         "Introduction to Scope and Context",
         "Practice Workshop: Quiz Time"
       ],
-      path: "/HTMLKit/javascript/chapter2"
+      path: "/javascript/chapter2"
     },
     {
       title: "Chapter 3: Working with Arrays & Objects",
@@ -31,7 +31,7 @@
         "Introduction to JSON",
         "Practice Workshop: To-Do List App"
       ],
-      path: "/HTMLKit/javascript/chapter3"
+      path: "/javascript/chapter3"
     },
     {
       title: "Chapter 4: DOM Manipulation & Events",
@@ -41,7 +41,7 @@
         "Working with Events",
         "Practice Workshop: Interactive Profile Page"
       ],
-      path: "/HTMLKit/javascript/chapter4"
+      path: "/javascript/chapter4"
     },
     {
       title: "Chapter 5: Asynchronous JavaScript & API Fetching",
@@ -51,7 +51,7 @@
         "Error Handling",
         "Practice Workshop: Weather App"
       ],
-      path: "/HTMLKit/javascript/chapter5"
+      path: "/javascript/chapter5"
     },
     {
       title: "Chapter 6: Advanced Topics & Best Practices",
@@ -61,7 +61,7 @@
         "Best Practices for Code Organization",
         "Practice Workshop: Refactoring the To-Do List App"
       ],
-      path: "/HTMLKit/javascript/chapter6"
+      path: "/javascript/chapter6"
     },
     {
       title: "Chapter 7: Frontend Frameworks & Libraries",
@@ -71,7 +71,7 @@
         "Choosing the Right Tool",
         "Practice Workshop: First Steps with React"
       ],
-      path: "/HTMLKit/javascript/chapter7"
+      path: "/javascript/chapter7"
     }
   ];
 </script>
