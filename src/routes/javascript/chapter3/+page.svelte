@@ -98,15 +98,15 @@ tasks.forEach(task => console.log(task));</code></pre>
 let cart = [];
 
 function addItem(item) {
-    cart.push(item)&#59;
+    cart.push(item)&semi;
 }
 
 function removeItem(index) {
-    cart.splice(index, 1)&#59;
+    cart.splice(index, 1)&semi;
 }
 
-addItem({ name: "T-shirt", price: 15.99 });
-addItem({ name: "Jeans", price: 39.99 });
+addItem({ name: "T-shirt", price: 15.99 })&semi;
+addItem({ name: "Jeans", price: 39.99 })&semi;
 </code></pre>
 
   <h3>3.2 Working with Objects</h3>
