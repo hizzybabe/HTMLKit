@@ -73,10 +73,11 @@
 const age = 30;</code></pre>
 
   <p>Data Types:</p>
-
-  <li>String: Textual data, enclosed in quotes ("Hello" or 'Hello').</li>
-  <li>Number: Numeric data (e.g., 10, 5.5).</li>
-  <li>Boolean: Logical data, either true or false.</li>
+  <ul>
+    <li>String: Textual data, enclosed in quotes ("Hello" or 'Hello').</li>
+    <li>Number: Numeric data (e.g., 10, 5.5).</li>
+    <li>Boolean: Logical data, either true or false.</li>
+  </ul>
 
   <p>Basic Operations: Arithmetic and string operations.</p>
 

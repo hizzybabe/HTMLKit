@@ -56,6 +56,9 @@ if (age >= 18) &#123;
 &#125;</code></pre>
     </div>
 
+    <p>1. **if/else Statement**<br/>This is like making a simple decision:<br/>- First, we set an age (in this case, 18)<br/>- Then we ask a question: "Is the age 18 or higher?"<br/>- If the answer is YES (age &gt;= 18), it prints "You are an adult."<br/>- If the answer is NO, it prints "You are a minor."</p>
+<p>Think of it like a bouncer at a club:<br/>- "Are you 18 or older? Yes? Come in, you're an adult!"<br/>- "No? Sorry, you're a minor."</p>
+
     <h4>switch Statement</h4>
     <div class="code-preview bg-gray-100 p-4 rounded-lg my-4">
       <pre><code>let grade = "A";
