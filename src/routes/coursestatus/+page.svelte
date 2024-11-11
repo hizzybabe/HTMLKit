@@ -4,8 +4,11 @@
   <section class="course-status">
     <h2 class="text-2xl font-semibold mb-4 live">Live 🌟</h2>
     <ul class="live">
-      <li>Svelte (creating workshop example files 🚧)</li>
-      <li>Astro (creating workshop example files 🚧)</li>
+      <li><a href="/html">HTML</a></li>
+      <li><a href="/css">CSS</a></li>
+      <li><a href="/javascript">JavaScript</a></li>
+      <li><a href="/learn/svelte">Svelte</a> (creating workshop example files 🚧)</li>
+      <li><a href="/learn/astro">Astro</a> (creating workshop example files 🚧)</li>
     </ul>
 
     <h2 class="text-2xl font-semibold mb-4 in-progress">In Progress 🚧</h2>
