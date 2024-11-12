@@ -30,9 +30,13 @@ To summarize, while each language has its own specific role, they all need to wo
 References
 
 [HTML, CSS, and JavaScript: Your Guide to Learning Fundamental Web Development Skills](https://techbootcamps.utexas.edu/blog/html-css-javascript/)
+
 [Where can I learn the very basic of how to exactly let javascript work with html css and how to manipulate the data?](https://forum.freecodecamp.org/t/where-can-i-learn-the-very-basic-of-how-to-exactly-let-javascript-work-with-html-css-and-how-to-manipulate-the-data/307254)
+
 [Will someone please explain React : r/webdev](https://www.reddit.com/r/webdev/comments/185555x/will_someone_please_explain_react/)
+
 [interop - How do multiple languages interact in one project? - Stack Overflow](https://stackoverflow.com/questions/1428145/how-do-multiple-languages-interact-in-one-project)
+
 [What are HTML, CSS, & Javascript? | CIAT](https://www.ciat.edu/blog/what-are-html-css-and-javascript/)
 
 We hope this helps clarify the roles of HTML, CSS, and JavaScript in web development!
