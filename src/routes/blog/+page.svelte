@@ -1,22 +1,19 @@
 <script>
-  // Import any necessary components
+  export let data;
 </script>
 
 <div class="blog-container">
   <h1>Blog Posts</h1>
   
   <div class="posts-grid">
-    <article class="post-card">
-      <h2><a href="/blog/first-post">Getting Started with Web Development</a></h2>
-      <p class="post-meta">Published on January 1, 2024</p>
-      <p class="post-excerpt">Learn the fundamentals of web development and start your journey as a developer.</p>
-    </article>
-    
-    <article class="post-card">
-      <h2><a href="/blog/second-post">Understanding Modern JavaScript</a></h2>
-      <p class="post-meta">Published on January 15, 2024</p>
-      <p class="post-excerpt">Dive deep into modern JavaScript features and best practices.</p>
-    </article>
+    {#each data.posts as post}
+      <article class="post-card">
+        <h2>
+          <a href="/blog/{post.path}">{post.title}</a>
+        </h2>
+        <p class="post-excerpt">{post.description}</p>
+      </article>
+    {/each}
   </div>
 </div>
 
@@ -47,12 +44,6 @@
 
   .post-card:hover {
     transform: translateY(-2px);
-  }
-
-  .post-meta {
-    color: #666;
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
   }
 
   .post-excerpt {
