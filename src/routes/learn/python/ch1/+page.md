@@ -1,9 +1,5 @@
 ---
-title: Introduction to Astro & Setup
----
-
-Here's a detailed outline for Chapter 1, with explanations and workshops to guide you and your learners through each section.
-
+title: Basic Operators and Expressions
 ---
 
 **Chapter 1: Introduction to Python and Setup**
@@ -58,7 +54,7 @@ Here's a detailed outline for Chapter 1, with explanations and workshops to guid
 
 <h2 class="workshop-title">Chapter Project</h2>
 <div class="workshop-container">
-**Project: Build a "Mad Libs" Game**
+#### Project: Build a "Mad Libs" Game
 
 - **Description**: Mad Libs is a fun, fill-in-the-blank word game where users enter specific types of words (nouns, verbs, adjectives, etc.), which are then incorporated into a pre-written story template.
 
