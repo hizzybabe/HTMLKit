@@ -96,7 +96,7 @@ h1 {
 
   button {
     background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: white;
+    color: var(--component-bg);
     border: none;
     border-radius: 8px;
     padding: 1rem 2rem;
