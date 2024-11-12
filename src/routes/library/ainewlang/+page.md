@@ -1,5 +1,6 @@
 ---
 title: Learn New Programming Languages with AI 🤖
+layout: nochecklayout
 ---
 
 Google's NotebookLM is an AI-powered tool designed to assist users in understanding and synthesizing complex information from their documents. When studying a new programming language, NotebookLM can be invaluable in breaking down documentation, highlighting key concepts, and answering specific questions. Here's how to effectively utilize NotebookLM for this purpose:

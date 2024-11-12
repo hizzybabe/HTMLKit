@@ -1,5 +1,6 @@
 ---
 title: Code with AI 🤖
+layout: nochecklayout
 ---
 
 # AI Coding Assistants
