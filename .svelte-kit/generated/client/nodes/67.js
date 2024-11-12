@@ -1,1 +1,0 @@
-export { default as component } from "../../../../src/routes/library/webdev2025/+page.svelte";
