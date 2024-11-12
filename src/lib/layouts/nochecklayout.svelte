@@ -1,6 +1,5 @@
 <script>
   export let title;
-  import SolutionChecker from '$lib/components/SolutionChecker.svelte';
 </script>
 
 <div class="container mx-auto px-4">
