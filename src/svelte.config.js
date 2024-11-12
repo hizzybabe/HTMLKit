@@ -13,11 +13,11 @@ const config = {
       base: ''
     }
   },
-  extensions: ['.svelte', '.md', '.svx'],
+  extensions: ['.svelte', '.md', '.svx', '.mdx'],
   preprocess: [
     vitePreprocess(),
     mdsvex({
-      extensions: ['.md', '.svx'],
+      extensions: ['.md', '.svx', '.mdx'],
       layout: {
         _: path.join(process.cwd(), 'src/lib/layouts/DefaultLayout.svelte'),
         library: path.join(process.cwd(), 'src/lib/layouts/nochecklayout.svelte')
