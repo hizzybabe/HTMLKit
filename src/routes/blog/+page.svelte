@@ -15,6 +15,9 @@
           {#if post.description}
             <p class="post-excerpt">{post.description}</p>
           {/if}
+          {#if post.date}
+            <p class="post-date">Published on {post.date}</p>
+          {/if}
         </article>
       {/each}
     {:else}
@@ -64,5 +67,11 @@
 
   a:hover {
     text-decoration: underline;
+  }
+
+  .post-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
   }
 </style>
