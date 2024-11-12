@@ -1,5 +1,5 @@
 ---
-Title: How Non-Devs Can Become Web Devs
+title: How Non-Devs Can Become Web Devs
 description: Exploring the feasibility and benefits of pursuing a career in web development without formal education.
 ---
 
