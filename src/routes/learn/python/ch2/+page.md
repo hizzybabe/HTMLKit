@@ -1,5 +1,5 @@
 ---
-title: Introduction to Python and Setup
+title: Basic Operators and Expressions
 ---
 
 **Chapter 2: Basic Operators and Expressions**
