@@ -18,7 +18,10 @@ const config = {
     vitePreprocess(),
     mdsvex({
       extensions: ['.md', '.svx'],
-      layout: path.join(process.cwd(), 'src/lib/layouts/DefaultLayout.svelte')
+      layout: {
+        _: path.join(process.cwd(), 'src/lib/layouts/DefaultLayout.svelte'),
+        library: path.join(process.cwd(), 'src/lib/layouts/nochecklayout.svelte')
+      }
     })
   ]
 };

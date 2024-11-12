@@ -1,6 +1,6 @@
 ---
 title: Front-End Development
-layout: nochecklayout
+layout: library
 ---
 
 Front-end development focuses on creating the parts of a website or web application that users directly interact with. This includes everything from the layout and design to interactive elements like buttons and forms. The primary goal is to ensure a seamless and engaging user experience.
