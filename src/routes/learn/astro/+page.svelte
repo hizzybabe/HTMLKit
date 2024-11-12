@@ -8,7 +8,7 @@
         "Deploying to Netlify",
         "Basic HTML/CSS/JavaScript Knowledge"
       ],
-      path: "/learn/svelte/prerequisites"
+      path: "/learn/astro/prerequisites"
     },
     {
       title: "Chapter 1: Introduction to Astro & Setup",
