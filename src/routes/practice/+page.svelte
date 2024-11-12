@@ -90,6 +90,7 @@
     </ul>
   </section>
 
+  <SolutionChecker />
 </div>
 
 <style>
