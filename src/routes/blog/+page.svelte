@@ -6,14 +6,20 @@
   <h1>Blog Posts</h1>
   
   <div class="posts-grid">
-    {#each data.posts as post}
-      <article class="post-card">
-        <h2>
-          <a href="/blog/{post.path}">{post.title}</a>
-        </h2>
-        <p class="post-excerpt">{post.description}</p>
-      </article>
-    {/each}
+    {#if data.posts && data.posts.length > 0}
+      {#each data.posts as post}
+        <article class="post-card">
+          <h2>
+            <a href="/blog/{post.path}">{post.title}</a>
+          </h2>
+          {#if post.description}
+            <p class="post-excerpt">{post.description}</p>
+          {/if}
+        </article>
+      {/each}
+    {:else}
+      <p>No blog posts found.</p>
+    {/if}
   </div>
 </div>
 
