@@ -1,5 +1,5 @@
 ---
-Title: Svelte: Svelte - A Developer's Best Friend in Modern Web Development
+title: Svelte: Svelte - A Developer's Best Friend in Modern Web Development
 description: Svelte is designed to be straightforward and accessible, even for those who are not professional front-end developers.
 ---
 
