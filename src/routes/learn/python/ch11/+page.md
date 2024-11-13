@@ -61,7 +61,8 @@ title: Introduction to Object-Oriented Programming (OOP)
 
 ---
 
-### Workshop Exercise
+<h2 class="workshop-title">Workshop Exercise</h2>
+<div class="workshop-container">
 
 #### Create a Class `Car` with Attributes and Display Details
 
@@ -95,9 +96,10 @@ title: Introduction to Object-Oriented Programming (OOP)
         car.display_info()  # Outputs: Car: 2020 Toyota Corolla
         ```
 
----
+</div>
 
-### Chapter Project
+<h2 class="workshop-title">Chapter Project</h2>
+<div class="workshop-container">
 
 **Project: Build a "Library System"**
 
