@@ -1,5 +1,5 @@
 <script>
-
+  export const title = "Web Development Roadmap 2025";
 </script>
 
 <div class="container mx-auto px-4 py-8">
