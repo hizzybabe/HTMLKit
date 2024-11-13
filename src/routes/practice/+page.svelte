@@ -1,5 +1,5 @@
 <script>
-
+  import SolutionChecker from '$lib/components/SolutionChecker.svelte';
 </script>
 
 <h1>Practice Projects</h1>
