@@ -66,6 +66,13 @@
   </section>
 
   <section>
+    <h2>🐍 Python Projects</h2>
+    <ul>
+      <li><a href="/practice/python">View All Python Projects</a></li>
+    </ul>
+  </section>
+
+  <section>
     <h2>🚀 Astro Projects (*WIP* - Coming Soon⌛)</h2>
     <ul>
       <s><li><a href="/practice/astro/blog">Astro Blog</a></li>

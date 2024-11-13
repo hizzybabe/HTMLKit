@@ -124,6 +124,6 @@ This chapter brings together the skills learned throughout the course, reinforci
 </script>
 
 <ChapterNavigation 
-    prevHref="/learn/python/ch12" 
-    nextHref="/learn/python/ch14"
+    prevHref="/learn/python/ch13" 
+    nextHref="/learn/practice"
   />
