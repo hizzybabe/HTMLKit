@@ -118,6 +118,6 @@ This chapter introduces learners to essential loop structures in Python. The mul
 </script>
 
 <ChapterNavigation 
-    prevHref="/learn/python/ch1" 
-    nextHref="/learn/python/ch3"
+    prevHref="/learn/python/ch3" 
+    nextHref="/learn/python/ch5"
   />

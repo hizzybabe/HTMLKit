@@ -121,6 +121,6 @@ This chapter introduces learners to the powerful control flow capabilities of Py
 </script>
 
 <ChapterNavigation 
-    prevHref="/learn/python/ch1" 
-    nextHref="/learn/python/ch3"
+    prevHref="/learn/python/ch2" 
+    nextHref="/learn/python/ch4"
   />
