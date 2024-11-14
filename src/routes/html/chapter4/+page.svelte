@@ -104,16 +104,20 @@
   &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
     {:else}
-    <table border="1" class="w-full">
-      <tr>
-        <th class="p-2">Header 1</th>
-        <th class="p-2">Header 2</th>
-      </tr>
-      <tr>
-        <td class="p-2">Data 1</td>
-        <td class="p-2">Data 2</td>
-      </tr>
-    </table>
+<!-- Replace the table structure -->
+<table border="1" class="w-full">
+  <tbody>
+    <tr>
+      <th class="p-2">Header 1</th>
+      <th class="p-2">Header 2</th>
+    </tr>
+    <tr>
+      <td class="p-2">Data 1</td>
+      <td class="p-2">Data 2</td>
+    </tr>
+  </tbody>
+</table>
+
     {/if}
   </div>
 
@@ -187,17 +191,20 @@
           </ul>
           <h2>Comparison</h2>
           <table border="1" class="w-full">
-            <tr>
-              <th class="p-2">Feature</th>
-              <th class="p-2">Basic</th>
-              <th class="p-2">Premium</th>
-            </tr>
-            <tr>
-              <td class="p-2">Feature 1</td>
-              <td class="p-2">✓</td>
-              <td class="p-2">✓</td>
-            </tr>
+            <tbody>
+              <tr>
+                <th class="p-2">Feature</th>
+                <th class="p-2">Basic</th>
+                <th class="p-2">Premium</th>
+              </tr>
+              <tr>
+                <td class="p-2">Feature 1</td>
+                <td class="p-2">✓</td>
+                <td class="p-2">✓</td>
+              </tr>
+            </tbody>
           </table>
+          
         </div>
         {/if}
       </div>
