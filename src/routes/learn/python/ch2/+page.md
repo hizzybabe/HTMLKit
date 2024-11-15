@@ -358,28 +358,31 @@ A **truth table** is a helpful tool to understand the behavior of logical operat
 
 1. **Truth Table for `and`**:
    - Both conditions need to be `True` for the result to be `True`.
-   | Condition 1 | Condition 2 | Condition 1 `and` Condition 2 |
-   |-------------|-------------|-------------------------------|
-   | `True`      | `True`      | `True`                        |
-   | `True`      | `False`     | `False`                       |
-   | `False`     | `True`      | `False`                       |
-   | `False`     | `False`     | `False`                       |
+   
+   | Condition 1 | Condition 2 | Result |
+   |------------|-------------|---------|
+   | `True`     | `True`      | `True`  |
+   | `True`     | `False`     | `False` |
+   | `False`    | `True`      | `False` |
+   | `False`    | `False`     | `False` |
 
 2. **Truth Table for `or`**:
    - Only one condition needs to be `True` for the result to be `True`.
-   | Condition 1 | Condition 2 | Condition 1 `or` Condition 2 |
-   |-------------|-------------|------------------------------|
-   | `True`      | `True`      | `True`                       |
-   | `True`      | `False`     | `True`                       |
-   | `False`     | `True`      | `True`                       |
-   | `False`     | `False`     | `False`                      |
+   
+   | Condition 1 | Condition 2 | Result |
+   |------------|-------------|---------|
+   | `True`     | `True`      | `True`  |
+   | `True`     | `False`     | `True`  |
+   | `False`    | `True`      | `True`  |
+   | `False`    | `False`     | `False` |
 
 3. **Truth Table for `not`**:
    - The `not` operator simply reverses the boolean value.
-   | Condition | `not` Condition |
-   |-----------|-----------------|
-   | `True`    | `False`         |
-   | `False`   | `True`          |
+   
+   | Condition | Result |
+   |-----------|---------|
+   | `True`    | `False` |
+   | `False`   | `True`  |
 
 These tables help in visualizing how logical operators evaluate conditions in Python.
 
