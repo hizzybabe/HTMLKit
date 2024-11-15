@@ -560,7 +560,7 @@ With practice, you’ll become comfortable combining operators to build powerful
 <h2 class="workshop-title">Workshop Exercise</h2>
 <div class="workshop-container">
 
-#### Create a Calculator Script
+<h3>Create a Calculator Script</h3>
 
 - **Objective**: Write a script that can perform basic arithmetic operations (+, -, *, /) based on user input.
 - **Instructions**:
