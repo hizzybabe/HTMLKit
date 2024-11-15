@@ -601,7 +601,7 @@ With practice, you’ll become comfortable combining operators to build powerful
 
 <h2 class="workshop-title">Chapter Project</h2>
 <div class="workshop-container">
-#### Project: Develop a "Tip Calculator"
+<h3>Project: Develop a "Tip Calculator"</h3>
 
 - **Description**: The Tip Calculator will ask the user for the bill amount and desired tip percentage, then calculate and display the total tip amount and total bill amount including the tip.
 
