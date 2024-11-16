@@ -2,7 +2,7 @@
 title: Control Flow - Conditional Statements
 ---
 
-**Chapter 3: Control Flow - Conditional Statements**
+# Chapter 3: Control Flow - Conditional Statements
 
 ## Topics
 
