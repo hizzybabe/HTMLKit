@@ -53,6 +53,38 @@
   <p>Ad Banner Placeholder</p>
 </div> -->
 
+<section class="latest-posts">
+  <h2 class="text-center text-2xl font-bold mb-6">Latest Blog Posts</h2>
+  
+  {#await import.meta.glob('/src/routes/blog/**/*.md')() then modules}
+    <div class="posts-grid">
+      {#each Object.entries(modules)
+        .slice(0, 3)
+        .map(([path, resolver]) => ({
+          title: resolver.metadata?.title || 'Untitled Post',
+          description: resolver.metadata?.description || 'No description available',
+          path: path.replace('/src/routes/blog/', '').replace('/+page.md', '')
+        })) as post}
+        <div class="post-card">
+          <h3 class="post-title">
+            <a href="/blog/{post.path}">{post.title}</a>
+          </h3>
+          <p class="post-excerpt">{post.description}</p>
+        </div>
+      {/each}
+    </div>
+  {/await}
+  
+  <div class="text-center mt-6">
+    <a href="/blog" class="view-all-link">View All Posts →</a>
+  </div>
+</section>
+
+<!-- Ad Banner Placeholder 
+<div class="ad-banner">
+  <p>Ad Banner Placeholder</p>
+</div> -->
+
 <h1>Dig Even Deeper</h1>
 
 <section class="features">
@@ -120,6 +152,57 @@
     background-color: #e0e0e0;
     border-radius: 8px;
     border: 1px dashed #ccc;
+  }
+
+  .latest-posts {
+    padding: 2rem 0;
+    margin: 2rem 0;
+    background: #f8f8f8;
+    border-radius: 8px;
+  }
+
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+  }
+
+  .post-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .post-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-excerpt {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .view-all-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+  }
+
+  .view-all-link:hover {
+    color: #666;
   }
   </style>
 
