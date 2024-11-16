@@ -54,7 +54,7 @@
 </div> -->
 
 <section class="latest-posts">
-  <div class="text-center mt-6">
+  <div class="text-center mx-6">
   <h2 class="text-center text-2xl font-bold mb-6">Latest Blog Posts</h2>
   </div>
 
