@@ -56,13 +56,14 @@
 <section class="latest-posts">
   <h2 class="text-center text-2xl font-bold mb-6">Latest Blog Posts</h2>
   
-  {#await import.meta.glob('/src/routes/blog/**/*.md')() then modules}
+  {#await import.meta.glob('/src/routes/blog/**/*.md', { eager: true }) then modules}
     <div class="posts-grid">
       {#each Object.entries(modules)
+        .sort(([, a], [, b]) => new Date(b.metadata?.date || 0) - new Date(a.metadata?.date || 0))
         .slice(0, 3)
-        .map(([path, resolver]) => ({
-          title: resolver.metadata?.title || 'Untitled Post',
-          description: resolver.metadata?.description || 'No description available',
+        .map(([path, module]) => ({
+          title: module.metadata?.title || 'Untitled Post',
+          description: module.metadata?.description || 'No description available',
           path: path.replace('/src/routes/blog/', '').replace('/+page.md', '')
         })) as post}
         <div class="post-card">
