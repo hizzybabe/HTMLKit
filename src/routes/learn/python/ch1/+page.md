@@ -1,9 +1,6 @@
 ---
-title: Introduction to Python and Setup
+title: Chapter 1: Introduction to Python and Setup
 ---
-
-**Chapter 1: Introduction to Python and Setup**
-
 ## Topics
 
 ### 1.1 What is Python? History and Applications

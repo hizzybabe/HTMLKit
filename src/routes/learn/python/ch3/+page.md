@@ -1,9 +1,6 @@
 ---
-title: Control Flow - Conditional Statements
+title: Chapter 3: Control Flow - Conditional Statements
 ---
-
-# Chapter 3: Control Flow - Conditional Statements
-
 ## Topics
 
 ### 3.1 if, elif, and else Statements
