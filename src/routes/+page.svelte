@@ -54,7 +54,7 @@
 </div> -->
 
 <section class="latest-posts">
-  <h2 class="text-center text-2xl font-bold mb-6 pl-4">Latest Blog Posts</h2>
+  <h2 class="text-center text-2xl font-bold mb-6 px-4">Latest Blog Posts</h2>
   
   {#await import.meta.glob('/src/routes/blog/**/*.md', { eager: true }) then modules}
     <div class="posts-grid">
