@@ -1,5 +1,5 @@
 ---
-title: Chapter 2: Basic Operators and Expressions
+title: Chapter 2 - Basic Operators and Expressions
 ---
 ## Topics
 

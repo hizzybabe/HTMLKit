@@ -1,5 +1,5 @@
 ---
-title: Chapter 3: Control Flow - Conditional Statements
+title: Chapter 3 - Control Flow - Conditional Statements
 ---
 ## Topics
 

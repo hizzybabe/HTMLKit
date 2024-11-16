@@ -1,5 +1,5 @@
 ---
-title: Chapter 1: Introduction to Python and Setup
+title: Chapter 1 - Introduction to Python and Setup
 ---
 ## Topics
 

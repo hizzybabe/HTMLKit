@@ -1,5 +1,5 @@
 ---
-title: Chapter 4: Loops in Python
+title: Chapter 4 - Loops in Python
 ---
 
 ## Topics
