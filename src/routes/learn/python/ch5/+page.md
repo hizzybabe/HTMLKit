@@ -1,5 +1,5 @@
 ---
-title: Chapter 5: Functions and Modules
+title: Chapter 5 - Functions and Modules
 ---
 ## Topics
 
