@@ -5,60 +5,345 @@ title: File Handling
 
 ### Topics
 
-#### 9.1 Reading from and Writing to Files
-   - **Opening Files**:
-      - Introduce the `open()` function to open a file, with common modes such as `"r"` for reading, `"w"` for writing, and `"a"` for appending.
-      - **Syntax**:
-        ```python
-        file = open("example.txt", "r")  # Opens file in read mode
-        ```
-   - **Reading Files**:
-      - Explain methods for reading files: `.read()`, `.readline()`, and `.readlines()`.
-      - **Examples**:
-        ```python
-        # Reading entire content
-        with open("example.txt", "r") as file:
-            content = file.read()
-            print(content)
+### 9.1 Reading from and Writing to Files
 
-        # Reading line by line
-        with open("example.txt", "r") as file:
-            for line in file:
-                print(line.strip())
-        ```
-   - **Writing to Files**:
-      - Explain how to write to files using `"w"` and `"a"` modes and the `.write()` method.
-      - **Example**:
-        ```python
-        with open("output.txt", "w") as file:
-            file.write("Hello, World!")
-        ```
-   - **Closing Files**:
-      - Discuss the importance of closing files after operations to free resources.
-      - **Best Practice**: Use the `with` statement for automatic file closure.
+---
 
-#### 9.2 Handling Different File Types (e.g., .txt, .csv)
-   - **Text Files**:
-      - Explain text files as simple files storing plain text data.
-   - **CSV Files**:
-      - Introduce CSV files as Comma-Separated Values files, commonly used for storing tabular data.
-      - Use Python’s `csv` module to read and write CSV files.
-      - **Examples**:
-        ```python
-        import csv
+#### **Opening Files**
 
-        # Reading CSV
-        with open("data.csv", "r") as file:
-            reader = csv.reader(file)
-            for row in reader:
-                print(row)
+Python provides the `open()` function to open files for reading, writing, or appending. The function takes two main arguments:
+1. **Filename**: The name of the file to open.
+2. **Mode**: Specifies the operation mode (e.g., read, write).
 
-        # Writing CSV
-        with open("output.csv", "w", newline="") as file:
-            writer = csv.writer(file)
-            writer.writerow(["Name", "Age"])
-            writer.writerow(["Alice", 25])
-        ```
+**Common Modes**:
+- `"r"`: Read (default). Opens the file for reading; an error occurs if the file doesn’t exist.
+- `"w"`: Write. Opens the file for writing; creates a new file if it doesn’t exist, or truncates (overwrites) the file if it does.
+- `"a"`: Append. Opens the file for appending; creates a new file if it doesn’t exist.
+
+**Syntax**:
+```python
+file = open("example.txt", "r")  # Opens the file in read mode
+```
+
+---
+
+#### **Reading Files**
+
+There are several methods to read files:
+
+1. **`.read()`**:
+   - Reads the entire content of the file as a single string.
+   ```python
+   with open("example.txt", "r") as file:
+       content = file.read()
+       print(content)
+   ```
+
+2. **`.readline()`**:
+   - Reads the file one line at a time. Subsequent calls read the next line.
+   ```python
+   with open("example.txt", "r") as file:
+       line = file.readline()
+       while line:
+           print(line.strip())  # Remove extra whitespace
+           line = file.readline()
+   ```
+
+3. **`.readlines()`**:
+   - Reads all lines of the file into a list of strings.
+   ```python
+   with open("example.txt", "r") as file:
+       lines = file.readlines()
+       print(lines)
+   ```
+
+4. **Using a Loop**:
+   - Read and process each line directly in a loop.
+   ```python
+   with open("example.txt", "r") as file:
+       for line in file:
+           print(line.strip())
+   ```
+
+---
+
+#### **Writing to Files**
+
+To write data to a file, use the following modes:
+1. **`"w"`**: Write mode. Creates a new file or overwrites an existing file.
+2. **`"a"`**: Append mode. Adds data to the end of the file without removing existing content.
+
+**Example: Writing to a File**:
+```python
+with open("output.txt", "w") as file:
+    file.write("Hello, World!\n")
+    file.write("This is a new file.")
+```
+
+**Example: Appending to a File**:
+```python
+with open("output.txt", "a") as file:
+    file.write("\nAppending this line.")
+```
+
+---
+
+#### **Closing Files**
+
+It’s important to close a file after performing file operations to release system resources. Forgetting to close a file can lead to resource leaks.
+
+**Manual File Closure**:
+```python
+file = open("example.txt", "r")
+content = file.read()
+file.close()
+```
+
+**Best Practice: Using the `with` Statement**:
+- The `with` statement ensures that the file is automatically closed after the block is executed, even if an error occurs.
+```python
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+# File is automatically closed here
+```
+
+---
+
+#### **Examples**
+
+1. **Reading a File**:
+   ```python
+   with open("example.txt", "r") as file:
+       for line in file:
+           print(line.strip())  # Outputs each line without extra spaces
+   ```
+
+2. **Writing to a File**:
+   ```python
+   with open("output.txt", "w") as file:
+       file.write("This is the first line.\n")
+       file.write("This is the second line.")
+   ```
+
+3. **Appending to a File**:
+   ```python
+   with open("output.txt", "a") as file:
+       file.write("\nThis line is appended.")
+   ```
+
+4. **Combining Reading and Writing**:
+   ```python
+   with open("example.txt", "r") as infile, open("copy.txt", "w") as outfile:
+       for line in infile:
+           outfile.write(line)  # Copies each line to a new file
+   ```
+
+---
+
+#### **Summary**
+
+1. **Opening Files**:
+   - Use `open()` with modes like `"r"`, `"w"`, or `"a"`.
+   ```python
+   file = open("example.txt", "r")
+   ```
+
+2. **Reading Files**:
+   - `.read()`: Reads the entire file.
+   - `.readline()`: Reads one line at a time.
+   - `.readlines()`: Reads all lines as a list.
+   - Example:
+     ```python
+     with open("example.txt", "r") as file:
+         for line in file:
+             print(line.strip())
+     ```
+
+3. **Writing Files**:
+   - Use `"w"` mode to write or `"a"` mode to append.
+   - Example:
+     ```python
+     with open("output.txt", "w") as file:
+         file.write("Hello, World!")
+     ```
+
+4. **Closing Files**:
+   - Use `file.close()` or the `with` statement for automatic closure.
+
+Efficient file handling is essential for reading, writing, and managing data in Python programs.
+
+### 9.2 Handling Different File Types (e.g., .txt, .csv)
+
+---
+
+#### **Text Files**
+
+**What are Text Files?**
+- Text files store plain text data, often with a `.txt` extension.
+- They are commonly used for storing readable data such as logs, configuration files, or simple documents.
+
+**Reading and Writing Text Files**:
+- Use the methods covered in **9.1** to handle `.txt` files.
+
+**Example: Reading a Text File**:
+```python
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line.strip())  # Outputs each line without extra whitespace
+```
+
+**Example: Writing to a Text File**:
+```python
+with open("output.txt", "w") as file:
+    file.write("This is a sample text file.\n")
+    file.write("Python makes file handling easy!")
+```
+
+---
+
+#### **CSV Files**
+
+**What are CSV Files?**
+- **CSV** (Comma-Separated Values) files store tabular data, with each row as a line of text and values separated by commas.
+- They are widely used for data exchange between applications like Excel, databases, and data analysis tools.
+
+**Handling CSV Files with Python**:
+- Use Python’s built-in `csv` module to work with CSV files.
+- The `csv.reader` reads data, and `csv.writer` writes data.
+
+---
+
+#### **Reading CSV Files**
+
+**Using `csv.reader`**:
+- The `csv.reader` reads the CSV file and returns each row as a list.
+```python
+import csv
+
+# Reading a CSV file
+with open("data.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)  # Outputs each row as a list
+```
+
+**Handling Headers**:
+- If the CSV file contains headers, you can skip the first row or process it separately.
+```python
+with open("data.csv", "r") as file:
+    reader = csv.reader(file)
+    headers = next(reader)  # Reads the first row (headers)
+    print("Headers:", headers)
+    for row in reader:
+        print("Data Row:", row)
+```
+
+---
+
+#### **Writing CSV Files**
+
+**Using `csv.writer`**:
+- The `csv.writer` writes rows to a CSV file. Use the `writerow()` method to write a single row or `writerows()` to write multiple rows.
+
+**Example: Writing to a CSV File**:
+```python
+import csv
+
+# Writing to a CSV file
+with open("output.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Name", "Age", "City"])  # Writing the header
+    writer.writerow(["Alice", 25, "New York"])  # Writing a single row
+    writer.writerow(["Bob", 30, "Los Angeles"])
+```
+
+**Example: Writing Multiple Rows**:
+```python
+data = [
+    ["Name", "Age", "City"],
+    ["Alice", 25, "New York"],
+    ["Bob", 30, "Los Angeles"]
+]
+
+with open("output.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)  # Writes all rows at once
+```
+
+---
+
+#### **Advanced CSV Handling**
+
+**Using Dictionaries**:
+- The `csv.DictReader` reads rows into dictionaries, where the keys are the column headers.
+- The `csv.DictWriter` writes rows from dictionaries.
+
+**Reading with `csv.DictReader`**:
+```python
+with open("data.csv", "r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(row)  # Outputs each row as a dictionary
+```
+
+**Writing with `csv.DictWriter`**:
+```python
+data = [
+    {"Name": "Alice", "Age": 25, "City": "New York"},
+    {"Name": "Bob", "Age": 30, "City": "Los Angeles"}
+]
+
+with open("output.csv", "w", newline="") as file:
+    fieldnames = ["Name", "Age", "City"]
+    writer = csv.DictWriter(file, fieldnames=fieldnames)
+    writer.writeheader()  # Write the header row
+    writer.writerows(data)  # Write the data rows
+```
+
+---
+
+#### **Comparison of Text and CSV Files**
+
+| **Feature**             | **Text Files**                         | **CSV Files**                       |
+|--------------------------|-----------------------------------------|-------------------------------------|
+| **Structure**            | Plain text with no strict format.      | Tabular format with rows and columns. |
+| **Use Cases**            | Logs, configuration files, documents.  | Data exchange, tabular data storage. |
+| **Handling**             | Read/write using `.read()`/`.write()`. | Use `csv.reader`/`csv.writer`.       |
+
+---
+
+#### **Summary**
+
+1. **Text Files**:
+   - Read and write using the `open()` function and standard file methods.
+   - Example:
+     ```python
+     with open("example.txt", "r") as file:
+         content = file.read()
+         print(content)
+     ```
+
+2. **CSV Files**:
+   - Use the `csv` module for handling structured tabular data.
+   - Example:
+     **Reading**:
+     ```python
+     import csv
+     with open("data.csv", "r") as file:
+         reader = csv.reader(file)
+         for row in reader:
+             print(row)
+     ```
+     **Writing**:
+     ```python
+     with open("output.csv", "w", newline="") as file:
+         writer = csv.writer(file)
+         writer.writerow(["Name", "Age"])
+         writer.writerow(["Alice", 25])
+     ```
+
+Handling different file types effectively allows you to manage a variety of data formats in Python, making it essential for data processing and analysis tasks.
 
 <h2 class="workshop-title">Workshop Exercise</h2>
 <div class="workshop-container">
