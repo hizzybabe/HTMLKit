@@ -5,49 +5,385 @@ title: Error Handling and Debugging
 
 ### Topics
 
-#### 10.1 Understanding Errors and Exceptions
-   - **Types of Errors**:
-      - **Syntax Errors**: Errors in the code’s structure or syntax that prevent it from running (e.g., missing colons or parentheses).
-      - **Runtime Errors**: Errors that occur during program execution, such as `ZeroDivisionError` or `ValueError`.
-      - **Logical Errors**: Errors in the logic of the code that lead to incorrect results but don’t raise exceptions.
-   - **Common Exceptions**:
-      - Introduce commonly encountered exceptions in Python, such as `TypeError`, `ValueError`, `IndexError`, and `KeyError`.
-   - **The Exception Hierarchy**:
-      - Briefly explain the hierarchy of exceptions, with `Exception` as the base class for most error types in Python.
+### 10.1 Understanding Errors and Exceptions
 
-#### 10.2 Using `try`, `except`, and `finally`
-   - **try and except Blocks**:
-      - Explain how `try` and `except` are used to handle exceptions by catching and managing errors that occur during code execution.
-      - **Example**:
-        ```python
-        try:
-            result = 10 / 0
-        except ZeroDivisionError:
-            print("Cannot divide by zero!")
-        ```
-   - **finally Block**:
-      - Introduce the `finally` block, which runs regardless of whether an exception occurred. It is commonly used for cleanup tasks.
-      - **Example**:
-        ```python
-        try:
-            file = open("example.txt", "r")
-        except FileNotFoundError:
-            print("File not found.")
-        finally:
-            print("Cleaning up...")
-            file.close()
-        ```
-   - **Using `else` with try and except**:
-      - Explain how `else` can be used to execute code if no exception was raised.
-      - **Example**:
-        ```python
-        try:
-            result = 10 / 2
-        except ZeroDivisionError:
-            print("Cannot divide by zero!")
-        else:
-            print(f"Result: {result}")
-        ```
+---
+
+#### **Types of Errors**
+
+Errors in Python can be categorized into three main types:
+
+1. **Syntax Errors**:
+   - **What Are They?**:
+     - Syntax errors occur when the code violates Python's syntax rules.
+     - These errors are detected before the program is executed, during the parsing stage.
+   - **Examples**:
+     ```python
+     # Missing a colon
+     if True
+         print("Syntax Error")  # SyntaxError: expected ':'
+     ```
+
+2. **Runtime Errors**:
+   - **What Are They?**:
+     - Runtime errors occur during the execution of the program.
+     - These errors stop the program and raise exceptions.
+   - **Examples**:
+     ```python
+     # ZeroDivisionError
+     print(10 / 0)  # RuntimeError: division by zero
+
+     # ValueError
+     num = int("not a number")  # ValueError: invalid literal for int()
+     ```
+
+3. **Logical Errors**:
+   - **What Are They?**:
+     - Logical errors occur when the program runs without crashing but produces incorrect results.
+     - These errors are the hardest to detect because Python doesn’t flag them as exceptions.
+   - **Examples**:
+     ```python
+     # Incorrect logic
+     def is_even(n):
+         return n % 2 == 1  # Logical error: should be n % 2 == 0
+     print(is_even(4))  # Outputs: True (incorrect)
+     ```
+
+---
+
+#### **Common Exceptions**
+
+Python provides several built-in exceptions to handle runtime errors. Some of the most common ones are:
+
+1. **`TypeError`**:
+   - Raised when an operation is performed on an inappropriate type.
+   ```python
+   print("Hello" + 5)  # TypeError: can only concatenate str (not "int") to str
+   ```
+
+2. **`ValueError`**:
+   - Raised when a function receives an argument of the correct type but an inappropriate value.
+   ```python
+   num = int("abc")  # ValueError: invalid literal for int()
+   ```
+
+3. **`IndexError`**:
+   - Raised when trying to access an index that is out of range in a sequence.
+   ```python
+   lst = [1, 2, 3]
+   print(lst[5])  # IndexError: list index out of range
+   ```
+
+4. **`KeyError`**:
+   - Raised when trying to access a key that doesn’t exist in a dictionary.
+   ```python
+   data = {"name": "Alice"}
+   print(data["age"])  # KeyError: 'age'
+   ```
+
+5. **`ZeroDivisionError`**:
+   - Raised when trying to divide by zero.
+   ```python
+   print(10 / 0)  # ZeroDivisionError: division by zero
+   ```
+
+6. **`FileNotFoundError`**:
+   - Raised when trying to access a file that doesn’t exist.
+   ```python
+   with open("nonexistent_file.txt", "r") as file:
+       content = file.read()  # FileNotFoundError: [Errno 2] No such file or directory
+   ```
+
+---
+
+#### **The Exception Hierarchy**
+
+Python exceptions are organized in a hierarchy, with the base class `BaseException` at the top. Most errors inherit from the `Exception` class.
+
+**Key Hierarchy Levels**:
+1. **`BaseException`**:
+   - The root class for all exceptions. Rarely used directly.
+2. **`Exception`**:
+   - The base class for most standard exceptions.
+3. **Specific Exception Classes**:
+   - Examples include `TypeError`, `ValueError`, `IndexError`, etc.
+
+**Diagram**:
+```
+BaseException
+ ├── SystemExit
+ ├── KeyboardInterrupt
+ └── Exception
+      ├── ArithmeticError
+      │    ├── ZeroDivisionError
+      │    └── OverflowError
+      ├── LookupError
+      │    ├── IndexError
+      │    └── KeyError
+      ├── ValueError
+      ├── TypeError
+      └── ...
+```
+
+**Key Points**:
+- Catching a higher-level exception (like `Exception`) will also catch all its derived exceptions.
+- However, it’s best practice to catch specific exceptions to avoid masking errors unintentionally.
+
+---
+
+#### **Examples of Exceptions and Hierarchy**
+
+1. **Catching Specific Exceptions**:
+   ```python
+   try:
+       num = int("abc")
+   except ValueError:
+       print("Caught a ValueError!")  # Outputs: Caught a ValueError!
+   ```
+
+2. **Catching Multiple Exceptions**:
+   ```python
+   try:
+       result = 10 / 0
+   except (ZeroDivisionError, ValueError):
+       print("An error occurred!")  # Outputs: An error occurred!
+   ```
+
+3. **Catching All Exceptions**:
+   ```python
+   try:
+       result = 10 / 0
+   except Exception as e:
+       print(f"An exception occurred: {e}")  # Outputs: An exception occurred: division by zero
+   ```
+
+---
+
+#### **Summary**
+
+1. **Types of Errors**:
+   - **Syntax Errors**: Detected before execution; caused by incorrect code structure.
+   - **Runtime Errors**: Occur during execution and raise exceptions.
+   - **Logical Errors**: Flawed logic in the program produces incorrect results.
+
+2. **Common Exceptions**:
+   - **`TypeError`**: Operation on the wrong type.
+   - **`ValueError`**: Invalid value for a function.
+   - **`IndexError`**: Accessing an out-of-range index.
+   - **`KeyError`**: Accessing a nonexistent key in a dictionary.
+
+3. **Exception Hierarchy**:
+   - Exceptions inherit from the base class `Exception`.
+   - Catch specific exceptions for precise error handling.
+
+Understanding errors and exceptions is crucial for debugging and writing robust Python code. Up next, we’ll explore how to handle these exceptions effectively!
+
+### 10.2 Using `try`, `except`, and `finally`
+
+---
+
+#### **`try` and `except` Blocks**
+
+The `try` and `except` blocks allow you to handle exceptions gracefully by catching and managing errors that occur during code execution.
+
+**Syntax**:
+```python
+try:
+    # Code that may raise an exception
+except ExceptionType:
+    # Code to handle the exception
+```
+
+**How It Works**:
+1. Code in the `try` block is executed.
+2. If an exception is raised, Python skips the rest of the `try` block and executes the corresponding `except` block.
+3. If no exception is raised, the `except` block is skipped.
+
+---
+
+**Example**: Handling a Specific Exception
+```python
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+```
+**Output**:
+```
+Cannot divide by zero!
+```
+
+**Example**: Handling Multiple Exceptions
+```python
+try:
+    num = int("abc")
+except ValueError:
+    print("Invalid input!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+```
+**Output**:
+```
+Invalid input!
+```
+
+**Example**: Catching Any Exception
+```python
+try:
+    result = 10 / 0
+except Exception as e:
+    print(f"An error occurred: {e}")
+```
+**Output**:
+```
+An error occurred: division by zero
+```
+
+---
+
+#### **`finally` Block**
+
+The `finally` block is executed **regardless of whether an exception occurred**. It is often used for cleanup tasks, such as closing files or releasing resources.
+
+**Syntax**:
+```python
+try:
+    # Code that may raise an exception
+except ExceptionType:
+    # Code to handle the exception
+finally:
+    # Code that runs no matter what
+```
+
+**Example**: Using `finally` for Cleanup
+```python
+try:
+    file = open("example.txt", "r")
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    print("Cleaning up...")
+    # Ensure the file is closed (if it was opened)
+    try:
+        file.close()
+    except NameError:
+        pass
+```
+**Output**:
+```
+File not found.
+Cleaning up...
+```
+
+**Key Points**:
+- The `finally` block executes even if the `try` block has a `return` statement or an exception is raised.
+
+---
+
+#### **Using `else` with `try` and `except`**
+
+The `else` block is executed **only if no exception was raised** in the `try` block. It is useful for separating code that should run only when no errors occur.
+
+**Syntax**:
+```python
+try:
+    # Code that may raise an exception
+except ExceptionType:
+    # Code to handle the exception
+else:
+    # Code to run if no exception occurs
+```
+
+**Example**: Using `else` for Successful Execution
+```python
+try:
+    result = 10 / 2
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+else:
+    print(f"Result: {result}")
+```
+**Output**:
+```
+Result: 5.0
+```
+
+**Why Use `else`?**
+- Improves code readability by separating error handling (`except`) from the code that runs when no errors occur.
+
+---
+
+#### **Combined Example: `try`, `except`, `else`, and `finally`**
+```python
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+except ValueError:
+    print("Invalid input. Please enter a number.")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+else:
+    print(f"Result: {result}")
+finally:
+    print("Execution completed.")
+```
+
+**Sample Input/Output**:
+1. **Input**: `abc`
+   ```
+   Invalid input. Please enter a number.
+   Execution completed.
+   ```
+2. **Input**: `0`
+   ```
+   Cannot divide by zero!
+   Execution completed.
+   ```
+3. **Input**: `2`
+   ```
+   Result: 5.0
+   Execution completed.
+   ```
+
+---
+
+#### **Summary**
+
+1. **`try` and `except`**:
+   - Used to handle exceptions and prevent program crashes.
+   - Example:
+     ```python
+     try:
+         result = 10 / 0
+     except ZeroDivisionError:
+         print("Cannot divide by zero!")
+     ```
+
+2. **`finally`**:
+   - Executes code regardless of whether an exception occurred.
+   - Example:
+     ```python
+     try:
+         file = open("example.txt", "r")
+     except FileNotFoundError:
+         print("File not found.")
+     finally:
+         print("Cleaning up...")
+     ```
+
+3. **`else`**:
+   - Runs code only if no exception was raised in the `try` block.
+   - Example:
+     ```python
+     try:
+         result = 10 / 2
+     except ZeroDivisionError:
+         print("Cannot divide by zero!")
+     else:
+         print(f"Result: {result}")
+     ```
+
+Using `try`, `except`, `else`, and `finally` effectively ensures robust error handling and program reliability.
 
 <h2 class="workshop-title">Workshop Exercise</h2>
 <div class="workshop-container">
