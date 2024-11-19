@@ -9,11 +9,13 @@
       <li><a href="/javascript">JavaScript</a></li>
       <li><a href="/learn/svelte">Svelte</a> (creating workshop example files 🚧)</li>
       <li><a href="/learn/astro">Astro</a> (creating workshop example files 🚧)</li>
+      <li><a href="/learn/python">Python</a> (creating workshop example files 🚧)</li>
     </ul>
 
     <h2 class="text-2xl font-semibold mb-4 in-progress">In Progress 🚧</h2>
     <ul class="in-progress">
-      <li>Python</li>
+      <li>WordPress</li>
+      <li>Tailwind CSS</li>
     </ul>
     
     <h2 class="text-2xl font-semibold mt-6 mb-4 planned">Planned 📅</h2>
@@ -21,11 +23,9 @@
       <li>React</li>
       <li>Next.js</li>
       <li>PHP</li>
-      <li>WordPress</li>
       <li>MDSVEX</li>
       <li>SvelteKit</li>
       <li>Bootstrap</li>
-      <li>Tailwind CSS</li>
       <li>GitHub</li>
     </ul>
   </section>
