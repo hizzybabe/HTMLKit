@@ -36,7 +36,7 @@
         <a href="/javascript">JavaScript</a>
         <a href="/learn/svelte">Svelte</a>
         <a href="/learn/astro">Astro</a>
-        <a href="/learn/python" class="wip"><s>Python</s> (⌛Soon)</a>
+        <a href="/learn/python">Python</a>
         <a href="/learn/react" class="wip"><s>React</s> (⌛Soon)</a>
         <a href="/learn/php" class="wip"><s>PHP</s> (⌛Soon)</a>
         <a href="/learn/nextjs" class="wip"><s>Next.js</s> (⌛Soon)</a>
