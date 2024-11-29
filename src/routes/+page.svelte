@@ -53,11 +53,9 @@
   <p>Ad Banner Placeholder</p>
 </div> -->
 
-<section class="latest-posts">
-  <div>
-    <h2>Latest Blog Posts</h2>
-  </div>
+<h2>Latest Blog Posts</h2>
 
+<section class="latest-posts">
   {#await import.meta.glob('/src/routes/blog/**/*.md', { eager: true }) then modules}
     <div class="posts-grid">
       {#each Object.entries(modules)
