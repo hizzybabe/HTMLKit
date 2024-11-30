@@ -28,10 +28,6 @@
       </div>
     </article>
   </main>
-
-  <footer>
-    <p>© {new Date().getFullYear()} TechWizard Academy. All rights reserved.</p>
-  </footer>
 </div>
 
 <style>
