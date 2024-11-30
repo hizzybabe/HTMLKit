@@ -22,7 +22,6 @@
           <p class="post-description">{metadata.description}</p>
         {/if}
       </header>
-      
       <div class="post-content">
         <slot />
       </div>

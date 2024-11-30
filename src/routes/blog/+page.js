@@ -19,15 +19,15 @@ export async function load({ url }) {
       const relativePath = path.replace('./', '').replace('/+page.md', '');
       
       return {
+        path: relativePath,
         title: metadata.title || 'Untitled Post',
         description: metadata.description || 'No description available',
-        path: relativePath,
-        date: metadata.date || new Date().toISOString().split('T')[0]
+        date: metadata.date
       };
     })
   );
 
   return {
-    posts: posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+    posts: posts.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))
   };
 } 
